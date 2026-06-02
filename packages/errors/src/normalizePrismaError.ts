@@ -9,9 +9,8 @@ export const isPrismaKnownError = (
     return false;
   }
 
-  return (
-    "code" in error && typeof (error as { code?: unknown }).code === "string"
-  );
+  const code = "code" in error ? (error as { code?: unknown }).code : undefined;
+  return typeof code === "string" && /^P\d{4}$/.test(code);
 };
 
 export const normalizePrismaError = (error: unknown): ErrorCode | null => {
