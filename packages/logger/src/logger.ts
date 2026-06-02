@@ -1,4 +1,4 @@
-import pino, { LoggerOptions } from "pino";
+import pino, { Logger } from "pino";
 import { context, trace } from "@opentelemetry/api";
 import { REDACT_PATHS } from "./constants.js";
 
@@ -20,7 +20,7 @@ const transportOption = !isProduction
     }
   : undefined;
 
-export const logger: LoggerOptions = pino({
+export const logger: Logger = pino({
   level: logLevel,
 
   redact: {
