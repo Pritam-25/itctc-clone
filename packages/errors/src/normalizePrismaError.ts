@@ -1,0 +1,34 @@
+import { ERROR_CODES, type ErrorCode } from "./errorCodes.js";
+
+type PrismaKnownError = { code: string };
+
+export const isPrismaKnownError = (
+  error: unknown,
+): error is PrismaKnownError => {
+  if (typeof error !== "object" || error === null) {
+    return false;
+  }
+
+  const code = "code" in error ? (error as { code?: unknown }).code : undefined;
+  return typeof code === "string" && /^P\d{4}$/.test(code);
+};
+
+export const normalizePrismaError = (error: unknown): ErrorCode | null => {
+  if (!isPrismaKnownError(error)) {
+    return null;
+  }
+
+  switch (error.code) {
+    case "P2002":
+      return ERROR_CODES.CONFLICT;
+
+    case "P2025":
+      return ERROR_CODES.NOT_FOUND;
+
+    case "P2003":
+      return ERROR_CODES.INVALID_INPUT;
+
+    default:
+      return ERROR_CODES.INTERNAL_ERROR;
+  }
+};
