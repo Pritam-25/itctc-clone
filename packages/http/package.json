@@ -1,5 +1,5 @@
 {
-  "name": "@irctc/errors",
+  "name": "@irctc/http",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -12,6 +12,11 @@
     }
   },
   "scripts": {},
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "@irctc/errors": "workspace:*",
+    "@opentelemetry/api": "^1.9.1"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1"
+  }
 }

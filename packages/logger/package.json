@@ -1,15 +1,17 @@
 {
-  "name": "logger",
-  "version": "0.0.0",
+  "name": "@irctc/logger",
+  "version": "0.1.0",
   "private": true,
-  "main": "index.js",
   "type": "module",
-  "scripts": {
-    "dev": "echo 'Add dev script here'",
-    "build": "echo 'Add build script here'",
-    "test": "echo 'Add test script here'",
-    "lint": "echo 'Add lint script here'"
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
   },
+  "scripts": {},
   "dependencies": {
     "@opentelemetry/api": "^1.9.1",
     "pino": "^10.3.1"
