@@ -11,9 +11,5 @@ export const runWithRequestContext = <T>(
   fn: () => T,
 ): T => requestContextStorage.run(context, fn);
 
-export const setRequestContext = (context: RequestContext): void => {
-  requestContextStorage.enterWith(context);
-};
-
 export const getRequestContext = (): RequestContext | undefined =>
   requestContextStorage.getStore();
