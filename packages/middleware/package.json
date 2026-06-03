@@ -1,5 +1,5 @@
 {
-  "name": "@irctc/errors",
+  "name": "@irctc/middleware",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -14,8 +14,14 @@
   "scripts": {
     "build": "tsc"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@irctc/errors": "workspace:*",
+    "@irctc/http": "workspace:*",
+    "@irctc/logger": "workspace:*",
+    "zod": "^4.4.3"
+  },
   "devDependencies": {
-    "@repo/typescript-config": "workspace:*"
+    "@repo/typescript-config": "workspace:*",
+    "@types/express": "^4.17.21"
   }
 }
