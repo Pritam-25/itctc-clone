@@ -23,11 +23,11 @@ export const requestLoggerMiddleware = (
       requestId: (req as any).requestId,
       traceId: getTraceId(),
       statusCode: res.statusCode,
-      durationMs: duration,
+      duration: `${duration}ms`,
       module: "http",
     };
 
-    const message = `${req.method} ${sanitizedPath} ${res.statusCode} ${duration}ms`;
+    const message = "request completed";
     const log = (req as any).logger ?? logger;
 
     if (res.statusCode >= 500) {

@@ -8,19 +8,16 @@ export const env = createEnv({
     NODE_ENV: z
       .enum(["development", "production", "test"])
       .default("development"),
-    DATABASE_URL: z.string().url(),
-    REDIS_URL: z
-      .string()
-      .url()
-      .refine(
-        (value) => {
-          const protocol = new URL(value).protocol;
-          return protocol === "redis:" || protocol === "rediss:";
-        },
-        {
-          message: "REDIS_URL must use redis:// or rediss://",
-        },
-      ),
+    DATABASE_URL: z.url(),
+    REDIS_URL: z.url().refine(
+      (value) => {
+        const protocol = new URL(value).protocol;
+        return protocol === "redis:" || protocol === "rediss:";
+      },
+      {
+        message: "REDIS_URL must use redis:// or rediss://",
+      },
+    ),
     CORS_ORIGINS: z
       .string()
       .default("http://localhost:3000")

@@ -10,7 +10,6 @@ const createPrismaClient = () => {
   const adapter = new PrismaPg({
     connectionString: env.DATABASE_URL,
     max: 10,
-    min: 1,
     idleTimeoutMillis: 120_000,
     connectionTimeoutMillis: 15_000,
     keepAlive: true,
