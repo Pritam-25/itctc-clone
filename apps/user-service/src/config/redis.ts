@@ -19,13 +19,21 @@ const createRedisClient = (): Redis => {
   });
 
   // Wires comprehensive observability hooks for Grafana Loki/Tempo tracking
-  client.on("connect", () => logger.info("Redis connection initiating"));
-  client.on("ready", () => logger.info("Redis connected successfully."));
-  client.on("close", () => logger.warn("Redis connection closed"));
-  client.on("reconnecting", (delay: number) =>
-    logger.info(`Reconnecting to Redis in ${delay}ms`),
+  client.on("connect", () =>
+    logger.info({ module: "redis" }, "Redis connection initiating"),
   );
-  client.on("end", () => logger.warn("Redis connection ended permanently"));
+  client.on("ready", () =>
+    logger.info({ module: "redis" }, "Redis connected successfully."),
+  );
+  client.on("close", () =>
+    logger.warn({ module: "redis" }, "Redis connection closed"),
+  );
+  client.on("reconnecting", (delay: number) =>
+    logger.info({ module: "redis" }, `Reconnecting to Redis in ${delay}ms`),
+  );
+  client.on("end", () =>
+    logger.warn({ module: "redis" }, "Redis connection ended permanently"),
+  );
   client.on("warning", (warning: Error) =>
     logger.warn({ module: "redis", err: warning }, "Redis runtime warning"),
   );
@@ -53,7 +61,10 @@ export const initRedis = async (): Promise<void> => {
 
     redis.once("ready", () => {
       clearTimeout(timeout);
-      logger.info("Redis connection established and ready.");
+      logger.info(
+        { module: "redis" },
+        "Redis connection established and ready.",
+      );
       resolve();
     });
 
@@ -72,7 +83,10 @@ if (env.NODE_ENV !== "production") {
 // Graceful termination handler for Kubernetes/Docker lifecycle
 export const disconnectRedis = async (): Promise<void> => {
   if (redis.status !== "end") {
-    logger.info("Gracefully closing Redis connection channels");
+    logger.info(
+      { module: "redis" },
+      "Gracefully closing Redis connection channels",
+    );
     await redis.quit();
   }
 };

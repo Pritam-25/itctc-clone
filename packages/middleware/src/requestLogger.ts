@@ -23,7 +23,7 @@ export const requestLoggerMiddleware = (
       requestId: (req as any).requestId,
       traceId: getTraceId(),
       statusCode: res.statusCode,
-      duration: `${duration}ms`,
+      durationMs: duration,
       module: "http",
     };
 

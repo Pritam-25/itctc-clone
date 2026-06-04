@@ -14,7 +14,10 @@ const shutdown = async (signal: NodeJS.Signals) => {
   if (isShuttingDown) return;
   isShuttingDown = true;
 
-  logger.info(`Received ${signal}, shutting down gracefully...`);
+  logger.info(
+    { module: "server" },
+    `Received ${signal}, shutting down gracefully...`,
+  );
 
   if (server) {
     try {
@@ -24,19 +27,23 @@ const shutdown = async (signal: NodeJS.Signals) => {
           resolve();
         });
       });
-      logger.info("HTTP server closed.");
+      logger.info({ module: "server" }, "HTTP server closed.");
     } catch (error) {
-      logger.error({ err: error }, "Error occurred while closing HTTP server.");
+      logger.error(
+        { module: "server", err: error },
+        "Error occurred while closing HTTP server.",
+      );
     }
   }
 
   try {
     await prisma.$disconnect();
-    logger.info("Prisma disconnected successfully.");
+    logger.info({ module: "prisma" }, "Prisma disconnected successfully.");
+    logger.info({ module: "redis" }, "Redis disconnected successfully.");
     await disconnectRedis();
   } catch (error) {
     logger.error(
-      { err: error },
+      { module: "prisma", err: error },
       "Error occurred while disconnecting Prisma and Redis.",
     );
   }
@@ -46,10 +53,11 @@ const shutdown = async (signal: NodeJS.Signals) => {
 
 const startServer = async () => {
   await prisma.$connect();
-  logger.info("Prisma connected successfully.");
+  logger.info({ module: "prisma" }, "Prisma connected successfully.");
 
   server = app.listen(PORT, () => {
     logger.info(
+      { module: "server" },
       `server running at http://localhost:${PORT}/api/v1 (${env.NODE_ENV})`,
     );
   });
@@ -63,6 +71,6 @@ const startServer = async () => {
 try {
   await startServer();
 } catch (error) {
-  logger.error({ err: error }, "Failed to start server.");
+  logger.error({ module: "server", err: error }, "Failed to start server.");
   process.exit(1);
 }

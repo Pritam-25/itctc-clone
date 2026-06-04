@@ -1,5 +1,5 @@
 import express from "express";
-import type { Request, Response, Application } from "express";
+import type { Application } from "express";
 import cors from "cors";
 import helmet from "helmet";
 import cookieParser from "cookie-parser";
