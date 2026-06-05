@@ -55,23 +55,30 @@ export const initRedis = async (): Promise<void> => {
   if (redis.status === "ready") return;
 
   return new Promise((resolve, reject) => {
-    const timeout = setTimeout(() => {
-      reject(new Error("Redis connection timed out during bootstrap"));
-    }, 5000);
-
-    redis.once("ready", () => {
+    const onReady = () => {
       clearTimeout(timeout);
+      redis.off("error", onError);
       logger.info(
         { module: "redis" },
         "Redis connection established and ready.",
       );
       resolve();
-    });
+    };
 
-    redis.once("error", (err) => {
+    const onError = (err: Error) => {
       clearTimeout(timeout);
+      redis.off("ready", onReady);
       reject(err);
-    });
+    };
+
+    const timeout = setTimeout(() => {
+      redis.off("ready", onReady);
+      redis.off("error", onError);
+      reject(new Error("Redis connection timed out during bootstrap"));
+    }, 5000);
+
+    redis.once("ready", onReady);
+    redis.once("error", onError);
   });
 };
 
