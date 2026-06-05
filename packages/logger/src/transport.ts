@@ -34,11 +34,13 @@ const durationColor = "\x1b[47m\x1b[30m"; // White BG, Black FG
 const METHOD_WIDTH = 7;
 const STATUS_WIDTH = 3;
 const DURATION_WIDTH = 8;
+const REMOTE_ADDR_WIDTH = 15;
 
 export default (opts: Record<string, unknown>) =>
   pretty({
     ...opts,
     colorize: true,
+    translateTime: "SYS:yyyy-mm-dd - HH:MM:ss",
     messageFormat: (log) => {
       const moduleName = typeof log.module === "string" ? log.module : "app";
 
@@ -49,17 +51,20 @@ export default (opts: Record<string, unknown>) =>
       const code = Number(log.statusCode ?? 200);
       const method = String(log.method ?? "GET");
       const duration = `${log.durationMs}ms`;
+      const remoteAddress = String(log.remoteAddress ?? "unknown");
 
       // Padding for fixed width blocks
       const paddedMethod = ` ${method.toUpperCase().padEnd(METHOD_WIDTH, " ")} `;
       const paddedStatus = ` ${code.toString().padStart(STATUS_WIDTH, " ")} `;
       const paddedDuration = ` ${duration.padStart(DURATION_WIDTH, " ")} `;
+      const paddedRemoteAddress = ` ${remoteAddress.padStart(REMOTE_ADDR_WIDTH, " ")} `;
 
       return (
-        `${SERVICE_COLOR}[${log.service}]${RESET} ${MODULE_COLOR}[http]${RESET} ` +
-        `${methodColor(method)}${paddedMethod}${RESET} ${log.path} | ` +
+        `${SERVICE_COLOR}[${log.service}]${RESET} ${MODULE_COLOR}[http]${RESET} | ` +
         `${statusColor(code)}${paddedStatus}${RESET} | ` +
-        `${durationColor}${paddedDuration}${RESET}`
+        `${durationColor}${paddedDuration}${RESET} | ` +
+        `${paddedRemoteAddress} | ` +
+        `${methodColor(method)}${paddedMethod}${RESET} "${log.path}"`
       );
     },
   });

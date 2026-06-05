@@ -58,7 +58,7 @@ const startServer = async () => {
   server = app.listen(PORT, () => {
     logger.info(
       { module: "server" },
-      `server running at http://localhost:${PORT}/api/v1 (${env.NODE_ENV})`,
+      `server running at http://localhost:${PORT} (${env.NODE_ENV})`,
     );
   });
 

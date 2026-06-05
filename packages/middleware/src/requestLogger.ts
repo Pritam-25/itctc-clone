@@ -24,6 +24,7 @@ export const requestLoggerMiddleware = (
       traceId: getTraceId(),
       statusCode: res.statusCode,
       durationMs: duration,
+      remoteAddress: req.ip,
       module: "http",
     };
 

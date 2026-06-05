@@ -17,7 +17,7 @@ const transportOption = !isProduction
       target: path.resolve(__dirname, "transport.js"),
       options: {
         ignore:
-          "pid,hostname,service,module,statusCode,durationMs,method,path,traceId,spanId,message",
+          "pid,hostname,service,module,statusCode,durationMs,method,path,traceId,requestId,spanId,remoteAddress,message",
         singleLine: true,
       },
     }
