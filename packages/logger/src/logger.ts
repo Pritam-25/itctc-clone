@@ -1,6 +1,10 @@
 import pino, { Logger } from "pino";
 import { context, trace } from "@opentelemetry/api";
+import path from "path";
+import { fileURLToPath } from "url";
 import { REDACT_PATHS } from "./constants.js";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const serviceName = process.env.SERVICE_NAME ?? "unknown-service";
 
@@ -10,11 +14,10 @@ const logLevel = isProduction ? "info" : "debug";
 
 const transportOption = !isProduction
   ? {
-      target: "pino-pretty",
+      target: path.resolve(__dirname, "transport.js"),
       options: {
-        colorize: true,
-        translateTime: "SYS:standard",
-        ignore: "pid,hostname",
+        ignore:
+          "pid,hostname,service,module,statusCode,durationMs,method,path,traceId,requestId,spanId,remoteAddress,message",
         singleLine: true,
       },
     }
@@ -33,8 +36,6 @@ export const logger: Logger = pino({
   },
 
   messageKey: "message",
-
-  timestamp: pino.stdTimeFunctions.isoTime,
 
   formatters: {
     level(label: string) {
