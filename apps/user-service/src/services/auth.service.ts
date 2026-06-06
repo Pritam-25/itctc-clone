@@ -97,8 +97,12 @@ export class AuthService {
     // 3. Execute registration using stored data
     const authResponse = await this.registerUser(regData);
 
-    // 4. Clean up sessions
-    await OtpService.deleteRegistrationSession(sessionId);
+    // 4. Clean up sessions (best-effort; do not fail completed registration)
+    try {
+      await OtpService.deleteRegistrationSession(sessionId);
+    } catch (error) {
+      logger.warn({ module: "auth", sessionId, error }, "Session cleanup failed");
+    }
 
     return authResponse;
   }

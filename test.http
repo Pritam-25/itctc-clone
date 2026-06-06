@@ -22,5 +22,5 @@ POST {{authBase}}/verify-otp
 Content-Type: application/json
 
 {
-  "otp": "123456"
+  "otp": "788434"
 }
