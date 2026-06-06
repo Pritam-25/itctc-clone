@@ -61,7 +61,13 @@ export class AuthService {
     });
 
     // 4. Send email
-    await emailService.sendOtpEmail(data.email, otp);
+    try {
+      await emailService.sendOtpEmail(data.email, otp);
+    } catch (error) {
+      // Rollback OTP and registration session to prevent stale state
+      await OtpService.deleteRegistrationSession(sessionId);
+      throw error;
+    }
 
     return sessionId;
   }
@@ -101,7 +107,10 @@ export class AuthService {
     try {
       await OtpService.deleteRegistrationSession(sessionId);
     } catch (error) {
-      logger.warn({ module: "auth", sessionId, error }, "Session cleanup failed");
+      logger.warn(
+        { module: "auth", sessionId, error },
+        "Session cleanup failed",
+      );
     }
 
     return authResponse;

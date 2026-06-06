@@ -1,6 +1,9 @@
 import sgMail from "@sendgrid/mail";
 import { env } from "@config/env.js";
 import { logger } from "@irctc/logger";
+import { ApiError } from "@irctc/errors";
+import { statusCode } from "@irctc/http";
+import { ERROR_CODES } from "@utils/errors";
 
 export class EmailService {
   constructor() {
@@ -29,7 +32,12 @@ export class EmailService {
         { module: "email", error, email },
         "Failed to send OTP email",
       );
-      throw error;
+      throw new ApiError(
+        statusCode.badGateway,
+        ERROR_CODES.EMAIL_SEND_FAILED,
+        "Failed to send OTP email",
+        { cause: error },
+      );
     }
   }
 }

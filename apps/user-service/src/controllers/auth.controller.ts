@@ -1,9 +1,11 @@
 import type { RegisterRequestDto, VerifyOtpRequestDto } from "@dto/auth";
-import { statusCode, successResponse } from "@irctc/http";
+import { statusCode, successResponse, errorResponse } from "@irctc/http";
+import { createErrorResponse } from "@irctc/errors";
 import type { AuthService } from "@services/auth.service.js";
 import type { Request, Response } from "express";
 import { env } from "@config/env.js";
 import { COOKIE_NAMES, COOKIE_MAX_AGE } from "@utils/constants.js";
+import { ERROR_CODES } from "@utils/errors";
 
 export class AuthController {
   /**
@@ -55,10 +57,13 @@ export class AuthController {
   async verifyOtp(req: Request, res: Response) {
     const sessionId = req.cookies[COOKIE_NAMES.OTP_SESSION];
     if (!sessionId) {
-      return res.status(statusCode.badRequest).json({
-        success: false,
-        message: "OTP session not found. Please request a new OTP.",
-      });
+      return res.status(statusCode.badRequest).json(
+        errorResponse(
+          createErrorResponse({
+            code: ERROR_CODES.OTP_SESSION_NOT_FOUND,
+          }),
+        ),
+      );
     }
 
     const payload = req.body as VerifyOtpRequestDto;
@@ -79,6 +84,9 @@ export class AuthController {
       authResponse.tokens.refreshToken,
       COOKIE_MAX_AGE.REFRESH_TOKEN,
     );
+
+    // Clear the OTP session cookie after successful registration
+    res.clearCookie(COOKIE_NAMES.OTP_SESSION, { path: "/" });
 
     return res
       .status(statusCode.created)

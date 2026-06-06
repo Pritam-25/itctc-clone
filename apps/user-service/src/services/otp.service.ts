@@ -99,7 +99,10 @@ export class OtpService {
     if (attempts > this.OTP_ATTEMPT_LIMIT) {
       // Delete OTP session to block further attempts
       await redis.del(`otp_session:${sessionId}`);
-      throw new ApiError(statusCode.tooManyRequests, AUTH_ERROR_CODES.OTP_LOCKED);
+      throw new ApiError(
+        statusCode.tooManyRequests,
+        AUTH_ERROR_CODES.OTP_LOCKED,
+      );
     }
 
     const isValid = await bcrypt.compare(otp, hashedOtp);
