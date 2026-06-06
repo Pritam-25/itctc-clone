@@ -1,0 +1,26 @@
+@apiV1 = http://localhost:4001/api/v1
+@authBase = {{apiV1}}/auth
+
+###
+# Step 1: Request OTP (POST /api/v1/auth/send-otp)
+# The full registration payload is sent now and stored in Redis.
+POST {{authBase}}/send-otp
+Content-Type: application/json
+
+{
+  "firstName": "Test",
+  "lastName": "User",
+  "email": "maityp2024@gmail.com",
+  "password": "password123",
+  "confirmPassword": "password123"
+}
+
+###
+# Step 2: Verify OTP and Complete Registration (POST /api/v1/auth/verify-otp)
+# Now only the OTP is required. Registration data is retrieved from the Redis session.
+POST {{authBase}}/verify-otp
+Content-Type: application/json
+
+{
+  "otp": "788434"
+}

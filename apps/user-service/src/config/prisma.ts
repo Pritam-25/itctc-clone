@@ -17,8 +17,7 @@ const createPrismaClient = () => {
 
   return new PrismaClient({
     adapter,
-    log:
-      env.NODE_ENV === "development" ? ["query", "warn", "error"] : ["error"],
+    // log: env.NODE_ENV === "development" ? ["query", "warn", "error"] : ["error"],
   });
 };
 
