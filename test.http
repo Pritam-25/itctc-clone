@@ -2,14 +2,25 @@
 @authBase = {{apiV1}}/auth
 
 ###
-# Register (POST /api/v1/auth/register)
-POST {{authBase}}/register
+# Step 1: Request OTP (POST /api/v1/auth/send-otp)
+# The full registration payload is sent now and stored in Redis.
+POST {{authBase}}/send-otp
 Content-Type: application/json
 
 {
-  "firstName": "test_user_01",
-  "lastName": "test_user_01",
-  "email": "test_user_01@example.com",
-  "password": "password123"
+  "firstName": "Test",
+  "lastName": "User",
+  "email": "maityp2024@gmail.com",
+  "password": "password123",
+  "confirmPassword": "password123"
 }
 
+###
+# Step 2: Verify OTP and Complete Registration (POST /api/v1/auth/verify-otp)
+# Now only the OTP is required. Registration data is retrieved from the Redis session.
+POST {{authBase}}/verify-otp
+Content-Type: application/json
+
+{
+  "otp": "123456"
+}

@@ -1,1 +1,1 @@
-export * from "./user.mapper.js";
+export * from "./auth.mapper.js";
