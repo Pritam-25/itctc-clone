@@ -11,7 +11,4 @@ export const ERROR_MESSAGES: Record<ErrorCode, string> = {
   [ERROR_CODES.INVALID_INPUT]: "Invalid input.",
   [ERROR_CODES.RATE_LIMIT_EXCEEDED]: "Rate limit exceeded.",
   [ERROR_CODES.SERVICE_UNAVAILABLE]: "Service unavailable.",
-  [ERROR_CODES.KAFKA_ERROR]: "Kafka error.",
-  [ERROR_CODES.PAYMENT_FAILED]: "Payment failed.",
-  [ERROR_CODES.BOOKING_FAILED]: "Booking failed.",
 };

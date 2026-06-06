@@ -1,159 +1,399 @@
-# Turborepo starter
+# IRCTC Clone
 
-This Turborepo starter is maintained by the Turborepo core team.
+Production-grade railway ticket booking platform built using Microservices Architecture, TypeScript, PostgreSQL, Redis, Kafka, OpenTelemetry, and Kubernetes.
 
-## Using this example
+---
 
-Run the following command:
+## Overview
 
-```sh
-npx create-turbo@latest
+IRCTC Clone is a distributed railway reservation system inspired by the Indian Railway Catering and Tourism Corporation (IRCTC).
+
+The project is designed to demonstrate:
+
+- Microservices Architecture
+- Domain Driven Design (DDD)
+- Clean Architecture
+- Event Driven Communication
+- Distributed Tracing
+- Observability
+- Scalable Infrastructure
+
+The system is built as a Turborepo monorepo using pnpm workspaces.
+
+---
+
+## Architecture
+
+```text
+                    ┌──────────────┐
+                    │ API Gateway  │
+                    └──────┬───────┘
+                           │
+        ┌──────────────────┼──────────────────┐
+        │                  │                  │
+        ▼                  ▼                  ▼
+
+ ┌─────────────┐   ┌──────────────┐   ┌─────────────┐
+ │ User Service│   │Search Service│   │ Booking Svc │
+ └──────┬──────┘   └──────┬───────┘   └──────┬──────┘
+        │                 │                 │
+        └─────────┬───────┴───────┬─────────┘
+                  │               │
+                  ▼               ▼
+
+           ┌─────────────┐  ┌─────────────┐
+           │ Kafka Broker│  │ Redis Cache │
+           └──────┬──────┘  └─────────────┘
+                  │
+                  ▼
+
+           ┌─────────────┐
+           │Payment Svc  │
+           └─────────────┘
 ```
 
-## What's inside?
+---
 
-This Turborepo includes the following packages/apps:
+## Microservices
 
-### Apps and Packages
+### User Service
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+Responsible for:
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+- Registration
+- Authentication
+- Authorization
+- JWT Management
+- Refresh Tokens
+- User Profile Management
 
-### Utilities
+### Search Service
 
-This Turborepo has some additional tools already setup for you:
+Responsible for:
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+- Train Search
+- Station Search
+- Availability Search
+- Caching Search Results
 
-### Build
+### Booking Service
 
-To build all apps and packages, run the following command:
+Responsible for:
 
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended):
+- Seat Allocation
+- Booking Creation
+- Booking Validation
+- Reservation Logic
 
-```sh
-cd my-turborepo
-turbo build
+### Payment Service
+
+Responsible for:
+
+- Payment Processing
+- Payment Verification
+- Payment Events
+
+### API Gateway
+
+Responsible for:
+
+- Routing
+- Authentication Middleware
+- Rate Limiting
+- Request Validation
+- Request Tracing
+
+---
+
+## Monorepo Structure
+
+```text
+apps/
+│
+├── api-gateway
+├── user-service
+├── booking-service
+├── payment-service
+└── search-service
+
+packages/
+│
+├── contracts
+├── errors
+├── http
+├── kafka
+├── logger
+├── middleware
+├── telemetry
+└── typescript-config
+
+infra/
+│
+├── docker
+├── k8s
+├── grafana
+├── loki
+├── tempo
+├── alloy
+└── prometheus
 ```
 
-Without global `turbo`, use your package manager:
+---
 
-```sh
-cd my-turborepo
-npx turbo build
-pnpm dlx turbo build
-pnpm exec turbo build
+## Technology Stack
+
+### Backend
+
+- Node.js
+- TypeScript
+- Express.js
+
+### Database
+
+- PostgreSQL
+- Prisma ORM
+
+### Cache
+
+- Redis
+- ioredis
+
+### Messaging
+
+- Apache Kafka
+- kafkajs
+
+### Validation
+
+- Zod
+- ts-rest
+
+### Observability
+
+- OpenTelemetry
+- Grafana
+- Loki
+- Tempo
+- Prometheus
+- Alloy
+
+### Infrastructure
+
+- Docker
+- Kubernetes
+
+---
+
+## Prerequisites
+
+Install:
+
+- Node.js 22+
+- pnpm
+- Docker
+- Docker Compose
+- PostgreSQL
+- Redis
+- Kafka
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+cd itctc-clone
 ```
 
-You can build a specific package by using a [filter](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters):
+Install dependencies:
 
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed:
-
-```sh
-turbo build --filter=docs
+```bash
+pnpm install
 ```
 
-Without global `turbo`:
+---
 
-```sh
-npx turbo build --filter=docs
-pnpm exec turbo build --filter=docs
-pnpm exec turbo build --filter=docs
+## Environment Variables
+
+Create:
+
+```bash
+apps/user-service/.env
 ```
 
-### Develop
+Example:
 
-To develop all apps and packages, run the following command:
+```env
+NODE_ENV=development
 
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended):
+PORT=4001
 
-```sh
-cd my-turborepo
-turbo dev
+DATABASE_URL=
+
+REDIS_URL=
+
+JWT_ACCESS_SECRET=
+JWT_REFRESH_SECRET=
+
+KAFKA_BROKERS=
 ```
 
-Without global `turbo`, use your package manager:
+---
 
-```sh
-cd my-turborepo
-npx turbo dev
-pnpm exec turbo dev
-pnpm exec turbo dev
+## Database Setup
+
+Generate Prisma Client:
+
+```bash
+pnpm --filter user-service prisma generate
 ```
 
-You can develop a specific package by using a [filter](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters):
+Run migrations:
 
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed:
-
-```sh
-turbo dev --filter=web
+```bash
+pnpm --filter user-service prisma migrate dev
 ```
 
-Without global `turbo`:
+---
 
-```sh
-npx turbo dev --filter=web
-pnpm exec turbo dev --filter=web
-pnpm exec turbo dev --filter=web
+## Running Infrastructure
+
+Start PostgreSQL, Redis, Kafka and Observability stack:
+
+```bash
+docker compose up -d
 ```
 
-### Remote Caching
+---
 
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
+## Development
 
-Turborepo can use a technique known as [Remote Caching](https://turborepo.dev/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+Run all services:
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended):
-
-```sh
-cd my-turborepo
-turbo login
+```bash
+pnpm dev
 ```
 
-Without global `turbo`, use your package manager:
+Run specific service:
 
-```sh
-cd my-turborepo
-npx turbo login
-pnpm exec turbo login
-pnpm exec turbo login
+```bash
+pnpm --filter user-service dev
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+Run API Gateway:
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed:
-
-```sh
-turbo link
+```bash
+pnpm --filter api-gateway dev
 ```
 
-Without global `turbo`:
+---
 
-```sh
-npx turbo link
-pnpm exec turbo link
-pnpm exec turbo link
+## Build
+
+Build all packages and applications:
+
+```bash
+pnpm build
 ```
 
-## Useful Links
+Build a specific service:
 
-Learn more about the power of Turborepo:
+```bash
+pnpm --filter user-service build
+```
 
-- [Tasks](https://turborepo.dev/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.dev/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.dev/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.dev/docs/reference/configuration)
-- [CLI Usage](https://turborepo.dev/docs/reference/command-line-reference)
+---
+
+## Lint
+
+```bash
+pnpm lint
+```
+
+---
+
+## Type Check
+
+```bash
+pnpm typecheck
+```
+
+---
+
+## Testing
+
+```bash
+pnpm test
+```
+
+---
+
+## Observability
+
+### Grafana
+
+Visualize:
+
+- Logs
+- Metrics
+- Traces
+- Service Health
+
+### Loki
+
+Centralized Log Aggregation
+
+### Tempo
+
+Distributed Tracing
+
+### Prometheus
+
+Metrics Collection
+
+### OpenTelemetry
+
+Trace Propagation Across:
+
+- HTTP
+- Kafka
+- Redis
+
+---
+
+## Logging
+
+Structured JSON logging powered by:
+
+- Pino
+- OpenTelemetry Trace Correlation
+
+Development logs are human-readable.
+
+Production logs are optimized for:
+
+- Grafana Loki
+- Distributed Tracing
+- Centralized Monitoring
+
+---
+
+## Future Roadmap
+
+- Waitlist Management
+- Dynamic Pricing
+- Tatkal Booking
+- Notification Service
+- Email Service
+- SMS Service
+- Admin Dashboard
+- Seat Recommendation Engine
+- AI-Powered Demand Prediction
+
+---
+
+## License
+
+MIT

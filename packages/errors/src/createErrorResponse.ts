@@ -4,7 +4,7 @@ import type { ErrorContract } from "./errorContract.js";
 import type { ErrorCode } from "./errorCodes.js";
 
 type ErrorInput = {
-  code: ErrorCode;
+  code: string;
   message?: string;
   details?: unknown;
 };
@@ -14,7 +14,9 @@ export const createErrorResponse = (
 ): ErrorContract => {
   const code = input.code;
   const message =
-    "message" in input && input.message ? input.message : ERROR_MESSAGES[code];
+    "message" in input && input.message
+      ? input.message
+      : (ERROR_MESSAGES[code as ErrorCode] ?? code);
   const details = "details" in input ? input.details : undefined;
 
   return {

@@ -3,7 +3,7 @@ import type { Request, Response, Application } from "express";
 import cors from "cors";
 import helmet from "helmet";
 import cookieParser from "cookie-parser";
-import router from "@api/v1/routes/user.route.js";
+import router from "@routes";
 
 import { successResponse, statusCode } from "@irctc/http";
 
