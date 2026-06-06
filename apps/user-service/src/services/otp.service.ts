@@ -17,6 +17,7 @@ interface RegistrationSessionData {
 export class OtpService {
   private static readonly RATE_LIMIT_MAX = 5;
   private static readonly RATE_LIMIT_WINDOW = 3600; // 1 hour in seconds
+  private static readonly OTP_ATTEMPT_LIMIT = 5;
 
   /**
    * Stores a hashed OTP in Redis and handles rate limiting.
@@ -88,11 +89,28 @@ export class OtpService {
       throw new ApiError(statusCode.notFound, AUTH_ERROR_CODES.OTP_EXPIRED);
     }
 
+    // 1. Track and limit OTP attempts to prevent brute-force
+    const attemptKey = `otp_attempts:${sessionId}`;
+    const attempts = await redis.incr(attemptKey);
+
+    if (attempts === 1) {
+      await redis.expire(attemptKey, env.OTP_TTL);
+    }
+
+    if (attempts > this.OTP_ATTEMPT_LIMIT) {
+      // Delete OTP session to block further attempts
+      await redis.del(`otp_session:${sessionId}`);
+      throw new ApiError(statusCode.tooManyRequests, AUTH_ERROR_CODES.OTP_LOCKED);
+    }
+
     const isValid = await bcrypt.compare(otp, hashedOtp);
 
     if (!isValid) {
       throw new ApiError(statusCode.badRequest, AUTH_ERROR_CODES.OTP_INVALID);
     }
+
+    // Clear attempts on success
+    await redis.del(attemptKey);
 
     return true;
   }
