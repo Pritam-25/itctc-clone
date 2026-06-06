@@ -24,9 +24,13 @@ export class OtpService {
    */
   static async storeOtp(email: string, otp: string): Promise<string> {
     const rateKey = `otp_rate:${email}`;
-    const currentCount = await redis.get(rateKey);
+    const nextCount = await redis.incr(rateKey);
 
-    if (currentCount && parseInt(currentCount) >= this.RATE_LIMIT_MAX) {
+    if (nextCount === 1) {
+      await redis.expire(rateKey, this.RATE_LIMIT_WINDOW);
+    }
+
+    if (nextCount > this.RATE_LIMIT_MAX) {
       throw new ApiError(
         statusCode.tooManyRequests,
         COMMON_ERROR_CODES.RATE_LIMIT_EXCEEDED,
@@ -37,11 +41,6 @@ export class OtpService {
     const hashedOtp = await bcrypt.hash(otp, 10);
 
     await redis.set(`otp_session:${sessionId}`, hashedOtp, "EX", env.OTP_TTL);
-
-    await redis.incr(rateKey);
-    if (currentCount === null) {
-      await redis.expire(rateKey, this.RATE_LIMIT_WINDOW);
-    }
 
     return sessionId;
   }
