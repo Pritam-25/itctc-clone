@@ -16,17 +16,19 @@ const errorHandlerMiddleware: ErrorRequestHandler = (err, req, res, next) => {
   const requestId = getRequestId();
   const log = requestId ? logger.child({ requestId }) : logger;
 
-  log.error(
-    {
-      err,
-      requestId,
-      statusCode: normalizedError.statusCode,
-      path: sanitizedPath,
-      method: req.method,
-      module: "http",
-    },
-    err instanceof Error ? err.message : "Unhandled error",
-  );
+  if (normalizedError.statusCode >= 500) {
+    log.error(
+      {
+        err,
+        requestId,
+        statusCode: normalizedError.statusCode,
+        path: sanitizedPath,
+        method: req.method,
+        module: "http",
+      },
+      err instanceof Error ? err.message : "Unhandled error",
+    );
+  }
 
   return res.status(normalizedError.statusCode).json(errorResponse(err));
 };

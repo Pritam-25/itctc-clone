@@ -8,18 +8,28 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import type { AuthResponseDto } from "@dto/auth";
 import { AuthMapper } from "@mappers/auth.mapper.js";
+import { logger } from "@irctc/logger";
 
 export class AuthService {
   constructor(private repo: AuthRepository) {}
 
   /**
-   * Generates JWT token for authenticated users.
-   * @param userId - User ID
-   * @returns Signed JWT token
+   * Generates Access JWT token for authenticated users.
+   * @returns Signed Access JWT token
    */
-  private generateToken(userId: string, expiresIn: any) {
+  private generateAccessToken(userId: string): string {
     return jwt.sign({ userId }, env.JWT_SECRET, {
-      expiresIn,
+      expiresIn: env.JWT_ACCESS_EXPIRES_IN,
+    });
+  }
+
+  /**
+   * Generates Refresh JWT token for authenticated users.
+   * @returns Signed Refresh JWT token
+   */
+  private generateRefreshToken(userId: string): string {
+    return jwt.sign({ userId }, env.JWT_SECRET, {
+      expiresIn: env.JWT_REFRESH_EXPIRES_IN,
     });
   }
 
@@ -33,10 +43,14 @@ export class AuthService {
   async register(data: RegisterRequestDto): Promise<AuthResponseDto> {
     const existingUser = await this.repo.findUserByEmail(data.email);
     if (existingUser) {
-      throw new ApiError(
-        statusCode.conflict,
-        ERROR_CODES.USER_ALREADY_EXISTS as any,
+      logger.warn(
+        {
+          module: "auth",
+          email: data.email,
+        },
+        "User already exists",
       );
+      throw new ApiError(statusCode.conflict, ERROR_CODES.USER_ALREADY_EXISTS);
     }
 
     const hashedPassword = await bcrypt.hash(data.password, 10);
@@ -48,8 +62,16 @@ export class AuthService {
       password: hashedPassword,
     });
 
-    const accessToken = this.generateToken(user.id, "15m");
-    const refreshToken = this.generateToken(user.id, "7d");
+    const accessToken = this.generateAccessToken(user.id);
+    const refreshToken = this.generateRefreshToken(user.id);
+
+    logger.info(
+      {
+        module: "auth",
+        userId: user.id,
+      },
+      "User registered successfully",
+    );
 
     return AuthMapper.toAuthResponseDto(user, accessToken, refreshToken);
   }

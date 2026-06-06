@@ -31,6 +31,8 @@ export const env = createEnv({
         message: "CORS_ORIGINS must include at least one origin",
       }),
     JWT_SECRET: z.string().min(1),
+    JWT_ACCESS_EXPIRES_IN: z.enum(["15m", "30m", "1h", "1d"]).default("15m"),
+    JWT_REFRESH_EXPIRES_IN: z.enum(["7d", "30d"]).default("7d"),
     SERVICE_NAME: z.string().default("user-service"),
     OTEL_EXPORTER_OTLP_ENDPOINT: z.url().optional(),
     OTEL_DEBUG: z.enum(["true", "false"]).default("false"),

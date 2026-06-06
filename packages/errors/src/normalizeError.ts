@@ -27,8 +27,10 @@ const normalizeFromCode = (
   code: string,
   message?: string,
   details?: unknown,
+  overrideStatus?: number,
 ): NormalizedError => {
-  const statusCode = (ERROR_STATUS_MAP as Record<string, number>)[code] ?? 500;
+  const statusCode =
+    overrideStatus ?? (ERROR_STATUS_MAP as Record<string, number>)[code] ?? 500;
   const fallbackMessage =
     ERROR_MESSAGES[code as ErrorCode] ??
     ERROR_MESSAGES[ERROR_CODES.INTERNAL_ERROR];
@@ -43,7 +45,12 @@ const normalizeFromCode = (
 
 export const normalizeError = (error: unknown): NormalizedError => {
   if (error instanceof ApiError) {
-    return normalizeFromCode(error.code, error.message, error.details);
+    return normalizeFromCode(
+      error.code,
+      error.message,
+      error.details,
+      error.statusCode,
+    );
   }
 
   const prismaCode = normalizePrismaError(error);
