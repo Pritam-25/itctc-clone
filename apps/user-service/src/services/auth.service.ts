@@ -32,11 +32,6 @@ export class AuthService {
    * Sends an OTP to the user's email and stores registration state in Redis.
    */
   async sendOtp(data: RegisterRequestDto): Promise<string> {
-    logger.info(
-      { module: "auth", email: data.email },
-      "Initiating OTP sending flow",
-    );
-
     // 1. Check if user already exists to prevent spam/duplicate registrations
     const existingUser = await this.repo.findUserByEmail(data.email);
     if (existingUser) {
@@ -79,11 +74,6 @@ export class AuthService {
     sessionId: string,
     data: VerifyOtpRequestDto,
   ): Promise<AuthResponseDto> {
-    logger.info(
-      { module: "auth", sessionId },
-      "Verifying OTP and completing registration",
-    );
-
     // 1. Verify OTP
     await OtpService.verifyOtp(sessionId, data.otp);
 
@@ -139,7 +129,7 @@ export class AuthService {
 
     logger.info(
       { module: "auth", userId: user.id, email: user.email },
-      "User registered successfully via OTP verification",
+      "User registered successfully",
     );
 
     return AuthMapper.toAuthResponseDto(user, accessToken, refreshToken);

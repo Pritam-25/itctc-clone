@@ -6,6 +6,7 @@ import { ApiError } from "@irctc/errors";
 import { statusCode } from "@irctc/http";
 import { ERROR_CODES as AUTH_ERROR_CODES } from "@utils/errors";
 import { ERROR_CODES as COMMON_ERROR_CODES } from "@irctc/errors";
+import { logger } from "@irctc/logger";
 
 interface RegistrationSessionData {
   firstName: string;
@@ -31,6 +32,10 @@ export class OtpService {
     }
 
     if (nextCount > this.RATE_LIMIT_MAX) {
+      logger.warn(
+        { module: "otp", email, count: nextCount },
+        "OTP request rate limit exceeded",
+      );
       throw new ApiError(
         statusCode.tooManyRequests,
         COMMON_ERROR_CODES.RATE_LIMIT_EXCEEDED,
@@ -85,6 +90,10 @@ export class OtpService {
     const hashedOtp = await redis.get(`otp_session:${sessionId}`);
 
     if (!hashedOtp) {
+      logger.warn(
+        { module: "otp", sessionId },
+        "OTP session not found or expired",
+      );
       throw new ApiError(statusCode.notFound, AUTH_ERROR_CODES.OTP_EXPIRED);
     }
 
@@ -97,6 +106,10 @@ export class OtpService {
     }
 
     if (attempts > this.OTP_ATTEMPT_LIMIT) {
+      logger.warn(
+        { module: "otp", sessionId, attempts },
+        "OTP session locked due to too many attempts",
+      );
       // Delete OTP session to block further attempts
       await redis.del(`otp_session:${sessionId}`);
       throw new ApiError(
@@ -108,6 +121,10 @@ export class OtpService {
     const isValid = await bcrypt.compare(otp, hashedOtp);
 
     if (!isValid) {
+      logger.warn(
+        { module: "otp", sessionId, attempt: attempts },
+        "Invalid OTP provided",
+      );
       throw new ApiError(statusCode.badRequest, AUTH_ERROR_CODES.OTP_INVALID);
     }
 

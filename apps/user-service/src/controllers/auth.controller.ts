@@ -1,6 +1,6 @@
 import type { RegisterRequestDto, VerifyOtpRequestDto } from "@dto/auth";
 import { statusCode, successResponse, errorResponse } from "@irctc/http";
-import { createErrorResponse } from "@irctc/errors";
+import { createErrorResponse, ApiError } from "@irctc/errors";
 import type { AuthService } from "@services/auth.service.js";
 import type { Request, Response } from "express";
 import { env } from "@config/env.js";
@@ -57,12 +57,9 @@ export class AuthController {
   async verifyOtp(req: Request, res: Response) {
     const sessionId = req.cookies[COOKIE_NAMES.OTP_SESSION];
     if (!sessionId) {
-      return res.status(statusCode.badRequest).json(
-        errorResponse(
-          createErrorResponse({
-            code: ERROR_CODES.OTP_SESSION_NOT_FOUND,
-          }),
-        ),
+      throw new ApiError(
+        statusCode.badRequest,
+        ERROR_CODES.OTP_SESSION_NOT_FOUND,
       );
     }
 
