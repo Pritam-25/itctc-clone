@@ -24,3 +24,8 @@ Content-Type: application/json
 {
   "otp": "788434"
 }
+
+###
+# Step 3: Get User Profile (GET /api/v1/auth/me)
+GET {{authBase}}/me
+

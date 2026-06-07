@@ -34,7 +34,7 @@ const durationColor = "\x1b[47m\x1b[30m"; // White BG, Black FG
 const METHOD_WIDTH = 7;
 const STATUS_WIDTH = 3;
 const DURATION_WIDTH = 8;
-const REMOTE_ADDR_WIDTH = 15;
+const REMOTE_ADDR_WIDTH = 16;
 
 export default (opts: Record<string, unknown>) =>
   pretty({
