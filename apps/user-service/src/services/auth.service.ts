@@ -170,6 +170,11 @@ export class AuthService {
           { module: "auth", sessionId, userId },
           "Fingerprint mismatch detected",
         );
+        await this.logout(sessionId, userId);
+        throw new ApiError(
+          statusCode.unauthorized,
+          ERROR_CODES.DEVICE_FINGERPRINT_MISMATCH,
+        );
       }
 
       // 3. Hash incoming refresh token and compare (Reuse Detection)
@@ -241,7 +246,8 @@ export class AuthService {
         const data = await redis.get(REDIS_KEYS.authSession(id));
         if (!data) return null;
         const parsed = JSON.parse(data);
-        return { sessionId: id, ...parsed };
+        const { refreshTokenHash, ...safeSession } = parsed;
+        return { sessionId: id, ...safeSession };
       }),
     );
 
