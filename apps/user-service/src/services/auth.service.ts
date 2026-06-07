@@ -5,6 +5,8 @@ import { env } from "@config/env.js";
 import { ApiError } from "@irctc/errors";
 import { statusCode } from "@irctc/http";
 import { ERROR_CODES } from "@utils/errors";
+import { REDIS_KEYS } from "@utils/constants/redis-keys.js";
+import { AUTH_DURATIONS } from "@utils/constants/auth.js";
 import type { AuthRepository } from "@repository/auth.repo.js";
 import jwt from "jsonwebtoken";
 import type {
@@ -100,19 +102,24 @@ export class AuthService {
       refreshTokenHash,
       createdAt: new Date().toISOString(),
       lastUsedAt: new Date().toISOString(),
-      expiresAt: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(), // 30 days
+      expiresAt: new Date(
+        Date.now() + AUTH_DURATIONS.SESSION_TTL_MS,
+      ).toISOString(), // 30 days
     };
 
     await redis.set(
-      `auth:session:${sessionId}`,
+      REDIS_KEYS.authSession(sessionId),
       JSON.stringify(sessionData),
       "EX",
-      30 * 24 * 60 * 60, // 30 days in seconds
+      AUTH_DURATIONS.SESSION_TTL_SECONDS, // 30 days in seconds
     );
 
     // Track session for this user to support logout-all
-    await redis.sadd(`auth:user:${user.id}:sessions`, sessionId);
-    await redis.expire(`auth:user:${user.id}:sessions`, 30 * 24 * 60 * 60);
+    await redis.sadd(REDIS_KEYS.userSessions(user.id), sessionId);
+    await redis.expire(
+      REDIS_KEYS.userSessions(user.id),
+      AUTH_DURATIONS.SESSION_TTL_SECONDS,
+    );
 
     logger.info(
       { module: "auth", userId: user.id, sessionId },
@@ -135,11 +142,14 @@ export class AuthService {
       const { sub: userId, sessionId } = decoded;
 
       if (decoded.type !== "refresh") {
-        throw new ApiError(statusCode.unauthorized, "Invalid token type");
+        throw new ApiError(
+          statusCode.unauthorized,
+          ERROR_CODES.INVALID_TOKEN_TYPE,
+        );
       }
 
       // 1. Load session from Redis
-      const sessionKey = `auth:session:${sessionId}`;
+      const sessionKey = REDIS_KEYS.authSession(sessionId);
       const sessionJson = await redis.get(sessionKey);
       if (!sessionJson) {
         logger.warn(
@@ -148,7 +158,7 @@ export class AuthService {
         );
         throw new ApiError(
           statusCode.unauthorized,
-          "Session expired or invalid",
+          ERROR_CODES.SESSION_EXPIRED_OR_REVOKED,
         );
       }
 
@@ -175,13 +185,14 @@ export class AuthService {
         await this.logoutAll(userId);
         throw new ApiError(
           statusCode.unauthorized,
-          "Refresh token reuse detected",
+          ERROR_CODES.REFRESH_TOKEN_INVALID,
         );
       }
 
       // 4. Generate NEW tokens (Rotation)
       const user = await this.repo.findById(userId);
-      if (!user) throw new ApiError(statusCode.notFound, "User not found");
+      if (!user)
+        throw new ApiError(statusCode.notFound, ERROR_CODES.USER_NOT_FOUND);
 
       const accessToken = this.generateAccessToken(
         user.id,
@@ -201,7 +212,7 @@ export class AuthService {
         sessionKey,
         JSON.stringify(session),
         "EX",
-        30 * 24 * 60 * 60,
+        AUTH_DURATIONS.SESSION_TTL_SECONDS,
       );
 
       logger.info(
@@ -211,7 +222,10 @@ export class AuthService {
       return AuthMapper.toAuthResponseDto(user, accessToken, newRefreshToken);
     } catch (error) {
       if (error instanceof ApiError) throw error;
-      throw new ApiError(statusCode.unauthorized, "Invalid refresh token");
+      throw new ApiError(
+        statusCode.unauthorized,
+        ERROR_CODES.INVALID_REFRESH_TOKEN,
+      );
     }
   }
 
@@ -219,12 +233,12 @@ export class AuthService {
    * Retrieves all active sessions for a user.
    */
   async getSessions(userId: string): Promise<any[]> {
-    const sessionsKey = `auth:user:${userId}:sessions`;
+    const sessionsKey = REDIS_KEYS.userSessions(userId);
     const sessionIds = await redis.smembers(sessionsKey);
 
     const sessions = await Promise.all(
       sessionIds.map(async (id) => {
-        const data = await redis.get(`auth:session:${id}`);
+        const data = await redis.get(REDIS_KEYS.authSession(id));
         if (!data) return null;
         const parsed = JSON.parse(data);
         return { sessionId: id, ...parsed };
@@ -238,8 +252,8 @@ export class AuthService {
    * Revokes a specific session.
    */
   async revokeSession(sessionId: string, userId: string): Promise<void> {
-    await redis.del(`auth:session:${sessionId}`);
-    await redis.srem(`auth:user:${userId}:sessions`, sessionId);
+    await redis.del(REDIS_KEYS.authSession(sessionId));
+    await redis.srem(REDIS_KEYS.userSessions(userId), sessionId);
     logger.info({ module: "auth", sessionId, userId }, "Session revoked");
   }
 
@@ -252,8 +266,8 @@ export class AuthService {
       "Logging out current device",
     );
 
-    await redis.del(`auth:session:${sessionId}`);
-    await redis.srem(`auth:user:${userId}:sessions`, sessionId);
+    await redis.del(REDIS_KEYS.authSession(sessionId));
+    await redis.srem(REDIS_KEYS.userSessions(userId), sessionId);
 
     logger.info({ module: "auth", sessionId }, "Session deleted successfully");
   }
@@ -264,11 +278,11 @@ export class AuthService {
   async logoutAll(userId: string): Promise<void> {
     logger.info({ module: "auth", userId }, "Logging out all devices");
 
-    const sessionsKey = `auth:user:${userId}:sessions`;
+    const sessionsKey = REDIS_KEYS.userSessions(userId);
     const sessions = await redis.smembers(sessionsKey);
 
     if (sessions.length > 0) {
-      const sessionKeys = sessions.map((id) => `auth:session:${id}`);
+      const sessionKeys = sessions.map((id) => REDIS_KEYS.authSession(id));
       await redis.del(...sessionKeys);
     }
 

@@ -3,7 +3,8 @@ import jwt from "jsonwebtoken";
 import { env } from "@config/env.js";
 import { ApiError } from "@irctc/errors";
 import { statusCode } from "@irctc/http";
-import { COOKIE_NAMES } from "@utils/constants.js";
+import { ERROR_CODES } from "@utils/errors";
+import { COOKIE_NAMES } from "@utils/constants/cookie.js";
 
 export interface AuthUser {
   userId: string;
@@ -19,14 +20,20 @@ export const authMiddleware = (
   const token = req.cookies[COOKIE_NAMES.ACCESS_TOKEN];
 
   if (!token) {
-    throw new ApiError(statusCode.unauthorized, "Access token missing");
+    throw new ApiError(
+      statusCode.unauthorized,
+      ERROR_CODES.ACCESS_TOKEN_MISSING,
+    );
   }
 
   try {
     const decoded = jwt.verify(token, env.JWT_SECRET) as any;
 
     if (decoded.type !== "access") {
-      throw new ApiError(statusCode.unauthorized, "Invalid token type");
+      throw new ApiError(
+        statusCode.unauthorized,
+        ERROR_CODES.INVALID_TOKEN_TYPE,
+      );
     }
 
     // Attach user information to the request
@@ -41,7 +48,7 @@ export const authMiddleware = (
     if (error instanceof ApiError) throw error;
     throw new ApiError(
       statusCode.unauthorized,
-      "Invalid or expired access token",
+      ERROR_CODES.REFRESH_TOKEN_INVALID,
     );
   }
 };

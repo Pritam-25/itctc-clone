@@ -4,6 +4,8 @@ import { prisma } from "@config/prisma.js";
 import { disconnectRedis } from "@config/redis.js";
 import app from "./app.js";
 import type { Server } from "node:http";
+import { registerErrorMessages } from "@irctc/errors";
+import { ERROR_MESSAGES } from "@utils/errors";
 
 const PORT = env.PORT;
 
@@ -52,6 +54,7 @@ const shutdown = async (signal: NodeJS.Signals) => {
 };
 
 const startServer = async () => {
+  registerErrorMessages(ERROR_MESSAGES);
   await prisma.$connect();
   logger.info({ module: "prisma" }, "Prisma connected successfully.");
 

@@ -8,7 +8,7 @@ import { createErrorResponse, ApiError } from "@irctc/errors";
 import type { AuthService } from "@services/auth.service.js";
 import type { Request, Response } from "express";
 import { env } from "@config/env.js";
-import { COOKIE_NAMES, COOKIE_MAX_AGE } from "@utils/constants.js";
+import { COOKIE_NAMES, COOKIE_MAX_AGE } from "@utils/constants/cookie.js";
 import { ERROR_CODES } from "@utils/errors";
 
 import { getDeviceFingerprint } from "@utils/fingerprint.js";
@@ -46,7 +46,10 @@ export class AuthController {
     const refreshToken = req.cookies[COOKIE_NAMES.REFRESH_TOKEN];
 
     if (!refreshToken) {
-      throw new ApiError(statusCode.unauthorized, "Refresh token missing");
+      throw new ApiError(
+        statusCode.unauthorized,
+        ERROR_CODES.REFRESH_TOKEN_MISSING,
+      );
     }
 
     const fingerprint = getDeviceFingerprint(req);
@@ -92,7 +95,10 @@ export class AuthController {
     const userId = (req as any).user.userId;
 
     if (!sessionId) {
-      throw new ApiError(statusCode.badRequest, "Session ID is required");
+      throw new ApiError(
+        statusCode.badRequest,
+        ERROR_CODES.SESSION_ID_REQUIRED,
+      );
     }
 
     await this.service.revokeSession(sessionId, userId);
@@ -112,7 +118,7 @@ export class AuthController {
     const user = await this.service.getUserById(userId);
 
     if (!user) {
-      throw new ApiError(statusCode.notFound, "User not found");
+      throw new ApiError(statusCode.notFound, ERROR_CODES.USER_NOT_FOUND);
     }
 
     return res
@@ -154,7 +160,10 @@ export class AuthController {
     const refreshToken = req.cookies[COOKIE_NAMES.REFRESH_TOKEN];
 
     if (!refreshToken) {
-      throw new ApiError(statusCode.unauthorized, "Refresh token missing");
+      throw new ApiError(
+        statusCode.unauthorized,
+        ERROR_CODES.REFRESH_TOKEN_MISSING,
+      );
     }
 
     try {

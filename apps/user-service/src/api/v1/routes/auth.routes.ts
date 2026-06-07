@@ -10,6 +10,18 @@ const router: Router = Router();
 const authController = createAuthController();
 
 router.post(
+  "/send-otp",
+  validateSchema(RegisterSchema),
+  asyncHandler(authController.sendOtp.bind(authController)),
+);
+
+router.post(
+  "/verify-otp",
+  validateSchema(VerifyOtpRequestSchema),
+  asyncHandler(authController.verifyOtp.bind(authController)),
+);
+
+router.post(
   "/login",
   validateSchema(LoginSchema),
   asyncHandler(authController.login.bind(authController)),
@@ -18,6 +30,13 @@ router.post(
 router.post(
   "/refresh",
   asyncHandler(authController.refresh.bind(authController)),
+);
+
+router.get(
+  "/me",
+  authMiddleware,
+  sessionMiddleware,
+  asyncHandler(authController.me.bind(authController)),
 );
 
 router.post(
@@ -46,25 +65,6 @@ router.delete(
   authMiddleware,
   sessionMiddleware,
   asyncHandler(authController.revokeSession.bind(authController)),
-);
-
-router.get(
-  "/me",
-  authMiddleware,
-  sessionMiddleware,
-  asyncHandler(authController.me.bind(authController)),
-);
-
-router.post(
-  "/send-otp",
-  validateSchema(RegisterSchema),
-  asyncHandler(authController.sendOtp.bind(authController)),
-);
-
-router.post(
-  "/verify-otp",
-  validateSchema(VerifyOtpRequestSchema),
-  asyncHandler(authController.verifyOtp.bind(authController)),
 );
 
 export default router;

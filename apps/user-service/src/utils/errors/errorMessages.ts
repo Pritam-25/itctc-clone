@@ -15,4 +15,13 @@ export const ERROR_MESSAGES: Record<ErrorCode, string> = {
     "Failed to send OTP email. Please try again.",
   [ERROR_CODES.REGISTRATION_SESSION_EXPIRED]:
     "Your registration session has expired. Please start over.",
+  [ERROR_CODES.SESSION_CONTEXT_MISSING]: "User session context is missing.",
+  [ERROR_CODES.SESSION_EXPIRED_OR_REVOKED]:
+    "Session has expired or been revoked.",
+  [ERROR_CODES.ACCESS_TOKEN_MISSING]: "Access token is missing.",
+  [ERROR_CODES.INVALID_TOKEN_TYPE]: "Invalid token type provided.",
+  [ERROR_CODES.REFRESH_TOKEN_MISSING]: "Refresh token is missing.",
+  [ERROR_CODES.SESSION_ID_REQUIRED]: "Session ID is required.",
+  [ERROR_CODES.USER_NOT_FOUND]: "User not found.",
+  [ERROR_CODES.INVALID_REFRESH_TOKEN]: "Invalid or expired refresh token.",
 };

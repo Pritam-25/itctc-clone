@@ -2,6 +2,7 @@ import { ApiError } from "./apiError.js";
 import { ERROR_CODES, type ErrorCode } from "./errorCodes.js";
 import { ERROR_MESSAGES } from "./errorMessages.js";
 import { normalizePrismaError } from "./normalizePrismaError.js";
+import { getMessageFromRegistry } from "./registry.js";
 
 type NormalizedError = {
   statusCode: number;
@@ -32,13 +33,17 @@ const normalizeFromCode = (
   const statusCode =
     overrideStatus ?? (ERROR_STATUS_MAP as Record<string, number>)[code] ?? 500;
   const fallbackMessage =
+    getMessageFromRegistry(code) ??
     ERROR_MESSAGES[code as ErrorCode] ??
     ERROR_MESSAGES[ERROR_CODES.INTERNAL_ERROR];
+
+  const resolvedMessage =
+    !message || message === code ? fallbackMessage : message;
 
   return {
     statusCode,
     errorCode: code,
-    message: message && message.length > 0 ? message : fallbackMessage,
+    message: resolvedMessage,
     details,
   };
 };
