@@ -71,10 +71,7 @@ export class AuthService {
     // 1. Find user
     const user = await this.repo.findUserByEmail(data.email);
     if (!user) {
-      logger.warn(
-        { module: "auth", email: data.email },
-        "Login failed: User not found",
-      );
+      logger.warn({ module: "auth" }, "Login failed: User not found");
       throw new ApiError(
         statusCode.unauthorized,
         ERROR_CODES.INVALID_CREDENTIALS,
@@ -84,10 +81,7 @@ export class AuthService {
     // 2. Verify password
     const isPasswordValid = await bcrypt.compare(data.password, user.password);
     if (!isPasswordValid) {
-      logger.warn(
-        { module: "auth", email: data.email },
-        "Login failed: Invalid password",
-      );
+      logger.warn({ module: "auth" }, "Login failed: Invalid password");
       throw new ApiError(
         statusCode.unauthorized,
         ERROR_CODES.INVALID_CREDENTIALS,
@@ -135,7 +129,7 @@ export class AuthService {
     );
 
     logger.info(
-      { module: "auth", userId: user.id, sessionId },
+      { module: "auth", userId: user.id },
       "User logged in successfully",
     );
 
@@ -151,7 +145,10 @@ export class AuthService {
     fingerprint: string,
   ): Promise<AuthResponseDto> {
     try {
-      const decoded = jwt.verify(refreshToken, env.JWT_SECRET) as RefreshTokenPayload;
+      const decoded = jwt.verify(
+        refreshToken,
+        env.JWT_SECRET,
+      ) as RefreshTokenPayload;
       const { sub: userId, sessionId } = decoded;
 
       if (decoded.type !== "refresh") {
@@ -165,10 +162,7 @@ export class AuthService {
       const sessionKey = REDIS_KEYS.authSession(sessionId);
       const sessionJson = await redis.get(sessionKey);
       if (!sessionJson) {
-        logger.warn(
-          { module: "auth", sessionId },
-          "Refresh failed: Session not found",
-        );
+        logger.warn({ module: "auth" }, "Refresh failed: Session not found");
         throw new ApiError(
           statusCode.unauthorized,
           ERROR_CODES.SESSION_EXPIRED_OR_REVOKED,
@@ -180,7 +174,7 @@ export class AuthService {
       // 2. Verify Fingerprint (Optional but recommended)
       if (session.fingerprint !== fingerprint) {
         logger.warn(
-          { module: "auth", sessionId, userId },
+          { module: "auth", userId },
           "Fingerprint mismatch detected",
         );
         await this.logout(sessionId, userId);
@@ -197,7 +191,7 @@ export class AuthService {
 
       if (session.refreshTokenHash !== incomingHash) {
         logger.error(
-          { module: "auth", sessionId, userId },
+          { module: "auth", userId },
           "Refresh token reuse detected! Revoking all sessions.",
         );
         await this.logoutAll(userId);
@@ -233,10 +227,7 @@ export class AuthService {
         AUTH_DURATIONS.SESSION_TTL_SECONDS,
       );
 
-      logger.info(
-        { module: "auth", userId, sessionId },
-        "Token refreshed successfully",
-      );
+      logger.info({ module: "auth", userId }, "Token refreshed successfully");
       return AuthMapper.toAuthResponseDto(user, accessToken, newRefreshToken);
     } catch (error) {
       if (error instanceof ApiError) throw error;
@@ -279,7 +270,7 @@ export class AuthService {
     const session = JSON.parse(sessionJson);
     if (session.userId !== userId) {
       logger.warn(
-        { module: "auth", sessionId, userId, ownerId: session.userId },
+        { module: "auth", userId, ownerId: session.userId },
         "Unauthorized session revocation attempt",
       );
       throw new ApiError(
@@ -290,22 +281,19 @@ export class AuthService {
 
     await redis.del(sessionKey);
     await redis.srem(REDIS_KEYS.userSessions(userId), sessionId);
-    logger.info({ module: "auth", sessionId, userId }, "Session revoked");
+    logger.info({ module: "auth", userId }, "Session revoked");
   }
 
   /**
    * Logs out the current device by deleting the session.
    */
   async logout(sessionId: string, userId: string): Promise<void> {
-    logger.info(
-      { module: "auth", sessionId, userId },
-      "Logging out current device",
-    );
+    logger.info({ module: "auth", userId }, "Logging out current device");
 
     await redis.del(REDIS_KEYS.authSession(sessionId));
     await redis.srem(REDIS_KEYS.userSessions(userId), sessionId);
 
-    logger.info({ module: "auth", sessionId }, "Session deleted successfully");
+    logger.info({ module: "auth", userId }, "Session deleted successfully");
   }
 
   /**
@@ -345,7 +333,7 @@ export class AuthService {
     const existingUser = await this.repo.findUserByEmail(data.email);
     if (existingUser) {
       logger.warn(
-        { module: "auth", email: data.email },
+        { module: "auth" },
         "OTP request failed: User already exists",
       );
       throw new ApiError(statusCode.conflict, ERROR_CODES.USER_ALREADY_EXISTS);
@@ -390,7 +378,7 @@ export class AuthService {
     const regData = await OtpService.getRegistrationSession(sessionId);
     if (!regData) {
       logger.warn(
-        { module: "auth", sessionId },
+        { module: "auth" },
         "Registration session expired or missing",
       );
       throw new ApiError(
@@ -406,10 +394,7 @@ export class AuthService {
     try {
       await OtpService.deleteRegistrationSession(sessionId);
     } catch (error) {
-      logger.warn(
-        { module: "auth", sessionId, error },
-        "Session cleanup failed",
-      );
+      logger.warn({ module: "auth", error }, "Session cleanup failed");
     }
 
     return authResponse;
@@ -444,7 +429,7 @@ export class AuthService {
     const refreshToken = this.generateRefreshToken(user.id, sessionId);
 
     logger.info(
-      { module: "auth", userId: user.id, email: user.email },
+      { module: "auth", userId: user.id },
       "User registered successfully",
     );
 

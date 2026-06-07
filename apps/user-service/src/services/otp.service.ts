@@ -7,6 +7,7 @@ import { statusCode } from "@irctc/http";
 import { ERROR_CODES as AUTH_ERROR_CODES } from "@utils/errors";
 import { ERROR_CODES as COMMON_ERROR_CODES } from "@irctc/errors";
 import { logger } from "@irctc/logger";
+import { REDIS_KEYS } from "@utils/constants/redis-keys.js";
 
 interface RegistrationSessionData {
   firstName: string;
@@ -24,7 +25,7 @@ export class OtpService {
    * Stores a hashed OTP in Redis and handles rate limiting.
    */
   static async storeOtp(email: string, otp: string): Promise<string> {
-    const rateKey = `otp_rate:${email}`;
+    const rateKey = REDIS_KEYS.otpRate(email);
     const nextCount = await redis.incr(rateKey);
 
     if (nextCount === 1) {
@@ -33,7 +34,7 @@ export class OtpService {
 
     if (nextCount > this.RATE_LIMIT_MAX) {
       logger.warn(
-        { module: "otp", email, count: nextCount },
+        { module: "otp", count: nextCount },
         "OTP request rate limit exceeded",
       );
       throw new ApiError(
@@ -45,7 +46,7 @@ export class OtpService {
     const sessionId = randomUUID();
     const hashedOtp = await bcrypt.hash(otp, 10);
 
-    await redis.set(`otp_session:${sessionId}`, hashedOtp, "EX", env.OTP_TTL);
+    await redis.set(REDIS_KEYS.otp(sessionId), hashedOtp, "EX", env.OTP_TTL);
 
     return sessionId;
   }
@@ -58,7 +59,7 @@ export class OtpService {
     data: RegistrationSessionData,
   ): Promise<void> {
     await redis.set(
-      `reg_session:${sessionId}`,
+      REDIS_KEYS.registrationSession(sessionId),
       JSON.stringify(data),
       "EX",
       env.OTP_TTL,
@@ -71,7 +72,7 @@ export class OtpService {
   static async getRegistrationSession(
     sessionId: string,
   ): Promise<RegistrationSessionData | null> {
-    const data = await redis.get(`reg_session:${sessionId}`);
+    const data = await redis.get(REDIS_KEYS.registrationSession(sessionId));
     if (!data) return null;
     return JSON.parse(data);
   }
@@ -80,25 +81,25 @@ export class OtpService {
    * Cleans up both OTP and registration sessions.
    */
   static async deleteRegistrationSession(sessionId: string): Promise<void> {
-    await redis.del(`otp_session:${sessionId}`, `reg_session:${sessionId}`);
+    await redis.del(
+      REDIS_KEYS.otp(sessionId),
+      REDIS_KEYS.registrationSession(sessionId),
+    );
   }
 
   /**
    * Verifies the provided OTP against the stored hashed OTP.
    */
   static async verifyOtp(sessionId: string, otp: string): Promise<boolean> {
-    const hashedOtp = await redis.get(`otp_session:${sessionId}`);
+    const hashedOtp = await redis.get(REDIS_KEYS.otp(sessionId));
 
     if (!hashedOtp) {
-      logger.warn(
-        { module: "otp", sessionId },
-        "OTP session not found or expired",
-      );
+      logger.warn({ module: "otp" }, "OTP session not found or expired");
       throw new ApiError(statusCode.notFound, AUTH_ERROR_CODES.OTP_EXPIRED);
     }
 
     // 1. Track and limit OTP attempts to prevent brute-force
-    const attemptKey = `otp_attempts:${sessionId}`;
+    const attemptKey = REDIS_KEYS.otpAttempts(sessionId);
     const attempts = await redis.incr(attemptKey);
 
     if (attempts === 1) {
@@ -107,11 +108,11 @@ export class OtpService {
 
     if (attempts > this.OTP_ATTEMPT_LIMIT) {
       logger.warn(
-        { module: "otp", sessionId, attempts },
+        { module: "otp", attempts },
         "OTP session locked due to too many attempts",
       );
       // Delete OTP session to block further attempts
-      await redis.del(`otp_session:${sessionId}`);
+      await redis.del(REDIS_KEYS.otp(sessionId));
       throw new ApiError(
         statusCode.tooManyRequests,
         AUTH_ERROR_CODES.OTP_LOCKED,
@@ -121,10 +122,7 @@ export class OtpService {
     const isValid = await bcrypt.compare(otp, hashedOtp);
 
     if (!isValid) {
-      logger.warn(
-        { module: "otp", sessionId, attempt: attempts },
-        "Invalid OTP provided",
-      );
+      logger.warn({ module: "otp", attempt: attempts }, "Invalid OTP provided");
       throw new ApiError(statusCode.badRequest, AUTH_ERROR_CODES.OTP_INVALID);
     }
 

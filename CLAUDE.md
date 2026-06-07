@@ -61,6 +61,7 @@ Each microservice typically follows a layered architecture:
 4. The response is wrapped in `errorResponse` from `@irctc/http` for the final client output.
 
 #### Error Handling Guidelines
+
 - **Avoid Hardcoded Strings**: Never pass raw strings as error codes or messages in `ApiError`.
 - **Use Constants**: Always use the `ERROR_CODES` and `ERROR_MESSAGES` constants defined in the service's `utils/errors` directory.
 - **Maintainability**: This ensures that all error messages are centralized, translation-ready, and consistent across the service.
