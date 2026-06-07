@@ -14,6 +14,7 @@ import {
 } from "@irctc/middleware";
 
 import { env } from "@config/env.js";
+import { healthRoutes } from "@routes";
 
 const app: Application = express();
 
@@ -44,14 +45,7 @@ app.use(cookieParser());
 app.use(requestIdMiddleware);
 app.use(requestLoggerMiddleware);
 
-app.get("/health", (_req: Request, res: Response) => {
-  res.status(statusCode.success).json(
-    successResponse("Service is healthy", {
-      status: "healthy",
-      uptime: process.uptime(),
-    }),
-  );
-});
+app.use("/health", healthRoutes);
 
 app.get("/", (_req: Request, res: Response) => {
   res.status(statusCode.success).json(

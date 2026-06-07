@@ -4,20 +4,10 @@ import { z } from "zod";
 
 export const env = createEnv({
   server: {
-    PORT: z.string().default("4001"),
+    PORT: z.string().default("4002"),
     NODE_ENV: z
       .enum(["development", "production", "test"])
       .default("development"),
-    DATABASE_URL: z.url(),
-    REDIS_URL: z.url().refine(
-      (value) => {
-        const protocol = new URL(value).protocol;
-        return protocol === "redis:" || protocol === "rediss:";
-      },
-      {
-        message: "REDIS_URL must use redis:// or rediss://",
-      },
-    ),
     CORS_ORIGINS: z
       .string()
       .default("http://localhost:3000")
@@ -30,13 +20,7 @@ export const env = createEnv({
       .refine((origins) => origins.length > 0, {
         message: "CORS_ORIGINS must include at least one origin",
       }),
-    JWT_SECRET: z.string().min(1),
-    JWT_ACCESS_EXPIRES_IN: z.enum(["15m", "30m", "1h", "1d"]).default("15m"),
-    JWT_REFRESH_EXPIRES_IN: z.enum(["7d", "30d"]).default("7d"),
-    OTP_TTL: z.coerce.number().int().positive().default(300), // 5 minutes in seconds
-    SENDGRID_API_KEY: z.string().min(1),
-    SENDGRID_SENDER: z.email(),
-    SERVICE_NAME: z.string().default("user-service"),
+    SERVICE_NAME: z.string().default("notification-service"),
     OTEL_EXPORTER_OTLP_ENDPOINT: z.url().optional(),
     OTEL_DEBUG: z.enum(["true", "false"]).default("false"),
     LOKI_HOST: z.url().optional(),
@@ -51,7 +35,7 @@ export const env = createEnv({
           .map((broker) => broker.trim())
           .filter((broker) => broker.length > 0),
       ),
-    KAFKA_CLIENT_ID: z.string().default("user-service"),
+    KAFKA_CLIENT_ID: z.string().default("notification-service"),
   },
   runtimeEnv: process.env,
   emptyStringAsUndefined: true,

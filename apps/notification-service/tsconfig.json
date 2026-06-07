@@ -34,27 +34,7 @@
 
     // Recommended Options
     "paths": {
-      "@config/*": ["./src/config/*"],
-      "@config": ["./src/config/index.js"],
-      "@container/*": ["./src/container/*"],
-      "@container": ["./src/container/index.js"],
-      "@routes/*": ["./src/api/v1/routes/*"],
-      "@routes": ["./src/api/v1/routes/index.js"],
-      "@services/*": ["./src/services/*"],
-      "@services": ["./src/services/index.js"],
-      "@repository/*": ["./src/repository/*"],
-      "@repository": ["./src/repository/index.js"],
-      "@controllers/*": ["./src/controllers/*"],
-      "@controllers": ["./src/controllers/index.js"],
-      "@middleware/*": ["./src/middleware/*"],
-      "@middleware": ["./src/middleware/index.js"],
-      "@utils/errors": ["./src/utils/errors/index.js"],
-      "@utils/*": ["./src/utils/*"],
-      "@dto/auth": ["./src/dto/auth/index.js"],
-      "@dto/user": ["./src/dto/user/index.js"],
-      "@mappers/*": ["./src/mappers/*"],
-      "@mappers": ["./src/mappers/index.js"],
-      "@generated/*": ["./src/generated/*"]
+      "@config/*": ["./src/config/*"]
     },
     "strict": true,
     "jsx": "react-jsx",

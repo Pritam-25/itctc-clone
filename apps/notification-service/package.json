@@ -1,0 +1,32 @@
+{
+  "name": "notification-service",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc && tsc-alias",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier . --check",
+    "format:fix": "prettier . --write",
+    "test": "echo 'Add test script here'"
+  },
+  "dependencies": {
+    "@irctc/errors": "workspace:*",
+    "@irctc/http": "workspace:*",
+    "@irctc/logger": "workspace:*",
+    "@irctc/middleware": "workspace:*",
+    "@irctc/kafka": "workspace:*",
+    "@t3-oss/env-core": "^0.13.11",
+    "kafkajs": "^2.2.4",
+    "zod": "^4.4.3",
+    "dotenv": "^17.4.2"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^22.0.0",
+    "tsc-alias": "^1.8.17",
+    "tsx": "^4.22.4"
+  }
+}

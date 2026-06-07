@@ -13,6 +13,7 @@
     "@irctc/http": "workspace:*",
     "@irctc/logger": "workspace:*",
     "@irctc/middleware": "workspace:*",
+    "@irctc/kafka": "workspace:*",
     "@prisma/adapter-pg": "^7.8.0",
     "@prisma/client": "^7.8.0",
     "@sendgrid/mail": "^8.1.6",
@@ -25,6 +26,7 @@
     "helmet": "^8.2.0",
     "ioredis": "^5.11.0",
     "jsonwebtoken": "^9.0.3",
+    "kafkajs": "^2.2.4",
     "otp-generator": "^4.0.1",
     "zod": "^4.4.3"
   },

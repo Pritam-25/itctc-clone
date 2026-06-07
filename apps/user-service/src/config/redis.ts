@@ -20,7 +20,7 @@ const createRedisClient = (): Redis => {
 
   // Wires comprehensive observability hooks for Grafana Loki/Tempo tracking
   client.on("connect", () =>
-    logger.info({ module: "redis" }, "Redis connection initiating"),
+    logger.info({ module: "redis" }, "Redis connection initiating..."),
   );
   client.on("ready", () =>
     logger.info({ module: "redis" }, "Redis connected successfully."),
@@ -58,10 +58,6 @@ export const initRedis = async (): Promise<void> => {
     const onReady = () => {
       clearTimeout(timeout);
       redis.off("error", onError);
-      logger.info(
-        { module: "redis" },
-        "Redis connection established and ready.",
-      );
       resolve();
     };
 

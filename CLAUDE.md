@@ -33,12 +33,14 @@ The project is a distributed railway reservation system using a Microservices ar
   - `booking-service`: Seat allocation and reservation logic.
   - `payment-service`: Payment processing and verification.
   - `search-service`: Train and station searches with Redis caching.
+  - `notification-service`: Event-driven notifications.
 - `packages/`: Shared cross-cutting concerns:
   - `@irctc/errors`: Centralized error handling and normalization.
   - `@irctc/http`: Standardized API response formats.
   - `@irctc/logger`: Structured logging with Pino and OpenTelemetry.
   - `@irctc/middleware`: Common Express middlewares (validation, error handling, request ID).
-  - `@irctc/kafka`: Event-driven communication wrappers.
+  - `@irctc/kafka`: Shared Kafka client, producer, and consumer factory.
+  - `@irctc/contracts`: Versioned event schemas (Zod) for inter-service communication.
   - `@irctc/telemetry`: OpenTelemetry instrumentation.
 - `infra/`: Configuration for Docker, Kubernetes, and observability (Grafana, Loki, Tempo, Prometheus).
 
@@ -50,8 +52,40 @@ Each microservice typically follows a layered architecture:
 - **Routes**: Define endpoints and apply validation middleware (`zod` via `@irctc/middleware`).
 - **Controllers**: Handle HTTP request/response flow, call services, and use mappers to format data.
 - **Services**: Contain business logic, coordinate between repositories, and handle domain-specific errors.
-- **Repositories**: Abstract data access (Prisma) and maintain the dependency injection pattern.
+- **Repositories**: Abstract data access (Prisma, Redis) and maintain the dependency injection pattern.
 - **DTOs & Mappers**: Ensure strict separation between database entities and the API contract.
+
+### Infrastructure Guidelines
+
+#### Startup Sequence
+
+Services must not accept traffic until all critical dependencies are ready.
+`initPrisma()` $\rightarrow$ `initRedis()` $\rightarrow$ `initKafka()` $\rightarrow$ `app.listen()`
+
+#### Graceful Shutdown
+
+To prevent data loss and ensure clean termination in K8s/Docker:
+
+1. Stop HTTP server (drain requests).
+2. Disconnect Kafka consumers.
+3. Disconnect Kafka producer.
+4. Disconnect Redis.
+5. Disconnect Prisma.
+6. Exit process.
+
+#### Health Monitoring
+
+Every service must implement:
+
+- `/health/live`: Basic process check (200 OK).
+- `/health/ready`: Deep check of Prisma, Redis, and Kafka connectivity (200 OK or 503 Service Unavailable).
+
+#### Kafka Architecture
+
+- **Ownership**: Each service owns its own producer and consumer groups.
+- **Shared Library**: Use `@irctc/kafka` for client/producer/consumer plumbing.
+- **Contracts**: All events must be defined as versioned Zod schemas in `@irctc/contracts`.
+- **Producer Defaults**: `allowAutoTopicCreation: false`, `idempotent: true`, `maxInFlightRequests: 5`.
 
 ### Error Handling Flow
 
