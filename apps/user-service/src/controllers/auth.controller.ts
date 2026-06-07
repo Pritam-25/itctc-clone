@@ -3,8 +3,8 @@ import type {
   VerifyOtpRequestDto,
   LoginRequestDto,
 } from "@dto/auth";
-import { statusCode, successResponse, errorResponse } from "@irctc/http";
-import { createErrorResponse, ApiError } from "@irctc/errors";
+import { statusCode, successResponse } from "@irctc/http";
+import { ApiError } from "@irctc/errors";
 import type { AuthService } from "@services/auth.service.js";
 import type { Request, Response } from "express";
 import { env } from "@config/env.js";
@@ -13,6 +13,7 @@ import { ERROR_CODES } from "@utils/errors";
 
 import { getDeviceFingerprint } from "@utils/fingerprint.js";
 import jwt from "jsonwebtoken";
+import { UserMapper } from "@mappers/user.mapper.js";
 
 export class AuthController {
   /**
@@ -120,10 +121,11 @@ export class AuthController {
     if (!user) {
       throw new ApiError(statusCode.notFound, ERROR_CODES.USER_NOT_FOUND);
     }
+    const userDto = UserMapper.toUserResponseDto(user);
 
     return res
       .status(statusCode.success)
-      .json(successResponse("User profile retrieved", user));
+      .json(successResponse("User profile retrieved", userDto));
   }
 
   /**
@@ -166,24 +168,26 @@ export class AuthController {
       );
     }
 
+    let decoded;
     try {
-      const decoded = jwt.verify(refreshToken, env.JWT_SECRET) as any;
-      const { userId, sessionId } = decoded;
-
-      await this.service.logout(sessionId, userId);
-
-      res.clearCookie(COOKIE_NAMES.ACCESS_TOKEN, { path: "/" });
-      res.clearCookie(COOKIE_NAMES.REFRESH_TOKEN, { path: "/" });
-
-      return res
-        .status(statusCode.success)
-        .json(successResponse("Logged out successfully", {}));
+      decoded = jwt.verify(refreshToken, env.JWT_SECRET) as any;
     } catch (error) {
       throw new ApiError(
         statusCode.unauthorized,
         ERROR_CODES.REFRESH_TOKEN_INVALID,
       );
     }
+
+    const { userId, sessionId } = decoded;
+
+    await this.service.logout(sessionId, userId);
+
+    res.clearCookie(COOKIE_NAMES.ACCESS_TOKEN, { path: "/" });
+    res.clearCookie(COOKIE_NAMES.REFRESH_TOKEN, { path: "/" });
+
+    return res
+      .status(statusCode.success)
+      .json(successResponse("Logged out successfully", {}));
   }
 
   /**
@@ -199,24 +203,26 @@ export class AuthController {
       );
     }
 
+    let decoded;
     try {
-      const decoded = jwt.verify(refreshToken, env.JWT_SECRET) as any;
-      const { userId } = decoded;
-
-      await this.service.logoutAll(userId);
-
-      res.clearCookie(COOKIE_NAMES.ACCESS_TOKEN, { path: "/" });
-      res.clearCookie(COOKIE_NAMES.REFRESH_TOKEN, { path: "/" });
-
-      return res
-        .status(statusCode.success)
-        .json(successResponse("Logged out from all devices", {}));
+      decoded = jwt.verify(refreshToken, env.JWT_SECRET) as any;
     } catch (error) {
       throw new ApiError(
         statusCode.unauthorized,
         ERROR_CODES.REFRESH_TOKEN_INVALID,
       );
     }
+
+    const { userId } = decoded;
+
+    await this.service.logoutAll(userId);
+
+    res.clearCookie(COOKIE_NAMES.ACCESS_TOKEN, { path: "/" });
+    res.clearCookie(COOKIE_NAMES.REFRESH_TOKEN, { path: "/" });
+
+    return res
+      .status(statusCode.success)
+      .json(successResponse("Logged out from all devices", {}));
   }
 
   /**
