@@ -21,6 +21,19 @@ import { OtpService } from "./otp.service.js";
 import { generateOtp } from "@utils/generate-otp.js";
 import { emailService } from "./email.service.js";
 
+export interface AccessTokenPayload {
+  sub: string;
+  email: string;
+  sessionId: string;
+  type: "access";
+}
+
+export interface RefreshTokenPayload {
+  sub: string;
+  sessionId: string;
+  type: "refresh";
+}
+
 export class AuthService {
   constructor(private repo: AuthRepository) {}
 
@@ -138,7 +151,7 @@ export class AuthService {
     fingerprint: string,
   ): Promise<AuthResponseDto> {
     try {
-      const decoded = jwt.verify(refreshToken, env.JWT_SECRET) as any;
+      const decoded = jwt.verify(refreshToken, env.JWT_SECRET) as RefreshTokenPayload;
       const { sub: userId, sessionId } = decoded;
 
       if (decoded.type !== "refresh") {

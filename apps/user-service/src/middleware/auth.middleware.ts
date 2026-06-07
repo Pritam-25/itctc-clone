@@ -6,6 +6,13 @@ import { statusCode } from "@irctc/http";
 import { ERROR_CODES } from "@utils/errors";
 import { COOKIE_NAMES } from "@utils/constants/cookie.js";
 
+interface AccessTokenPayload {
+  sub: string;
+  email: string;
+  sessionId: string;
+  type: "access";
+}
+
 export interface AuthUser {
   userId: string;
   email?: string;
@@ -27,7 +34,7 @@ export const authMiddleware = (
   }
 
   try {
-    const decoded = jwt.verify(token, env.JWT_SECRET) as any;
+    const decoded = jwt.verify(token, env.JWT_SECRET) as AccessTokenPayload;
 
     if (decoded.type !== "access") {
       throw new ApiError(

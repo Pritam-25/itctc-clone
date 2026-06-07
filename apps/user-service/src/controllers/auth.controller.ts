@@ -14,6 +14,10 @@ import { ERROR_CODES } from "@utils/errors";
 import { getDeviceFingerprint } from "@utils/fingerprint.js";
 import jwt from "jsonwebtoken";
 import { UserMapper } from "@mappers/user.mapper.js";
+import type {
+  AccessTokenPayload,
+  RefreshTokenPayload,
+} from "@services/auth.service.js";
 
 export class AuthController {
   /**
@@ -170,7 +174,7 @@ export class AuthController {
 
     let decoded;
     try {
-      decoded = jwt.verify(refreshToken, env.JWT_SECRET) as any;
+      decoded = jwt.verify(refreshToken, env.JWT_SECRET) as RefreshTokenPayload;
     } catch (error) {
       throw new ApiError(
         statusCode.unauthorized,
@@ -178,7 +182,13 @@ export class AuthController {
       );
     }
 
-    const { userId, sessionId } = decoded;
+    const { sub: userId, sessionId, type } = decoded;
+    if (type !== "refresh" || !userId || !sessionId) {
+      throw new ApiError(
+        statusCode.unauthorized,
+        ERROR_CODES.REFRESH_TOKEN_INVALID,
+      );
+    }
 
     await this.service.logout(sessionId, userId);
 
@@ -205,7 +215,7 @@ export class AuthController {
 
     let decoded;
     try {
-      decoded = jwt.verify(refreshToken, env.JWT_SECRET) as any;
+      decoded = jwt.verify(refreshToken, env.JWT_SECRET) as RefreshTokenPayload;
     } catch (error) {
       throw new ApiError(
         statusCode.unauthorized,
@@ -213,7 +223,13 @@ export class AuthController {
       );
     }
 
-    const { userId } = decoded;
+    const { sub: userId, type } = decoded;
+    if (type !== "refresh" || !userId) {
+      throw new ApiError(
+        statusCode.unauthorized,
+        ERROR_CODES.REFRESH_TOKEN_INVALID,
+      );
+    }
 
     await this.service.logoutAll(userId);
 

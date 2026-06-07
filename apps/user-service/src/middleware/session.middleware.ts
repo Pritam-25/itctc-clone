@@ -41,5 +41,11 @@ export const sessionMiddleware = async (
     AUTH_DURATIONS.SESSION_TTL_SECONDS,
   );
 
+  // Refresh the user-sessions index TTL to keep sessions discoverable
+  await redis.expire(
+    REDIS_KEYS.userSessions(user.userId),
+    AUTH_DURATIONS.SESSION_TTL_SECONDS,
+  );
+
   next();
 };
