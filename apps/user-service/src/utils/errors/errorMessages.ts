@@ -24,4 +24,5 @@ export const ERROR_MESSAGES: Record<ErrorCode, string> = {
   [ERROR_CODES.SESSION_ID_REQUIRED]: "Session ID is required.",
   [ERROR_CODES.USER_NOT_FOUND]: "User not found.",
   [ERROR_CODES.INVALID_REFRESH_TOKEN]: "Invalid or expired refresh token.",
+  [ERROR_CODES.SESSION_OWNERSHIP_INVALID]: "Cannot revoke another user's session.",
 };

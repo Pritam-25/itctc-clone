@@ -252,7 +252,24 @@ export class AuthService {
    * Revokes a specific session.
    */
   async revokeSession(sessionId: string, userId: string): Promise<void> {
-    await redis.del(REDIS_KEYS.authSession(sessionId));
+    const sessionKey = REDIS_KEYS.authSession(sessionId);
+    const sessionJson = await redis.get(sessionKey);
+
+    if (!sessionJson) return;
+
+    const session = JSON.parse(sessionJson);
+    if (session.userId !== userId) {
+      logger.warn(
+        { module: "auth", sessionId, userId, ownerId: session.userId },
+        "Unauthorized session revocation attempt",
+      );
+      throw new ApiError(
+        statusCode.forbidden,
+        ERROR_CODES.SESSION_OWNERSHIP_INVALID,
+      );
+    }
+
+    await redis.del(sessionKey);
     await redis.srem(REDIS_KEYS.userSessions(userId), sessionId);
     logger.info({ module: "auth", sessionId, userId }, "Session revoked");
   }
