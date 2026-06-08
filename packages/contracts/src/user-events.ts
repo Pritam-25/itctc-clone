@@ -11,7 +11,10 @@ export type UserCreatedV1Type = z.infer<typeof UserCreatedV1>;
 
 export const UserUpdatedV1 = z.object({
   userId: z.string().uuid(),
-  updates: z.record(z.any()),
+  updates: z.object({
+    email: z.string().email().optional(),
+    username: z.string().optional(),
+  }),
   timestamp: z.string().datetime(),
 });
 

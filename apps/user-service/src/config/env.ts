@@ -50,7 +50,10 @@ export const env = createEnv({
           .split(",")
           .map((broker) => broker.trim())
           .filter((broker) => broker.length > 0),
-      ),
+      )
+      .refine((brokers) => brokers.length > 0, {
+        message: "KAFKA_BROKERS must include at least one broker",
+      }),
     KAFKA_CLIENT_ID: z.string().default("user-service"),
   },
   runtimeEnv: process.env,

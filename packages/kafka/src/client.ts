@@ -1,8 +1,12 @@
-import { Kafka, KafkaConfig } from "kafkajs";
+import { Kafka, KafkaConfig, logLevel } from "kafkajs";
 import { logger } from "@irctc/logger";
 
-export const createKafkaClient = (config: Partial<KafkaConfig>) => {
+export const createKafkaClient = (config: Partial<KafkaConfig> = {}) => {
+  // Start from the caller's config so caller-supplied options (ssl, sasl,
+  // connectionTimeout, requestTimeout, logCreator, etc.) are preserved, then
+  // layer our defaults on top.
   const finalConfig: KafkaConfig = {
+    ...config,
     clientId: config.clientId ?? "irctc-service",
     brokers: config.brokers ?? ["localhost:9092"],
     retry: {
@@ -10,7 +14,7 @@ export const createKafkaClient = (config: Partial<KafkaConfig>) => {
       retries: 8,
       ...config.retry,
     },
-    logLevel: 0,
+    logLevel: config.logLevel ?? logLevel.NOTHING,
   };
 
   const kafka = new Kafka(finalConfig);

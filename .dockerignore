@@ -5,8 +5,12 @@
 **/.cache
 **/coverage
 **/.env
+**/.env.*
 **/.env.local
 **/.env.*.local
+!**/.env.example
+!**/.env.production
+!**/.env.test
 **/.git
 **/.DS_Store
 **/*.log

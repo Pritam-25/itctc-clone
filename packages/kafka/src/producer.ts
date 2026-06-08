@@ -9,13 +9,17 @@ export class KafkaProducerManager {
 
     logger.info({ module: "kafka-producer" }, "Initializing Kafka producer...");
 
-    this.instance = kafka.producer({
+    const producer = kafka.producer({
       allowAutoTopicCreation: false,
       idempotent: true,
       maxInFlightRequests: 5,
     });
 
-    await this.instance.connect();
+    // Connect BEFORE publishing the instance, so `isConnected()` only ever
+    // returns true when the producer has a live broker connection.
+    await producer.connect();
+    this.instance = producer;
+
     logger.info(
       { module: "kafka-producer" },
       "Kafka producer connected successfully",

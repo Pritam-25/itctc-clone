@@ -1,8 +1,6 @@
 import type { Request, Response } from "express";
-import { prisma } from "@config/prisma.js";
-import { redis } from "@config/redis.js";
-import { isKafkaProducerReady } from "@config/kafka.js";
 import { statusCode, successResponse } from "@irctc/http";
+import { HealthService } from "@services/health.service.js";
 
 export const liveCheck = (req: Request, res: Response) => {
   res.status(statusCode.success).json(
@@ -15,28 +13,7 @@ export const liveCheck = (req: Request, res: Response) => {
 
 export const readyCheck = async (req: Request, res: Response) => {
   try {
-    const checks: Record<string, boolean> = {};
-
-    // Database check
-    try {
-      await prisma.$queryRaw`SELECT 1`;
-      checks.database = true;
-    } catch (e) {
-      checks.database = false;
-    }
-
-    // Redis check
-    checks.redis = redis.status === "ready";
-
-    // Kafka check
-    try {
-      // Lightweight check: just verify if the producer instance is initialized.
-      // This avoids calling connect() on every probe request.
-      checks.kafka = isKafkaProducerReady();
-    } catch (e) {
-      checks.kafka = false;
-    }
-
+    const checks = await HealthService.runReadinessChecks();
     const allHealthy = Object.values(checks).every((v) => v === true);
 
     if (!allHealthy) {

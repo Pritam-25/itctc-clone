@@ -46,18 +46,28 @@ const shutdown = async (signal: NodeJS.Signals) => {
     }
   }
 
-  try {
-    await disconnectKafka();
-    await disconnectRedis();
-    await prisma.$disconnect();
+  // Run all disconnects independently — a failure in one must not skip the
+  // others, otherwise K8s may see the pod exit with live connections still
+  // open. Promise.allSettled waits for every promise before aggregating.
+  const teardownResults = await Promise.allSettled([
+    disconnectKafka(),
+    disconnectRedis(),
+    prisma.$disconnect(),
+  ]);
+
+  const failures = teardownResults.filter(
+    (result): result is PromiseRejectedResult => result.status === "rejected",
+  );
+
+  if (failures.length === 0) {
     logger.info(
       { module: "server" },
       "All infrastructure connections closed successfully.",
     );
-  } catch (error) {
+  } else {
     logger.error(
-      { module: "server", err: error },
-      "Error occurred during infrastructure disconnection.",
+      { module: "server", errors: failures.map((f) => f.reason) },
+      "One or more infrastructure disconnect operations failed.",
     );
   }
 
