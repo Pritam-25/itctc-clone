@@ -1,70 +1,95 @@
 import { Router } from "express";
 import { asyncHandler, validateSchema } from "@irctc/middleware";
-import { createAuthController } from "@container/index.js";
+import { getAuthController } from "@container/index.js";
 import { RegisterSchema, VerifyOtpRequestSchema, LoginSchema } from "@dto/auth";
 import { authMiddleware } from "@middleware/auth.middleware.js";
 import { sessionMiddleware } from "@middleware/session.middleware.js";
 
 const router: Router = Router();
 
-const authController = createAuthController();
+// Container is wired async; the bootstrap in server.ts awaits
+// initKafka() before app.listen(), so this resolves before any request.
+let authControllerPromise = getAuthController();
 
 router.post(
   "/send-otp",
   validateSchema(RegisterSchema),
-  asyncHandler(authController.sendOtp.bind(authController)),
+  asyncHandler(async (req, res, next) => {
+    const ctrl = await authControllerPromise;
+    return ctrl.sendOtp(req, res);
+  }),
 );
 
 router.post(
   "/verify-otp",
   validateSchema(VerifyOtpRequestSchema),
-  asyncHandler(authController.verifyOtp.bind(authController)),
+  asyncHandler(async (req, res, next) => {
+    const ctrl = await authControllerPromise;
+    return ctrl.verifyOtp(req, res);
+  }),
 );
 
 router.post(
   "/login",
   validateSchema(LoginSchema),
-  asyncHandler(authController.login.bind(authController)),
+  asyncHandler(async (req, res, next) => {
+    const ctrl = await authControllerPromise;
+    return ctrl.login(req, res);
+  }),
 );
 
-router.post(
-  "/refresh",
-  asyncHandler(authController.refresh.bind(authController)),
-);
+router.post("/refresh", (req, res, next) => {
+  authControllerPromise.then((ctrl) => ctrl.refresh(req, res)).catch(next);
+});
 
 router.get(
   "/me",
   authMiddleware,
   sessionMiddleware,
-  asyncHandler(authController.me.bind(authController)),
+  asyncHandler(async (req, res, next) => {
+    const ctrl = await authControllerPromise;
+    return ctrl.me(req, res);
+  }),
 );
 
 router.post(
   "/logout",
   authMiddleware,
   sessionMiddleware,
-  asyncHandler(authController.logout.bind(authController)),
+  asyncHandler(async (req, res, next) => {
+    const ctrl = await authControllerPromise;
+    return ctrl.logout(req, res);
+  }),
 );
 
 router.post(
   "/logout-all",
   authMiddleware,
   sessionMiddleware,
-  asyncHandler(authController.logoutAll.bind(authController)),
+  asyncHandler(async (req, res, next) => {
+    const ctrl = await authControllerPromise;
+    return ctrl.logoutAll(req, res);
+  }),
 );
 
 router.get(
   "/sessions",
   authMiddleware,
   sessionMiddleware,
-  asyncHandler(authController.getSessions.bind(authController)),
+  asyncHandler(async (req, res, next) => {
+    const ctrl = await authControllerPromise;
+    return ctrl.getSessions(req, res);
+  }),
 );
 
 router.delete(
   "/sessions/:sessionId",
   authMiddleware,
   sessionMiddleware,
-  asyncHandler(authController.revokeSession.bind(authController)),
+  asyncHandler(async (req, res, next) => {
+    const ctrl = await authControllerPromise;
+    return ctrl.revokeSession(req, res);
+  }),
 );
 
 export default router;

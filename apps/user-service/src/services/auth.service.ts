@@ -19,7 +19,8 @@ import { AuthMapper } from "@mappers/auth.mapper.js";
 import { logger } from "@irctc/logger";
 import { OtpService } from "./otp.service.js";
 import { generateOtp } from "@utils/generate-otp.js";
-import { emailService } from "./email.service.js";
+import { OtpEventPublisher } from "../kafka/producer/otp-requested.publisher.js";
+import type { OTPRequestedV1Type } from "@irctc/contracts";
 
 export interface AccessTokenPayload {
   sub: string;
@@ -35,7 +36,10 @@ export interface RefreshTokenPayload {
 }
 
 export class AuthService {
-  constructor(private repo: AuthRepository) {}
+  constructor(
+    private repo: AuthRepository,
+    private otpPublisher: OtpEventPublisher,
+  ) {}
 
   private generateAccessToken(
     userId: string,
@@ -326,7 +330,15 @@ export class AuthService {
   }
 
   /**
-   * Sends an OTP to the user's email and stores registration state in Redis.
+   * Generates an OTP, persists registration state in Redis, and enqueues
+   * the OTPRequestedV1 event for asynchronous email delivery by the
+   * notification service. Returns immediately on success — the email is
+   * not awaited.
+   *
+   * If the Kafka publish fails after Redis writes succeed, the Redis
+   * state is rolled back and a 502 (KAFKA_PUBLISH_FAILED) is returned.
+   * The user is never told "OTP sent" unless the event is durably
+   * enqueued.
    */
   async sendOtp(data: RegisterRequestDto): Promise<string> {
     // 1. Check if user already exists to prevent spam/duplicate registrations
@@ -352,13 +364,29 @@ export class AuthService {
       hashedPassword,
     });
 
-    // 4. Send email
+    // 4. Publish OTPRequestedV1. Roll back on failure so the user can
+    //    safely retry without leaving a stale registration session.
+    const event: OTPRequestedV1Type = {
+      eventId: randomUUID(),
+      email: data.email,
+      otp,
+      createdAt: new Date(),
+    };
+
     try {
-      await emailService.sendOtpEmail(data.email, otp);
-    } catch (error) {
-      // Rollback OTP and registration session to prevent stale state
+      await this.otpPublisher.publishOtpRequested(event);
+    } catch (err) {
+      logger.error(
+        { module: "auth", err, email: data.email },
+        "OTP publish failed; rolling back Redis state",
+      );
       await OtpService.deleteRegistrationSession(sessionId);
-      throw error;
+      throw new ApiError(
+        statusCode.badGateway,
+        ERROR_CODES.KAFKA_PUBLISH_FAILED,
+        "Failed to enqueue OTP delivery. Please try again.",
+        { cause: err },
+      );
     }
 
     return sessionId;

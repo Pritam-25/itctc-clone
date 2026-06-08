@@ -4,6 +4,7 @@ import {
   createConsumer,
 } from "@irctc/kafka";
 import { env } from "@config/env.js";
+import { logger } from "@irctc/logger";
 
 const kafka = createKafkaClient({
   clientId: env.KAFKA_CLIENT_ID,
@@ -24,6 +25,10 @@ export const disconnectKafka = async () => {
   await KafkaProducerManager.disconnect();
 };
 
+/**
+ * Eagerly connect the producer at boot so the producer manager
+ * returns a connected instance for any future DLQ writes.
+ */
 export const initKafka = async (): Promise<void> => {
   await getProducer();
 };

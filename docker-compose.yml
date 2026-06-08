@@ -151,6 +151,41 @@ services:
 
   # --- Application Layer ---
 
+  # Creates the OTP and DLQ topics once at stack startup. Topics are not
+  # auto-created (allowAutoTopicCreation: false on the producer) so this
+  # sidecar is the only source of topic creation. The container exits
+  # successfully after the topics are created; restart is "no" so it
+  # does not loop.
+  #
+  # The application services (user-service, notification-service) are
+  # not part of this compose file — they run via `pnpm dev` on the host
+  # for now. See apps/*/Dockerfile (TODO) when the team is ready to
+  # containerise the runtime.
+  kafka-init:
+    image: confluentinc/cp-kafka:7.8.0
+    container_name: irctc-kafka-init
+    depends_on:
+      - kafka
+    networks:
+      - irctc-network
+    restart: "no"
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        set -e
+        echo "Creating Kafka topics..."
+        kafka-topics --bootstrap-server irctc-kafka:29092 \
+          --create --if-not-exists \
+          --topic notification.otp-requested.v1 \
+          --partitions 1 --replication-factor 1 \
+          --config retention.ms=604800000
+        kafka-topics --bootstrap-server irctc-kafka:29092 \
+          --create --if-not-exists \
+          --topic notification.otp-requested.v1.dlq \
+          --partitions 1 --replication-factor 1 \
+          --config retention.ms=2592000000
+        echo "Kafka topics created."
+
 networks:
   irctc-network:
     driver: bridge
