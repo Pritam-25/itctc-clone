@@ -14,7 +14,10 @@ let isShuttingDown = false;
 let server: Server | undefined;
 let consumer: Consumer | undefined;
 
-const shutdown = async (signal: NodeJS.Signals) => {
+const shutdown = async (
+  signal: NodeJS.Signals,
+  exitCode: number = 0,
+) => {
   if (isShuttingDown) return;
   isShuttingDown = true;
 
@@ -72,7 +75,7 @@ const shutdown = async (signal: NodeJS.Signals) => {
     );
   }
 
-  process.exit(0);
+  process.exit(exitCode);
 };
 
 const startServer = async () => {
@@ -104,7 +107,7 @@ process.on("unhandledRejection", (reason) => {
     { module: "server", err: reason },
     "Unhandled Promise Rejection detected. Shutting down...",
   );
-  shutdown("SIGTERM");
+  void shutdown("SIGTERM", 1);
 });
 
 process.on("uncaughtException", (err) => {
@@ -112,7 +115,7 @@ process.on("uncaughtException", (err) => {
     { module: "server", err },
     "Uncaught Exception detected. Shutting down...",
   );
-  shutdown("SIGTERM");
+  void shutdown("SIGTERM", 1);
 });
 
 try {
