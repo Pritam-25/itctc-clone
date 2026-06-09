@@ -13,22 +13,23 @@ import { IdempotencyRepository } from "@repositories/idempotency.repository.js";
 import { EmailProviderFactory } from "@providers/email/index.js";
 import type { EmailProvider } from "@providers/email/email-provider.js";
 import { OtpNotificationService } from "@services/otp-notification.service.js";
+import { WelcomeNotificationService } from "@services/welcome-notification.service.js";
 import { OtpRequestedConsumer } from "@consumers/otp-requested.consumer.js";
+import { UserLoggedInConsumer } from "@consumers/user-logged-in.consumer.js";
 
 /**
  * Composition root for the notification service.
  *
  * Wires (in order):
  *   1. Kafka producer (kept warm; not currently used by the runner)
- *   2. Idempotency repository (Redis SETNX)
+ *   2. Idempotency repositories (one per topic — separate keyspaces)
  *   3. Email provider (chosen via EmailProviderFactory + EMAIL_VENDOR env)
- *   4. OtpNotificationService (validate + dedupe + render + send)
- *   5. OtpRequestedConsumer (parses Buffer→JSON, calls service)
- *   6. KafkaConsumerRunner — generic connect + subscribe + run
+ *   4. Notification services (validate + dedupe + render + send)
+ *   5. KafkaJS consumers + generic runners, one per topic
+ *   6. Business consumers (depend on the runners)
  *
- * Construction order: build the runner (which needs the kafkajs
- * consumer) before the business consumer, so the business consumer
- * can take the runner via constructor injection.
+ * Each topic gets its own consumer group and runner, so an offset
+ * stall or retry exhaustion on one topic does not block the other.
  */
 export const bootstrap = async () => {
   // 1. Producer kept warm so the producer manager returns a connected
@@ -37,11 +38,16 @@ export const bootstrap = async () => {
   await initKafka();
   const producer = await getProducer();
 
-  // 2. Idempotency repository
-  const idempotency = new IdempotencyRepository(
+  // 2. Idempotency repositories (one keyspace per topic)
+  const otpIdempotency = new IdempotencyRepository(
     redis,
     env.IDEMPOTENCY_TTL_SECONDS,
     IDEMPOTENCY_KEYS.OTP_REQUESTED,
+  );
+  const loginIdempotency = new IdempotencyRepository(
+    redis,
+    env.IDEMPOTENCY_TTL_SECONDS,
+    IDEMPOTENCY_KEYS.USER_LOGGED_IN,
   );
 
   // 3. Email provider (vendor picked from env)
@@ -51,42 +57,64 @@ export const bootstrap = async () => {
     logger,
   });
 
-  // 4. Service
-  const service = new OtpNotificationService(
-    idempotency,
+  // 4. Services
+  const otpService = new OtpNotificationService(
+    otpIdempotency,
     email,
     env.OTP_TTL_SECONDS,
     logger,
   );
+  const welcomeService = new WelcomeNotificationService(
+    loginIdempotency,
+    email,
+    logger,
+  );
 
-  // 5. KafkaJS consumer + generic runner. Retry config is service-side
-  //    (kafkajs applies it inside the consumer instance, not at run()).
+  // 5. KafkaJS consumers + generic runners, one per topic.
+  //    Retry config is service-side (kafkajs applies it inside the
+  //    consumer instance, not at run()).
   const retryPolicy = RetryPolicies.custom({
     retries: env.KAFKA_RETRY_MAX_RETRIES,
     initialRetryTime: env.KAFKA_RETRY_INITIAL_MS,
     maxRetryTime: env.KAFKA_RETRY_MAX_MS,
   });
-  const kafkaConsumer = createConsumer(
+
+  const otpKafkaConsumer = createConsumer(
     kafka,
     env.KAFKA_CONSUMER_GROUP_ID,
     retryPolicy,
   );
-  const runner = new KafkaConsumerRunner(kafkaConsumer, logger);
+  const otpRunner = new KafkaConsumerRunner(otpKafkaConsumer, logger);
 
-  // 6. Business consumer (depends on the runner)
-  const consumer = new OtpRequestedConsumer(runner, service);
+  const loginKafkaConsumer = createConsumer(
+    kafka,
+    env.KAFKA_LOGIN_CONSUMER_GROUP_ID,
+    retryPolicy,
+  );
+  const loginRunner = new KafkaConsumerRunner(loginKafkaConsumer, logger);
 
-  await consumer.start();
+  // 6. Business consumers (depend on the runners)
+  const otpConsumer = new OtpRequestedConsumer(otpRunner, otpService);
+  const loginConsumer = new UserLoggedInConsumer(loginRunner, welcomeService);
+
+  await Promise.all([otpConsumer.start(), loginConsumer.start()]);
 
   logger.info(
-    { module: "container", consumer: env.KAFKA_CONSUMER_GROUP_ID },
+    {
+      module: "container",
+      otpConsumer: env.KAFKA_CONSUMER_GROUP_ID,
+      loginConsumer: env.KAFKA_LOGIN_CONSUMER_GROUP_ID,
+    },
     "Notification service consuming",
   );
 
   return {
-    consumer: kafkaConsumer,
-    runner,
+    otpConsumer: otpKafkaConsumer,
+    loginConsumer: loginKafkaConsumer,
+    otpRunner,
+    loginRunner,
     producer,
-    service,
+    otpService,
+    welcomeService,
   };
 };

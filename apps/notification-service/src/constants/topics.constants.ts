@@ -10,4 +10,5 @@ import { env } from "@config/env.js";
  */
 export const Topics = {
   OTP_REQUESTED: env.KAFKA_OTP_TOPIC,
+  USER_LOGGED_IN: env.KAFKA_USER_LOGIN_TOPIC,
 } as const;

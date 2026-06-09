@@ -57,6 +57,12 @@ export const env = createEnv({
     KAFKA_OTP_DLQ_TOPIC: z
       .string()
       .default("notification.otp-requested.v1.dlq"),
+    KAFKA_USER_LOGIN_TOPIC: z
+      .string()
+      .default("notification.user-logged-in.v1"),
+    KAFKA_USER_LOGIN_DLQ_TOPIC: z
+      .string()
+      .default("notification.user-logged-in.v1.dlq"),
   },
   runtimeEnv: process.env,
   emptyStringAsUndefined: true,

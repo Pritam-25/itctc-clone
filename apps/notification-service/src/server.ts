@@ -12,12 +12,10 @@ const PORT = env.PORT;
 
 let isShuttingDown = false;
 let server: Server | undefined;
-let consumer: Consumer | undefined;
+let otpConsumer: Consumer | undefined;
+let loginConsumer: Consumer | undefined;
 
-const shutdown = async (
-  signal: NodeJS.Signals,
-  exitCode: number = 0,
-) => {
+const shutdown = async (signal: NodeJS.Signals, exitCode: number = 0) => {
   if (isShuttingDown) return;
   isShuttingDown = true;
 
@@ -43,14 +41,26 @@ const shutdown = async (
     }
   }
 
-  if (consumer) {
+  if (otpConsumer) {
     try {
-      await consumer.disconnect();
-      logger.info({ module: "server" }, "Kafka consumer disconnected.");
+      await otpConsumer.disconnect();
+      logger.info({ module: "server" }, "Kafka OTP consumer disconnected.");
     } catch (err) {
       logger.error(
         { module: "server", err },
-        "Error occurred while disconnecting consumer",
+        "Error occurred while disconnecting OTP consumer",
+      );
+    }
+  }
+
+  if (loginConsumer) {
+    try {
+      await loginConsumer.disconnect();
+      logger.info({ module: "server" }, "Kafka login consumer disconnected.");
+    } catch (err) {
+      logger.error(
+        { module: "server", err },
+        "Error occurred while disconnecting login consumer",
       );
     }
   }
@@ -81,11 +91,12 @@ const shutdown = async (
 const startServer = async () => {
   logger.info({ module: "server" }, "Bootstrapping dependencies...");
 
-  // Bootstrap the Kafka consumer. This awaits:
+  // Bootstrap the Kafka consumers. This awaits:
   //   1. Producer connect (for DLQ writes)
-  //   2. Consumer connect + subscribe + run
-  const { consumer: c } = await bootstrap();
-  consumer = c;
+  //   2. Consumer connect + subscribe + run for each topic
+  const { otpConsumer: otp, loginConsumer: login } = await bootstrap();
+  otpConsumer = otp;
+  loginConsumer = login;
 
   // Health-probe HTTP server — the only ingress besides Kafka. K8s probes
   // hit this; it does NOT expose the consumer or email provider.

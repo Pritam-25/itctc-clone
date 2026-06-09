@@ -1,32 +1,5 @@
 import { z } from "zod";
 
-export const UserCreatedV1 = z.object({
-  userId: z.uuid(),
-  email: z.email(),
-  username: z.string(),
-  timestamp: z.date(),
-});
-
-export type UserCreatedV1Type = z.infer<typeof UserCreatedV1>;
-
-export const UserUpdatedV1 = z.object({
-  userId: z.uuid(),
-  updates: z.object({
-    email: z.email().optional(),
-    username: z.string().optional(),
-  }),
-  timestamp: z.date(),
-});
-
-export type UserUpdatedV1Type = z.infer<typeof UserUpdatedV1>;
-
-export const UserDeletedV1 = z.object({
-  userId: z.uuid(),
-  timestamp: z.date(),
-});
-
-export type UserDeletedV1Type = z.infer<typeof UserDeletedV1>;
-
 /**
  * Published by user-service after it has stored an OTP in Redis.
  * Consumed by notification-service to send the OTP via email.

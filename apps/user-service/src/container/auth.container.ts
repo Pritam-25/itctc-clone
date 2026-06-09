@@ -1,7 +1,8 @@
 import { AuthRepository } from "@repository/auth.repo.js";
 import { AuthService } from "@services/auth.service.js";
 import { AuthController } from "@controllers/auth.controller.js";
-import { OtpEventPublisher } from "../kafka/producer/otp-requested.publisher.js";
+import { OtpEventPublisher } from "../events/publishers/otp-requested.publisher.js";
+import { UserLoggedInEventPublisher } from "../events/publishers/user-logged-in.publisher.js";
 
 import { prisma } from "@config/prisma.js";
 import { getProducer } from "@config/kafka.js";
@@ -28,8 +29,9 @@ export function getAuthController(): Promise<AuthController> {
 async function build(): Promise<AuthController> {
   const repository = new AuthRepository(prisma);
   const producer = await getProducer();
-  const publisher = new OtpEventPublisher(producer);
-  const service = new AuthService(repository, publisher);
+  const otpPublisher = new OtpEventPublisher(producer);
+  const loginPublisher = new UserLoggedInEventPublisher(producer);
+  const service = new AuthService(repository, otpPublisher, loginPublisher);
 
   logger.info({ module: "auth-container" }, "Auth dependencies wired");
   return new AuthController(service);

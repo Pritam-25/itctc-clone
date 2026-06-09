@@ -38,17 +38,11 @@ router.post(
   }),
 );
 
-router.post("/refresh", (req, res, next) => {
-  authControllerPromise.then((ctrl) => ctrl.refresh(req, res)).catch(next);
-});
-
-router.get(
-  "/me",
-  authMiddleware,
-  sessionMiddleware,
-  asyncHandler(async (req, res, next) => {
+router.post(
+  "/refresh",
+  asyncHandler(async (req, res) => {
     const ctrl = await authControllerPromise;
-    return ctrl.me(req, res);
+    return ctrl.refresh(req, res);
   }),
 );
 

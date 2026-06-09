@@ -19,8 +19,9 @@ import { AuthMapper } from "@mappers/auth.mapper.js";
 import { logger } from "@irctc/logger";
 import { OtpService } from "./otp.service.js";
 import { generateOtp } from "@utils/generate-otp.js";
-import { OtpEventPublisher } from "../kafka/producer/otp-requested.publisher.js";
-import type { OTPRequestedV1Type } from "@irctc/contracts";
+import { OtpEventPublisher } from "../events/publishers/otp-requested.publisher.js";
+import { UserLoggedInEventPublisher } from "../events/publishers/user-logged-in.publisher.js";
+import type { OTPRequestedV1Type, UserLoggedInV1Type } from "@irctc/contracts";
 
 export interface AccessTokenPayload {
   sub: string;
@@ -39,6 +40,7 @@ export class AuthService {
   constructor(
     private repo: AuthRepository,
     private otpPublisher: OtpEventPublisher,
+    private loginPublisher: UserLoggedInEventPublisher,
   ) {}
 
   private generateAccessToken(
@@ -136,6 +138,27 @@ export class AuthService {
       { module: "auth", userId: user.id },
       "User logged in successfully",
     );
+
+    // Best-effort welcome email: the user has already authenticated
+    // and the session is persisted, so a degraded notification queue
+    // must NOT roll back the login. The notification service will
+    // dedupe on eventId if a redelivery ever lands.
+    const loginEvent: UserLoggedInV1Type = {
+      eventId: randomUUID(),
+      userId: user.id,
+      email: user.email,
+      firstName: user.firstName,
+      loggedInAt: new Date(),
+    };
+
+    try {
+      await this.loginPublisher.publishUserLoggedIn(loginEvent);
+    } catch (err) {
+      logger.error(
+        { module: "auth", err, userId: user.id, email: user.email },
+        "Welcome email publish failed; continuing without rollback",
+      );
+    }
 
     return AuthMapper.toAuthResponseDto(user, accessToken, refreshToken);
   }

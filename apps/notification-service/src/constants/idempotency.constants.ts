@@ -4,4 +4,5 @@
  */
 export const IDEMPOTENCY_KEYS = {
   OTP_REQUESTED: "notification:processed:otp-requested",
+  USER_LOGGED_IN: "notification:processed:user-logged-in",
 } as const;

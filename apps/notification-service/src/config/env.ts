@@ -48,6 +48,12 @@ export const env = createEnv({
     KAFKA_OTP_DLQ_TOPIC: z
       .string()
       .default("notification.otp-requested.v1.dlq"),
+    KAFKA_USER_LOGIN_TOPIC: z
+      .string()
+      .default("notification.user-logged-in.v1"),
+    KAFKA_LOGIN_CONSUMER_GROUP_ID: z
+      .string()
+      .default("notification-service.user-logged-in"),
     KAFKA_RETRY_MAX_RETRIES: z.coerce.number().int().nonnegative().default(5),
     KAFKA_RETRY_INITIAL_MS: z.coerce.number().int().positive().default(300),
     KAFKA_RETRY_MAX_MS: z.coerce.number().int().positive().default(30_000),
