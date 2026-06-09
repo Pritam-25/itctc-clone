@@ -18,15 +18,16 @@ import {
  * Orchestrates a single workflow:
  *   1. Validate the unknown payload against the Zod schema in
  *      @irctc/contracts. Schema failures return INVALID.
- *   2. Claim the event in the idempotency store. Duplicates return
+ *   2. Reserve the event in the idempotency store. Duplicates return
  *      DUPLICATE without sending.
  *   3. Render the email via the template.
  *   4. Hand the rendered command to the configured EmailProvider.
- *      Provider failures are re-thrown so the consumer runner can
- *      apply its retry policy. The claim stays in Redis; a
- *      redelivery is short-circuited at step 2 (intentional: a
- *      side-effect that may have partially happened should not be
- *      repeated — a human will replay from outside).
+ *   5. On success, mark the reservation processed (re-arms TTL). On
+ *      failure, release the reservation so the consumer runner's
+ *      retry can actually re-deliver — otherwise a single transient
+ *      provider failure would permanently drop the notification.
+ *      Provider failures are re-thrown so the runner can apply its
+ *      retry policy.
  */
 export class OtpNotificationService {
   constructor(
@@ -40,8 +41,8 @@ export class OtpNotificationService {
     const parsed = this.tryValidate(event);
     if (!parsed) return PROCESSING_STATUS.INVALID;
 
-    const isNew = await this.idempotency.markIfNew(parsed.eventId);
-    if (!isNew) {
+    const reserved = await this.idempotency.reserveIfNew(parsed.eventId);
+    if (!reserved) {
       this.logger.info(
         { eventId: parsed.eventId, email: parsed.email },
         "Duplicate OTPRequestedV1 skipped",
@@ -55,7 +56,21 @@ export class OtpNotificationService {
       ttlSeconds: this.otpTtlSeconds,
     });
 
-    await this.email.send(command);
+    try {
+      await this.email.send(command);
+    } catch (err) {
+      // Release the reservation so a redelivery can retry the side
+      // effect instead of being short-circuited as a duplicate.
+      await this.idempotency.release(parsed.eventId).catch((releaseErr) => {
+        this.logger.warn(
+          { eventId: parsed.eventId, err: releaseErr },
+          "Failed to release OTP idempotency reservation after send failure",
+        );
+      });
+      throw err;
+    }
+
+    await this.idempotency.markProcessed(parsed.eventId);
 
     this.logger.info(
       { eventId: parsed.eventId, email: parsed.email },

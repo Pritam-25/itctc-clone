@@ -6,7 +6,7 @@ import {
 import { env } from "@config/env.js";
 import { logger } from "@irctc/logger";
 import { getProducer, initKafka, kafka } from "@config/kafka.js";
-import { redis } from "@config/redis.js";
+import { initRedis, redis } from "@config/redis.js";
 import { getEmailVendor } from "@config/email.js";
 import { IDEMPOTENCY_KEYS } from "@constants/idempotency.constants.js";
 import { IdempotencyRepository } from "@repositories/idempotency.repository.js";
@@ -38,7 +38,10 @@ export const bootstrap = async () => {
   await initKafka();
   const producer = await getProducer();
 
-  // 2. Idempotency repositories (one keyspace per topic)
+  // 2. Idempotency repositories (one keyspace per topic).
+  //    Await Redis readiness first so the client is fully connected
+  //    before we hand it to the repository (avoids bootstrap races).
+  await initRedis();
   const otpIdempotency = new IdempotencyRepository(
     redis,
     env.IDEMPOTENCY_TTL_SECONDS,

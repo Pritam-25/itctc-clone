@@ -5,9 +5,9 @@
     "semantic_hash": "af5683cedca023035194f9ad92eb0eef"
   },
   ".claude/settings.local.json": {
-    "mtime": 1780902413.6370559,
-    "ast_hash": "dd4df388536101bc72aeed7df89ac467",
-    "semantic_hash": "dd4df388536101bc72aeed7df89ac467"
+    "mtime": 1781025088.5735724,
+    "ast_hash": "00211dd0d369a3526165b9c150058a1b",
+    "semantic_hash": ""
   },
   "apps/notification-service/package.json": {
     "mtime": 1780912123.192882,
@@ -140,8 +140,8 @@
     "semantic_hash": "7f8bb815da80ea25e97206701f4c6dce"
   },
   "apps/notification-service/src/server.ts": {
-    "mtime": 1780947513.4884233,
-    "ast_hash": "82c66b10063c8210e6f2e1edee330c2b",
+    "mtime": 1780950291.642513,
+    "ast_hash": "f17f0b95608bd5e53285d784de7bf759",
     "semantic_hash": ""
   },
   "apps/notification-service/src/services/index.ts": {
@@ -185,9 +185,9 @@
     "semantic_hash": "bb3c0585b8783d83d110d47493bef000"
   },
   "apps/user-service/src/api/v1/routes/auth.routes.ts": {
-    "mtime": 1780902914.1912067,
-    "ast_hash": "c29dbf35ca3e4b29ccbafa97a1ebb1f7",
-    "semantic_hash": "c29dbf35ca3e4b29ccbafa97a1ebb1f7"
+    "mtime": 1780951390.349065,
+    "ast_hash": "17218d03fe02b9150cf10f1e1d0438e2",
+    "semantic_hash": ""
   },
   "apps/user-service/src/api/v1/routes/health.routes.ts": {
     "mtime": 1780851520.04367,
@@ -200,9 +200,9 @@
     "semantic_hash": "cd0fe65c45753115e70908330826be9e"
   },
   "apps/user-service/src/api/v1/routes/user.route.ts": {
-    "mtime": 1780720611.4144835,
-    "ast_hash": "a3900235b753bcfc4a1f44de65fadbf8",
-    "semantic_hash": "a3900235b753bcfc4a1f44de65fadbf8"
+    "mtime": 1780951463.3113434,
+    "ast_hash": "e0f886a1fa4482c83f8d7965270f667c",
+    "semantic_hash": ""
   },
   "apps/user-service/src/app.ts": {
     "mtime": 1780907825.9139552,
@@ -235,8 +235,8 @@
     "semantic_hash": "b47615b03f5b7f2a7ae9e35c682da9da"
   },
   "apps/user-service/src/container/auth.container.ts": {
-    "mtime": 1780947551.5883589,
-    "ast_hash": "d6d8779b335376834647ba48f5d9c27c",
+    "mtime": 1780949839.5552146,
+    "ast_hash": "f5d6313b5240be0d85dfeafa9b8ca12e",
     "semantic_hash": ""
   },
   "apps/user-service/src/container/index.ts": {
@@ -339,11 +339,6 @@
     "ast_hash": "924ac2fbc616813866f23d5b86f0294e",
     "semantic_hash": "924ac2fbc616813866f23d5b86f0294e"
   },
-  "apps/user-service/src/kafka/producer/otp-requested.publisher.ts": {
-    "mtime": 1780909332.3605754,
-    "ast_hash": "ed711604f18df89585e68a02472c1d3c",
-    "semantic_hash": "ed711604f18df89585e68a02472c1d3c"
-  },
   "apps/user-service/src/mappers/auth.mapper.ts": {
     "mtime": 1780758687.7942624,
     "ast_hash": "f47f6d7985209206ebdd71cf0ea22cab",
@@ -385,8 +380,8 @@
     "semantic_hash": "fbeb265d372fedc6f0102a8974fa8ad4"
   },
   "apps/user-service/src/services/auth.service.ts": {
-    "mtime": 1780947544.7053657,
-    "ast_hash": "7928d37f8a9010eba25ce62afbc67a8d",
+    "mtime": 1781027521.9460251,
+    "ast_hash": "4bbfacdc88cbe2a098f58a475df04758",
     "semantic_hash": ""
   },
   "apps/user-service/src/services/health.service.ts": {
@@ -445,9 +440,9 @@
     "semantic_hash": "4b0fa62a9fc1d6ba5a445410c55f0952"
   },
   "apps/user-service/tsconfig.json": {
-    "mtime": 1780909096.5722773,
-    "ast_hash": "23dd15d7a03edb10ec97c926b471cee2",
-    "semantic_hash": "23dd15d7a03edb10ec97c926b471cee2"
+    "mtime": 1780949831.3922648,
+    "ast_hash": "3757d3d1372d2cb140c015db48330095",
+    "semantic_hash": ""
   },
   "package.json": {
     "mtime": 1780429032.2919643,
@@ -460,13 +455,8 @@
     "semantic_hash": "3a3bb6265d71a3fd21214b975537861a"
   },
   "packages/contracts/src/index.ts": {
-    "mtime": 1780849907.8590665,
-    "ast_hash": "dfe64574c275fd433cfea4362081b983",
-    "semantic_hash": "dfe64574c275fd433cfea4362081b983"
-  },
-  "packages/contracts/src/user-events.ts": {
-    "mtime": 1780947162.292661,
-    "ast_hash": "961cf8de58ace8c40fb4dae8bb414beb",
+    "mtime": 1780949328.8731227,
+    "ast_hash": "676c633781cd6ee4529f09f1e5c94154",
     "semantic_hash": ""
   },
   "packages/contracts/tsconfig.json": {
@@ -770,9 +760,9 @@
     "semantic_hash": "ba072c863bd8d32ee5e6e6f3e42feb3c"
   },
   "CLAUDE.md": {
-    "mtime": 1780938287.6059036,
-    "ast_hash": "9cbd7c8fb3dba14be13439f5a5e73dd9",
-    "semantic_hash": "9cbd7c8fb3dba14be13439f5a5e73dd9"
+    "mtime": 1780950293.0563033,
+    "ast_hash": "faad1914e94467101e3a26f99a8ff69b",
+    "semantic_hash": ""
   },
   "README.md": {
     "mtime": 1780758689.3819077,
@@ -790,9 +780,9 @@
     "semantic_hash": "45593b6a5fe5eb6ae0da82348395db77"
   },
   "docker-compose.yml": {
-    "mtime": 1780902239.0380478,
-    "ast_hash": "40fff28982d774fb04b9051e890781c6",
-    "semantic_hash": "40fff28982d774fb04b9051e890781c6"
+    "mtime": 1781025275.37501,
+    "ast_hash": "985782abe81debea7a20df175edf2429",
+    "semantic_hash": ""
   },
   "packages/eslint-config/README.md": {
     "mtime": 1780404266.0,
@@ -819,14 +809,34 @@
     "ast_hash": "638031b67c5d26af031e31bd7405532d",
     "semantic_hash": ""
   },
-  "apps/user-service/src/kafka/producer/user-logged-in.publisher.ts": {
+  ".coderabbit.yaml": {
+    "mtime": 1780947100.7294886,
+    "ast_hash": "f1f3d8964709e8f166fb007fa5140b7c",
+    "semantic_hash": ""
+  },
+  "apps/user-service/src/events/publishers/otp-requested.publisher.ts": {
+    "mtime": 1780909332.3605754,
+    "ast_hash": "ed711604f18df89585e68a02472c1d3c",
+    "semantic_hash": ""
+  },
+  "apps/user-service/src/events/publishers/user-logged-in.publisher.ts": {
     "mtime": 1780947531.2528722,
     "ast_hash": "e4ded74c65e5ec64f4acaaff23ccdf04",
     "semantic_hash": ""
   },
-  ".coderabbit.yaml": {
-    "mtime": 1780947100.7294886,
-    "ast_hash": "f1f3d8964709e8f166fb007fa5140b7c",
+  "packages/contracts/src/user/index.ts": {
+    "mtime": 1780950293.242545,
+    "ast_hash": "635d323bac4851595a9b8bb8ddd68086",
+    "semantic_hash": ""
+  },
+  "packages/contracts/src/user/otp-requested.v1.ts": {
+    "mtime": 1780950293.2521703,
+    "ast_hash": "ac7cb38bbefccb01060e079cb6353f7d",
+    "semantic_hash": ""
+  },
+  "packages/contracts/src/user/user-logged-in.v1.ts": {
+    "mtime": 1780950293.26886,
+    "ast_hash": "57490b78f0c281067ecdea4e9f44d45d",
     "semantic_hash": ""
   }
 }

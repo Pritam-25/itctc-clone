@@ -38,21 +38,39 @@ const probeRedis = async (): Promise<boolean> => {
  * still alive — far stronger than `instance !== null`, which can be true
  * even when `connect()` failed or the broker has since become unreachable.
  */
+const KAFKA_PROBE_TIMEOUT_MS = 5000;
+
 const probeKafka = async (): Promise<boolean> => {
-  try {
-    const admin = kafka.admin();
+  const probe = async (): Promise<boolean> => {
     try {
-      await admin.connect();
-      await admin.listTopics();
-      return true;
-    } finally {
-      await admin.disconnect().catch(() => {
-        // Disconnect failures are non-fatal for a readiness probe.
-      });
+      const admin = kafka.admin();
+      try {
+        await admin.connect();
+        await admin.listTopics();
+        return true;
+      } finally {
+        await admin.disconnect().catch(() => {
+          // Disconnect failures are non-fatal for a readiness probe.
+        });
+      }
+    } catch (err) {
+      logger.warn({ module: "health", err }, "Kafka readiness probe failed");
+      return false;
     }
-  } catch (err) {
-    logger.warn({ module: "health", err }, "Kafka readiness probe failed");
-    return false;
+  };
+
+  let timeoutHandle: NodeJS.Timeout | undefined;
+  const timeout = new Promise<boolean>((resolve) => {
+    timeoutHandle = setTimeout(() => {
+      logger.warn({ module: "health" }, "Kafka readiness probe timed out");
+      resolve(false);
+    }, KAFKA_PROBE_TIMEOUT_MS);
+  });
+
+  try {
+    return await Promise.race([probe(), timeout]);
+  } finally {
+    if (timeoutHandle) clearTimeout(timeoutHandle);
   }
 };
 

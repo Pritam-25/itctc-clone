@@ -1,14 +1,21 @@
-# Graph Report - . (2026-06-08)
+# Graph Report - itctc-clone (2026-06-09)
 
 ## Corpus Check
 
-- Corpus is ~29,049 words - fits in a single context window. You may not need a graph.
+- 163 files · ~30,423 words
+- Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
 
-- 977 nodes · 1159 edges · 57 communities (45 shown, 12 thin omitted)
-- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 50 edges (avg confidence: 0.8)
-- Token cost: 32,000 input · 8,977 output
+- 1097 nodes · 1292 edges · 73 communities (59 shown, 14 thin omitted)
+- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 51 edges (avg confidence: 0.8)
+- Token cost: 0 input · 0 output
+
+## Graph Freshness
+
+- Built from commit: `a78bd729`
+- Run `git rev-parse HEAD` and compare to check if the graph is stale.
+- Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 
@@ -66,28 +73,44 @@
 - [[_COMMUNITY_Logger Types|Logger Types]]
 - [[_COMMUNITY_Eslint Config README|Eslint Config README]]
 - [[_COMMUNITY_Notification Service README|Notification Service README]]
+- [[_COMMUNITY_Community 57|Community 57]]
+- [[_COMMUNITY_Community 58|Community 58]]
+- [[_COMMUNITY_Community 59|Community 59]]
+- [[_COMMUNITY_Community 60|Community 60]]
+- [[_COMMUNITY_Community 61|Community 61]]
+- [[_COMMUNITY_Community 62|Community 62]]
+- [[_COMMUNITY_Community 63|Community 63]]
+- [[_COMMUNITY_Community 64|Community 64]]
+- [[_COMMUNITY_Community 65|Community 65]]
+- [[_COMMUNITY_Community 66|Community 66]]
+- [[_COMMUNITY_Community 67|Community 67]]
+- [[_COMMUNITY_Community 68|Community 68]]
+- [[_COMMUNITY_Community 69|Community 69]]
+- [[_COMMUNITY_Community 70|Community 70]]
+- [[_COMMUNITY_Community 71|Community 71]]
+- [[_COMMUNITY_Community 72|Community 72]]
 
 ## God Nodes (most connected - your core abstractions)
 
-1. `compilerOptions` - 19 edges
-2. `compilerOptions` - 18 edges
-3. `paths` - 15 edges
-4. `successResponse()` - 15 edges
-5. `compilerOptions` - 15 edges
-6. `AuthService` - 14 edges
-7. `AuthController` - 12 edges
-8. `paths` - 11 edges
-9. `Layered Service Pattern (Routes->Controllers->Services->Repositories)` - 11 edges
-10. `user-service README` - 10 edges
+1. `IRCTC Clone` - 27 edges
+2. `compilerOptions` - 19 edges
+3. `user-service` - 19 edges
+4. `compilerOptions` - 18 edges
+5. `paths` - 15 edges
+6. `successResponse()` - 15 edges
+7. `compilerOptions` - 15 edges
+8. `AuthService` - 14 edges
+9. `AuthController` - 12 edges
+10. `paths` - 11 edges
 
 ## Surprising Connections (you probably didn't know these)
 
+- `Postgres Service (postgres:16-alpine)` --references--> `user-service` [INFERRED]
+  docker-compose.yml → CLAUDE.md
+- `Redis Service (redis:7-alpine)` --references--> `user-service` [INFERRED]
+  docker-compose.yml → CLAUDE.md
 - `bootstrap()` --calls--> `createConsumer()` [INFERRED]
   apps/notification-service/src/container/notification.container.ts → packages/kafka/src/client/consumer.ts
-- `liveCheck()` --calls--> `successResponse()` [INFERRED]
-  apps/notification-service/src/health/health.controller.ts → packages/http/src/response/apiResponse.ts
-- `readyCheck()` --calls--> `successResponse()` [INFERRED]
-  apps/notification-service/src/health/health.controller.ts → packages/http/src/response/apiResponse.ts
 - `liveCheck()` --calls--> `successResponse()` [INFERRED]
   apps/user-service/src/controllers/health.controller.ts → packages/http/src/response/apiResponse.ts
 - `readyCheck()` --calls--> `successResponse()` [INFERRED]
@@ -104,7 +127,7 @@
 - **Shared @irctc/\* Packages** — claude_pkg_errors, claude_pkg_http, claude_pkg_logger, claude_pkg_middleware, claude_pkg_kafka, claude_pkg_contracts, claude_pkg_telemetry [EXTRACTED 1.00]
 - **user-service Async OTP Email Flow** — user_service_async_registration_flow, user_service_kafka_contract, docker_kafka_topic_otp, claude_notification_service, user_service_redis_keys [INFERRED 0.85]
 
-## Communities (57 total, 12 thin omitted)
+## Communities (73 total, 14 thin omitted)
 
 ### Community 0 - "Prisma Generated Types"
 
@@ -113,8 +136,8 @@ Nodes (98): Args, At, AtLeast, AtLoose, AtStrict, BatchPayload, Boolean, Boolean
 
 ### Community 1 - "User Service Server & DTOs"
 
-Cohesion: 0.05
-Nodes (28): LoginRequestDto, LoginSchema, VerifyOtpRequestDto, VerifyOtpRequestSchema, RegisterRequestDto, RegisterSchema, AUTH_DURATIONS, COOKIE_MAX_AGE (+20 more)
+Cohesion: 0.06
+Nodes (23): RegisterRequestDto, AUTH_DURATIONS, COOKIE_MAX_AGE, COOKIE_NAMES, DURATION_TO_MS, REDIS_KEYS, build(), getAuthController() (+15 more)
 
 ### Community 2 - "Prisma User Model"
 
@@ -123,8 +146,8 @@ Nodes (57): AggregateUser, BoolFieldUpdateOperationsInput, DateTimeFieldUpdateOp
 
 ### Community 3 - "Architecture & Service Design"
 
-Cohesion: 0.07
-Nodes (52): api-gateway Service, booking-service, Clean Architecture, Domain Driven Design (DDD), Error Handling Flow (ApiError -> normalizeError -> ErrorContract -> errorResponse), Error Registry (ERROR_CODES / ERROR_MESSAGES constants), Graceful Shutdown Sequence, graphify Knowledge Graph Integration (+44 more)
+Cohesion: 0.17
+Nodes (15): Kafka Architecture, @irctc/contracts Package (Zod Event Schemas), @irctc/kafka Package, docker-compose Infrastructure Stack, irctc-network (bridge), kafka-init Sidecar (Topic Provisioning), Kafka Broker (KRaft, dual listeners EXTERNAL/INTERNAL), Kafka Topic notification.otp-requested.v1 (+7 more)
 
 ### Community 4 - "Kafka Client Package"
 
@@ -138,8 +161,8 @@ Nodes (39): dependencies, bcryptjs, cookie-parser, cors, dotenv, express, helmet
 
 ### Community 6 - "Auth Response & Prisma Client"
 
-Cohesion: 0.09
-Nodes (10): AuthResponseDto, globalForPrisma, AuthMapper, UserMapper, PrismaClient, User, AuthRepository, AuthService (+2 more)
+Cohesion: 0.06
+Nodes (20): app, AuthResponseDto, LoginRequestDto, LoginSchema, VerifyOtpRequestDto, VerifyOtpRequestSchema, RegisterSchema, globalForPrisma (+12 more)
 
 ### Community 7 - "TS Config - Service Base"
 
@@ -148,8 +171,8 @@ Nodes (36): compilerOptions, declaration, declarationMap, exactOptionalPropertyT
 
 ### Community 8 - "Env & Server Bootstrap"
 
-Cohesion: 0.08
-Nodes (14): env, startServer(), getEmailVendor(), bootstrap(), EmailContent, EmailProvider, SendEmailCommand, EmailProviderFactory (+6 more)
+Cohesion: 0.06
+Nodes (17): env, startServer(), getEmailVendor(), bootstrap(), EmailContent, EmailProvider, SendEmailCommand, EmailProviderFactory (+9 more)
 
 ### Community 9 - "HTTP Package Utilities"
 
@@ -223,8 +246,8 @@ Nodes (13): BoolFilter, BoolWithAggregatesFilter, DateTimeFilter, DateTimeWithAg
 
 ### Community 23 - "Health Check Endpoints"
 
-Cohesion: 0.27
-Nodes (7): router, liveCheck(), readyCheck(), HealthChecks, HealthService, probeKafka(), probeRedis()
+Cohesion: 0.13
+Nodes (11): router, AuthController, liveCheck(), readyCheck(), liveCheck(), readyCheck(), HealthChecks, HealthService (+3 more)
 
 ### Community 24 - "Notification Constants"
 
@@ -238,13 +261,13 @@ Nodes (7): ModelName, NullTypes, QueryMode, SortOrder, TransactionIsolationLevel
 
 ### Community 26 - "User Auth Container & Publisher"
 
-Cohesion: 0.24
-Nodes (4): build(), getAuthController(), OtpEventPublisher, SCHEMA_VERSION
+Cohesion: 0.11
+Nodes (17): Clean Architecture, Architecture, Build, Database Setup, Development, Environment Variables, Installation, IRCTC Clone (+9 more)
 
 ### Community 27 - "User Event Contracts (Kafka)"
 
-Cohesion: 0.20
-Nodes (8): OTPRequestedV1, OTPRequestedV1Type, UserCreatedV1, UserCreatedV1Type, UserDeletedV1, UserDeletedV1Type, UserUpdatedV1, UserUpdatedV1Type
+Cohesion: 0.17
+Nodes (10): OTPRequestedV1, OTPRequestedV1Type, UserCreatedV1, UserCreatedV1Type, UserDeletedV1, UserDeletedV1Type, UserLoggedInV1, UserLoggedInV1Type (+2 more)
 
 ### Community 28 - "TS Config - Next.js"
 
@@ -298,8 +321,8 @@ Nodes (6): license, name, private, publishConfig, access, version
 
 ### Community 38 - "User Service Routes"
 
-Cohesion: 0.33
-Nodes (3): app, router, router
+Cohesion: 0.22
+Nodes (14): Error Handling Flow, Error Handling Guidelines, Error Registry (ERROR_CODES / ERROR_MESSAGES constants), @irctc/errors Package, @irctc/http Package, user-service API Reference (REST endpoints), Async Registration Flow (send-otp -> Kafka -> notification-service), Failure Modes & Rollback (Kafka publish, Redis down, Postgres down) (+6 more)
 
 ### Community 40 - "ESLint Configs (Next/React)"
 
@@ -316,27 +339,97 @@ Nodes (3): REDACT_PATHS, \_\_dirname, logger
 Cohesion: 0.40
 Nodes (4): compilerOptions, jsx, extends, $schema
 
+### Community 57 - "Community 57"
+
+Cohesion: 0.28
+Nodes (13): api-gateway Service, booking-service, Domain Driven Design (DDD), graphify Knowledge Graph Integration, Layered Service Pattern (Routes->Controllers->Services->Repositories), Microservices Architecture, notification-service, payment-service (+5 more)
+
+### Community 58 - "Community 58"
+
+Cohesion: 0.15
+Nodes (13): 12. Rate limits & abuse prevention, 15. Configuration reference, 2. High-level architecture, 3. Component diagram, 4. Async registration flow (user-service ↔ notification-service), 7. Session management, 8. Redis data model, See also (+5 more)
+
+### Community 59 - "Community 59"
+
+Cohesion: 0.20
+Nodes (8): Common Commands, Global Operations, graphify, High-Level Architecture, Monorepo Structure, Service Internal Pattern, Service-Specific Operations, System Design
+
+### Community 60 - "Community 60"
+
+Cohesion: 0.29
+Nodes (9): Graceful Shutdown, Health Monitoring, Infrastructure Guidelines, @irctc/logger Package (Pino + OpenTelemetry), @irctc/middleware Package, @irctc/telemetry Package, Startup Sequence, Observability Stack (Grafana, Loki, Tempo, Prometheus, Alloy) (+1 more)
+
+### Community 61 - "Community 61"
+
+Cohesion: 0.25
+Nodes (8): Backend, Cache, Database, Infrastructure, Messaging, Observability, Technology Stack, Validation
+
+### Community 62 - "Community 62"
+
+Cohesion: 0.33
+Nodes (6): API Gateway, Booking Service, Microservices, Payment Service, Search Service, User Service
+
+### Community 63 - "Community 63"
+
+Cohesion: 0.33
+Nodes (6): Grafana, Loki, Observability, OpenTelemetry, Prometheus, Tempo
+
+### Community 64 - "Community 64"
+
+Cohesion: 0.33
+Nodes (6): 13. Failure modes & rollback, Graceful shutdown, Kafka publish fails after Redis writes, `notification-service` is down, Postgres is down, Redis is down
+
+### Community 65 - "Community 65"
+
+Cohesion: 0.33
+Nodes (6): 16. Local development, Build, One-time setup, Prerequisites, Run, Smoke test
+
+### Community 66 - "Community 66"
+
+Cohesion: 0.40
+Nodes (5): 10. API reference, Authenticated (require `auth_token` cookie), Cookie contract, Health, Public (unauthenticated)
+
+### Community 67 - "Community 67"
+
+Cohesion: 0.40
+Nodes (5): 14. Startup, shutdown, and observability, Health endpoints, Logging & tracing, Shutdown sequence, Startup sequence (parallelised where possible)
+
+### Community 68 - "Community 68"
+
+Cohesion: 0.50
+Nodes (4): 6. Token refresh & rotation, Fingerprint, Refresh token rotation, Reuse detection
+
+### Community 69 - "Community 69"
+
+Cohesion: 0.50
+Nodes (4): 9. Kafka contract, `OTPRequestedV1` payload, Published events, Why a UUID for `eventId`?
+
+### Community 70 - "Community 70"
+
+Cohesion: 0.67
+Nodes (3): 1. Responsibilities & non-responsibilities, Does NOT own, Owns
+
 ## Knowledge Gaps
 
-- **549 isolated node(s):** `PreToolUse`, `allow`, `name`, `version`, `private` (+544 more)
+- **628 isolated node(s):** `PreToolUse`, `allow`, `name`, `version`, `private` (+623 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **12 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **14 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `successResponse()` connect `User Service Server & DTOs` to `HTTP Package Utilities`, `Health Check Endpoints`?**
+- **Why does `successResponse()` connect `Health Check Endpoints` to `HTTP Package Utilities`?**
+  _High betweenness centrality (0.044) - this node is a cross-community bridge._
+- **Why does `AuthController` connect `Health Check Endpoints` to `User Service Server & DTOs`?**
   _High betweenness centrality (0.041) - this node is a cross-community bridge._
-- **Why does `dependencies` connect `User Service Dependencies` to `Auth Response & Prisma Client`?**
-  _High betweenness centrality (0.033) - this node is a cross-community bridge._
+- **Why does `@prisma/client` connect `Auth Response & Prisma Client` to `User Service Dependencies`?**
+  _High betweenness centrality (0.038) - this node is a cross-community bridge._
 - **What connects `PreToolUse`, `allow`, `name` to the rest of the system?**
-  _551 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _630 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Prisma Generated Types` be split into smaller, more focused modules?**
   _Cohesion score 0.020202020202020204 - nodes in this community are weakly interconnected._
 - **Should `User Service Server & DTOs` be split into smaller, more focused modules?**
-  _Cohesion score 0.051577152600170505 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05909090909090909 - nodes in this community are weakly interconnected._
 - **Should `Prisma User Model` be split into smaller, more focused modules?**
   _Cohesion score 0.034482758620689655 - nodes in this community are weakly interconnected._
-- **Should `Architecture & Service Design` be split into smaller, more focused modules?**
-  _Cohesion score 0.07013574660633484 - nodes in this community are weakly interconnected._

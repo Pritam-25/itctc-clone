@@ -407,7 +407,7 @@ export class AuthService {
       throw new ApiError(
         statusCode.badGateway,
         ERROR_CODES.KAFKA_PUBLISH_FAILED,
-        "Failed to enqueue OTP delivery. Please try again.",
+        ERROR_CODES.KAFKA_PUBLISH_FAILED,
         { cause: err },
       );
     }
