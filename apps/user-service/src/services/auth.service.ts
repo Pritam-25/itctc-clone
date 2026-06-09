@@ -19,7 +19,9 @@ import { AuthMapper } from "@mappers/auth.mapper.js";
 import { logger } from "@irctc/logger";
 import { OtpService } from "./otp.service.js";
 import { generateOtp } from "@utils/generate-otp.js";
-import { emailService } from "./email.service.js";
+import { OtpEventPublisher } from "../events/publishers/otp-requested.publisher.js";
+import { UserLoggedInEventPublisher } from "../events/publishers/user-logged-in.publisher.js";
+import type { OTPRequestedV1Type, UserLoggedInV1Type } from "@irctc/contracts";
 
 export interface AccessTokenPayload {
   sub: string;
@@ -34,8 +36,25 @@ export interface RefreshTokenPayload {
   type: "refresh";
 }
 
+/**
+ * Application service responsible for authentication and registration workflows.
+ *
+ * Responsibilities:
+ * - OTP-based user registration
+ * - JWT access/refresh token issuance
+ * - Refresh token rotation and reuse detection
+ * - Redis-backed session management
+ * - Authentication-related Kafka event publishing
+ *
+ * This service orchestrates business workflows and delegates persistence,
+ * OTP storage, and event delivery to dedicated collaborators.
+ */
 export class AuthService {
-  constructor(private repo: AuthRepository) {}
+  constructor(
+    private repo: AuthRepository,
+    private otpPublisher: OtpEventPublisher,
+    private loginPublisher: UserLoggedInEventPublisher,
+  ) {}
 
   private generateAccessToken(
     userId: string,
@@ -62,7 +81,24 @@ export class AuthService {
   }
 
   /**
-   * Authenticates user and creates a new device session.
+   * Authenticates a user and creates a new device session.
+   *
+   * Workflow:
+   * 1. Validate email and password.
+   * 2. Generate access and refresh tokens.
+   * 3. Create a Redis-backed session.
+   * 4. Track the session for logout-all support.
+   * 5. Publish a UserLoggedInV1 event (best effort).
+   *
+   * Login succeeds even if event publication fails because authentication
+   * is considered the primary operation while notifications are secondary.
+   *
+   * @param data Login credentials.
+   * @param fingerprint Device fingerprint used for session binding.
+   * @returns Auth response containing user details and JWT tokens.
+   *
+   * @throws {ApiError}
+   * - INVALID_CREDENTIALS
    */
   async login(
     data: LoginRequestDto,
@@ -133,12 +169,50 @@ export class AuthService {
       "User logged in successfully",
     );
 
+    // Best-effort welcome email: the user has already authenticated
+    // and the session is persisted, so a degraded notification queue
+    // must NOT roll back the login. The notification service will
+    // dedupe on eventId if a redelivery ever lands.
+    const loginEvent: UserLoggedInV1Type = {
+      eventId: randomUUID(),
+      userId: user.id,
+      email: user.email,
+      firstName: user.firstName,
+      loggedInAt: new Date(),
+    };
+
+    try {
+      await this.loginPublisher.publishUserLoggedIn(loginEvent);
+    } catch (err) {
+      logger.error(
+        { module: "auth", err, userId: user.id },
+        "Welcome email publish failed; continuing without rollback",
+      );
+    }
+
     return AuthMapper.toAuthResponseDto(user, accessToken, refreshToken);
   }
 
   /**
-   * Refreshes the access token using a valid refresh token.
-   * Implements Refresh Token Rotation and Reuse Detection.
+   * Issues a new access token and refresh token for an existing session.
+   *
+   * Security protections:
+   * - Session existence validation
+   * - Device fingerprint verification
+   * - Refresh token rotation
+   * - Refresh token reuse detection
+   *
+   * If refresh token reuse is detected, all active sessions belonging to
+   * the user are revoked as a defensive security measure.
+   *
+   * @param refreshToken Existing refresh token.
+   * @param fingerprint Device fingerprint associated with the session.
+   * @returns Newly issued access and refresh tokens.
+   *
+   * @throws {ApiError}
+   * - INVALID_REFRESH_TOKEN
+   * - SESSION_EXPIRED_OR_REVOKED
+   * - DEVICE_FINGERPRINT_MISMATCH
    */
   async refresh(
     refreshToken: string,
@@ -239,7 +313,13 @@ export class AuthService {
   }
 
   /**
-   * Retrieves all active sessions for a user.
+   * Retrieves all active sessions belonging to a user.
+   *
+   * Sensitive fields such as refresh token hashes are excluded
+   * from the returned payload.
+   *
+   * @param userId User identifier.
+   * @returns Active session metadata.
    */
   async getSessions(userId: string): Promise<any[]> {
     const sessionsKey = REDIS_KEYS.userSessions(userId);
@@ -259,7 +339,16 @@ export class AuthService {
   }
 
   /**
-   * Revokes a specific session.
+   * Revokes a specific session owned by the user.
+   *
+   * Ownership validation is performed before deletion to prevent
+   * one user from revoking another user's session.
+   *
+   * @param sessionId Session identifier.
+   * @param userId Current authenticated user.
+   *
+   * @throws {ApiError}
+   * - SESSION_OWNERSHIP_INVALID
    */
   async revokeSession(sessionId: string, userId: string): Promise<void> {
     const sessionKey = REDIS_KEYS.authSession(sessionId);
@@ -285,7 +374,13 @@ export class AuthService {
   }
 
   /**
-   * Logs out the current device by deleting the session.
+   * Logs out the current device by removing the associated session.
+   *
+   * Both the session record and the user's session index
+   * are cleaned up from Redis.
+   *
+   * @param sessionId Session identifier.
+   * @param userId User identifier.
    */
   async logout(sessionId: string, userId: string): Promise<void> {
     logger.info({ module: "auth", userId }, "Logging out current device");
@@ -297,7 +392,14 @@ export class AuthService {
   }
 
   /**
-   * Logs out all devices for a user by deleting all their sessions.
+   * Revokes every active session belonging to the user.
+   *
+   * This operation is used for:
+   * - Explicit logout-all requests
+   * - Refresh token reuse detection
+   * - Security incident response
+   *
+   * @param userId User identifier.
    */
   async logoutAll(userId: string): Promise<void> {
     logger.info({ module: "auth", userId }, "Logging out all devices");
@@ -319,14 +421,39 @@ export class AuthService {
   }
 
   /**
-   * Retrieves a user by their ID.
+   * Retrieves a user by identifier.
+   *
+   * @param id User identifier.
+   * @returns User entity if found.
    */
   async getUserById(id: string) {
     return this.repo.findById(id);
   }
 
   /**
-   * Sends an OTP to the user's email and stores registration state in Redis.
+   * Initiates the registration workflow.
+   *
+   * Workflow:
+   * 1. Ensure the email is not already registered.
+   * 2. Generate an OTP.
+   * 3. Store OTP state in Redis.
+   * 4. Store pre-registration data in Redis.
+   * 5. Publish OTPRequestedV1 for asynchronous email delivery.
+   *
+   * The OTP email is sent by Notification Service after consuming the
+   * Kafka event. This service never communicates directly with an
+   * email provider.
+   *
+   * Consistency guarantee:
+   * If Kafka publishing fails, Redis registration state is rolled back
+   * so the user can safely retry registration.
+   *
+   * @param data Registration request.
+   * @returns Registration session identifier.
+   *
+   * @throws {ApiError}
+   * - USER_ALREADY_EXISTS
+   * - KAFKA_PUBLISH_FAILED
    */
   async sendOtp(data: RegisterRequestDto): Promise<string> {
     // 1. Check if user already exists to prevent spam/duplicate registrations
@@ -352,20 +479,54 @@ export class AuthService {
       hashedPassword,
     });
 
-    // 4. Send email
+    // 4. Publish OTPRequestedV1. Roll back on failure so the user can
+    //    safely retry without leaving a stale registration session.
+    const event: OTPRequestedV1Type = {
+      eventId: randomUUID(),
+      email: data.email,
+      otp,
+      createdAt: new Date(),
+    };
+
     try {
-      await emailService.sendOtpEmail(data.email, otp);
-    } catch (error) {
-      // Rollback OTP and registration session to prevent stale state
+      await this.otpPublisher.publishOtpRequested(event);
+    } catch (err) {
+      // Pre-registration flow has no userId; log eventId only.
+      logger.error(
+        { module: "auth", err, eventId: event.eventId },
+        "OTP publish failed; rolling back Redis state",
+      );
       await OtpService.deleteRegistrationSession(sessionId);
-      throw error;
+      throw new ApiError(
+        statusCode.badGateway,
+        ERROR_CODES.KAFKA_PUBLISH_FAILED,
+        ERROR_CODES.KAFKA_PUBLISH_FAILED,
+        { cause: err },
+      );
     }
 
     return sessionId;
   }
 
   /**
-   * Verifies the OTP and registers the user using stored registration data.
+   * Completes registration after successful OTP verification.
+   *
+   * Workflow:
+   * 1. Verify OTP.
+   * 2. Load pre-registration data from Redis.
+   * 3. Create the user in PostgreSQL.
+   * 4. Generate authentication tokens.
+   * 5. Remove temporary registration state.
+   *
+   * Registration cleanup is best effort and does not affect a
+   * successful registration response.
+   *
+   * @param sessionId Registration session identifier.
+   * @param data OTP verification request.
+   * @returns Auth response containing issued tokens.
+   *
+   * @throws {ApiError}
+   * - REGISTRATION_SESSION_EXPIRED
    */
   async verifyAndRegister(
     sessionId: string,
@@ -401,8 +562,15 @@ export class AuthService {
   }
 
   /**
-   * Internal method to handle user creation and token generation.
-   * Now accepts the data already containing the hashedPassword.
+   * Creates a verified user account and issues initial JWT tokens.
+   *
+   * This method is only invoked after OTP verification has succeeded.
+   * Password hashing has already been completed during the registration
+   * initiation phase.
+   *
+   * @param data Verified registration data.
+   * @param sessionId Registration session identifier.
+   * @returns Auth response containing issued tokens.
    */
   private async registerUser(
     data: {

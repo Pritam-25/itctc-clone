@@ -1,0 +1,38 @@
+{
+  "name": "notification-service",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch ./src/server.ts",
+    "build": "tsc && tsc-alias",
+    "type-check": "tsc --noEmit",
+    "test": "echo 'Add test script here'"
+  },
+  "dependencies": {
+    "@irctc/errors": "workspace:*",
+    "@irctc/http": "workspace:*",
+    "@irctc/logger": "workspace:*",
+    "@irctc/middleware": "workspace:*",
+    "@irctc/contracts": "workspace:*",
+    "@irctc/kafka": "workspace:*",
+    "@sendgrid/mail": "^8.1.6",
+    "@t3-oss/env-core": "^0.13.11",
+    "cors": "^2.8.5",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "helmet": "^8.2.0",
+    "ioredis": "^5.11.0",
+    "kafkajs": "^2.2.4",
+    "pino": "^9.5.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.0.0",
+    "tsc-alias": "^1.8.17",
+    "tsx": "^4.22.4"
+  }
+}

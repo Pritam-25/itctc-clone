@@ -1,0 +1,13 @@
+reviews:
+  path_filters:
+    #  skip these folders completely
+    - "!graphify-out/"
+
+    #  always ignore generated/noise
+    - '!**/node_modules/**'
+    - '!**/dist/**'
+    - '!**/build/**'
+    - '!**/*.generated.*'
+    - '!**/generated/**'
+    - '!**/openapi/**'
+    - '!**/*.lock'

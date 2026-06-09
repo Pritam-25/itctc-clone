@@ -1,0 +1,210 @@
+services:
+  # --- Infrastructure Layer ---
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: irctc-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: irctc_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - irctc-network
+
+  redis:
+    image: redis:7-alpine
+    container_name: irctc-redis
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - irctc-network
+
+  # --- Messaging Layer (KRaft Mode - Using Confluent Image for stability) ---
+  # Two listeners because Kafka clients resolve advertised addresses against
+  # their OWN network namespace. `localhost` means the client container (or
+  # host), not the broker. Splitting EXTERNAL (host) from INTERNAL (docker
+  # network) keeps both client classes happy with one broker.
+  #   EXTERNAL :9092  -> advertised as localhost:9092     (host-side `pnpm dev`)
+  #   INTERNAL :29092 -> advertised as irctc-kafka:29092  (other containers)
+
+  kafka:
+    image: confluentinc/cp-kafka:7.8.0
+    container_name: irctc-kafka
+    restart: always
+    ports:
+      - "9092:9092"
+      - "29092:29092"
+    environment:
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: "broker,controller"
+      KAFKA_CONTROLLER_QUORUM_VOTERS: "1@irctc-kafka:9093"
+      KAFKA_LISTENERS: "EXTERNAL://:9092,INTERNAL://:29092,CONTROLLER://:9093"
+      KAFKA_ADVERTISED_LISTENERS: "EXTERNAL://localhost:9092,INTERNAL://irctc-kafka:29092"
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: "CONTROLLER:PLAINTEXT,EXTERNAL:PLAINTEXT,INTERNAL:PLAINTEXT"
+      KAFKA_CONTROLLER_LISTENER_NAMES: "CONTROLLER"
+      KAFKA_INTER_BROKER_LISTENER_NAME: "INTERNAL"
+      CLUSTER_ID: "MkU3OEVBNTcwNTJENDM2Qk"
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+    volumes:
+      - kafka_data:/var/lib/kafka/data
+    networks:
+      - irctc-network
+
+  kafka-ui:
+    image: ghcr.io/kafbat/kafka-ui:v1.5.0
+    container_name: irctc-kafka-ui
+    restart: always
+    depends_on:
+      - kafka
+    ports:
+      - "8080:8080"
+    environment:
+      KAFKA_CLUSTERS_0_NAME: irctc-cluster
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: irctc-kafka:29092
+    networks:
+      - irctc-network
+
+  # --- Observability Stack ---
+
+  # alloy:
+  #   image: grafana/alloy:latest
+  #   container_name: irctc-alloy
+  #   restart: always
+  #   ports:
+  #     - "12345:12345"
+  #   volumes:
+  #     - ./infra/alloy/config.alloy:/etc/alloy/config.alloy
+  #   command: run --storage.path=/var/lib/alloy/data /etc/alloy/config.alloy
+  #   networks:
+  #     - irctc-network
+
+  # loki:
+  #   image: grafana/loki:latest
+  #   container_name: irctc-loki
+  #   restart: always
+  #   ports:
+  #     - "3100:3100"
+  #   command: -config.file=/etc/loki/local-config.yaml
+  #   networks:
+  #     - irctc-network
+
+  # tempo:
+  #   image: grafana/tempo:latest
+  #   container_name: irctc-tempo
+  #   restart: always
+  #   ports:
+  #     - "4317:4317" # OTLP gRPC
+  #     - "4318:4318" # OTLP HTTP
+  #     - "3200:3200"
+  #   command: ["-config.file=/etc/tempo.yaml"]
+  #   networks:
+  #     - irctc-network
+
+
+  # grafana:
+  #   image: grafana/grafana:latest
+  #   container_name: irctc-grafana
+  #   restart: always
+  #   depends_on:
+  #     - loki
+  #     - tempo
+  #   ports:
+  #     - "3000:3000"
+  #   environment:
+  #     - GF_SECURITY_ADMIN_PASSWORD=admin
+  #   networks:
+  #     - irctc-network
+
+  # --- Management Tools ---
+
+  pgadmin:
+    image: dpage/pgadmin4:9.15.0
+    container_name: irctc-pgadmin
+    restart: always
+    ports:
+      - "8081:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@irctc.com
+      PGADMIN_DEFAULT_PASSWORD: password
+    networks:
+      - irctc-network
+
+  redis-insight:
+    image: redis/redisinsight:3.4.2
+    container_name: irctc-redis-insight
+    restart: always
+    ports:
+      - "8001:8001"
+    networks:
+      - irctc-network
+
+  # --- Application Layer ---
+
+  # Creates the OTP and DLQ topics once at stack startup. Topics are not
+  # auto-created (allowAutoTopicCreation: false on the producer) so this
+  # sidecar is the only source of topic creation. The container exits
+  # successfully after the topics are created; restart is "no" so it
+  # does not loop.
+  #
+  # The application services (user-service, notification-service) are
+  # not part of this compose file — they run via `pnpm dev` on the host
+  # for now. See apps/*/Dockerfile (TODO) when the team is ready to
+  # containerise the runtime.
+  kafka-init:
+    image: confluentinc/cp-kafka:7.8.0
+    container_name: irctc-kafka-init
+    depends_on:
+      - kafka
+    networks:
+      - irctc-network
+    restart: "no"
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        set -e
+        echo "Waiting for Kafka broker..."
+        until kafka-topics --bootstrap-server irctc-kafka:29092 --list >/dev/null 2>&1; do
+          echo "Waiting for Kafka..."; sleep 2
+        done
+        echo "Creating Kafka topics..."
+        kafka-topics --bootstrap-server irctc-kafka:29092 \
+          --create --if-not-exists \
+          --topic notification.otp-requested.v1 \
+          --partitions 1 --replication-factor 1 \
+          --config retention.ms=604800000
+        kafka-topics --bootstrap-server irctc-kafka:29092 \
+          --create --if-not-exists \
+          --topic notification.otp-requested.v1.dlq \
+          --partitions 1 --replication-factor 1 \
+          --config retention.ms=2592000000
+        kafka-topics --bootstrap-server irctc-kafka:29092 \
+          --create --if-not-exists \
+          --topic notification.user-logged-in.v1 \
+          --partitions 1 --replication-factor 1 \
+          --config retention.ms=604800000
+        kafka-topics --bootstrap-server irctc-kafka:29092 \
+          --create --if-not-exists \
+          --topic notification.user-logged-in.v1.dlq \
+          --partitions 1 --replication-factor 1 \
+          --config retention.ms=2592000000
+        echo "Kafka topics created."
+
+networks:
+  irctc-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  redis_data:
+  kafka_data:

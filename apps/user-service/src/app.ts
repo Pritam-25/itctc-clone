@@ -4,16 +4,14 @@ import cors from "cors";
 import helmet from "helmet";
 import cookieParser from "cookie-parser";
 import router from "@routes";
-
-import { successResponse, statusCode } from "@irctc/http";
-
 import {
   requestIdMiddleware,
   requestLoggerMiddleware,
   errorHandler,
 } from "@irctc/middleware";
-
+import { successResponse, statusCode } from "@irctc/http";
 import { env } from "@config/env.js";
+import { healthRoutes } from "@routes";
 
 const app: Application = express();
 
@@ -22,6 +20,7 @@ app.use(
     contentSecurityPolicy: false,
   }),
 );
+
 app.use(
   cors({
     origin: env.CORS_ORIGINS,
@@ -44,18 +43,11 @@ app.use(cookieParser());
 app.use(requestIdMiddleware);
 app.use(requestLoggerMiddleware);
 
-app.get("/health", (_req: Request, res: Response) => {
-  res.status(statusCode.success).json(
-    successResponse("Service is healthy", {
-      status: "healthy",
-      uptime: process.uptime(),
-    }),
-  );
-});
+app.use("/health", healthRoutes);
 
 app.get("/", (_req: Request, res: Response) => {
   res.status(statusCode.success).json(
-    successResponse("Welcome to User Service API v1", {
+    successResponse("Welcome to User Service API", {
       version: "1.0.0",
       endpoints: {
         health: "/health",

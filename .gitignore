@@ -39,3 +39,8 @@ yarn-error.log*
 
 .vscode/
 .idea/
+
+.claude/
+
+graphify-out/cost.json
+graphify-out/cache/

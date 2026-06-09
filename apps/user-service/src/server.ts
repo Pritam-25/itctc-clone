@@ -1,7 +1,8 @@
 import { env } from "@config/env.js";
 import { logger } from "@irctc/logger";
 import { prisma } from "@config/prisma.js";
-import { disconnectRedis } from "@config/redis.js";
+import { disconnectRedis, initRedis } from "@config/redis.js";
+import { initKafka, disconnectKafka } from "@config/kafka.js";
 import app from "./app.js";
 import type { Server } from "node:http";
 import { registerErrorMessages } from "@irctc/errors";
@@ -12,6 +13,13 @@ const PORT = env.PORT;
 let isShuttingDown = false;
 let server: Server | undefined;
 
+/**
+ * Graceful shutdown sequence as per industry standards:
+ * 1. Stop HTTP server (draining requests)
+ * 2. Disconnect Kafka clients
+ * 3. Disconnect Redis
+ * 4. Disconnect Prisma
+ */
 const shutdown = async (signal: NodeJS.Signals) => {
   if (isShuttingDown) return;
   isShuttingDown = true;
@@ -38,15 +46,28 @@ const shutdown = async (signal: NodeJS.Signals) => {
     }
   }
 
-  try {
-    await prisma.$disconnect();
-    logger.info({ module: "prisma" }, "Prisma disconnected successfully.");
-    logger.info({ module: "redis" }, "Redis disconnected successfully.");
-    await disconnectRedis();
-  } catch (error) {
+  // Run all disconnects independently — a failure in one must not skip the
+  // others, otherwise K8s may see the pod exit with live connections still
+  // open. Promise.allSettled waits for every promise before aggregating.
+  const teardownResults = await Promise.allSettled([
+    disconnectKafka(),
+    disconnectRedis(),
+    prisma.$disconnect(),
+  ]);
+
+  const failures = teardownResults.filter(
+    (result): result is PromiseRejectedResult => result.status === "rejected",
+  );
+
+  if (failures.length === 0) {
+    logger.info(
+      { module: "server" },
+      "All infrastructure connections closed successfully.",
+    );
+  } else {
     logger.error(
-      { module: "prisma", err: error },
-      "Error occurred while disconnecting Prisma and Redis.",
+      { module: "server", errors: failures.map((f) => f.reason) },
+      "One or more infrastructure disconnect operations failed.",
     );
   }
 
@@ -55,13 +76,18 @@ const shutdown = async (signal: NodeJS.Signals) => {
 
 const startServer = async () => {
   registerErrorMessages(ERROR_MESSAGES);
-  await prisma.$connect();
-  logger.info({ module: "prisma" }, "Prisma connected successfully.");
+
+  logger.info({ module: "server" }, "Bootstrapping dependencies...");
+
+  // Parallel initialization of dependencies to reduce startup time
+  await Promise.all([prisma.$connect(), initRedis(), initKafka()]);
+
+  logger.info({ module: "server" }, "All dependencies connected successfully.");
 
   server = app.listen(PORT, () => {
     logger.info(
       { module: "server" },
-      `server running at http://localhost:${PORT} (${env.NODE_ENV})`,
+      `server listening at http://localhost:${PORT} (${env.NODE_ENV})`,
     );
   });
 
@@ -70,6 +96,24 @@ const startServer = async () => {
 
   return server;
 };
+
+// Handle unhandled promise rejections
+process.on("unhandledRejection", (reason) => {
+  logger.error(
+    { module: "server", err: reason },
+    "Unhandled Promise Rejection detected. Shutting down...",
+  );
+  shutdown("SIGTERM");
+});
+
+// Handle uncaught exceptions
+process.on("uncaughtException", (error) => {
+  logger.error(
+    { module: "server", err: error },
+    "Uncaught Exception detected. Shutting down...",
+  );
+  shutdown("SIGTERM");
+});
 
 try {
   await startServer();

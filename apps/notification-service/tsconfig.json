@@ -1,0 +1,49 @@
+{
+  "extends": "@repo/typescript-config/base.json",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "module": "nodenext",
+    "target": "esnext",
+    "types": ["node"],
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "paths": {
+      "@config/*": ["./src/config/*"],
+      "@config": ["./src/config/index.js"],
+      "@constants/*": ["./src/constants/*"],
+      "@constants": ["./src/constants/index.js"],
+      "@services/*": ["./src/services/*"],
+      "@services": ["./src/services/index.js"],
+      "@consumers/*": ["./src/consumers/*"],
+      "@consumers": ["./src/consumers/index.js"],
+      "@providers/*": ["./src/providers/*"],
+      "@providers": ["./src/providers/index.js"],
+      "@templates/*": ["./src/templates/*"],
+      "@templates": ["./src/templates/index.js"],
+      "@repositories/*": ["./src/repositories/*"],
+      "@repositories": ["./src/repositories/index.js"],
+      "@container/*": ["./src/container/*"],
+      "@container": ["./src/container/index.js"],
+      "@api/*": ["./src/api/*"],
+      "@health/*": ["./src/health/*"]
+    },
+    "strict": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "test",
+    "prisma.config.ts",
+    "vitest.config.ts"
+  ]
+}
