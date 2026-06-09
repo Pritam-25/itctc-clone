@@ -21,7 +21,10 @@ let controllerPromise: Promise<AuthController> | null = null;
  */
 export function getAuthController(): Promise<AuthController> {
   if (!controllerPromise) {
-    controllerPromise = build();
+    controllerPromise = build().catch((err) => {
+      controllerPromise = null;
+      throw err;
+    });
   }
   return controllerPromise;
 }

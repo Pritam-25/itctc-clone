@@ -43,8 +43,10 @@ export class OtpNotificationService {
 
     const reserved = await this.idempotency.reserveIfNew(parsed.eventId);
     if (!reserved) {
+      // OTPRequestedV1 has no guaranteed userId (pre-auth flow), so
+      // eventId is the only safe identifier to log.
       this.logger.info(
-        { eventId: parsed.eventId, email: parsed.email },
+        { eventId: parsed.eventId },
         "Duplicate OTPRequestedV1 skipped",
       );
       return PROCESSING_STATUS.DUPLICATE;
@@ -72,18 +74,18 @@ export class OtpNotificationService {
 
     await this.idempotency.markProcessed(parsed.eventId);
 
-    this.logger.info(
-      { eventId: parsed.eventId, email: parsed.email },
-      "OTP email delivered",
-    );
+    this.logger.info({ eventId: parsed.eventId }, "OTP email delivered");
     return PROCESSING_STATUS.PROCESSED;
   }
 
   private tryValidate(event: unknown): OTPRequestedV1Type | null {
     const result = OTPRequestedV1.safeParse(event);
     if (!result.success) {
+      // Avoid logging the full event payload — it contains PII
+      // (email, otp). The Zod issues list is enough to diagnose
+      // the schema mismatch.
       this.logger.warn(
-        { issues: result.error.issues, event },
+        { issues: result.error.issues },
         "OTPRequestedV1 schema validation failed",
       );
       return null;

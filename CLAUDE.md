@@ -100,6 +100,29 @@ Every service must implement:
 - **Use Constants**: Always use the `ERROR_CODES` and `ERROR_MESSAGES` constants defined in the service's `utils/errors` directory.
 - **Maintainability**: This ensures that all error messages are centralized, translation-ready, and consistent across the service.
 - **Registry**: Service-specific errors are registered with the global `@irctc/errors` registry during service startup to ensure proper normalization.
+- **Centralized error constants are for user-facing errors only.** `ERROR_MESSAGES` is registered with `@irctc/errors` and surfaced in HTTP responses. Do NOT use it for developer log lines (`logger.error("…")`); write a short, specific log message and reference the `ERROR_CODES.*` key in a comment if the log corresponds to a user-facing failure code.
+
+### Logging & PII
+
+The Pino logger in `packages/logger` already redacts credentials and secrets via `REDACT_PATHS` (`password`, `token`, `otp`, `cardNumber`, `cvv`, `upiPin`, `*.password`, etc.). It does **not** redact PII.
+
+**Rules — apply to every service:**
+
+- **Never log PII in application logs.** Forbidden in log bound objects: `email`, `firstName`, `lastName`, `phone`, `address`, `dateOfBirth`, full event/request payloads, full `req.body`, full `req.user`, and full DTOs.
+- **Use stable, non-PII identifiers instead.** `eventId` and `userId` (or `sessionId` for unauthenticated flows) are always safe. The `OTPRequestedV1` contract does not guarantee a `userId` — log `eventId` only.
+- **Never log a whole event or request object.** Zod `safeParse` failures should log `result.error.issues` only; HTTP request errors should log `req.id` + a redacted field summary, not the body.
+- **Kafka message keys must not be PII.** Use `userId` (or `eventId` for anonymous flows) as the partition key. Email-as-key both leaks PII on the wire and ties partition routing to mutable user data.
+- **When adding new log statements, do a self-check:** does the bound object contain any field that could identify a real person? If yes, replace it with `eventId`/`userId`/`sessionId` or drop it.
+- **Code review must flag any new `email:` / `firstName:` field in a `logger.*` call.** Same for any change to `REDACT_PATHS` in `packages/logger/src/constants.ts` — that file is the trust boundary for log redaction.
+
+### Idempotency for Side-Effecting Consumers
+
+Any Kafka consumer that triggers an irreversible side effect (email, SMS, payment, external API write) MUST use the two-phase idempotency pattern in `@irctc/notification-service` (and any new service that follows the same shape): `reserveIfNew` → do the work → `markProcessed` on success, `release` on failure and rethrow. The single-call `markIfNew` style drops notifications permanently on a single transient provider failure, because the redelivery is short-circuited as a duplicate. Redis keys store explicit `PROCESSING` (short lease TTL) vs `PROCESSED` (full dedupe TTL) values so in-flight work, completed dedupe, and crash recovery are distinguishable. See `IdempotencyRepository` in `apps/notification-service/src/repositories/idempotency.repository.ts` for the canonical API.
+
+### Health Probes & Bootstrap Readiness
+
+- **Every dependency probe inside `/health/ready` must have a bounded timeout** (target 5s) wrapped via `Promise.race` with a `clearTimeout` in `finally`. Default KafkaJS / Prisma / ioredis timeouts are 30s+; without an explicit bound, a slow dependency will hang `Promise.all` in `runReadinessChecks` and make orchestrators (k8s, load balancers) unable to mark the pod NotReady in time.
+- **Always `await initRedis()` (and equivalent) before wiring repositories that depend on the client.** `lazyConnect: false` starts the connect handshake, but the client is not safe to use until the `ready` event fires. The `initRedis()` helper in `apps/notification-service/src/config/redis.ts` is the canonical pattern — replicate it in any new service that uses Redis.
 
 ## graphify
 
@@ -111,3 +134,15 @@ Rules:
 - If graphify-out/wiki/index.md exists, use it for broad navigation instead of raw source browsing.
 - Read graphify-out/GRAPH_REPORT.md only for broad architecture review or when query/path/explain do not surface enough context.
 - After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost).
+
+## JSDoc Guidelines
+
+When generating TypeScript:
+
+- Add concise production-grade JSDoc.
+- Every service class must have a class-level JSDoc.
+- Every public service method must have workflow-oriented JSDoc.
+- Document side effects, Redis usage, Kafka publishing, security behavior, and failure guarantees when relevant.
+- Avoid tutorial-style comments.
+- Avoid line-by-line comments.
+- Prefer explaining WHY over WHAT.

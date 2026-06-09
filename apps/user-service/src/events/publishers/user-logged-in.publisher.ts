@@ -26,7 +26,10 @@ export class UserLoggedInEventPublisher {
         topic: env.KAFKA_USER_LOGIN_TOPIC,
         messages: [
           {
-            key: input.email, // per-user ordering
+            // Key on userId (stable, non-PII) for per-user ordering
+            // and partition affinity. Email would expose PII on the
+            // wire and tie partition routing to mutable user data.
+            key: input.userId,
             value: JSON.stringify(input),
             headers: {
               [HEADER_EVENT_ID]: input.eventId,
@@ -40,7 +43,7 @@ export class UserLoggedInEventPublisher {
         {
           module: "user-logged-in-publisher",
           eventId: input.eventId,
-          email: input.email,
+          userId: input.userId,
         },
         "UserLoggedInV1 published",
       );
@@ -50,7 +53,7 @@ export class UserLoggedInEventPublisher {
           module: "user-logged-in-publisher",
           error,
           eventId: input.eventId,
-          email: input.email,
+          userId: input.userId,
         },
         "Failed to publish UserLoggedInV1",
       );

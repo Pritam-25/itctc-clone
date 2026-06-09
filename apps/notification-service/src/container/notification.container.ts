@@ -44,11 +44,13 @@ export const bootstrap = async () => {
   await initRedis();
   const otpIdempotency = new IdempotencyRepository(
     redis,
+    env.IDEMPOTENCY_PROCESSING_LEASE_SECONDS,
     env.IDEMPOTENCY_TTL_SECONDS,
     IDEMPOTENCY_KEYS.OTP_REQUESTED,
   );
   const loginIdempotency = new IdempotencyRepository(
     redis,
+    env.IDEMPOTENCY_PROCESSING_LEASE_SECONDS,
     env.IDEMPOTENCY_TTL_SECONDS,
     IDEMPOTENCY_KEYS.USER_LOGGED_IN,
   );

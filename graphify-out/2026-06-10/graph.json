@@ -55,296 +55,6 @@
   },
   "nodes": [
     {
-      "label": "CLAUDE.md",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "claude",
-      "community": 59,
-      "norm_label": "claude.md"
-    },
-    {
-      "label": "CLAUDE.md",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "claude_claude_md",
-      "community": 59,
-      "norm_label": "claude.md"
-    },
-    {
-      "label": "Common Commands",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "claude_common_commands",
-      "community": 59,
-      "norm_label": "common commands"
-    },
-    {
-      "label": "Global Operations",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "claude_global_operations",
-      "community": 59,
-      "norm_label": "global operations"
-    },
-    {
-      "label": "Service-Specific Operations",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L15",
-      "_origin": "ast",
-      "id": "claude_service_specific_operations",
-      "community": 59,
-      "norm_label": "service-specific operations"
-    },
-    {
-      "label": "High-Level Architecture",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L22",
-      "_origin": "ast",
-      "id": "claude_high_level_architecture",
-      "community": 73,
-      "norm_label": "high-level architecture"
-    },
-    {
-      "label": "System Design",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L24",
-      "_origin": "ast",
-      "id": "claude_system_design",
-      "community": 73,
-      "norm_label": "system design"
-    },
-    {
-      "label": "Monorepo Structure",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L28",
-      "_origin": "ast",
-      "id": "claude_monorepo_structure",
-      "community": 73,
-      "norm_label": "monorepo structure"
-    },
-    {
-      "label": "Service Internal Pattern",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L47",
-      "_origin": "ast",
-      "id": "claude_service_internal_pattern",
-      "community": 73,
-      "norm_label": "service internal pattern"
-    },
-    {
-      "label": "Infrastructure Guidelines",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L58",
-      "_origin": "ast",
-      "id": "claude_infrastructure_guidelines",
-      "community": 60,
-      "norm_label": "infrastructure guidelines"
-    },
-    {
-      "label": "Startup Sequence",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L60",
-      "_origin": "ast",
-      "id": "claude_startup_sequence",
-      "community": 60,
-      "norm_label": "startup sequence"
-    },
-    {
-      "label": "Graceful Shutdown",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L65",
-      "_origin": "ast",
-      "id": "claude_graceful_shutdown",
-      "community": 60,
-      "norm_label": "graceful shutdown"
-    },
-    {
-      "label": "Health Monitoring",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L76",
-      "_origin": "ast",
-      "id": "claude_health_monitoring",
-      "community": 60,
-      "norm_label": "health monitoring"
-    },
-    {
-      "label": "Kafka Architecture",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L83",
-      "_origin": "ast",
-      "id": "claude_kafka_architecture",
-      "community": 60,
-      "norm_label": "kafka architecture"
-    },
-    {
-      "label": "Error Handling Flow",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L90",
-      "_origin": "ast",
-      "id": "claude_error_handling_flow",
-      "community": 73,
-      "norm_label": "error handling flow"
-    },
-    {
-      "label": "Error Handling Guidelines",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L97",
-      "_origin": "ast",
-      "id": "claude_error_handling_guidelines",
-      "community": 73,
-      "norm_label": "error handling guidelines"
-    },
-    {
-      "label": "graphify",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L104",
-      "_origin": "ast",
-      "id": "claude_graphify",
-      "community": 59,
-      "norm_label": "graphify"
-    },
-    {
-      "label": "env.ts",
-      "file_type": "code",
-      "source_file": "apps/notification-service/src/config/env.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_notification_service_src_config_env_ts_config_env",
-      "community": 8,
-      "norm_label": "env.ts"
-    },
-    {
-      "label": "env",
-      "file_type": "code",
-      "source_file": "apps/notification-service/src/config/env.ts",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "apps_notification_service_src_config_env_ts_config_env_env",
-      "community": 8,
-      "norm_label": "env"
-    },
-    {
-      "label": "idempotency.constants.ts",
-      "file_type": "code",
-      "source_file": "apps/notification-service/src/constants/idempotency.constants.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "constants_idempotency_constants",
-      "community": 24,
-      "norm_label": "idempotency.constants.ts"
-    },
-    {
-      "label": "IDEMPOTENCY_KEYS",
-      "file_type": "code",
-      "source_file": "apps/notification-service/src/constants/idempotency.constants.ts",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "constants_idempotency_constants_idempotency_keys",
-      "community": 24,
-      "norm_label": "idempotency_keys"
-    },
-    {
-      "label": "topics.constants.ts",
-      "file_type": "code",
-      "source_file": "apps/notification-service/src/constants/topics.constants.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "constants_topics_constants",
-      "community": 24,
-      "norm_label": "topics.constants.ts"
-    },
-    {
-      "label": "Topics",
-      "file_type": "code",
-      "source_file": "apps/notification-service/src/constants/topics.constants.ts",
-      "source_location": "L11",
-      "_origin": "ast",
-      "id": "constants_topics_constants_topics",
-      "community": 24,
-      "norm_label": "topics"
-    },
-    {
-      "label": "index.ts",
-      "file_type": "code",
-      "source_file": "apps/notification-service/src/consumers/index.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "consumers_index",
-      "community": 39,
-      "norm_label": "index.ts"
-    },
-    {
-      "label": "user-logged-in.consumer.ts",
-      "file_type": "code",
-      "source_file": "apps/notification-service/src/consumers/user-logged-in.consumer.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "consumers_user_logged_in_consumer",
-      "community": 39,
-      "norm_label": "user-logged-in.consumer.ts"
-    },
-    {
-      "label": "UserLoggedInConsumer",
-      "file_type": "code",
-      "source_file": "apps/notification-service/src/consumers/user-logged-in.consumer.ts",
-      "source_location": "L18",
-      "_origin": "ast",
-      "id": "consumers_user_logged_in_consumer_userloggedinconsumer",
-      "community": 39,
-      "norm_label": "userloggedinconsumer"
-    },
-    {
-      "label": ".constructor()",
-      "file_type": "code",
-      "source_file": "apps/notification-service/src/consumers/user-logged-in.consumer.ts",
-      "source_location": "L19",
-      "_origin": "ast",
-      "id": "consumers_user_logged_in_consumer_userloggedinconsumer_constructor",
-      "community": 39,
-      "norm_label": ".constructor()"
-    },
-    {
-      "label": ".start()",
-      "file_type": "code",
-      "source_file": "apps/notification-service/src/consumers/user-logged-in.consumer.ts",
-      "source_location": "L24",
-      "_origin": "ast",
-      "id": "consumers_user_logged_in_consumer_userloggedinconsumer_start",
-      "community": 39,
-      "norm_label": ".start()"
-    },
-    {
-      "label": ".handle()",
-      "file_type": "code",
-      "source_file": "apps/notification-service/src/consumers/user-logged-in.consumer.ts",
-      "source_location": "L30",
-      "_origin": "ast",
-      "id": "consumers_user_logged_in_consumer_userloggedinconsumer_handle",
-      "community": 39,
-      "norm_label": ".handle()"
-    },
-    {
       "label": "notification.container.ts",
       "file_type": "code",
       "source_file": "apps/notification-service/src/container/notification.container.ts",
@@ -365,44 +75,124 @@
       "norm_label": "bootstrap()"
     },
     {
-      "label": "server.ts",
+      "label": "idempotency.repository.ts",
       "file_type": "code",
-      "source_file": "apps/notification-service/src/server.ts",
+      "source_file": "apps/notification-service/src/repositories/idempotency.repository.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_server",
-      "community": 8,
-      "norm_label": "server.ts"
+      "id": "repositories_idempotency_repository",
+      "community": 42,
+      "norm_label": "idempotency.repository.ts"
     },
     {
-      "label": "shutdown()",
+      "label": "IdempotencyRepository",
       "file_type": "code",
-      "source_file": "apps/notification-service/src/server.ts",
-      "source_location": "L18",
+      "source_file": "apps/notification-service/src/repositories/idempotency.repository.ts",
+      "source_location": "L25",
       "_origin": "ast",
-      "id": "src_server_shutdown",
-      "community": 8,
-      "norm_label": "shutdown()"
+      "id": "repositories_idempotency_repository_idempotencyrepository",
+      "community": 42,
+      "norm_label": "idempotencyrepository"
     },
     {
-      "label": "startServer()",
+      "label": ".constructor()",
       "file_type": "code",
-      "source_file": "apps/notification-service/src/server.ts",
-      "source_location": "L91",
+      "source_file": "apps/notification-service/src/repositories/idempotency.repository.ts",
+      "source_location": "L26",
       "_origin": "ast",
-      "id": "src_server_startserver",
-      "community": 8,
-      "norm_label": "startserver()"
+      "id": "repositories_idempotency_repository_idempotencyrepository_constructor",
+      "community": 42,
+      "norm_label": ".constructor()"
     },
     {
-      "label": "index.ts",
+      "label": ".buildKey()",
       "file_type": "code",
-      "source_file": "apps/notification-service/src/services/index.ts",
+      "source_file": "apps/notification-service/src/repositories/idempotency.repository.ts",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "repositories_idempotency_repository_idempotencyrepository_buildkey",
+      "community": 42,
+      "norm_label": ".buildkey()"
+    },
+    {
+      "label": ".reserveIfNew()",
+      "file_type": "code",
+      "source_file": "apps/notification-service/src/repositories/idempotency.repository.ts",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "repositories_idempotency_repository_idempotencyrepository_reserveifnew",
+      "community": 42,
+      "norm_label": ".reserveifnew()"
+    },
+    {
+      "label": ".markProcessed()",
+      "file_type": "code",
+      "source_file": "apps/notification-service/src/repositories/idempotency.repository.ts",
+      "source_location": "L47",
+      "_origin": "ast",
+      "id": "repositories_idempotency_repository_idempotencyrepository_markprocessed",
+      "community": 42,
+      "norm_label": ".markprocessed()"
+    },
+    {
+      "label": ".release()",
+      "file_type": "code",
+      "source_file": "apps/notification-service/src/repositories/idempotency.repository.ts",
+      "source_location": "L59",
+      "_origin": "ast",
+      "id": "repositories_idempotency_repository_idempotencyrepository_release",
+      "community": 42,
+      "norm_label": ".release()"
+    },
+    {
+      "label": "otp-notification.service.ts",
+      "file_type": "code",
+      "source_file": "apps/notification-service/src/services/otp-notification.service.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "services_index",
+      "id": "services_otp_notification_service",
       "community": 8,
-      "norm_label": "index.ts"
+      "norm_label": "otp-notification.service.ts"
+    },
+    {
+      "label": "OtpNotificationService",
+      "file_type": "code",
+      "source_file": "apps/notification-service/src/services/otp-notification.service.ts",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "services_otp_notification_service_otpnotificationservice",
+      "community": 8,
+      "norm_label": "otpnotificationservice"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "apps/notification-service/src/services/otp-notification.service.ts",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "services_otp_notification_service_otpnotificationservice_constructor",
+      "community": 8,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": ".process()",
+      "file_type": "code",
+      "source_file": "apps/notification-service/src/services/otp-notification.service.ts",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "services_otp_notification_service_otpnotificationservice_process",
+      "community": 8,
+      "norm_label": ".process()"
+    },
+    {
+      "label": ".tryValidate()",
+      "file_type": "code",
+      "source_file": "apps/notification-service/src/services/otp-notification.service.ts",
+      "source_location": "L82",
+      "_origin": "ast",
+      "id": "services_otp_notification_service_otpnotificationservice_tryvalidate",
+      "community": 8,
+      "norm_label": ".tryvalidate()"
     },
     {
       "label": "welcome-notification.service.ts",
@@ -418,7 +208,7 @@
       "label": "WelcomeNotificationService",
       "file_type": "code",
       "source_file": "apps/notification-service/src/services/welcome-notification.service.ts",
-      "source_location": "L31",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "services_welcome_notification_service_welcomenotificationservice",
       "community": 8,
@@ -428,7 +218,7 @@
       "label": ".constructor()",
       "file_type": "code",
       "source_file": "apps/notification-service/src/services/welcome-notification.service.ts",
-      "source_location": "L32",
+      "source_location": "L33",
       "_origin": "ast",
       "id": "services_welcome_notification_service_welcomenotificationservice_constructor",
       "community": 8,
@@ -438,7 +228,7 @@
       "label": ".process()",
       "file_type": "code",
       "source_file": "apps/notification-service/src/services/welcome-notification.service.ts",
-      "source_location": "L38",
+      "source_location": "L39",
       "_origin": "ast",
       "id": "services_welcome_notification_service_welcomenotificationservice_process",
       "community": 8,
@@ -448,261 +238,11 @@
       "label": ".tryValidate()",
       "file_type": "code",
       "source_file": "apps/notification-service/src/services/welcome-notification.service.ts",
-      "source_location": "L66",
+      "source_location": "L81",
       "_origin": "ast",
       "id": "services_welcome_notification_service_welcomenotificationservice_tryvalidate",
       "community": 8,
       "norm_label": ".tryvalidate()"
-    },
-    {
-      "label": "index.ts",
-      "file_type": "code",
-      "source_file": "apps/notification-service/src/templates/index.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "templates_index",
-      "community": 8,
-      "norm_label": "index.ts"
-    },
-    {
-      "label": "welcome-email.template.ts",
-      "file_type": "code",
-      "source_file": "apps/notification-service/src/templates/welcome-email.template.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "templates_welcome_email_template",
-      "community": 8,
-      "norm_label": "welcome-email.template.ts"
-    },
-    {
-      "label": "WelcomeEmailInput",
-      "file_type": "code",
-      "source_file": "apps/notification-service/src/templates/welcome-email.template.ts",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "templates_welcome_email_template_welcomeemailinput",
-      "community": 8,
-      "norm_label": "welcomeemailinput"
-    },
-    {
-      "label": "renderWelcomeEmail()",
-      "file_type": "code",
-      "source_file": "apps/notification-service/src/templates/welcome-email.template.ts",
-      "source_location": "L19",
-      "_origin": "ast",
-      "id": "templates_welcome_email_template_renderwelcomeemail",
-      "community": 8,
-      "norm_label": "renderwelcomeemail()"
-    },
-    {
-      "label": "auth.routes.ts",
-      "file_type": "code",
-      "source_file": "apps/user-service/src/api/v1/routes/auth.routes.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "routes_auth_routes",
-      "community": 6,
-      "norm_label": "auth.routes.ts"
-    },
-    {
-      "label": "router",
-      "file_type": "code",
-      "source_file": "apps/user-service/src/api/v1/routes/auth.routes.ts",
-      "source_location": "L8",
-      "_origin": "ast",
-      "id": "routes_auth_routes_router",
-      "community": 6,
-      "norm_label": "router"
-    },
-    {
-      "label": "authControllerPromise",
-      "file_type": "code",
-      "source_file": "apps/user-service/src/api/v1/routes/auth.routes.ts",
-      "source_location": "L12",
-      "_origin": "ast",
-      "id": "routes_auth_routes_authcontrollerpromise",
-      "community": 6,
-      "norm_label": "authcontrollerpromise"
-    },
-    {
-      "label": "user.route.ts",
-      "file_type": "code",
-      "source_file": "apps/user-service/src/api/v1/routes/user.route.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "routes_user_route",
-      "community": 3,
-      "norm_label": "user.route.ts"
-    },
-    {
-      "label": "router",
-      "file_type": "code",
-      "source_file": "apps/user-service/src/api/v1/routes/user.route.ts",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "routes_user_route_router",
-      "community": 3,
-      "norm_label": "router"
-    },
-    {
-      "label": "authControllerPromise",
-      "file_type": "code",
-      "source_file": "apps/user-service/src/api/v1/routes/user.route.ts",
-      "source_location": "L11",
-      "_origin": "ast",
-      "id": "routes_user_route_authcontrollerpromise",
-      "community": 3,
-      "norm_label": "authcontrollerpromise"
-    },
-    {
-      "label": "env.ts",
-      "file_type": "code",
-      "source_file": "apps/user-service/src/config/env.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_user_service_src_config_env_ts_config_env",
-      "community": 51,
-      "norm_label": "env.ts"
-    },
-    {
-      "label": "env",
-      "file_type": "code",
-      "source_file": "apps/user-service/src/config/env.ts",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "apps_user_service_src_config_env_ts_config_env_env",
-      "community": 51,
-      "norm_label": "env"
-    },
-    {
-      "label": "auth.container.ts",
-      "file_type": "code",
-      "source_file": "apps/user-service/src/container/auth.container.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "container_auth_container",
-      "community": 1,
-      "norm_label": "auth.container.ts"
-    },
-    {
-      "label": "getAuthController()",
-      "file_type": "code",
-      "source_file": "apps/user-service/src/container/auth.container.ts",
-      "source_location": "L22",
-      "_origin": "ast",
-      "id": "container_auth_container_getauthcontroller",
-      "community": 1,
-      "norm_label": "getauthcontroller()"
-    },
-    {
-      "label": "build()",
-      "file_type": "code",
-      "source_file": "apps/user-service/src/container/auth.container.ts",
-      "source_location": "L29",
-      "_origin": "ast",
-      "id": "container_auth_container_build",
-      "community": 1,
-      "norm_label": "build()"
-    },
-    {
-      "label": "otp-requested.publisher.ts",
-      "file_type": "code",
-      "source_file": "apps/user-service/src/events/publishers/otp-requested.publisher.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "publishers_otp_requested_publisher",
-      "community": 1,
-      "norm_label": "otp-requested.publisher.ts"
-    },
-    {
-      "label": "SCHEMA_VERSION",
-      "file_type": "code",
-      "source_file": "apps/user-service/src/events/publishers/otp-requested.publisher.ts",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "publishers_otp_requested_publisher_schema_version",
-      "community": 1,
-      "norm_label": "schema_version"
-    },
-    {
-      "label": "OtpEventPublisher",
-      "file_type": "code",
-      "source_file": "apps/user-service/src/events/publishers/otp-requested.publisher.ts",
-      "source_location": "L10",
-      "_origin": "ast",
-      "id": "publishers_otp_requested_publisher_otpeventpublisher",
-      "community": 1,
-      "norm_label": "otpeventpublisher"
-    },
-    {
-      "label": ".constructor()",
-      "file_type": "code",
-      "source_file": "apps/user-service/src/events/publishers/otp-requested.publisher.ts",
-      "source_location": "L11",
-      "_origin": "ast",
-      "id": "publishers_otp_requested_publisher_otpeventpublisher_constructor",
-      "community": 1,
-      "norm_label": ".constructor()"
-    },
-    {
-      "label": ".publishOtpRequested()",
-      "file_type": "code",
-      "source_file": "apps/user-service/src/events/publishers/otp-requested.publisher.ts",
-      "source_location": "L13",
-      "_origin": "ast",
-      "id": "publishers_otp_requested_publisher_otpeventpublisher_publishotprequested",
-      "community": 1,
-      "norm_label": ".publishotprequested()"
-    },
-    {
-      "label": "user-logged-in.publisher.ts",
-      "file_type": "code",
-      "source_file": "apps/user-service/src/events/publishers/user-logged-in.publisher.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "publishers_user_logged_in_publisher",
-      "community": 1,
-      "norm_label": "user-logged-in.publisher.ts"
-    },
-    {
-      "label": "SCHEMA_VERSION",
-      "file_type": "code",
-      "source_file": "apps/user-service/src/events/publishers/user-logged-in.publisher.ts",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "publishers_user_logged_in_publisher_schema_version",
-      "community": 1,
-      "norm_label": "schema_version"
-    },
-    {
-      "label": "UserLoggedInEventPublisher",
-      "file_type": "code",
-      "source_file": "apps/user-service/src/events/publishers/user-logged-in.publisher.ts",
-      "source_location": "L20",
-      "_origin": "ast",
-      "id": "publishers_user_logged_in_publisher_userloggedineventpublisher",
-      "community": 1,
-      "norm_label": "userloggedineventpublisher"
-    },
-    {
-      "label": ".constructor()",
-      "file_type": "code",
-      "source_file": "apps/user-service/src/events/publishers/user-logged-in.publisher.ts",
-      "source_location": "L21",
-      "_origin": "ast",
-      "id": "publishers_user_logged_in_publisher_userloggedineventpublisher_constructor",
-      "community": 1,
-      "norm_label": ".constructor()"
-    },
-    {
-      "label": ".publishUserLoggedIn()",
-      "file_type": "code",
-      "source_file": "apps/user-service/src/events/publishers/user-logged-in.publisher.ts",
-      "source_location": "L23",
-      "_origin": "ast",
-      "id": "publishers_user_logged_in_publisher_userloggedineventpublisher_publishuserloggedin",
-      "community": 1,
-      "norm_label": ".publishuserloggedin()"
     },
     {
       "label": "auth.service.ts",
@@ -711,7 +251,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "services_auth_service",
-      "community": 1,
+      "community": 78,
       "norm_label": "auth.service.ts"
     },
     {
@@ -721,7 +261,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "services_auth_service_accesstokenpayload",
-      "community": 1,
+      "community": 78,
       "norm_label": "accesstokenpayload"
     },
     {
@@ -731,7 +271,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "services_auth_service_refreshtokenpayload",
-      "community": 1,
+      "community": 78,
       "norm_label": "refreshtokenpayload"
     },
     {
@@ -741,7 +281,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "services_auth_service_authservice",
-      "community": 6,
+      "community": 76,
       "norm_label": "authservice"
     },
     {
@@ -761,7 +301,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "services_auth_service_authservice_generateaccesstoken",
-      "community": 6,
+      "community": 76,
       "norm_label": ".generateaccesstoken()"
     },
     {
@@ -771,7 +311,7 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "services_auth_service_authservice_generaterefreshtoken",
-      "community": 6,
+      "community": 76,
       "norm_label": ".generaterefreshtoken()"
     },
     {
@@ -781,7 +321,7 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "services_auth_service_authservice_login",
-      "community": 6,
+      "community": 76,
       "norm_label": ".login()"
     },
     {
@@ -791,7 +331,7 @@
       "source_location": "L170",
       "_origin": "ast",
       "id": "services_auth_service_authservice_refresh",
-      "community": 6,
+      "community": 76,
       "norm_label": ".refresh()"
     },
     {
@@ -801,7 +341,7 @@
       "source_location": "L271",
       "_origin": "ast",
       "id": "services_auth_service_authservice_getsessions",
-      "community": 6,
+      "community": 76,
       "norm_label": ".getsessions()"
     },
     {
@@ -811,7 +351,7 @@
       "source_location": "L291",
       "_origin": "ast",
       "id": "services_auth_service_authservice_revokesession",
-      "community": 6,
+      "community": 76,
       "norm_label": ".revokesession()"
     },
     {
@@ -821,7 +361,7 @@
       "source_location": "L317",
       "_origin": "ast",
       "id": "services_auth_service_authservice_logout",
-      "community": 6,
+      "community": 76,
       "norm_label": ".logout()"
     },
     {
@@ -831,7 +371,7 @@
       "source_location": "L329",
       "_origin": "ast",
       "id": "services_auth_service_authservice_logoutall",
-      "community": 6,
+      "community": 76,
       "norm_label": ".logoutall()"
     },
     {
@@ -841,7 +381,7 @@
       "source_location": "L351",
       "_origin": "ast",
       "id": "services_auth_service_authservice_getuserbyid",
-      "community": 6,
+      "community": 76,
       "norm_label": ".getuserbyid()"
     },
     {
@@ -851,7 +391,7 @@
       "source_location": "L366",
       "_origin": "ast",
       "id": "services_auth_service_authservice_sendotp",
-      "community": 1,
+      "community": 78,
       "norm_label": ".sendotp()"
     },
     {
@@ -861,7 +401,7 @@
       "source_location": "L421",
       "_origin": "ast",
       "id": "services_auth_service_authservice_verifyandregister",
-      "community": 6,
+      "community": 76,
       "norm_label": ".verifyandregister()"
     },
     {
@@ -871,8 +411,658 @@
       "source_location": "L458",
       "_origin": "ast",
       "id": "services_auth_service_authservice_registeruser",
-      "community": 6,
+      "community": 76,
       "norm_label": ".registeruser()"
+    },
+    {
+      "label": "health.service.ts",
+      "file_type": "code",
+      "source_file": "apps/user-service/src/services/health.service.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "services_health_service",
+      "community": 29,
+      "norm_label": "health.service.ts"
+    },
+    {
+      "label": "HealthChecks",
+      "file_type": "code",
+      "source_file": "apps/user-service/src/services/health.service.ts",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "services_health_service_healthchecks",
+      "community": 29,
+      "norm_label": "healthchecks"
+    },
+    {
+      "label": "probeDatabase()",
+      "file_type": "code",
+      "source_file": "apps/user-service/src/services/health.service.ts",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "services_health_service_probedatabase",
+      "community": 29,
+      "norm_label": "probedatabase()"
+    },
+    {
+      "label": "probeRedis()",
+      "file_type": "code",
+      "source_file": "apps/user-service/src/services/health.service.ts",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "services_health_service_proberedis",
+      "community": 29,
+      "norm_label": "proberedis()"
+    },
+    {
+      "label": "probeKafka()",
+      "file_type": "code",
+      "source_file": "apps/user-service/src/services/health.service.ts",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "services_health_service_probekafka",
+      "community": 29,
+      "norm_label": "probekafka()"
+    },
+    {
+      "label": "HealthService",
+      "file_type": "code",
+      "source_file": "apps/user-service/src/services/health.service.ts",
+      "source_location": "L77",
+      "_origin": "ast",
+      "id": "services_health_service_healthservice",
+      "community": 29,
+      "norm_label": "healthservice"
+    },
+    {
+      "label": ".runReadinessChecks()",
+      "file_type": "code",
+      "source_file": "apps/user-service/src/services/health.service.ts",
+      "source_location": "L78",
+      "_origin": "ast",
+      "id": "services_health_service_healthservice_runreadinesschecks",
+      "community": 29,
+      "norm_label": ".runreadinesschecks()"
+    },
+    {
+      "label": "CLAUDE.md",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 59,
+      "norm_label": "claude.md",
+      "id": "claude"
+    },
+    {
+      "label": "CLAUDE.md",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 59,
+      "norm_label": "claude.md",
+      "id": "claude_claude_md"
+    },
+    {
+      "label": "Common Commands",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 59,
+      "norm_label": "common commands",
+      "id": "claude_common_commands"
+    },
+    {
+      "label": "Global Operations",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 59,
+      "norm_label": "global operations",
+      "id": "claude_global_operations"
+    },
+    {
+      "label": "Service-Specific Operations",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L15",
+      "_origin": "ast",
+      "community": 59,
+      "norm_label": "service-specific operations",
+      "id": "claude_service_specific_operations"
+    },
+    {
+      "label": "High-Level Architecture",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L22",
+      "_origin": "ast",
+      "community": 73,
+      "norm_label": "high-level architecture",
+      "id": "claude_high_level_architecture"
+    },
+    {
+      "label": "System Design",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L24",
+      "_origin": "ast",
+      "community": 73,
+      "norm_label": "system design",
+      "id": "claude_system_design"
+    },
+    {
+      "label": "Monorepo Structure",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L28",
+      "_origin": "ast",
+      "community": 73,
+      "norm_label": "monorepo structure",
+      "id": "claude_monorepo_structure"
+    },
+    {
+      "label": "Service Internal Pattern",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L47",
+      "_origin": "ast",
+      "community": 73,
+      "norm_label": "service internal pattern",
+      "id": "claude_service_internal_pattern"
+    },
+    {
+      "label": "Infrastructure Guidelines",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L58",
+      "_origin": "ast",
+      "community": 60,
+      "norm_label": "infrastructure guidelines",
+      "id": "claude_infrastructure_guidelines"
+    },
+    {
+      "label": "Startup Sequence",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L60",
+      "_origin": "ast",
+      "community": 60,
+      "norm_label": "startup sequence",
+      "id": "claude_startup_sequence"
+    },
+    {
+      "label": "Graceful Shutdown",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L65",
+      "_origin": "ast",
+      "community": 60,
+      "norm_label": "graceful shutdown",
+      "id": "claude_graceful_shutdown"
+    },
+    {
+      "label": "Health Monitoring",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L76",
+      "_origin": "ast",
+      "community": 60,
+      "norm_label": "health monitoring",
+      "id": "claude_health_monitoring"
+    },
+    {
+      "label": "Kafka Architecture",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L83",
+      "_origin": "ast",
+      "community": 60,
+      "norm_label": "kafka architecture",
+      "id": "claude_kafka_architecture"
+    },
+    {
+      "label": "Error Handling Flow",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L90",
+      "_origin": "ast",
+      "community": 73,
+      "norm_label": "error handling flow",
+      "id": "claude_error_handling_flow"
+    },
+    {
+      "label": "Error Handling Guidelines",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L97",
+      "_origin": "ast",
+      "community": 73,
+      "norm_label": "error handling guidelines",
+      "id": "claude_error_handling_guidelines"
+    },
+    {
+      "label": "graphify",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L104",
+      "_origin": "ast",
+      "community": 59,
+      "norm_label": "graphify",
+      "id": "claude_graphify"
+    },
+    {
+      "label": "env.ts",
+      "file_type": "code",
+      "source_file": "apps/notification-service/src/config/env.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "env.ts",
+      "id": "apps_notification_service_src_config_env_ts_config_env"
+    },
+    {
+      "label": "env",
+      "file_type": "code",
+      "source_file": "apps/notification-service/src/config/env.ts",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "env",
+      "id": "apps_notification_service_src_config_env_ts_config_env_env"
+    },
+    {
+      "label": "idempotency.constants.ts",
+      "file_type": "code",
+      "source_file": "apps/notification-service/src/constants/idempotency.constants.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 24,
+      "norm_label": "idempotency.constants.ts",
+      "id": "constants_idempotency_constants"
+    },
+    {
+      "label": "IDEMPOTENCY_KEYS",
+      "file_type": "code",
+      "source_file": "apps/notification-service/src/constants/idempotency.constants.ts",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 24,
+      "norm_label": "idempotency_keys",
+      "id": "constants_idempotency_constants_idempotency_keys"
+    },
+    {
+      "label": "topics.constants.ts",
+      "file_type": "code",
+      "source_file": "apps/notification-service/src/constants/topics.constants.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 24,
+      "norm_label": "topics.constants.ts",
+      "id": "constants_topics_constants"
+    },
+    {
+      "label": "Topics",
+      "file_type": "code",
+      "source_file": "apps/notification-service/src/constants/topics.constants.ts",
+      "source_location": "L11",
+      "_origin": "ast",
+      "community": 24,
+      "norm_label": "topics",
+      "id": "constants_topics_constants_topics"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "apps/notification-service/src/consumers/index.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "index.ts",
+      "id": "consumers_index"
+    },
+    {
+      "label": "user-logged-in.consumer.ts",
+      "file_type": "code",
+      "source_file": "apps/notification-service/src/consumers/user-logged-in.consumer.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "user-logged-in.consumer.ts",
+      "id": "consumers_user_logged_in_consumer"
+    },
+    {
+      "label": "UserLoggedInConsumer",
+      "file_type": "code",
+      "source_file": "apps/notification-service/src/consumers/user-logged-in.consumer.ts",
+      "source_location": "L18",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": "userloggedinconsumer",
+      "id": "consumers_user_logged_in_consumer_userloggedinconsumer"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "apps/notification-service/src/consumers/user-logged-in.consumer.ts",
+      "source_location": "L19",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": ".constructor()",
+      "id": "consumers_user_logged_in_consumer_userloggedinconsumer_constructor"
+    },
+    {
+      "label": ".start()",
+      "file_type": "code",
+      "source_file": "apps/notification-service/src/consumers/user-logged-in.consumer.ts",
+      "source_location": "L24",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": ".start()",
+      "id": "consumers_user_logged_in_consumer_userloggedinconsumer_start"
+    },
+    {
+      "label": ".handle()",
+      "file_type": "code",
+      "source_file": "apps/notification-service/src/consumers/user-logged-in.consumer.ts",
+      "source_location": "L30",
+      "_origin": "ast",
+      "community": 39,
+      "norm_label": ".handle()",
+      "id": "consumers_user_logged_in_consumer_userloggedinconsumer_handle"
+    },
+    {
+      "label": "server.ts",
+      "file_type": "code",
+      "source_file": "apps/notification-service/src/server.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "server.ts",
+      "id": "src_server"
+    },
+    {
+      "label": "shutdown()",
+      "file_type": "code",
+      "source_file": "apps/notification-service/src/server.ts",
+      "source_location": "L18",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "shutdown()",
+      "id": "src_server_shutdown"
+    },
+    {
+      "label": "startServer()",
+      "file_type": "code",
+      "source_file": "apps/notification-service/src/server.ts",
+      "source_location": "L91",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "startserver()",
+      "id": "src_server_startserver"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "apps/notification-service/src/services/index.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "index.ts",
+      "id": "services_index"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "apps/notification-service/src/templates/index.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "index.ts",
+      "id": "templates_index"
+    },
+    {
+      "label": "welcome-email.template.ts",
+      "file_type": "code",
+      "source_file": "apps/notification-service/src/templates/welcome-email.template.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "welcome-email.template.ts",
+      "id": "templates_welcome_email_template"
+    },
+    {
+      "label": "WelcomeEmailInput",
+      "file_type": "code",
+      "source_file": "apps/notification-service/src/templates/welcome-email.template.ts",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "welcomeemailinput",
+      "id": "templates_welcome_email_template_welcomeemailinput"
+    },
+    {
+      "label": "renderWelcomeEmail()",
+      "file_type": "code",
+      "source_file": "apps/notification-service/src/templates/welcome-email.template.ts",
+      "source_location": "L19",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "renderwelcomeemail()",
+      "id": "templates_welcome_email_template_renderwelcomeemail"
+    },
+    {
+      "label": "auth.routes.ts",
+      "file_type": "code",
+      "source_file": "apps/user-service/src/api/v1/routes/auth.routes.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 77,
+      "norm_label": "auth.routes.ts",
+      "id": "routes_auth_routes"
+    },
+    {
+      "label": "router",
+      "file_type": "code",
+      "source_file": "apps/user-service/src/api/v1/routes/auth.routes.ts",
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 77,
+      "norm_label": "router",
+      "id": "routes_auth_routes_router"
+    },
+    {
+      "label": "authControllerPromise",
+      "file_type": "code",
+      "source_file": "apps/user-service/src/api/v1/routes/auth.routes.ts",
+      "source_location": "L12",
+      "_origin": "ast",
+      "community": 77,
+      "norm_label": "authcontrollerpromise",
+      "id": "routes_auth_routes_authcontrollerpromise"
+    },
+    {
+      "label": "user.route.ts",
+      "file_type": "code",
+      "source_file": "apps/user-service/src/api/v1/routes/user.route.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "user.route.ts",
+      "id": "routes_user_route"
+    },
+    {
+      "label": "router",
+      "file_type": "code",
+      "source_file": "apps/user-service/src/api/v1/routes/user.route.ts",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "router",
+      "id": "routes_user_route_router"
+    },
+    {
+      "label": "authControllerPromise",
+      "file_type": "code",
+      "source_file": "apps/user-service/src/api/v1/routes/user.route.ts",
+      "source_location": "L11",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "authcontrollerpromise",
+      "id": "routes_user_route_authcontrollerpromise"
+    },
+    {
+      "label": "env.ts",
+      "file_type": "code",
+      "source_file": "apps/user-service/src/config/env.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 51,
+      "norm_label": "env.ts",
+      "id": "apps_user_service_src_config_env_ts_config_env"
+    },
+    {
+      "label": "env",
+      "file_type": "code",
+      "source_file": "apps/user-service/src/config/env.ts",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 51,
+      "norm_label": "env",
+      "id": "apps_user_service_src_config_env_ts_config_env_env"
+    },
+    {
+      "label": "auth.container.ts",
+      "file_type": "code",
+      "source_file": "apps/user-service/src/container/auth.container.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "auth.container.ts",
+      "id": "container_auth_container"
+    },
+    {
+      "label": "getAuthController()",
+      "file_type": "code",
+      "source_file": "apps/user-service/src/container/auth.container.ts",
+      "source_location": "L22",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "getauthcontroller()",
+      "id": "container_auth_container_getauthcontroller"
+    },
+    {
+      "label": "build()",
+      "file_type": "code",
+      "source_file": "apps/user-service/src/container/auth.container.ts",
+      "source_location": "L29",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "build()",
+      "id": "container_auth_container_build"
+    },
+    {
+      "label": "otp-requested.publisher.ts",
+      "file_type": "code",
+      "source_file": "apps/user-service/src/events/publishers/otp-requested.publisher.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "otp-requested.publisher.ts",
+      "id": "publishers_otp_requested_publisher"
+    },
+    {
+      "label": "SCHEMA_VERSION",
+      "file_type": "code",
+      "source_file": "apps/user-service/src/events/publishers/otp-requested.publisher.ts",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "schema_version",
+      "id": "publishers_otp_requested_publisher_schema_version"
+    },
+    {
+      "label": "OtpEventPublisher",
+      "file_type": "code",
+      "source_file": "apps/user-service/src/events/publishers/otp-requested.publisher.ts",
+      "source_location": "L10",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "otpeventpublisher",
+      "id": "publishers_otp_requested_publisher_otpeventpublisher"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "apps/user-service/src/events/publishers/otp-requested.publisher.ts",
+      "source_location": "L11",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": ".constructor()",
+      "id": "publishers_otp_requested_publisher_otpeventpublisher_constructor"
+    },
+    {
+      "label": ".publishOtpRequested()",
+      "file_type": "code",
+      "source_file": "apps/user-service/src/events/publishers/otp-requested.publisher.ts",
+      "source_location": "L13",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": ".publishotprequested()",
+      "id": "publishers_otp_requested_publisher_otpeventpublisher_publishotprequested"
+    },
+    {
+      "label": "user-logged-in.publisher.ts",
+      "file_type": "code",
+      "source_file": "apps/user-service/src/events/publishers/user-logged-in.publisher.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "user-logged-in.publisher.ts",
+      "id": "publishers_user_logged_in_publisher"
+    },
+    {
+      "label": "SCHEMA_VERSION",
+      "file_type": "code",
+      "source_file": "apps/user-service/src/events/publishers/user-logged-in.publisher.ts",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "schema_version",
+      "id": "publishers_user_logged_in_publisher_schema_version"
+    },
+    {
+      "label": "UserLoggedInEventPublisher",
+      "file_type": "code",
+      "source_file": "apps/user-service/src/events/publishers/user-logged-in.publisher.ts",
+      "source_location": "L20",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "userloggedineventpublisher",
+      "id": "publishers_user_logged_in_publisher_userloggedineventpublisher"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "apps/user-service/src/events/publishers/user-logged-in.publisher.ts",
+      "source_location": "L21",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": ".constructor()",
+      "id": "publishers_user_logged_in_publisher_userloggedineventpublisher_constructor"
+    },
+    {
+      "label": ".publishUserLoggedIn()",
+      "file_type": "code",
+      "source_file": "apps/user-service/src/events/publishers/user-logged-in.publisher.ts",
+      "source_location": "L23",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": ".publishuserloggedin()",
+      "id": "publishers_user_logged_in_publisher_userloggedineventpublisher_publishuserloggedin"
     },
     {
       "label": "tsconfig.json",
@@ -880,9 +1070,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "user_service_tsconfig",
       "community": 7,
-      "norm_label": "tsconfig.json"
+      "norm_label": "tsconfig.json",
+      "id": "user_service_tsconfig"
     },
     {
       "label": "extends",
@@ -890,9 +1080,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "user_service_tsconfig_extends",
       "community": 7,
-      "norm_label": "extends"
+      "norm_label": "extends",
+      "id": "user_service_tsconfig_extends"
     },
     {
       "label": "compilerOptions",
@@ -900,9 +1090,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "user_service_tsconfig_compileroptions",
       "community": 7,
-      "norm_label": "compileroptions"
+      "norm_label": "compileroptions",
+      "id": "user_service_tsconfig_compileroptions"
     },
     {
       "label": "rootDir",
@@ -910,9 +1100,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "user_service_tsconfig_compileroptions_rootdir",
       "community": 7,
-      "norm_label": "rootdir"
+      "norm_label": "rootdir",
+      "id": "user_service_tsconfig_compileroptions_rootdir"
     },
     {
       "label": "outDir",
@@ -920,9 +1110,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "user_service_tsconfig_compileroptions_outdir",
       "community": 7,
-      "norm_label": "outdir"
+      "norm_label": "outdir",
+      "id": "user_service_tsconfig_compileroptions_outdir"
     },
     {
       "label": "module",
@@ -930,9 +1120,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L11",
       "_origin": "ast",
-      "id": "user_service_tsconfig_compileroptions_module",
       "community": 7,
-      "norm_label": "module"
+      "norm_label": "module",
+      "id": "user_service_tsconfig_compileroptions_module"
     },
     {
       "label": "target",
@@ -940,9 +1130,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L12",
       "_origin": "ast",
-      "id": "user_service_tsconfig_compileroptions_target",
       "community": 7,
-      "norm_label": "target"
+      "norm_label": "target",
+      "id": "user_service_tsconfig_compileroptions_target"
     },
     {
       "label": "types",
@@ -950,9 +1140,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L13",
       "_origin": "ast",
-      "id": "user_service_tsconfig_compileroptions_types",
       "community": 7,
-      "norm_label": "types"
+      "norm_label": "types",
+      "id": "user_service_tsconfig_compileroptions_types"
     },
     {
       "label": "sourceMap",
@@ -960,9 +1150,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L19",
       "_origin": "ast",
-      "id": "user_service_tsconfig_compileroptions_sourcemap",
       "community": 7,
-      "norm_label": "sourcemap"
+      "norm_label": "sourcemap",
+      "id": "user_service_tsconfig_compileroptions_sourcemap"
     },
     {
       "label": "declaration",
@@ -970,9 +1160,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L20",
       "_origin": "ast",
-      "id": "user_service_tsconfig_compileroptions_declaration",
       "community": 7,
-      "norm_label": "declaration"
+      "norm_label": "declaration",
+      "id": "user_service_tsconfig_compileroptions_declaration"
     },
     {
       "label": "declarationMap",
@@ -980,9 +1170,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L21",
       "_origin": "ast",
-      "id": "user_service_tsconfig_compileroptions_declarationmap",
       "community": 7,
-      "norm_label": "declarationmap"
+      "norm_label": "declarationmap",
+      "id": "user_service_tsconfig_compileroptions_declarationmap"
     },
     {
       "label": "noUncheckedIndexedAccess",
@@ -990,9 +1180,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L24",
       "_origin": "ast",
-      "id": "user_service_tsconfig_compileroptions_nouncheckedindexedaccess",
       "community": 7,
-      "norm_label": "nouncheckedindexedaccess"
+      "norm_label": "nouncheckedindexedaccess",
+      "id": "user_service_tsconfig_compileroptions_nouncheckedindexedaccess"
     },
     {
       "label": "exactOptionalPropertyTypes",
@@ -1000,9 +1190,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L25",
       "_origin": "ast",
-      "id": "user_service_tsconfig_compileroptions_exactoptionalpropertytypes",
       "community": 7,
-      "norm_label": "exactoptionalpropertytypes"
+      "norm_label": "exactoptionalpropertytypes",
+      "id": "user_service_tsconfig_compileroptions_exactoptionalpropertytypes"
     },
     {
       "label": "paths",
@@ -1010,9 +1200,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L36",
       "_origin": "ast",
-      "id": "user_service_tsconfig_compileroptions_paths",
       "community": 7,
-      "norm_label": "paths"
+      "norm_label": "paths",
+      "id": "user_service_tsconfig_compileroptions_paths"
     },
     {
       "label": "@config/*",
@@ -1020,9 +1210,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L37",
       "_origin": "ast",
-      "id": "user_service_tsconfig_paths_config",
       "community": 7,
-      "norm_label": "@config/*"
+      "norm_label": "@config/*",
+      "id": "user_service_tsconfig_paths_config"
     },
     {
       "label": "@container/*",
@@ -1030,9 +1220,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L39",
       "_origin": "ast",
-      "id": "user_service_tsconfig_paths_container",
       "community": 7,
-      "norm_label": "@container/*"
+      "norm_label": "@container/*",
+      "id": "user_service_tsconfig_paths_container"
     },
     {
       "label": "@routes/*",
@@ -1040,9 +1230,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L41",
       "_origin": "ast",
-      "id": "user_service_tsconfig_paths_routes",
       "community": 7,
-      "norm_label": "@routes/*"
+      "norm_label": "@routes/*",
+      "id": "user_service_tsconfig_paths_routes"
     },
     {
       "label": "@services/*",
@@ -1050,9 +1240,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L43",
       "_origin": "ast",
-      "id": "user_service_tsconfig_paths_services",
       "community": 7,
-      "norm_label": "@services/*"
+      "norm_label": "@services/*",
+      "id": "user_service_tsconfig_paths_services"
     },
     {
       "label": "@repository/*",
@@ -1060,9 +1250,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L45",
       "_origin": "ast",
-      "id": "user_service_tsconfig_paths_repository",
       "community": 7,
-      "norm_label": "@repository/*"
+      "norm_label": "@repository/*",
+      "id": "user_service_tsconfig_paths_repository"
     },
     {
       "label": "@controllers/*",
@@ -1070,9 +1260,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L47",
       "_origin": "ast",
-      "id": "user_service_tsconfig_paths_controllers",
       "community": 7,
-      "norm_label": "@controllers/*"
+      "norm_label": "@controllers/*",
+      "id": "user_service_tsconfig_paths_controllers"
     },
     {
       "label": "@events/*",
@@ -1080,9 +1270,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L49",
       "_origin": "ast",
-      "id": "user_service_tsconfig_paths_events",
       "community": 7,
-      "norm_label": "@events/*"
+      "norm_label": "@events/*",
+      "id": "user_service_tsconfig_paths_events"
     },
     {
       "label": "@middleware/*",
@@ -1090,9 +1280,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L50",
       "_origin": "ast",
-      "id": "user_service_tsconfig_paths_middleware",
       "community": 7,
-      "norm_label": "@middleware/*"
+      "norm_label": "@middleware/*",
+      "id": "user_service_tsconfig_paths_middleware"
     },
     {
       "label": "@utils/errors",
@@ -1100,9 +1290,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L52",
       "_origin": "ast",
-      "id": "user_service_tsconfig_paths_utils_errors",
       "community": 7,
-      "norm_label": "@utils/errors"
+      "norm_label": "@utils/errors",
+      "id": "user_service_tsconfig_paths_utils_errors"
     },
     {
       "label": "@utils/*",
@@ -1110,9 +1300,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L53",
       "_origin": "ast",
-      "id": "user_service_tsconfig_paths_utils",
       "community": 7,
-      "norm_label": "@utils/*"
+      "norm_label": "@utils/*",
+      "id": "user_service_tsconfig_paths_utils"
     },
     {
       "label": "@dto/auth",
@@ -1120,9 +1310,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L54",
       "_origin": "ast",
-      "id": "user_service_tsconfig_paths_dto_auth",
       "community": 7,
-      "norm_label": "@dto/auth"
+      "norm_label": "@dto/auth",
+      "id": "user_service_tsconfig_paths_dto_auth"
     },
     {
       "label": "@dto/user",
@@ -1130,9 +1320,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L55",
       "_origin": "ast",
-      "id": "user_service_tsconfig_paths_dto_user",
       "community": 7,
-      "norm_label": "@dto/user"
+      "norm_label": "@dto/user",
+      "id": "user_service_tsconfig_paths_dto_user"
     },
     {
       "label": "@mappers/*",
@@ -1140,9 +1330,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L56",
       "_origin": "ast",
-      "id": "user_service_tsconfig_paths_mappers",
       "community": 7,
-      "norm_label": "@mappers/*"
+      "norm_label": "@mappers/*",
+      "id": "user_service_tsconfig_paths_mappers"
     },
     {
       "label": "@generated/*",
@@ -1150,9 +1340,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L58",
       "_origin": "ast",
-      "id": "user_service_tsconfig_paths_generated",
       "community": 7,
-      "norm_label": "@generated/*"
+      "norm_label": "@generated/*",
+      "id": "user_service_tsconfig_paths_generated"
     },
     {
       "label": "strict",
@@ -1160,9 +1350,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L60",
       "_origin": "ast",
-      "id": "user_service_tsconfig_compileroptions_strict",
       "community": 7,
-      "norm_label": "strict"
+      "norm_label": "strict",
+      "id": "user_service_tsconfig_compileroptions_strict"
     },
     {
       "label": "jsx",
@@ -1170,9 +1360,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L61",
       "_origin": "ast",
-      "id": "user_service_tsconfig_compileroptions_jsx",
       "community": 7,
-      "norm_label": "jsx"
+      "norm_label": "jsx",
+      "id": "user_service_tsconfig_compileroptions_jsx"
     },
     {
       "label": "verbatimModuleSyntax",
@@ -1180,9 +1370,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L62",
       "_origin": "ast",
-      "id": "user_service_tsconfig_compileroptions_verbatimmodulesyntax",
       "community": 7,
-      "norm_label": "verbatimmodulesyntax"
+      "norm_label": "verbatimmodulesyntax",
+      "id": "user_service_tsconfig_compileroptions_verbatimmodulesyntax"
     },
     {
       "label": "isolatedModules",
@@ -1190,9 +1380,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L63",
       "_origin": "ast",
-      "id": "user_service_tsconfig_compileroptions_isolatedmodules",
       "community": 7,
-      "norm_label": "isolatedmodules"
+      "norm_label": "isolatedmodules",
+      "id": "user_service_tsconfig_compileroptions_isolatedmodules"
     },
     {
       "label": "noUncheckedSideEffectImports",
@@ -1200,9 +1390,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L64",
       "_origin": "ast",
-      "id": "user_service_tsconfig_compileroptions_nouncheckedsideeffectimports",
       "community": 7,
-      "norm_label": "nouncheckedsideeffectimports"
+      "norm_label": "nouncheckedsideeffectimports",
+      "id": "user_service_tsconfig_compileroptions_nouncheckedsideeffectimports"
     },
     {
       "label": "moduleDetection",
@@ -1210,9 +1400,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L65",
       "_origin": "ast",
-      "id": "user_service_tsconfig_compileroptions_moduledetection",
       "community": 7,
-      "norm_label": "moduledetection"
+      "norm_label": "moduledetection",
+      "id": "user_service_tsconfig_compileroptions_moduledetection"
     },
     {
       "label": "skipLibCheck",
@@ -1220,9 +1410,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L66",
       "_origin": "ast",
-      "id": "user_service_tsconfig_compileroptions_skiplibcheck",
       "community": 7,
-      "norm_label": "skiplibcheck"
+      "norm_label": "skiplibcheck",
+      "id": "user_service_tsconfig_compileroptions_skiplibcheck"
     },
     {
       "label": "include",
@@ -1230,9 +1420,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L68",
       "_origin": "ast",
-      "id": "user_service_tsconfig_include",
       "community": 7,
-      "norm_label": "include"
+      "norm_label": "include",
+      "id": "user_service_tsconfig_include"
     },
     {
       "label": "exclude",
@@ -1240,9 +1430,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L69",
       "_origin": "ast",
-      "id": "user_service_tsconfig_exclude",
       "community": 7,
-      "norm_label": "exclude"
+      "norm_label": "exclude",
+      "id": "user_service_tsconfig_exclude"
     },
     {
       "label": "index.ts",
@@ -1250,9 +1440,9 @@
       "source_file": "packages/contracts/src/index.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_index",
       "community": 6,
-      "norm_label": "index.ts"
+      "norm_label": "index.ts",
+      "id": "src_index"
     },
     {
       "label": "index.ts",
@@ -1260,9 +1450,9 @@
       "source_file": "packages/contracts/src/user/index.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "user_index",
       "community": 6,
-      "norm_label": "index.ts"
+      "norm_label": "index.ts",
+      "id": "user_index"
     },
     {
       "label": "otp-requested.v1.ts",
@@ -1270,9 +1460,9 @@
       "source_file": "packages/contracts/src/user/otp-requested.v1.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "user_otp_requested_v1",
       "community": 6,
-      "norm_label": "otp-requested.v1.ts"
+      "norm_label": "otp-requested.v1.ts",
+      "id": "user_otp_requested_v1"
     },
     {
       "label": "OTPRequestedV1",
@@ -1280,9 +1470,9 @@
       "source_file": "packages/contracts/src/user/otp-requested.v1.ts",
       "source_location": "L16",
       "_origin": "ast",
-      "id": "user_otp_requested_v1_otprequestedv1",
       "community": 6,
-      "norm_label": "otprequestedv1"
+      "norm_label": "otprequestedv1",
+      "id": "user_otp_requested_v1_otprequestedv1"
     },
     {
       "label": "OTPRequestedV1Type",
@@ -1290,9 +1480,9 @@
       "source_file": "packages/contracts/src/user/otp-requested.v1.ts",
       "source_location": "L24",
       "_origin": "ast",
-      "id": "user_otp_requested_v1_otprequestedv1type",
       "community": 6,
-      "norm_label": "otprequestedv1type"
+      "norm_label": "otprequestedv1type",
+      "id": "user_otp_requested_v1_otprequestedv1type"
     },
     {
       "label": "user-logged-in.v1.ts",
@@ -1300,9 +1490,9 @@
       "source_file": "packages/contracts/src/user/user-logged-in.v1.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "user_user_logged_in_v1",
       "community": 6,
-      "norm_label": "user-logged-in.v1.ts"
+      "norm_label": "user-logged-in.v1.ts",
+      "id": "user_user_logged_in_v1"
     },
     {
       "label": "UserLoggedInV1",
@@ -1310,9 +1500,9 @@
       "source_file": "packages/contracts/src/user/user-logged-in.v1.ts",
       "source_location": "L23",
       "_origin": "ast",
-      "id": "user_user_logged_in_v1_userloggedinv1",
       "community": 6,
-      "norm_label": "userloggedinv1"
+      "norm_label": "userloggedinv1",
+      "id": "user_user_logged_in_v1_userloggedinv1"
     },
     {
       "label": "UserLoggedInV1Type",
@@ -1320,9 +1510,9 @@
       "source_file": "packages/contracts/src/user/user-logged-in.v1.ts",
       "source_location": "L31",
       "_origin": "ast",
-      "id": "user_user_logged_in_v1_userloggedinv1type",
       "community": 6,
-      "norm_label": "userloggedinv1type"
+      "norm_label": "userloggedinv1type",
+      "id": "user_user_logged_in_v1_userloggedinv1type"
     },
     {
       "label": "settings.json",
@@ -2285,56 +2475,6 @@
       "id": "providers_index"
     },
     {
-      "label": "idempotency.repository.ts",
-      "file_type": "code",
-      "source_file": "apps/notification-service/src/repositories/idempotency.repository.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 42,
-      "norm_label": "idempotency.repository.ts",
-      "id": "repositories_idempotency_repository"
-    },
-    {
-      "label": "IdempotencyRepository",
-      "file_type": "code",
-      "source_file": "apps/notification-service/src/repositories/idempotency.repository.ts",
-      "source_location": "L14",
-      "_origin": "ast",
-      "community": 42,
-      "norm_label": "idempotencyrepository",
-      "id": "repositories_idempotency_repository_idempotencyrepository"
-    },
-    {
-      "label": ".constructor()",
-      "file_type": "code",
-      "source_file": "apps/notification-service/src/repositories/idempotency.repository.ts",
-      "source_location": "L15",
-      "_origin": "ast",
-      "community": 42,
-      "norm_label": ".constructor()",
-      "id": "repositories_idempotency_repository_idempotencyrepository_constructor"
-    },
-    {
-      "label": ".buildKey()",
-      "file_type": "code",
-      "source_file": "apps/notification-service/src/repositories/idempotency.repository.ts",
-      "source_location": "L21",
-      "_origin": "ast",
-      "community": 42,
-      "norm_label": ".buildkey()",
-      "id": "repositories_idempotency_repository_idempotencyrepository_buildkey"
-    },
-    {
-      "label": ".markIfNew()",
-      "file_type": "code",
-      "source_file": "apps/notification-service/src/repositories/idempotency.repository.ts",
-      "source_location": "L25",
-      "_origin": "ast",
-      "community": 42,
-      "norm_label": ".markifnew()",
-      "id": "repositories_idempotency_repository_idempotencyrepository_markifnew"
-    },
-    {
       "label": "index.ts",
       "file_type": "code",
       "source_file": "apps/notification-service/src/repositories/index.ts",
@@ -2343,56 +2483,6 @@
       "community": 42,
       "norm_label": "index.ts",
       "id": "repositories_index"
-    },
-    {
-      "label": "otp-notification.service.ts",
-      "file_type": "code",
-      "source_file": "apps/notification-service/src/services/otp-notification.service.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 8,
-      "norm_label": "otp-notification.service.ts",
-      "id": "services_otp_notification_service"
-    },
-    {
-      "label": "OtpNotificationService",
-      "file_type": "code",
-      "source_file": "apps/notification-service/src/services/otp-notification.service.ts",
-      "source_location": "L31",
-      "_origin": "ast",
-      "community": 8,
-      "norm_label": "otpnotificationservice",
-      "id": "services_otp_notification_service_otpnotificationservice"
-    },
-    {
-      "label": ".constructor()",
-      "file_type": "code",
-      "source_file": "apps/notification-service/src/services/otp-notification.service.ts",
-      "source_location": "L32",
-      "_origin": "ast",
-      "community": 8,
-      "norm_label": ".constructor()",
-      "id": "services_otp_notification_service_otpnotificationservice_constructor"
-    },
-    {
-      "label": ".process()",
-      "file_type": "code",
-      "source_file": "apps/notification-service/src/services/otp-notification.service.ts",
-      "source_location": "L39",
-      "_origin": "ast",
-      "community": 8,
-      "norm_label": ".process()",
-      "id": "services_otp_notification_service_otpnotificationservice_process"
-    },
-    {
-      "label": ".tryValidate()",
-      "file_type": "code",
-      "source_file": "apps/notification-service/src/services/otp-notification.service.ts",
-      "source_location": "L67",
-      "_origin": "ast",
-      "community": 8,
-      "norm_label": ".tryvalidate()",
-      "id": "services_otp_notification_service_otpnotificationservice_tryvalidate"
     },
     {
       "label": "otp-email.template.ts",
@@ -3410,7 +3500,7 @@
       "source_file": "apps/user-service/src/controllers/auth.controller.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 79,
       "norm_label": "auth.controller.ts",
       "id": "controllers_auth_controller"
     },
@@ -3570,7 +3660,7 @@
       "source_file": "apps/user-service/src/controllers/index.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 79,
       "norm_label": "index.ts",
       "id": "controllers_index"
     },
@@ -3590,7 +3680,7 @@
       "source_file": "apps/user-service/src/dto/auth/auth-response.dto.ts",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 6,
+      "community": 76,
       "norm_label": "authresponsedto",
       "id": "auth_auth_response_dto_authresponsedto"
     },
@@ -3600,7 +3690,7 @@
       "source_file": "apps/user-service/src/dto/auth/index.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 6,
+      "community": 77,
       "norm_label": "index.ts",
       "id": "auth_index"
     },
@@ -3610,7 +3700,7 @@
       "source_file": "apps/user-service/src/dto/auth/login-request.dto.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 6,
+      "community": 77,
       "norm_label": "login-request.dto.ts",
       "id": "auth_login_request_dto"
     },
@@ -3620,7 +3710,7 @@
       "source_file": "apps/user-service/src/dto/auth/login-request.dto.ts",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 6,
+      "community": 77,
       "norm_label": "loginschema",
       "id": "auth_login_request_dto_loginschema"
     },
@@ -3630,7 +3720,7 @@
       "source_file": "apps/user-service/src/dto/auth/login-request.dto.ts",
       "source_location": "L8",
       "_origin": "ast",
-      "community": 6,
+      "community": 77,
       "norm_label": "loginrequestdto",
       "id": "auth_login_request_dto_loginrequestdto"
     },
@@ -3640,7 +3730,7 @@
       "source_file": "apps/user-service/src/dto/auth/otp-request.dto.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 6,
+      "community": 77,
       "norm_label": "otp-request.dto.ts",
       "id": "auth_otp_request_dto"
     },
@@ -3650,7 +3740,7 @@
       "source_file": "apps/user-service/src/dto/auth/otp-request.dto.ts",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 6,
+      "community": 77,
       "norm_label": "verifyotprequestschema",
       "id": "auth_otp_request_dto_verifyotprequestschema"
     },
@@ -3660,7 +3750,7 @@
       "source_file": "apps/user-service/src/dto/auth/otp-request.dto.ts",
       "source_location": "L7",
       "_origin": "ast",
-      "community": 6,
+      "community": 77,
       "norm_label": "verifyotprequestdto",
       "id": "auth_otp_request_dto_verifyotprequestdto"
     },
@@ -3670,7 +3760,7 @@
       "source_file": "apps/user-service/src/dto/auth/register-request.dto.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 6,
+      "community": 77,
       "norm_label": "register-request.dto.ts",
       "id": "auth_register_request_dto"
     },
@@ -3680,7 +3770,7 @@
       "source_file": "apps/user-service/src/dto/auth/register-request.dto.ts",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 6,
+      "community": 77,
       "norm_label": "registerschema",
       "id": "auth_register_request_dto_registerschema"
     },
@@ -3690,7 +3780,7 @@
       "source_file": "apps/user-service/src/dto/auth/register-request.dto.ts",
       "source_location": "L16",
       "_origin": "ast",
-      "community": 1,
+      "community": 78,
       "norm_label": "registerrequestdto",
       "id": "auth_register_request_dto_registerrequestdto"
     },
@@ -3720,7 +3810,7 @@
       "source_file": "apps/user-service/src/generated/prisma/browser.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 25,
+      "community": 22,
       "norm_label": "browser.ts",
       "id": "prisma_browser"
     },
@@ -3730,7 +3820,7 @@
       "source_file": "apps/user-service/src/generated/prisma/browser.ts",
       "source_location": "L23",
       "_origin": "ast",
-      "community": 25,
+      "community": 22,
       "norm_label": "user",
       "id": "prisma_browser_user"
     },
@@ -3910,7 +4000,7 @@
       "source_file": "apps/user-service/src/generated/prisma/enums.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 25,
+      "community": 22,
       "norm_label": "enums.ts",
       "id": "prisma_enums"
     },
@@ -4980,7 +5070,7 @@
       "source_file": "apps/user-service/src/generated/prisma/internal/prismaNamespaceBrowser.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 25,
+      "community": 22,
       "norm_label": "prismanamespacebrowser.ts",
       "id": "internal_prismanamespacebrowser"
     },
@@ -4990,7 +5080,7 @@
       "source_file": "apps/user-service/src/generated/prisma/internal/prismaNamespaceBrowser.ts",
       "source_location": "L24",
       "_origin": "ast",
-      "community": 25,
+      "community": 22,
       "norm_label": "nulltypes",
       "id": "internal_prismanamespacebrowser_nulltypes"
     },
@@ -5000,7 +5090,7 @@
       "source_file": "apps/user-service/src/generated/prisma/internal/prismaNamespaceBrowser.ts",
       "source_location": "L56",
       "_origin": "ast",
-      "community": 25,
+      "community": 22,
       "norm_label": "modelname",
       "id": "internal_prismanamespacebrowser_modelname"
     },
@@ -5010,7 +5100,7 @@
       "source_file": "apps/user-service/src/generated/prisma/internal/prismaNamespaceBrowser.ts",
       "source_location": "L66",
       "_origin": "ast",
-      "community": 25,
+      "community": 22,
       "norm_label": "transactionisolationlevel",
       "id": "internal_prismanamespacebrowser_transactionisolationlevel"
     },
@@ -5020,7 +5110,7 @@
       "source_file": "apps/user-service/src/generated/prisma/internal/prismaNamespaceBrowser.ts",
       "source_location": "L76",
       "_origin": "ast",
-      "community": 25,
+      "community": 22,
       "norm_label": "userscalarfieldenum",
       "id": "internal_prismanamespacebrowser_userscalarfieldenum"
     },
@@ -5030,7 +5120,7 @@
       "source_file": "apps/user-service/src/generated/prisma/internal/prismaNamespaceBrowser.ts",
       "source_location": "L90",
       "_origin": "ast",
-      "community": 25,
+      "community": 22,
       "norm_label": "sortorder",
       "id": "internal_prismanamespacebrowser_sortorder"
     },
@@ -5040,7 +5130,7 @@
       "source_file": "apps/user-service/src/generated/prisma/internal/prismaNamespaceBrowser.ts",
       "source_location": "L97",
       "_origin": "ast",
-      "community": 25,
+      "community": 22,
       "norm_label": "querymode",
       "id": "internal_prismanamespacebrowser_querymode"
     },
@@ -5050,7 +5140,7 @@
       "source_file": "apps/user-service/src/generated/prisma/models.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 25,
+      "community": 22,
       "norm_label": "models.ts",
       "id": "prisma_models"
     },
@@ -5810,7 +5900,7 @@
       "source_file": "apps/user-service/src/middleware/auth.middleware.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 25,
       "norm_label": "auth.middleware.ts",
       "id": "middleware_auth_middleware"
     },
@@ -5820,7 +5910,7 @@
       "source_file": "apps/user-service/src/middleware/auth.middleware.ts",
       "source_location": "L9",
       "_origin": "ast",
-      "community": 1,
+      "community": 25,
       "norm_label": "accesstokenpayload",
       "id": "middleware_auth_middleware_accesstokenpayload"
     },
@@ -5830,7 +5920,7 @@
       "source_file": "apps/user-service/src/middleware/auth.middleware.ts",
       "source_location": "L16",
       "_origin": "ast",
-      "community": 1,
+      "community": 25,
       "norm_label": "authuser",
       "id": "middleware_auth_middleware_authuser"
     },
@@ -5840,7 +5930,7 @@
       "source_file": "apps/user-service/src/middleware/auth.middleware.ts",
       "source_location": "L22",
       "_origin": "ast",
-      "community": 1,
+      "community": 25,
       "norm_label": "authmiddleware()",
       "id": "middleware_auth_middleware_authmiddleware"
     },
@@ -5850,7 +5940,7 @@
       "source_file": "apps/user-service/src/middleware/session.middleware.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 25,
       "norm_label": "session.middleware.ts",
       "id": "middleware_session_middleware"
     },
@@ -5860,7 +5950,7 @@
       "source_file": "apps/user-service/src/middleware/session.middleware.ts",
       "source_location": "L10",
       "_origin": "ast",
-      "community": 1,
+      "community": 25,
       "norm_label": "sessionmiddleware()",
       "id": "middleware_session_middleware_sessionmiddleware"
     },
@@ -5940,7 +6030,7 @@
       "source_file": "apps/user-service/src/server.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 25,
       "norm_label": "server.ts",
       "id": "apps_user_service_src_server_ts_src_server"
     },
@@ -5950,7 +6040,7 @@
       "source_file": "apps/user-service/src/server.ts",
       "source_location": "L23",
       "_origin": "ast",
-      "community": 1,
+      "community": 25,
       "norm_label": "shutdown()",
       "id": "apps_user_service_src_server_ts_src_server_shutdown"
     },
@@ -5960,79 +6050,9 @@
       "source_file": "apps/user-service/src/server.ts",
       "source_location": "L77",
       "_origin": "ast",
-      "community": 13,
+      "community": 25,
       "norm_label": "startserver()",
       "id": "apps_user_service_src_server_ts_src_server_startserver"
-    },
-    {
-      "label": "health.service.ts",
-      "file_type": "code",
-      "source_file": "apps/user-service/src/services/health.service.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 29,
-      "norm_label": "health.service.ts",
-      "id": "services_health_service"
-    },
-    {
-      "label": "HealthChecks",
-      "file_type": "code",
-      "source_file": "apps/user-service/src/services/health.service.ts",
-      "source_location": "L6",
-      "_origin": "ast",
-      "community": 29,
-      "norm_label": "healthchecks",
-      "id": "services_health_service_healthchecks"
-    },
-    {
-      "label": "probeDatabase()",
-      "file_type": "code",
-      "source_file": "apps/user-service/src/services/health.service.ts",
-      "source_location": "L12",
-      "_origin": "ast",
-      "community": 29,
-      "norm_label": "probedatabase()",
-      "id": "services_health_service_probedatabase"
-    },
-    {
-      "label": "probeRedis()",
-      "file_type": "code",
-      "source_file": "apps/user-service/src/services/health.service.ts",
-      "source_location": "L22",
-      "_origin": "ast",
-      "community": 29,
-      "norm_label": "proberedis()",
-      "id": "services_health_service_proberedis"
-    },
-    {
-      "label": "probeKafka()",
-      "file_type": "code",
-      "source_file": "apps/user-service/src/services/health.service.ts",
-      "source_location": "L41",
-      "_origin": "ast",
-      "community": 29,
-      "norm_label": "probekafka()",
-      "id": "services_health_service_probekafka"
-    },
-    {
-      "label": "HealthService",
-      "file_type": "code",
-      "source_file": "apps/user-service/src/services/health.service.ts",
-      "source_location": "L59",
-      "_origin": "ast",
-      "community": 29,
-      "norm_label": "healthservice",
-      "id": "services_health_service_healthservice"
-    },
-    {
-      "label": ".runReadinessChecks()",
-      "file_type": "code",
-      "source_file": "apps/user-service/src/services/health.service.ts",
-      "source_location": "L60",
-      "_origin": "ast",
-      "community": 29,
-      "norm_label": ".runreadinesschecks()",
-      "id": "services_health_service_healthservice_runreadinesschecks"
     },
     {
       "label": "index.ts",
@@ -6050,7 +6070,7 @@
       "source_file": "apps/user-service/src/services/otp.service.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 25,
       "norm_label": "otp.service.ts",
       "id": "services_otp_service"
     },
@@ -6060,7 +6080,7 @@
       "source_file": "apps/user-service/src/services/otp.service.ts",
       "source_location": "L12",
       "_origin": "ast",
-      "community": 1,
+      "community": 25,
       "norm_label": "registrationsessiondata",
       "id": "services_otp_service_registrationsessiondata"
     },
@@ -6070,7 +6090,7 @@
       "source_file": "apps/user-service/src/services/otp.service.ts",
       "source_location": "L19",
       "_origin": "ast",
-      "community": 1,
+      "community": 80,
       "norm_label": "otpservice",
       "id": "services_otp_service_otpservice"
     },
@@ -6080,7 +6100,7 @@
       "source_file": "apps/user-service/src/services/otp.service.ts",
       "source_location": "L27",
       "_origin": "ast",
-      "community": 1,
+      "community": 80,
       "norm_label": ".storeotp()",
       "id": "services_otp_service_otpservice_storeotp"
     },
@@ -6090,7 +6110,7 @@
       "source_file": "apps/user-service/src/services/otp.service.ts",
       "source_location": "L57",
       "_origin": "ast",
-      "community": 1,
+      "community": 80,
       "norm_label": ".storeregistrationsession()",
       "id": "services_otp_service_otpservice_storeregistrationsession"
     },
@@ -6100,7 +6120,7 @@
       "source_file": "apps/user-service/src/services/otp.service.ts",
       "source_location": "L72",
       "_origin": "ast",
-      "community": 1,
+      "community": 80,
       "norm_label": ".getregistrationsession()",
       "id": "services_otp_service_otpservice_getregistrationsession"
     },
@@ -6110,7 +6130,7 @@
       "source_file": "apps/user-service/src/services/otp.service.ts",
       "source_location": "L83",
       "_origin": "ast",
-      "community": 1,
+      "community": 80,
       "norm_label": ".deleteregistrationsession()",
       "id": "services_otp_service_otpservice_deleteregistrationsession"
     },
@@ -6120,7 +6140,7 @@
       "source_file": "apps/user-service/src/services/otp.service.ts",
       "source_location": "L93",
       "_origin": "ast",
-      "community": 1,
+      "community": 80,
       "norm_label": ".verifyotp()",
       "id": "services_otp_service_otpservice_verifyotp"
     },
@@ -6130,7 +6150,7 @@
       "source_file": "apps/user-service/src/utils/constants/auth.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 78,
       "norm_label": "auth.ts",
       "id": "constants_auth"
     },
@@ -6140,7 +6160,7 @@
       "source_file": "apps/user-service/src/utils/constants/auth.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 78,
       "norm_label": "auth_durations",
       "id": "constants_auth_auth_durations"
     },
@@ -6150,7 +6170,7 @@
       "source_file": "apps/user-service/src/utils/constants/cookie.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 79,
       "norm_label": "cookie.ts",
       "id": "constants_cookie"
     },
@@ -6160,7 +6180,7 @@
       "source_file": "apps/user-service/src/utils/constants/cookie.ts",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 1,
+      "community": 79,
       "norm_label": "cookie_names",
       "id": "constants_cookie_cookie_names"
     },
@@ -6170,7 +6190,7 @@
       "source_file": "apps/user-service/src/utils/constants/cookie.ts",
       "source_location": "L9",
       "_origin": "ast",
-      "community": 1,
+      "community": 79,
       "norm_label": "duration_to_ms",
       "id": "constants_cookie_duration_to_ms"
     },
@@ -6180,7 +6200,7 @@
       "source_file": "apps/user-service/src/utils/constants/cookie.ts",
       "source_location": "L18",
       "_origin": "ast",
-      "community": 1,
+      "community": 79,
       "norm_label": "cookie_max_age",
       "id": "constants_cookie_cookie_max_age"
     },
@@ -6190,7 +6210,7 @@
       "source_file": "apps/user-service/src/utils/constants/redis-keys.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 25,
       "norm_label": "redis-keys.ts",
       "id": "constants_redis_keys"
     },
@@ -6200,7 +6220,7 @@
       "source_file": "apps/user-service/src/utils/constants/redis-keys.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 25,
       "norm_label": "redis_keys",
       "id": "constants_redis_keys_redis_keys"
     },
@@ -6210,7 +6230,7 @@
       "source_file": "apps/user-service/src/utils/errors/errorCodes.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 25,
       "norm_label": "errorcodes.ts",
       "id": "errors_errorcodes"
     },
@@ -6220,7 +6240,7 @@
       "source_file": "apps/user-service/src/utils/errors/errorCodes.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 25,
       "norm_label": "error_codes",
       "id": "errors_errorcodes_error_codes"
     },
@@ -6230,7 +6250,7 @@
       "source_file": "apps/user-service/src/utils/errors/errorCodes.ts",
       "source_location": "L24",
       "_origin": "ast",
-      "community": 1,
+      "community": 25,
       "norm_label": "errorcode",
       "id": "errors_errorcodes_errorcode"
     },
@@ -6240,7 +6260,7 @@
       "source_file": "apps/user-service/src/utils/errors/errorMessages.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 25,
       "norm_label": "errormessages.ts",
       "id": "errors_errormessages"
     },
@@ -6250,7 +6270,7 @@
       "source_file": "apps/user-service/src/utils/errors/errorMessages.ts",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 1,
+      "community": 25,
       "norm_label": "error_messages",
       "id": "errors_errormessages_error_messages"
     },
@@ -6260,7 +6280,7 @@
       "source_file": "apps/user-service/src/utils/errors/index.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 25,
       "norm_label": "index.ts",
       "id": "errors_index"
     },
@@ -6270,7 +6290,7 @@
       "source_file": "apps/user-service/src/utils/fingerprint.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 79,
       "norm_label": "fingerprint.ts",
       "id": "utils_fingerprint"
     },
@@ -6280,7 +6300,7 @@
       "source_file": "apps/user-service/src/utils/fingerprint.ts",
       "source_location": "L8",
       "_origin": "ast",
-      "community": 1,
+      "community": 79,
       "norm_label": "getdevicefingerprint()",
       "id": "utils_fingerprint_getdevicefingerprint"
     },
@@ -6290,7 +6310,7 @@
       "source_file": "apps/user-service/src/utils/generate-otp.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 78,
       "norm_label": "generate-otp.ts",
       "id": "utils_generate_otp"
     },
@@ -6300,7 +6320,7 @@
       "source_file": "apps/user-service/src/utils/generate-otp.ts",
       "source_location": "L7",
       "_origin": "ast",
-      "community": 1,
+      "community": 78,
       "norm_label": "generateotp()",
       "id": "utils_generate_otp_generateotp"
     },
@@ -7130,7 +7150,7 @@
       "source_file": "packages/errors/src/normalizeError.ts",
       "source_location": "L51",
       "_origin": "ast",
-      "community": 9,
+      "community": 13,
       "norm_label": "normalizeerror()",
       "id": "src_normalizeerror_normalizeerror"
     },
@@ -7200,7 +7220,7 @@
       "source_file": "packages/errors/src/registry.ts",
       "source_location": "L8",
       "_origin": "ast",
-      "community": 13,
+      "community": 25,
       "norm_label": "registererrormessages()",
       "id": "src_registry_registererrormessages"
     },
@@ -7900,7 +7920,7 @@
       "source_file": "packages/http/src/response/apiResponse.ts",
       "source_location": "L17",
       "_origin": "ast",
-      "community": 9,
+      "community": 13,
       "norm_label": "errorresponse()",
       "id": "response_apiresponse_errorresponse"
     },
@@ -9110,7 +9130,7 @@
       "source_file": "packages/middleware/src/errorHandler.ts",
       "source_location": "L7",
       "_origin": "ast",
-      "community": 9,
+      "community": 13,
       "norm_label": "errorhandlermiddleware()",
       "id": "src_errorhandler_errorhandlermiddleware"
     },
@@ -10939,6 +10959,1091 @@
   ],
   "links": [
     {
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/notification-service/src/container/index.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_notification_service_src_container_index_ts_container_index",
+      "target": "container_notification_container"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/notification-service/src/container/notification.container.ts",
+      "source_location": "L33",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "container_notification_container",
+      "target": "container_notification_container_bootstrap"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/notification-service/src/container/notification.container.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "container_notification_container",
+      "target": "email_email_provider_emailprovider"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "apps/notification-service/src/container/notification.container.ts",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "container_notification_container_bootstrap",
+      "target": "client_consumer_createconsumer"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "apps/notification-service/src/container/notification.container.ts",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "container_notification_container_bootstrap",
+      "target": "config_email_getemailvendor"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "apps/notification-service/src/server.ts",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "src_server_startserver",
+      "target": "container_notification_container_bootstrap"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/notification-service/src/repositories/idempotency.repository.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "repositories_idempotency_repository",
+      "target": "repositories_idempotency_repository_idempotencyrepository"
+    },
+    {
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/notification-service/src/repositories/index.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "repositories_index",
+      "target": "repositories_idempotency_repository"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/notification-service/src/repositories/idempotency.repository.ts",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "repositories_idempotency_repository_idempotencyrepository",
+      "target": "repositories_idempotency_repository_idempotencyrepository_buildkey"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/notification-service/src/repositories/idempotency.repository.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "repositories_idempotency_repository_idempotencyrepository",
+      "target": "repositories_idempotency_repository_idempotencyrepository_constructor"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/notification-service/src/repositories/idempotency.repository.ts",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "repositories_idempotency_repository_idempotencyrepository",
+      "target": "repositories_idempotency_repository_idempotencyrepository_markprocessed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/notification-service/src/repositories/idempotency.repository.ts",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "repositories_idempotency_repository_idempotencyrepository",
+      "target": "repositories_idempotency_repository_idempotencyrepository_release",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/notification-service/src/repositories/idempotency.repository.ts",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "repositories_idempotency_repository_idempotencyrepository",
+      "target": "repositories_idempotency_repository_idempotencyrepository_reserveifnew",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/notification-service/src/repositories/idempotency.repository.ts",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "repositories_idempotency_repository_idempotencyrepository_markprocessed",
+      "target": "repositories_idempotency_repository_idempotencyrepository_buildkey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/notification-service/src/repositories/idempotency.repository.ts",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "repositories_idempotency_repository_idempotencyrepository_release",
+      "target": "repositories_idempotency_repository_idempotencyrepository_buildkey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/notification-service/src/repositories/idempotency.repository.ts",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "repositories_idempotency_repository_idempotencyrepository_reserveifnew",
+      "target": "repositories_idempotency_repository_idempotencyrepository_buildkey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/notification-service/src/services/otp-notification.service.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_otp_notification_service",
+      "target": "email_email_provider_emailprovider"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/notification-service/src/services/otp-notification.service.ts",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_otp_notification_service",
+      "target": "services_otp_notification_service_otpnotificationservice"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/notification-service/src/services/otp-notification.service.ts",
+      "source_location": "L32",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_otp_notification_service_otpnotificationservice",
+      "target": "services_otp_notification_service_otpnotificationservice_constructor"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/notification-service/src/services/otp-notification.service.ts",
+      "source_location": "L39",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_otp_notification_service_otpnotificationservice",
+      "target": "services_otp_notification_service_otpnotificationservice_process"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/notification-service/src/services/otp-notification.service.ts",
+      "source_location": "L67",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_otp_notification_service_otpnotificationservice",
+      "target": "services_otp_notification_service_otpnotificationservice_tryvalidate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/notification-service/src/services/otp-notification.service.ts",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_otp_notification_service_otpnotificationservice_process",
+      "target": "services_otp_notification_service_otpnotificationservice_tryvalidate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "apps/notification-service/src/services/otp-notification.service.ts",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "services_otp_notification_service_otpnotificationservice_process",
+      "target": "templates_otp_email_template_renderotpemail"
+    },
+    {
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/notification-service/src/services/index.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_index",
+      "target": "services_welcome_notification_service"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/notification-service/src/services/welcome-notification.service.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_welcome_notification_service",
+      "target": "email_email_provider_emailprovider"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/notification-service/src/services/welcome-notification.service.ts",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_welcome_notification_service",
+      "target": "services_welcome_notification_service_welcomenotificationservice"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/notification-service/src/services/welcome-notification.service.ts",
+      "source_location": "L32",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_welcome_notification_service_welcomenotificationservice",
+      "target": "services_welcome_notification_service_welcomenotificationservice_constructor"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/notification-service/src/services/welcome-notification.service.ts",
+      "source_location": "L38",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_welcome_notification_service_welcomenotificationservice",
+      "target": "services_welcome_notification_service_welcomenotificationservice_process"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/notification-service/src/services/welcome-notification.service.ts",
+      "source_location": "L66",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_welcome_notification_service_welcomenotificationservice",
+      "target": "services_welcome_notification_service_welcomenotificationservice_tryvalidate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/notification-service/src/services/welcome-notification.service.ts",
+      "source_location": "L39",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_welcome_notification_service_welcomenotificationservice_process",
+      "target": "services_welcome_notification_service_welcomenotificationservice_tryvalidate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "apps/notification-service/src/services/welcome-notification.service.ts",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "services_welcome_notification_service_welcomenotificationservice_process",
+      "target": "templates_welcome_email_template_renderwelcomeemail"
+    },
+    {
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/index.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_user_service_src_services_index_ts_services_index",
+      "target": "services_auth_service"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service",
+      "target": "auth_auth_response_dto_authresponsedto"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service",
+      "target": "auth_index"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service",
+      "target": "auth_login_request_dto_loginrequestdto"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service",
+      "target": "auth_otp_request_dto_verifyotprequestdto"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service",
+      "target": "auth_register_request_dto_registerrequestdto"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service",
+      "target": "constants_auth"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service",
+      "target": "constants_auth_auth_durations"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service",
+      "target": "constants_redis_keys"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service",
+      "target": "constants_redis_keys_redis_keys"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service",
+      "target": "errors_errorcodes_error_codes"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service",
+      "target": "errors_index"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service",
+      "target": "producer_otp_requested_publisher"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service",
+      "target": "producer_otp_requested_publisher_otpeventpublisher"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service",
+      "target": "producer_user_logged_in_publisher"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service",
+      "target": "producer_user_logged_in_publisher_userloggedineventpublisher"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service",
+      "target": "publishers_otp_requested_publisher"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service",
+      "target": "publishers_otp_requested_publisher_otpeventpublisher"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service",
+      "target": "publishers_user_logged_in_publisher"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service",
+      "target": "publishers_user_logged_in_publisher_userloggedineventpublisher"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service",
+      "target": "services_auth_service_accesstokenpayload"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L38",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service",
+      "target": "services_auth_service_authservice"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L32",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service",
+      "target": "services_auth_service_refreshtokenpayload"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service",
+      "target": "services_otp_service"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service",
+      "target": "services_otp_service_otpservice"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service",
+      "target": "utils_generate_otp"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service",
+      "target": "utils_generate_otp_generateotp"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L39",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service_authservice",
+      "target": "services_auth_service_authservice_constructor"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L44",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service_authservice",
+      "target": "services_auth_service_authservice_generateaccesstoken"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L58",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service_authservice",
+      "target": "services_auth_service_authservice_generaterefreshtoken"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L248",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service_authservice",
+      "target": "services_auth_service_authservice_getsessions"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L328",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service_authservice",
+      "target": "services_auth_service_authservice_getuserbyid"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L71",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service_authservice",
+      "target": "services_auth_service_authservice_login"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L294",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service_authservice",
+      "target": "services_auth_service_authservice_logout"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L306",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service_authservice",
+      "target": "services_auth_service_authservice_logoutall"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L147",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service_authservice",
+      "target": "services_auth_service_authservice_refresh"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L435",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service_authservice",
+      "target": "services_auth_service_authservice_registeruser"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L268",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service_authservice",
+      "target": "services_auth_service_authservice_revokesession"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L343",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service_authservice",
+      "target": "services_auth_service_authservice_sendotp"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L398",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service_authservice",
+      "target": "services_auth_service_authservice_verifyandregister"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L39",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service_authservice_constructor",
+      "target": "producer_otp_requested_publisher_otpeventpublisher"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L43",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service_authservice_constructor",
+      "target": "producer_user_logged_in_publisher_userloggedineventpublisher"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service_authservice_constructor",
+      "target": "publishers_otp_requested_publisher_otpeventpublisher"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service_authservice_constructor",
+      "target": "publishers_user_logged_in_publisher_userloggedineventpublisher"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L97",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service_authservice_login",
+      "target": "services_auth_service_authservice_generateaccesstoken"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L213",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service_authservice_refresh",
+      "target": "services_auth_service_authservice_generateaccesstoken"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L452",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service_authservice_registeruser",
+      "target": "services_auth_service_authservice_generateaccesstoken"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L102",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service_authservice_login",
+      "target": "services_auth_service_authservice_generaterefreshtoken"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L218",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service_authservice_refresh",
+      "target": "services_auth_service_authservice_generaterefreshtoken"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L457",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service_authservice_registeruser",
+      "target": "services_auth_service_authservice_generaterefreshtoken"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L71",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service_authservice_login",
+      "target": "auth_auth_response_dto_authresponsedto"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L71",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service_authservice_login",
+      "target": "auth_login_request_dto_loginrequestdto"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L147",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service_authservice_refresh",
+      "target": "auth_auth_response_dto_authresponsedto"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L184",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service_authservice_refresh",
+      "target": "services_auth_service_authservice_logout"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L201",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service_authservice_refresh",
+      "target": "services_auth_service_authservice_logoutall"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L343",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service_authservice_sendotp",
+      "target": "auth_register_request_dto_registerrequestdto"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L355",
+      "weight": 1.0,
+      "source": "services_auth_service_authservice_sendotp",
+      "target": "utils_generate_otp_generateotp"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L398",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service_authservice_verifyandregister",
+      "target": "auth_auth_response_dto_authresponsedto"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L398",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service_authservice_verifyandregister",
+      "target": "auth_otp_request_dto_verifyotprequestdto"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L419",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service_authservice_verifyandregister",
+      "target": "services_auth_service_authservice_registeruser"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/auth.service.ts",
+      "source_location": "L435",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_auth_service_authservice_registeruser",
+      "target": "auth_auth_response_dto_authresponsedto"
+    },
+    {
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/index.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_user_service_src_services_index_ts_services_index",
+      "target": "services_health_service"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/health.service.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_health_service",
+      "target": "services_health_service_healthchecks"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/health.service.ts",
+      "source_location": "L59",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_health_service",
+      "target": "services_health_service_healthservice"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/health.service.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_health_service",
+      "target": "services_health_service_probedatabase"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/health.service.ts",
+      "source_location": "L41",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_health_service",
+      "target": "services_health_service_probekafka"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/health.service.ts",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_health_service",
+      "target": "services_health_service_proberedis"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/health.service.ts",
+      "source_location": "L62",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_health_service_healthservice_runreadinesschecks",
+      "target": "services_health_service_probedatabase"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/health.service.ts",
+      "source_location": "L63",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_health_service_healthservice_runreadinesschecks",
+      "target": "services_health_service_proberedis"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/health.service.ts",
+      "source_location": "L64",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_health_service_healthservice_runreadinesschecks",
+      "target": "services_health_service_probekafka"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/services/health.service.ts",
+      "source_location": "L60",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_health_service_healthservice",
+      "target": "services_health_service_healthservice_runreadinesschecks"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CLAUDE.md",
@@ -11354,79 +12459,14 @@
       "target": "consumers_user_logged_in_consumer_userloggedinconsumer_start"
     },
     {
-      "relation": "re_exports",
-      "context": "export",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/notification-service/src/container/index.ts",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_notification_service_src_container_index_ts_container_index",
-      "target": "container_notification_container"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/notification-service/src/container/notification.container.ts",
-      "source_location": "L33",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "container_notification_container",
-      "target": "container_notification_container_bootstrap"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/notification-service/src/container/notification.container.ts",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "container_notification_container",
-      "target": "email_email_provider_emailprovider"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "apps/notification-service/src/container/notification.container.ts",
-      "source_location": "L69",
-      "weight": 1.0,
-      "source": "container_notification_container_bootstrap",
-      "target": "client_consumer_createconsumer"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "apps/notification-service/src/container/notification.container.ts",
-      "source_location": "L48",
-      "weight": 1.0,
-      "source": "container_notification_container_bootstrap",
-      "target": "config_email_getemailvendor"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "apps/notification-service/src/server.ts",
-      "source_location": "L97",
-      "weight": 1.0,
-      "source": "src_server_startserver",
-      "target": "container_notification_container_bootstrap"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/notification-service/src/server.ts",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_server",
-      "target": "src_server_shutdown",
-      "confidence_score": 1.0
+      "target": "src_server_shutdown"
     },
     {
       "relation": "contains",
@@ -11434,93 +12474,9 @@
       "source_file": "apps/notification-service/src/server.ts",
       "source_location": "L91",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_server",
-      "target": "src_server_startserver",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "re_exports",
-      "context": "export",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/notification-service/src/services/index.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "services_index",
-      "target": "services_welcome_notification_service",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/notification-service/src/services/welcome-notification.service.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_welcome_notification_service",
-      "target": "email_email_provider_emailprovider"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/notification-service/src/services/welcome-notification.service.ts",
-      "source_location": "L31",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_welcome_notification_service",
-      "target": "services_welcome_notification_service_welcomenotificationservice"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/notification-service/src/services/welcome-notification.service.ts",
-      "source_location": "L32",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_welcome_notification_service_welcomenotificationservice",
-      "target": "services_welcome_notification_service_welcomenotificationservice_constructor"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/notification-service/src/services/welcome-notification.service.ts",
-      "source_location": "L38",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_welcome_notification_service_welcomenotificationservice",
-      "target": "services_welcome_notification_service_welcomenotificationservice_process"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/notification-service/src/services/welcome-notification.service.ts",
-      "source_location": "L66",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_welcome_notification_service_welcomenotificationservice",
-      "target": "services_welcome_notification_service_welcomenotificationservice_tryvalidate"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/notification-service/src/services/welcome-notification.service.ts",
-      "source_location": "L39",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_welcome_notification_service_welcomenotificationservice_process",
-      "target": "services_welcome_notification_service_welcomenotificationservice_tryvalidate"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "apps/notification-service/src/services/welcome-notification.service.ts",
-      "source_location": "L51",
-      "weight": 1.0,
-      "source": "services_welcome_notification_service_welcomenotificationservice_process",
-      "target": "templates_welcome_email_template_renderwelcomeemail"
+      "target": "src_server_startserver"
     },
     {
       "relation": "re_exports",
@@ -11667,9 +12623,9 @@
       "source_file": "apps/user-service/src/api/v1/routes/user.route.ts",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "routes_user_route",
-      "target": "routes_user_route_authcontrollerpromise",
-      "confidence_score": 1.0
+      "target": "routes_user_route_authcontrollerpromise"
     },
     {
       "relation": "contains",
@@ -11773,9 +12729,9 @@
       "source_file": "apps/user-service/src/container/auth.container.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "container_auth_container",
-      "target": "publishers_otp_requested_publisher",
-      "confidence_score": 1.0
+      "target": "publishers_otp_requested_publisher"
     },
     {
       "relation": "imports",
@@ -11784,9 +12740,9 @@
       "source_file": "apps/user-service/src/container/auth.container.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "container_auth_container",
-      "target": "publishers_otp_requested_publisher_otpeventpublisher",
-      "confidence_score": 1.0
+      "target": "publishers_otp_requested_publisher_otpeventpublisher"
     },
     {
       "relation": "imports_from",
@@ -11795,9 +12751,9 @@
       "source_file": "apps/user-service/src/container/auth.container.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "container_auth_container",
-      "target": "publishers_user_logged_in_publisher",
-      "confidence_score": 1.0
+      "target": "publishers_user_logged_in_publisher"
     },
     {
       "relation": "imports",
@@ -11806,9 +12762,9 @@
       "source_file": "apps/user-service/src/container/auth.container.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "container_auth_container",
-      "target": "publishers_user_logged_in_publisher_userloggedineventpublisher",
-      "confidence_score": 1.0
+      "target": "publishers_user_logged_in_publisher_userloggedineventpublisher"
     },
     {
       "relation": "calls",
@@ -11827,9 +12783,9 @@
       "source_file": "apps/user-service/src/events/publishers/otp-requested.publisher.ts",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "publishers_otp_requested_publisher",
-      "target": "publishers_otp_requested_publisher_otpeventpublisher",
-      "confidence_score": 1.0
+      "target": "publishers_otp_requested_publisher_otpeventpublisher"
     },
     {
       "relation": "contains",
@@ -11837,20 +12793,9 @@
       "source_file": "apps/user-service/src/events/publishers/otp-requested.publisher.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "publishers_otp_requested_publisher",
-      "target": "publishers_otp_requested_publisher_schema_version",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L22",
-      "weight": 1.0,
-      "source": "services_auth_service",
-      "target": "publishers_otp_requested_publisher",
-      "confidence_score": 1.0
+      "target": "publishers_otp_requested_publisher_schema_version"
     },
     {
       "relation": "method",
@@ -11858,9 +12803,9 @@
       "source_file": "apps/user-service/src/events/publishers/otp-requested.publisher.ts",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "publishers_otp_requested_publisher_otpeventpublisher",
-      "target": "publishers_otp_requested_publisher_otpeventpublisher_constructor",
-      "confidence_score": 1.0
+      "target": "publishers_otp_requested_publisher_otpeventpublisher_constructor"
     },
     {
       "relation": "method",
@@ -11868,31 +12813,9 @@
       "source_file": "apps/user-service/src/events/publishers/otp-requested.publisher.ts",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "publishers_otp_requested_publisher_otpeventpublisher",
-      "target": "publishers_otp_requested_publisher_otpeventpublisher_publishotprequested",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L22",
-      "weight": 1.0,
-      "source": "services_auth_service",
-      "target": "publishers_otp_requested_publisher_otpeventpublisher",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L40",
-      "weight": 1.0,
-      "source": "services_auth_service_authservice_constructor",
-      "target": "publishers_otp_requested_publisher_otpeventpublisher",
-      "confidence_score": 1.0
+      "target": "publishers_otp_requested_publisher_otpeventpublisher_publishotprequested"
     },
     {
       "relation": "contains",
@@ -11900,9 +12823,9 @@
       "source_file": "apps/user-service/src/events/publishers/user-logged-in.publisher.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "publishers_user_logged_in_publisher",
-      "target": "publishers_user_logged_in_publisher_schema_version",
-      "confidence_score": 1.0
+      "target": "publishers_user_logged_in_publisher_schema_version"
     },
     {
       "relation": "contains",
@@ -11910,20 +12833,9 @@
       "source_file": "apps/user-service/src/events/publishers/user-logged-in.publisher.ts",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "publishers_user_logged_in_publisher",
-      "target": "publishers_user_logged_in_publisher_userloggedineventpublisher",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L23",
-      "weight": 1.0,
-      "source": "services_auth_service",
-      "target": "publishers_user_logged_in_publisher",
-      "confidence_score": 1.0
+      "target": "publishers_user_logged_in_publisher_userloggedineventpublisher"
     },
     {
       "relation": "method",
@@ -11931,9 +12843,9 @@
       "source_file": "apps/user-service/src/events/publishers/user-logged-in.publisher.ts",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "publishers_user_logged_in_publisher_userloggedineventpublisher",
-      "target": "publishers_user_logged_in_publisher_userloggedineventpublisher_constructor",
-      "confidence_score": 1.0
+      "target": "publishers_user_logged_in_publisher_userloggedineventpublisher_constructor"
     },
     {
       "relation": "method",
@@ -11941,620 +12853,9 @@
       "source_file": "apps/user-service/src/events/publishers/user-logged-in.publisher.ts",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "publishers_user_logged_in_publisher_userloggedineventpublisher",
-      "target": "publishers_user_logged_in_publisher_userloggedineventpublisher_publishuserloggedin",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L23",
-      "weight": 1.0,
-      "source": "services_auth_service",
-      "target": "publishers_user_logged_in_publisher_userloggedineventpublisher",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L40",
-      "weight": 1.0,
-      "source": "services_auth_service_authservice_constructor",
-      "target": "publishers_user_logged_in_publisher_userloggedineventpublisher",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "re_exports",
-      "context": "export",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/index.ts",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_user_service_src_services_index_ts_services_index",
-      "target": "services_auth_service"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service",
-      "target": "auth_auth_response_dto_authresponsedto"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service",
-      "target": "auth_index"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service",
-      "target": "auth_login_request_dto_loginrequestdto"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service",
-      "target": "auth_otp_request_dto_verifyotprequestdto"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service",
-      "target": "auth_register_request_dto_registerrequestdto"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service",
-      "target": "constants_auth"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service",
-      "target": "constants_auth_auth_durations"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service",
-      "target": "constants_redis_keys"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service",
-      "target": "constants_redis_keys_redis_keys"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service",
-      "target": "errors_errorcodes_error_codes"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service",
-      "target": "errors_index"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L22",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service",
-      "target": "producer_otp_requested_publisher"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L22",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service",
-      "target": "producer_otp_requested_publisher_otpeventpublisher"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L23",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service",
-      "target": "producer_user_logged_in_publisher"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L23",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service",
-      "target": "producer_user_logged_in_publisher_userloggedineventpublisher"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L25",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service",
-      "target": "services_auth_service_accesstokenpayload"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L38",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service",
-      "target": "services_auth_service_authservice"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L32",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service",
-      "target": "services_auth_service_refreshtokenpayload"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L20",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service",
-      "target": "services_otp_service"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L20",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service",
-      "target": "services_otp_service_otpservice"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L21",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service",
-      "target": "utils_generate_otp"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L21",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service",
-      "target": "utils_generate_otp_generateotp"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L39",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service_authservice",
-      "target": "services_auth_service_authservice_constructor"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L44",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service_authservice",
-      "target": "services_auth_service_authservice_generateaccesstoken"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L58",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service_authservice",
-      "target": "services_auth_service_authservice_generaterefreshtoken"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L248",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service_authservice",
-      "target": "services_auth_service_authservice_getsessions"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L328",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service_authservice",
-      "target": "services_auth_service_authservice_getuserbyid"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L71",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service_authservice",
-      "target": "services_auth_service_authservice_login"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L294",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service_authservice",
-      "target": "services_auth_service_authservice_logout"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L306",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service_authservice",
-      "target": "services_auth_service_authservice_logoutall"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L147",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service_authservice",
-      "target": "services_auth_service_authservice_refresh"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L435",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service_authservice",
-      "target": "services_auth_service_authservice_registeruser"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L268",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service_authservice",
-      "target": "services_auth_service_authservice_revokesession"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L343",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service_authservice",
-      "target": "services_auth_service_authservice_sendotp"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L398",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service_authservice",
-      "target": "services_auth_service_authservice_verifyandregister"
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L39",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service_authservice_constructor",
-      "target": "producer_otp_requested_publisher_otpeventpublisher"
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L43",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service_authservice_constructor",
-      "target": "producer_user_logged_in_publisher_userloggedineventpublisher"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L97",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service_authservice_login",
-      "target": "services_auth_service_authservice_generateaccesstoken"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L213",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service_authservice_refresh",
-      "target": "services_auth_service_authservice_generateaccesstoken"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L452",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service_authservice_registeruser",
-      "target": "services_auth_service_authservice_generateaccesstoken"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L102",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service_authservice_login",
-      "target": "services_auth_service_authservice_generaterefreshtoken"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L218",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service_authservice_refresh",
-      "target": "services_auth_service_authservice_generaterefreshtoken"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L457",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service_authservice_registeruser",
-      "target": "services_auth_service_authservice_generaterefreshtoken"
-    },
-    {
-      "relation": "references",
-      "context": "generic_arg",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L71",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service_authservice_login",
-      "target": "auth_auth_response_dto_authresponsedto"
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L71",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service_authservice_login",
-      "target": "auth_login_request_dto_loginrequestdto"
-    },
-    {
-      "relation": "references",
-      "context": "generic_arg",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L147",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service_authservice_refresh",
-      "target": "auth_auth_response_dto_authresponsedto"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L184",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service_authservice_refresh",
-      "target": "services_auth_service_authservice_logout"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L201",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service_authservice_refresh",
-      "target": "services_auth_service_authservice_logoutall"
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L343",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service_authservice_sendotp",
-      "target": "auth_register_request_dto_registerrequestdto"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L355",
-      "weight": 1.0,
-      "source": "services_auth_service_authservice_sendotp",
-      "target": "utils_generate_otp_generateotp"
-    },
-    {
-      "relation": "references",
-      "context": "generic_arg",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L398",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service_authservice_verifyandregister",
-      "target": "auth_auth_response_dto_authresponsedto"
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L398",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service_authservice_verifyandregister",
-      "target": "auth_otp_request_dto_verifyotprequestdto"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L419",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service_authservice_verifyandregister",
-      "target": "services_auth_service_authservice_registeruser"
-    },
-    {
-      "relation": "references",
-      "context": "generic_arg",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L435",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service_authservice_registeruser",
-      "target": "auth_auth_response_dto_authresponsedto"
+      "target": "publishers_user_logged_in_publisher_userloggedineventpublisher_publishuserloggedin"
     },
     {
       "relation": "contains",
@@ -12832,9 +13133,9 @@
       "source_file": "apps/user-service/tsconfig.json",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "user_service_tsconfig_compileroptions_paths",
-      "target": "user_service_tsconfig_paths_events",
-      "confidence_score": 1.0
+      "target": "user_service_tsconfig_paths_events"
     },
     {
       "relation": "contains",
@@ -12923,9 +13224,9 @@
       "source_file": "packages/contracts/src/index.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_index",
-      "target": "user_index",
-      "confidence_score": 1.0
+      "target": "user_index"
     },
     {
       "relation": "imports_from",
@@ -12956,9 +13257,9 @@
       "source_file": "packages/contracts/src/user/index.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "user_index",
-      "target": "user_otp_requested_v1",
-      "confidence_score": 1.0
+      "target": "user_otp_requested_v1"
     },
     {
       "relation": "re_exports",
@@ -12967,9 +13268,9 @@
       "source_file": "packages/contracts/src/user/index.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "user_index",
-      "target": "user_user_logged_in_v1",
-      "confidence_score": 1.0
+      "target": "user_user_logged_in_v1"
     },
     {
       "relation": "re_exports",
@@ -12988,9 +13289,9 @@
       "source_file": "packages/contracts/src/user/otp-requested.v1.ts",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "user_otp_requested_v1",
-      "target": "user_otp_requested_v1_otprequestedv1",
-      "confidence_score": 1.0
+      "target": "user_otp_requested_v1_otprequestedv1"
     },
     {
       "relation": "contains",
@@ -12998,9 +13299,9 @@
       "source_file": "packages/contracts/src/user/otp-requested.v1.ts",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "user_otp_requested_v1",
-      "target": "user_otp_requested_v1_otprequestedv1type",
-      "confidence_score": 1.0
+      "target": "user_otp_requested_v1_otprequestedv1type"
     },
     {
       "relation": "contains",
@@ -13008,9 +13309,9 @@
       "source_file": "packages/contracts/src/user/user-logged-in.v1.ts",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "user_user_logged_in_v1",
-      "target": "user_user_logged_in_v1_userloggedinv1",
-      "confidence_score": 1.0
+      "target": "user_user_logged_in_v1_userloggedinv1"
     },
     {
       "relation": "contains",
@@ -13018,9 +13319,9 @@
       "source_file": "packages/contracts/src/user/user-logged-in.v1.ts",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "user_user_logged_in_v1",
-      "target": "user_user_logged_in_v1_userloggedinv1type",
-      "confidence_score": 1.0
+      "target": "user_user_logged_in_v1_userloggedinv1type"
     },
     {
       "relation": "contains",
@@ -13978,17 +14279,6 @@
       "target": "email_email_provider_emailprovider"
     },
     {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/notification-service/src/services/otp-notification.service.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_otp_notification_service",
-      "target": "email_email_provider_emailprovider"
-    },
-    {
       "relation": "re_exports",
       "context": "export",
       "confidence": "EXTRACTED",
@@ -14112,130 +14402,6 @@
       "confidence_score": 1.0,
       "source": "email_sendgrid_provider_sendgridprovider",
       "target": "email_sendgrid_provider_sendgridprovider_send"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/notification-service/src/repositories/idempotency.repository.ts",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repositories_idempotency_repository",
-      "target": "repositories_idempotency_repository_idempotencyrepository"
-    },
-    {
-      "relation": "re_exports",
-      "context": "export",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/notification-service/src/repositories/index.ts",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repositories_index",
-      "target": "repositories_idempotency_repository"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/notification-service/src/repositories/idempotency.repository.ts",
-      "source_location": "L21",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repositories_idempotency_repository_idempotencyrepository",
-      "target": "repositories_idempotency_repository_idempotencyrepository_buildkey"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/notification-service/src/repositories/idempotency.repository.ts",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repositories_idempotency_repository_idempotencyrepository",
-      "target": "repositories_idempotency_repository_idempotencyrepository_constructor"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/notification-service/src/repositories/idempotency.repository.ts",
-      "source_location": "L25",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repositories_idempotency_repository_idempotencyrepository",
-      "target": "repositories_idempotency_repository_idempotencyrepository_markifnew"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/notification-service/src/repositories/idempotency.repository.ts",
-      "source_location": "L27",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repositories_idempotency_repository_idempotencyrepository_markifnew",
-      "target": "repositories_idempotency_repository_idempotencyrepository_buildkey"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/notification-service/src/services/otp-notification.service.ts",
-      "source_location": "L31",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_otp_notification_service",
-      "target": "services_otp_notification_service_otpnotificationservice"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/notification-service/src/services/otp-notification.service.ts",
-      "source_location": "L32",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_otp_notification_service_otpnotificationservice",
-      "target": "services_otp_notification_service_otpnotificationservice_constructor"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/notification-service/src/services/otp-notification.service.ts",
-      "source_location": "L39",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_otp_notification_service_otpnotificationservice",
-      "target": "services_otp_notification_service_otpnotificationservice_process"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/notification-service/src/services/otp-notification.service.ts",
-      "source_location": "L67",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_otp_notification_service_otpnotificationservice",
-      "target": "services_otp_notification_service_otpnotificationservice_tryvalidate"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/notification-service/src/services/otp-notification.service.ts",
-      "source_location": "L40",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_otp_notification_service_otpnotificationservice_process",
-      "target": "services_otp_notification_service_otpnotificationservice_tryvalidate"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "apps/notification-service/src/services/otp-notification.service.ts",
-      "source_location": "L52",
-      "weight": 1.0,
-      "source": "services_otp_notification_service_otpnotificationservice_process",
-      "target": "templates_otp_email_template_renderotpemail"
     },
     {
       "relation": "contains",
@@ -18396,110 +18562,6 @@
       "weight": 1.0,
       "source": "apps_user_service_src_server_ts_src_server_startserver",
       "target": "src_registry_registererrormessages"
-    },
-    {
-      "relation": "re_exports",
-      "context": "export",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/index.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_user_service_src_services_index_ts_services_index",
-      "target": "services_health_service"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/health.service.ts",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_health_service",
-      "target": "services_health_service_healthchecks"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/health.service.ts",
-      "source_location": "L59",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_health_service",
-      "target": "services_health_service_healthservice"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/health.service.ts",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_health_service",
-      "target": "services_health_service_probedatabase"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/health.service.ts",
-      "source_location": "L41",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_health_service",
-      "target": "services_health_service_probekafka"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/health.service.ts",
-      "source_location": "L22",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_health_service",
-      "target": "services_health_service_proberedis"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/health.service.ts",
-      "source_location": "L62",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_health_service_healthservice_runreadinesschecks",
-      "target": "services_health_service_probedatabase"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/health.service.ts",
-      "source_location": "L63",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_health_service_healthservice_runreadinesschecks",
-      "target": "services_health_service_proberedis"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/health.service.ts",
-      "source_location": "L64",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_health_service_healthservice_runreadinesschecks",
-      "target": "services_health_service_probekafka"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/health.service.ts",
-      "source_location": "L60",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_health_service_healthservice",
-      "target": "services_health_service_healthservice_runreadinesschecks"
     },
     {
       "relation": "imports_from",
@@ -23802,5 +23864,5 @@
       "source_file": "apps/user-service/README.md"
     }
   ],
-  "built_at_commit": "463da6e198b602f8f945b77956146661a24d4585"
+  "built_at_commit": "c0acbb4351166ff3c63e60ca3ce55eb8e51e8ce7"
 }

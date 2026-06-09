@@ -16,7 +16,12 @@ export class OtpEventPublisher {
         topic: env.KAFKA_OTP_TOPIC,
         messages: [
           {
-            key: input.email, // per-user ordering
+            // Key on userId when present (per-user ordering for the
+            // authenticated path). Fall back to eventId for the
+            // pre-auth registration flow where userId is absent.
+            // Never key on email: PII on the wire, and ties partition
+            // routing to mutable user data.
+            key: input.userId ?? input.eventId,
             value: JSON.stringify(input),
             headers: {
               [HEADER_EVENT_ID]: input.eventId,
@@ -30,7 +35,6 @@ export class OtpEventPublisher {
         {
           module: "otp-publisher",
           eventId: input.eventId,
-          email: input.email,
         },
         "OTPRequestedV1 published",
       );
@@ -40,7 +44,6 @@ export class OtpEventPublisher {
           module: "otp-publisher",
           error,
           eventId: input.eventId,
-          email: input.email,
         },
         "Failed to publish OTPRequestedV1",
       );

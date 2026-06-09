@@ -68,6 +68,11 @@ export const env = createEnv({
       .int()
       .positive()
       .default(7 * 24 * 60 * 60), // 7 days
+    IDEMPOTENCY_PROCESSING_LEASE_SECONDS: z.coerce
+      .number()
+      .int()
+      .positive()
+      .default(300), // in-flight lease; must exceed worst-case send + retry window
   },
   runtimeEnv: process.env,
   emptyStringAsUndefined: true,

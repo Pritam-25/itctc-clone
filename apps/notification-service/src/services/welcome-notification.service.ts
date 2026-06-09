@@ -43,7 +43,7 @@ export class WelcomeNotificationService {
     const reserved = await this.idempotency.reserveIfNew(parsed.eventId);
     if (!reserved) {
       this.logger.info(
-        { eventId: parsed.eventId, email: parsed.email },
+        { eventId: parsed.eventId, userId: parsed.userId },
         "Duplicate UserLoggedInV1 skipped",
       );
       return PROCESSING_STATUS.DUPLICATE;
@@ -72,7 +72,7 @@ export class WelcomeNotificationService {
     await this.idempotency.markProcessed(parsed.eventId);
 
     this.logger.info(
-      { eventId: parsed.eventId, email: parsed.email },
+      { eventId: parsed.eventId, userId: parsed.userId },
       "Welcome email delivered",
     );
     return PROCESSING_STATUS.PROCESSED;
@@ -81,8 +81,11 @@ export class WelcomeNotificationService {
   private tryValidate(event: unknown): UserLoggedInV1Type | null {
     const result = UserLoggedInV1.safeParse(event);
     if (!result.success) {
+      // Avoid logging the full event payload — it contains PII
+      // (email, firstName). The Zod issues list is enough to diagnose
+      // the schema mismatch.
       this.logger.warn(
-        { issues: result.error.issues, event },
+        { issues: result.error.issues },
         "UserLoggedInV1 schema validation failed",
       );
       return null;

@@ -1,19 +1,33 @@
 import type { Redis } from "ioredis";
+import { IDEMPOTENCY_STATE } from "@constants/idempotency.constants.js";
+
+/**
+ * Atomically drop a reservation only when the key still holds PROCESSING.
+ * Prevents release() from deleting a PROCESSED marker if a race occurs.
+ */
+const RELEASE_IF_PROCESSING_SCRIPT = `
+if redis.call('get', KEYS[1]) == ARGV[1] then
+  return redis.call('del', KEYS[1])
+else
+  return 0
+end
+`;
 
 /**
  * Redis-backed idempotency repository for Kafka consumers.
  *
- * Two-phase API:
+ * Two-phase API with explicit state values:
  *
- *   - `reserveIfNew(eventId)` — atomically claims the event for processing
- *     using `SET key value NX EX ttl`. Returns true exactly once per
- *     eventId within the configured TTL. A subsequent `markProcessed` is
- *     expected to follow on success.
- *   - `markProcessed(eventId)` — re-arms the key with the full processing
- *     TTL, signaling the work completed. Called AFTER the side effect
- *     (e.g. email send) succeeds.
- *   - `release(eventId)` — drops the reservation so a redelivery can retry.
- *     Used when a side effect fails and the runner will redeliver.
+ *   - `reserveIfNew(eventId)` — atomically claims the event with
+ *     `PROCESSING` using `SET key value NX EX leaseTtl`. Returns true
+ *     exactly once per in-flight window. A short lease TTL lets a
+ *     crashed consumer's stale reservation expire so redelivery can
+ *     retry; a live duplicate within the lease window is rejected.
+ *   - `markProcessed(eventId)` — overwrites the key with `PROCESSED`
+ *     and the full dedupe TTL after the side effect succeeds.
+ *   - `release(eventId)` — deletes the key only when it still holds
+ *     `PROCESSING`, so a transient provider failure can be retried
+ *     without touching an already-completed event.
  *
  * The reserve→mark split is what lets transient provider failures be
  * safely retried: a redelivery that finds no reservation will re-process
@@ -25,7 +39,8 @@ import type { Redis } from "ioredis";
 export class IdempotencyRepository {
   constructor(
     private readonly redis: Redis,
-    private readonly ttlSeconds: number,
+    private readonly processingLeaseSeconds: number,
+    private readonly processedTtlSeconds: number,
     private readonly keyspace: string,
   ) {}
 
@@ -36,27 +51,29 @@ export class IdempotencyRepository {
   async reserveIfNew(eventId: string): Promise<boolean> {
     const res = await this.redis.set(
       this.buildKey(eventId),
-      "1",
+      IDEMPOTENCY_STATE.PROCESSING,
       "EX",
-      this.ttlSeconds,
+      this.processingLeaseSeconds,
       "NX",
     );
     return res === "OK";
   }
 
   async markProcessed(eventId: string): Promise<void> {
-    // Re-arm with the full TTL to mark the work as complete. We don't
-    // need NX here — overwriting an existing key with the sentinel is
-    // safe and idempotent.
     await this.redis.set(
       this.buildKey(eventId),
-      "1",
+      IDEMPOTENCY_STATE.PROCESSED,
       "EX",
-      this.ttlSeconds,
+      this.processedTtlSeconds,
     );
   }
 
   async release(eventId: string): Promise<void> {
-    await this.redis.del(this.buildKey(eventId));
+    await this.redis.eval(
+      RELEASE_IF_PROCESSING_SCRIPT,
+      1,
+      this.buildKey(eventId),
+      IDEMPOTENCY_STATE.PROCESSING,
+    );
   }
 }
