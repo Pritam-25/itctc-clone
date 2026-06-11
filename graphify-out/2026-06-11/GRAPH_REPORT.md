@@ -5,12 +5,12 @@
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1155 nodes · 1300 edges · 72 communities (60 shown, 12 thin omitted)
+- 1155 nodes · 1300 edges · 75 communities (63 shown, 12 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 27 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `dd02ad70`
+- Built from commit: `4a65b94f`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -58,14 +58,17 @@
 - [[_COMMUNITY_Community 42|Community 42]]
 - [[_COMMUNITY_Community 43|Community 43]]
 - [[_COMMUNITY_Community 44|Community 44]]
+- [[_COMMUNITY_Community 45|Community 45]]
 - [[_COMMUNITY_Community 46|Community 46]]
 - [[_COMMUNITY_Community 47|Community 47]]
 - [[_COMMUNITY_Community 48|Community 48]]
 - [[_COMMUNITY_Community 49|Community 49]]
 - [[_COMMUNITY_Community 50|Community 50]]
 - [[_COMMUNITY_Community 51|Community 51]]
+- [[_COMMUNITY_Community 52|Community 52]]
 - [[_COMMUNITY_Community 53|Community 53]]
 - [[_COMMUNITY_Community 54|Community 54]]
+- [[_COMMUNITY_Community 55|Community 55]]
 - [[_COMMUNITY_Community 56|Community 56]]
 - [[_COMMUNITY_Community 57|Community 57]]
 - [[_COMMUNITY_Community 58|Community 58]]
@@ -111,7 +114,7 @@
 - 3-file cycle: `apps/user-service/src/generated/prisma/commonInputTypes.ts -> apps/user-service/src/generated/prisma/internal/prismaNamespace.ts -> apps/user-service/src/generated/prisma/models.ts -> apps/user-service/src/generated/prisma/commonInputTypes.ts`
 - 3-file cycle: `apps/user-service/src/generated/prisma/internal/prismaNamespace.ts -> apps/user-service/src/generated/prisma/models.ts -> apps/user-service/src/generated/prisma/models/User.ts -> apps/user-service/src/generated/prisma/internal/prismaNamespace.ts`
 
-## Communities (72 total, 12 thin omitted)
+## Communities (75 total, 12 thin omitted)
 
 ### Community 0 - "Prisma Generated Types"
 Cohesion: 0.02
@@ -119,15 +122,15 @@ Nodes (98): Args, At, AtLeast, AtLoose, AtStrict, BatchPayload, Boolean, Boolean
 
 ### Community 1 - "User Service Server & DTOs"
 Cohesion: 0.06
-Nodes (23): RegisterRequestDto, AUTH_DURATIONS, COOKIE_MAX_AGE, COOKIE_NAMES, DURATION_TO_MS, REDIS_KEYS, build(), getAuthController() (+15 more)
+Nodes (24): RegisterRequestDto, RegisterSchema, AUTH_DURATIONS, COOKIE_MAX_AGE, COOKIE_NAMES, DURATION_TO_MS, REDIS_KEYS, build() (+16 more)
 
 ### Community 2 - "Prisma User Model"
 Cohesion: 0.03
 Nodes (57): AggregateUser, BoolFieldUpdateOperationsInput, DateTimeFieldUpdateOperationsInput, GetUserAggregateType, GetUserGroupByPayload, Prisma__UserClient, StringFieldUpdateOperationsInput, UserAggregateArgs (+49 more)
 
 ### Community 3 - "Community 3"
-Cohesion: 0.05
-Nodes (20): app, AuthResponseDto, LoginRequestDto, LoginSchema, VerifyOtpRequestDto, VerifyOtpRequestSchema, RegisterSchema, globalForPrisma (+12 more)
+Cohesion: 0.06
+Nodes (19): app, AuthResponseDto, LoginRequestDto, LoginSchema, VerifyOtpRequestDto, VerifyOtpRequestSchema, globalForPrisma, AuthMapper (+11 more)
 
 ### Community 4 - "Kafka Client Package"
 Cohesion: 0.05
@@ -143,19 +146,19 @@ Nodes (36): compilerOptions, declaration, declarationMap, exactOptionalPropertyT
 
 ### Community 7 - "TS Config - Service Base"
 Cohesion: 0.09
-Nodes (14): statusCode, StatusCodeKey, StatusCodeValue, getRequestId(), getTraceId(), getRequestContext(), RequestContext, requestContextStorage (+6 more)
+Nodes (16): statusCode, StatusCodeKey, StatusCodeValue, getRequestId(), getTraceId(), getRequestContext(), RequestContext, requestContextStorage (+8 more)
 
 ### Community 8 - "Env & Server Bootstrap"
 Cohesion: 0.06
 Nodes (29): devDependencies, prettier, turbo, typescript, engines, node, name, packageManager (+21 more)
 
 ### Community 9 - "HTTP Package Utilities"
-Cohesion: 0.14
-Nodes (20): startServer(), errorResponse(), ApiError, createErrorResponse(), ErrorInput, ERROR_CODES, ErrorCode, ErrorContract (+12 more)
+Cohesion: 0.16
+Nodes (18): startServer(), ApiError, createErrorResponse(), ErrorInput, ERROR_CODES, ErrorCode, ErrorContract, ERROR_MESSAGES (+10 more)
 
 ### Community 10 - "Notification Service Dependencies"
-Cohesion: 0.08
-Nodes (20): ModelName, NullTypes, QueryMode, SortOrder, TransactionIsolationLevel, UserScalarFieldEnum, User, BoolFilter (+12 more)
+Cohesion: 0.14
+Nodes (13): BoolFilter, BoolWithAggregatesFilter, DateTimeFilter, DateTimeWithAggregatesFilter, NestedBoolFilter, NestedBoolWithAggregatesFilter, NestedDateTimeFilter, NestedDateTimeWithAggregatesFilter (+5 more)
 
 ### Community 11 - "TS Config - Package Base"
 Cohesion: 0.10
@@ -273,6 +276,10 @@ Nodes (15): dependencies, zod, devDependencies, @repo/typescript-config, @types/
 Cohesion: 0.15
 Nodes (8): IDEMPOTENCY_KEYS, IDEMPOTENCY_STATE, IdempotencyState, KAFKA_HEADERS, DLQ_REASONS, PROCESSING_STATUS, ProcessingStatus, Topics
 
+### Community 45 - "Community 45"
+Cohesion: 0.18
+Nodes (7): ModelName, NullTypes, QueryMode, SortOrder, TransactionIsolationLevel, UserScalarFieldEnum, User
+
 ### Community 46 - "Community 46"
 Cohesion: 0.36
 Nodes (5): HealthChecks, HealthService, probeDatabase(), probeKafka(), probeRedis()
@@ -290,8 +297,12 @@ Cohesion: 0.29
 Nodes (4): OTPRequestedV1, OTPRequestedV1Type, UserLoggedInV1, UserLoggedInV1Type
 
 ### Community 51 - "Community 51"
-Cohesion: 0.10
-Nodes (20): 0a. `@irctc/telemetry`, 0b. `@irctc/resilience` — custom circuit breaker (V1, hand-rolled), 0c. `@irctc/ratelimit` — token bucket over Redis (Lua-atomic), 0d. `@irctc/idempotency` — three-phase Redis pattern, 0e. `@irctc/service-identity` — V1 placeholder, V2 mTLS, 0f. Reuse note for all five packages, API Gateway + Traefik + Distributed Tracing — Implementation Plan, `apps/api-gateway/package.json` (+12 more)
+Cohesion: 0.29
+Nodes (7): 0a. `@irctc/telemetry`, 0b. `@irctc/resilience` — custom circuit breaker (V1, hand-rolled), 0c. `@irctc/ratelimit` — token bucket over Redis (Lua-atomic), 0d. `@irctc/idempotency` — three-phase Redis pattern, 0e. `@irctc/service-identity` — V1 placeholder, V2 mTLS, 0f. Reuse note for all five packages, Phase 0 — New shared packages
+
+### Community 52 - "Community 52"
+Cohesion: 0.29
+Nodes (7): API Gateway + Traefik + Distributed Tracing — Implementation Plan, `apps/api-gateway/package.json`, `apps/api-gateway/tsconfig.json`, Architecture at a glance, Context, File tree, Phase 2 — `apps/api-gateway` service
 
 ### Community 53 - "Community 53"
 Cohesion: 0.29
@@ -300,6 +311,10 @@ Nodes (6): compilerOptions, composite, outDir, rootDir, extends, include
 ### Community 54 - "Community 54"
 Cohesion: 0.40
 Nodes (3): resolveOtlpTracesUrl(), startTelemetry(), TelemetryOptions
+
+### Community 55 - "Community 55"
+Cohesion: 0.33
+Nodes (6): Files to edit, New files, Phase 1 — Auth lives in the gateway only, Verification, What moves where, Why a tiny package, not a per-service copy, not the full middleware
 
 ### Community 56 - "Community 56"
 Cohesion: 0.33
@@ -334,7 +349,7 @@ Cohesion: 0.67
 Nodes (3): 1. Responsibilities & non-responsibilities, Does NOT own, Owns
 
 ## Knowledge Gaps
-- **702 isolated node(s):** `name`, `version`, `private`, `type`, `main` (+697 more)
+- **702 isolated node(s):** `name`, `version`, `private`, `type`, `dev` (+697 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **12 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -342,16 +357,16 @@ Nodes (3): 1. Responsibilities & non-responsibilities, Does NOT own, Owns
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `successResponse()` connect `Telemetry/Library Deps` to `TS Config - Service Base`?**
-  _High betweenness centrality (0.032) - this node is a cross-community bridge._
+  _High betweenness centrality (0.041) - this node is a cross-community bridge._
 - **Why does `AuthController` connect `Telemetry/Library Deps` to `User Service Server & DTOs`?**
-  _High betweenness centrality (0.030) - this node is a cross-community bridge._
+  _High betweenness centrality (0.037) - this node is a cross-community bridge._
 - **What connects `name`, `version`, `private` to the rest of the system?**
   _702 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Prisma Generated Types` be split into smaller, more focused modules?**
   _Cohesion score 0.020202020202020204 - nodes in this community are weakly interconnected._
 - **Should `User Service Server & DTOs` be split into smaller, more focused modules?**
-  _Cohesion score 0.05909090909090909 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.056261343012704176 - nodes in this community are weakly interconnected._
 - **Should `Prisma User Model` be split into smaller, more focused modules?**
   _Cohesion score 0.034482758620689655 - nodes in this community are weakly interconnected._
 - **Should `Community 3` be split into smaller, more focused modules?**
-  _Cohesion score 0.05451127819548872 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05656565656565657 - nodes in this community are weakly interconnected._
