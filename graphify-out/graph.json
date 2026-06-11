@@ -4,284 +4,214 @@
   "graph": {},
   "nodes": [
     {
-      "label": "execution.md",
+      "label": "CLAUDE.md",
       "file_type": "document",
-      "source_file": "execution.md",
+      "source_file": "CLAUDE.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "execution",
-      "community": 73,
-      "norm_label": "execution.md"
+      "id": "claude",
+      "community": 19,
+      "norm_label": "claude.md"
     },
     {
-      "label": "package.json",
-      "file_type": "code",
-      "source_file": "packages/telemetry/package.json",
+      "label": "CLAUDE.md",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "telemetry_package",
-      "community": 40,
-      "norm_label": "package.json"
+      "id": "claude_claude_md",
+      "community": 19,
+      "norm_label": "claude.md"
     },
     {
-      "label": "name",
-      "file_type": "code",
-      "source_file": "packages/telemetry/package.json",
-      "source_location": "L2",
-      "_origin": "ast",
-      "id": "telemetry_package_name",
-      "community": 40,
-      "norm_label": "name"
-    },
-    {
-      "label": "version",
-      "file_type": "code",
-      "source_file": "packages/telemetry/package.json",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "telemetry_package_version",
-      "community": 40,
-      "norm_label": "version"
-    },
-    {
-      "label": "private",
-      "file_type": "code",
-      "source_file": "packages/telemetry/package.json",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "telemetry_package_private",
-      "community": 40,
-      "norm_label": "private"
-    },
-    {
-      "label": "type",
-      "file_type": "code",
-      "source_file": "packages/telemetry/package.json",
+      "label": "Common Commands",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "telemetry_package_type",
-      "community": 40,
-      "norm_label": "type"
+      "id": "claude_common_commands",
+      "community": 19,
+      "norm_label": "common commands"
     },
     {
-      "label": "main",
-      "file_type": "code",
-      "source_file": "packages/telemetry/package.json",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "telemetry_package_main",
-      "community": 40,
-      "norm_label": "main"
-    },
-    {
-      "label": "types",
-      "file_type": "code",
-      "source_file": "packages/telemetry/package.json",
+      "label": "Global Operations",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "telemetry_package_types",
-      "community": 40,
-      "norm_label": "types"
+      "id": "claude_global_operations",
+      "community": 19,
+      "norm_label": "global operations"
     },
     {
-      "label": "exports",
-      "file_type": "code",
-      "source_file": "packages/telemetry/package.json",
-      "source_location": "L8",
-      "_origin": "ast",
-      "id": "telemetry_package_exports",
-      "community": 40,
-      "norm_label": "exports"
-    },
-    {
-      "label": "import",
-      "file_type": "code",
-      "source_file": "packages/telemetry/package.json",
-      "source_location": "L11",
-      "_origin": "ast",
-      "id": "telemetry_package_import",
-      "community": 40,
-      "norm_label": "import"
-    },
-    {
-      "label": "./propagation",
-      "file_type": "code",
-      "source_file": "packages/telemetry/package.json",
-      "source_location": "L13",
-      "_origin": "ast",
-      "id": "telemetry_package_exports_propagation",
-      "community": 40,
-      "norm_label": "./propagation"
-    },
-    {
-      "label": "types",
-      "file_type": "code",
-      "source_file": "packages/telemetry/package.json",
-      "source_location": "L14",
-      "_origin": "ast",
-      "id": "telemetry_package_propagation_types",
-      "community": 40,
-      "norm_label": "types"
-    },
-    {
-      "label": "import",
-      "file_type": "code",
-      "source_file": "packages/telemetry/package.json",
+      "label": "Service-Specific Operations",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
       "source_location": "L15",
       "_origin": "ast",
-      "id": "telemetry_package_propagation_import",
-      "community": 40,
-      "norm_label": "import"
+      "id": "claude_service_specific_operations",
+      "community": 19,
+      "norm_label": "service-specific operations"
     },
     {
-      "label": "scripts",
-      "file_type": "code",
-      "source_file": "packages/telemetry/package.json",
-      "source_location": "L18",
+      "label": "High-Level Architecture",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L22",
       "_origin": "ast",
-      "id": "telemetry_package_scripts",
-      "community": 40,
-      "norm_label": "scripts"
+      "id": "claude_high_level_architecture",
+      "community": 19,
+      "norm_label": "high-level architecture"
     },
     {
-      "label": "build",
-      "file_type": "code",
-      "source_file": "packages/telemetry/package.json",
-      "source_location": "L19",
-      "_origin": "ast",
-      "id": "telemetry_package_scripts_build",
-      "community": 40,
-      "norm_label": "build"
-    },
-    {
-      "label": "check-types",
-      "file_type": "code",
-      "source_file": "packages/telemetry/package.json",
-      "source_location": "L20",
-      "_origin": "ast",
-      "id": "telemetry_package_scripts_check_types",
-      "community": 40,
-      "norm_label": "check-types"
-    },
-    {
-      "label": "lint",
-      "file_type": "code",
-      "source_file": "packages/telemetry/package.json",
-      "source_location": "L21",
-      "_origin": "ast",
-      "id": "telemetry_package_scripts_lint",
-      "community": 40,
-      "norm_label": "lint"
-    },
-    {
-      "label": "dependencies",
-      "file_type": "code",
-      "source_file": "packages/telemetry/package.json",
-      "source_location": "L23",
-      "_origin": "ast",
-      "id": "telemetry_package_dependencies",
-      "community": 40,
-      "norm_label": "dependencies"
-    },
-    {
-      "label": "@opentelemetry/api",
-      "file_type": "code",
-      "source_file": "packages/telemetry/package.json",
+      "label": "System Design",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
       "source_location": "L24",
       "_origin": "ast",
-      "id": "telemetry_package_dependencies_opentelemetry_api",
-      "community": 40,
-      "norm_label": "@opentelemetry/api"
+      "id": "claude_system_design",
+      "community": 19,
+      "norm_label": "system design"
     },
     {
-      "label": "@opentelemetry/auto-instrumentations-node",
-      "file_type": "code",
-      "source_file": "packages/telemetry/package.json",
-      "source_location": "L25",
-      "_origin": "ast",
-      "id": "telemetry_package_dependencies_opentelemetry_auto_instrumentations_node",
-      "community": 40,
-      "norm_label": "@opentelemetry/auto-instrumentations-node"
-    },
-    {
-      "label": "@opentelemetry/exporter-trace-otlp-http",
-      "file_type": "code",
-      "source_file": "packages/telemetry/package.json",
-      "source_location": "L26",
-      "_origin": "ast",
-      "id": "telemetry_package_dependencies_opentelemetry_exporter_trace_otlp_http",
-      "community": 40,
-      "norm_label": "@opentelemetry/exporter-trace-otlp-http"
-    },
-    {
-      "label": "@opentelemetry/resources",
-      "file_type": "code",
-      "source_file": "packages/telemetry/package.json",
-      "source_location": "L27",
-      "_origin": "ast",
-      "id": "telemetry_package_dependencies_opentelemetry_resources",
-      "community": 40,
-      "norm_label": "@opentelemetry/resources"
-    },
-    {
-      "label": "@opentelemetry/sdk-node",
-      "file_type": "code",
-      "source_file": "packages/telemetry/package.json",
+      "label": "Monorepo Structure",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
       "source_location": "L28",
       "_origin": "ast",
-      "id": "telemetry_package_dependencies_opentelemetry_sdk_node",
-      "community": 40,
-      "norm_label": "@opentelemetry/sdk-node"
+      "id": "claude_monorepo_structure",
+      "community": 19,
+      "norm_label": "monorepo structure"
     },
     {
-      "label": "@opentelemetry/sdk-trace-base",
-      "file_type": "code",
-      "source_file": "packages/telemetry/package.json",
-      "source_location": "L29",
+      "label": "Service Internal Pattern",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L47",
       "_origin": "ast",
-      "id": "telemetry_package_dependencies_opentelemetry_sdk_trace_base",
-      "community": 40,
-      "norm_label": "@opentelemetry/sdk-trace-base"
+      "id": "claude_service_internal_pattern",
+      "community": 19,
+      "norm_label": "service internal pattern"
     },
     {
-      "label": "@opentelemetry/semantic-conventions",
-      "file_type": "code",
-      "source_file": "packages/telemetry/package.json",
-      "source_location": "L30",
+      "label": "Infrastructure Guidelines",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L58",
       "_origin": "ast",
-      "id": "telemetry_package_dependencies_opentelemetry_semantic_conventions",
-      "community": 40,
-      "norm_label": "@opentelemetry/semantic-conventions"
+      "id": "claude_infrastructure_guidelines",
+      "community": 19,
+      "norm_label": "infrastructure guidelines"
     },
     {
-      "label": "devDependencies",
-      "file_type": "code",
-      "source_file": "packages/telemetry/package.json",
-      "source_location": "L32",
+      "label": "Startup Sequence",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L60",
       "_origin": "ast",
-      "id": "telemetry_package_devdependencies",
-      "community": 40,
-      "norm_label": "devdependencies"
+      "id": "claude_startup_sequence",
+      "community": 19,
+      "norm_label": "startup sequence"
     },
     {
-      "label": "@repo/typescript-config",
-      "file_type": "code",
-      "source_file": "packages/telemetry/package.json",
-      "source_location": "L33",
+      "label": "Graceful Shutdown",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L65",
       "_origin": "ast",
-      "id": "telemetry_package_devdependencies_repo_typescript_config",
-      "community": 40,
-      "norm_label": "@repo/typescript-config"
+      "id": "claude_graceful_shutdown",
+      "community": 19,
+      "norm_label": "graceful shutdown"
     },
     {
-      "label": "@types/node",
-      "file_type": "code",
-      "source_file": "packages/telemetry/package.json",
-      "source_location": "L34",
+      "label": "Health Monitoring",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L76",
       "_origin": "ast",
-      "id": "telemetry_package_devdependencies_types_node",
-      "community": 40,
-      "norm_label": "@types/node"
+      "id": "claude_health_monitoring",
+      "community": 19,
+      "norm_label": "health monitoring"
+    },
+    {
+      "label": "Kafka Architecture",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L83",
+      "_origin": "ast",
+      "id": "claude_kafka_architecture",
+      "community": 19,
+      "norm_label": "kafka architecture"
+    },
+    {
+      "label": "Error Handling Flow",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L90",
+      "_origin": "ast",
+      "id": "claude_error_handling_flow",
+      "community": 19,
+      "norm_label": "error handling flow"
+    },
+    {
+      "label": "Error Handling Guidelines",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L97",
+      "_origin": "ast",
+      "id": "claude_error_handling_guidelines",
+      "community": 19,
+      "norm_label": "error handling guidelines"
+    },
+    {
+      "label": "Logging & PII",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L105",
+      "_origin": "ast",
+      "id": "claude_logging_pii",
+      "community": 19,
+      "norm_label": "logging & pii"
+    },
+    {
+      "label": "Idempotency for Side-Effecting Consumers",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L118",
+      "_origin": "ast",
+      "id": "claude_idempotency_for_side_effecting_consumers",
+      "community": 19,
+      "norm_label": "idempotency for side-effecting consumers"
+    },
+    {
+      "label": "Health Probes & Bootstrap Readiness",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L122",
+      "_origin": "ast",
+      "id": "claude_health_probes_bootstrap_readiness",
+      "community": 19,
+      "norm_label": "health probes & bootstrap readiness"
+    },
+    {
+      "label": "graphify",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L127",
+      "_origin": "ast",
+      "id": "claude_graphify",
+      "community": 19,
+      "norm_label": "graphify"
+    },
+    {
+      "label": "JSDoc Guidelines",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L138",
+      "_origin": "ast",
+      "id": "claude_jsdoc_guidelines",
+      "community": 19,
+      "norm_label": "jsdoc guidelines"
     },
     {
       "label": "index.ts",
@@ -297,7 +227,7 @@
       "label": "TelemetryOptions",
       "file_type": "code",
       "source_file": "packages/telemetry/src/index.ts",
-      "source_location": "L53",
+      "source_location": "L42",
       "_origin": "ast",
       "id": "src_index_telemetryoptions",
       "community": 54,
@@ -307,7 +237,7 @@
       "label": "resolveOtlpTracesUrl()",
       "file_type": "code",
       "source_file": "packages/telemetry/src/index.ts",
-      "source_location": "L80",
+      "source_location": "L69",
       "_origin": "ast",
       "id": "src_index_resolveotlptracesurl",
       "community": 54,
@@ -317,7 +247,7 @@
       "label": "startTelemetry()",
       "file_type": "code",
       "source_file": "packages/telemetry/src/index.ts",
-      "source_location": "L95",
+      "source_location": "L94",
       "_origin": "ast",
       "id": "src_index_starttelemetry",
       "community": 54,
@@ -327,7 +257,7 @@
       "label": "shutdownTelemetry()",
       "file_type": "code",
       "source_file": "packages/telemetry/src/index.ts",
-      "source_location": "L155",
+      "source_location": "L154",
       "_origin": "ast",
       "id": "src_index_shutdowntelemetry",
       "community": 54,
@@ -337,7 +267,7 @@
       "label": "__resetTelemetryForTests()",
       "file_type": "code",
       "source_file": "packages/telemetry/src/index.ts",
-      "source_location": "L170",
+      "source_location": "L169",
       "_origin": "ast",
       "id": "src_index_resettelemetryfortests",
       "community": 54,
@@ -377,7 +307,7 @@
       "label": "extractTraceContextFromKafkaHeaders()",
       "file_type": "code",
       "source_file": "packages/telemetry/src/propagation.ts",
-      "source_location": "L66",
+      "source_location": "L68",
       "_origin": "ast",
       "id": "src_propagation_extracttracecontextfromkafkaheaders",
       "community": 60,
@@ -387,11 +317,291 @@
       "label": "buildConsumerSpanContext()",
       "file_type": "code",
       "source_file": "packages/telemetry/src/propagation.ts",
-      "source_location": "L85",
+      "source_location": "L86",
       "_origin": "ast",
       "id": "src_propagation_buildconsumerspancontext",
       "community": 60,
       "norm_label": "buildconsumerspancontext()"
+    },
+    {
+      "label": "execution.md",
+      "file_type": "document",
+      "source_file": "execution.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 73,
+      "norm_label": "execution.md",
+      "id": "execution"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "package.json",
+      "id": "telemetry_package"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "name",
+      "id": "telemetry_package_name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "version",
+      "id": "telemetry_package_version"
+    },
+    {
+      "label": "private",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "private",
+      "id": "telemetry_package_private"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "type",
+      "id": "telemetry_package_type"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "main",
+      "id": "telemetry_package_main"
+    },
+    {
+      "label": "types",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "types",
+      "id": "telemetry_package_types"
+    },
+    {
+      "label": "exports",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "exports",
+      "id": "telemetry_package_exports"
+    },
+    {
+      "label": "import",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L11",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "import",
+      "id": "telemetry_package_import"
+    },
+    {
+      "label": "./propagation",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L13",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "./propagation",
+      "id": "telemetry_package_exports_propagation"
+    },
+    {
+      "label": "types",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L14",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "types",
+      "id": "telemetry_package_propagation_types"
+    },
+    {
+      "label": "import",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L15",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "import",
+      "id": "telemetry_package_propagation_import"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L18",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "scripts",
+      "id": "telemetry_package_scripts"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L19",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "build",
+      "id": "telemetry_package_scripts_build"
+    },
+    {
+      "label": "check-types",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L20",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "check-types",
+      "id": "telemetry_package_scripts_check_types"
+    },
+    {
+      "label": "lint",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L21",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "lint",
+      "id": "telemetry_package_scripts_lint"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L23",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "dependencies",
+      "id": "telemetry_package_dependencies"
+    },
+    {
+      "label": "@opentelemetry/api",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L24",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "@opentelemetry/api",
+      "id": "telemetry_package_dependencies_opentelemetry_api"
+    },
+    {
+      "label": "@opentelemetry/auto-instrumentations-node",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L25",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "@opentelemetry/auto-instrumentations-node",
+      "id": "telemetry_package_dependencies_opentelemetry_auto_instrumentations_node"
+    },
+    {
+      "label": "@opentelemetry/exporter-trace-otlp-http",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L26",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "@opentelemetry/exporter-trace-otlp-http",
+      "id": "telemetry_package_dependencies_opentelemetry_exporter_trace_otlp_http"
+    },
+    {
+      "label": "@opentelemetry/resources",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L27",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "@opentelemetry/resources",
+      "id": "telemetry_package_dependencies_opentelemetry_resources"
+    },
+    {
+      "label": "@opentelemetry/sdk-node",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L28",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "@opentelemetry/sdk-node",
+      "id": "telemetry_package_dependencies_opentelemetry_sdk_node"
+    },
+    {
+      "label": "@opentelemetry/sdk-trace-base",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L29",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "@opentelemetry/sdk-trace-base",
+      "id": "telemetry_package_dependencies_opentelemetry_sdk_trace_base"
+    },
+    {
+      "label": "@opentelemetry/semantic-conventions",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L30",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "@opentelemetry/semantic-conventions",
+      "id": "telemetry_package_dependencies_opentelemetry_semantic_conventions"
+    },
+    {
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L32",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "devdependencies",
+      "id": "telemetry_package_devdependencies"
+    },
+    {
+      "label": "@repo/typescript-config",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L33",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "@repo/typescript-config",
+      "id": "telemetry_package_devdependencies_repo_typescript_config"
+    },
+    {
+      "label": "@types/node",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L34",
+      "_origin": "ast",
+      "community": 40,
+      "norm_label": "@types/node",
+      "id": "telemetry_package_devdependencies_types_node"
     },
     {
       "label": "tsconfig.json",
@@ -399,9 +609,9 @@
       "source_file": "packages/telemetry/tsconfig.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "telemetry_tsconfig",
       "community": 53,
-      "norm_label": "tsconfig.json"
+      "norm_label": "tsconfig.json",
+      "id": "telemetry_tsconfig"
     },
     {
       "label": "extends",
@@ -409,9 +619,9 @@
       "source_file": "packages/telemetry/tsconfig.json",
       "source_location": "L2",
       "_origin": "ast",
-      "id": "telemetry_tsconfig_extends",
       "community": 53,
-      "norm_label": "extends"
+      "norm_label": "extends",
+      "id": "telemetry_tsconfig_extends"
     },
     {
       "label": "compilerOptions",
@@ -419,9 +629,9 @@
       "source_file": "packages/telemetry/tsconfig.json",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "telemetry_tsconfig_compileroptions",
       "community": 53,
-      "norm_label": "compileroptions"
+      "norm_label": "compileroptions",
+      "id": "telemetry_tsconfig_compileroptions"
     },
     {
       "label": "rootDir",
@@ -429,9 +639,9 @@
       "source_file": "packages/telemetry/tsconfig.json",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "telemetry_tsconfig_compileroptions_rootdir",
       "community": 53,
-      "norm_label": "rootdir"
+      "norm_label": "rootdir",
+      "id": "telemetry_tsconfig_compileroptions_rootdir"
     },
     {
       "label": "outDir",
@@ -439,9 +649,9 @@
       "source_file": "packages/telemetry/tsconfig.json",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "telemetry_tsconfig_compileroptions_outdir",
       "community": 53,
-      "norm_label": "outdir"
+      "norm_label": "outdir",
+      "id": "telemetry_tsconfig_compileroptions_outdir"
     },
     {
       "label": "composite",
@@ -449,9 +659,9 @@
       "source_file": "packages/telemetry/tsconfig.json",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "telemetry_tsconfig_compileroptions_composite",
       "community": 53,
-      "norm_label": "composite"
+      "norm_label": "composite",
+      "id": "telemetry_tsconfig_compileroptions_composite"
     },
     {
       "label": "include",
@@ -459,9 +669,9 @@
       "source_file": "packages/telemetry/tsconfig.json",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "telemetry_tsconfig_include",
       "community": 53,
-      "norm_label": "include"
+      "norm_label": "include",
+      "id": "telemetry_tsconfig_include"
     },
     {
       "label": "plan.md",
@@ -469,9 +679,9 @@
       "source_file": "plan.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "plan",
       "community": 17,
-      "norm_label": "plan.md"
+      "norm_label": "plan.md",
+      "id": "plan"
     },
     {
       "label": "API Gateway + Traefik + Distributed Tracing \u2014 Implementation Plan",
@@ -479,9 +689,9 @@
       "source_file": "plan.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "plan_api_gateway_traefik_distributed_tracing_implementation_plan",
       "community": 51,
-      "norm_label": "api gateway + traefik + distributed tracing \u2014 implementation plan"
+      "norm_label": "api gateway + traefik + distributed tracing \u2014 implementation plan",
+      "id": "plan_api_gateway_traefik_distributed_tracing_implementation_plan"
     },
     {
       "label": "Context",
@@ -489,9 +699,9 @@
       "source_file": "plan.md",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "plan_context",
       "community": 51,
-      "norm_label": "context"
+      "norm_label": "context",
+      "id": "plan_context"
     },
     {
       "label": "Architecture at a glance",
@@ -499,9 +709,9 @@
       "source_file": "plan.md",
       "source_location": "L53",
       "_origin": "ast",
-      "id": "plan_architecture_at_a_glance",
       "community": 51,
-      "norm_label": "architecture at a glance"
+      "norm_label": "architecture at a glance",
+      "id": "plan_architecture_at_a_glance"
     },
     {
       "label": "Phase 0 \u2014 New shared packages",
@@ -509,9 +719,9 @@
       "source_file": "plan.md",
       "source_location": "L87",
       "_origin": "ast",
-      "id": "plan_phase_0_new_shared_packages",
       "community": 51,
-      "norm_label": "phase 0 \u2014 new shared packages"
+      "norm_label": "phase 0 \u2014 new shared packages",
+      "id": "plan_phase_0_new_shared_packages"
     },
     {
       "label": "0a. `@irctc/telemetry`",
@@ -519,9 +729,9 @@
       "source_file": "plan.md",
       "source_location": "L91",
       "_origin": "ast",
-      "id": "plan_0a_irctc_telemetry",
       "community": 51,
-      "norm_label": "0a. `@irctc/telemetry`"
+      "norm_label": "0a. `@irctc/telemetry`",
+      "id": "plan_0a_irctc_telemetry"
     },
     {
       "label": "0b. `@irctc/resilience` \u2014 custom circuit breaker (V1, hand-rolled)",
@@ -529,9 +739,9 @@
       "source_file": "plan.md",
       "source_location": "L102",
       "_origin": "ast",
-      "id": "plan_0b_irctc_resilience_custom_circuit_breaker_v1_hand_rolled",
       "community": 51,
-      "norm_label": "0b. `@irctc/resilience` \u2014 custom circuit breaker (v1, hand-rolled)"
+      "norm_label": "0b. `@irctc/resilience` \u2014 custom circuit breaker (v1, hand-rolled)",
+      "id": "plan_0b_irctc_resilience_custom_circuit_breaker_v1_hand_rolled"
     },
     {
       "label": "0c. `@irctc/ratelimit` \u2014 token bucket over Redis (Lua-atomic)",
@@ -539,9 +749,9 @@
       "source_file": "plan.md",
       "source_location": "L153",
       "_origin": "ast",
-      "id": "plan_0c_irctc_ratelimit_token_bucket_over_redis_lua_atomic",
       "community": 51,
-      "norm_label": "0c. `@irctc/ratelimit` \u2014 token bucket over redis (lua-atomic)"
+      "norm_label": "0c. `@irctc/ratelimit` \u2014 token bucket over redis (lua-atomic)",
+      "id": "plan_0c_irctc_ratelimit_token_bucket_over_redis_lua_atomic"
     },
     {
       "label": "0d. `@irctc/idempotency` \u2014 three-phase Redis pattern",
@@ -549,9 +759,9 @@
       "source_file": "plan.md",
       "source_location": "L174",
       "_origin": "ast",
-      "id": "plan_0d_irctc_idempotency_three_phase_redis_pattern",
       "community": 51,
-      "norm_label": "0d. `@irctc/idempotency` \u2014 three-phase redis pattern"
+      "norm_label": "0d. `@irctc/idempotency` \u2014 three-phase redis pattern",
+      "id": "plan_0d_irctc_idempotency_three_phase_redis_pattern"
     },
     {
       "label": "0e. `@irctc/service-identity` \u2014 V1 placeholder, V2 mTLS",
@@ -559,9 +769,9 @@
       "source_file": "plan.md",
       "source_location": "L188",
       "_origin": "ast",
-      "id": "plan_0e_irctc_service_identity_v1_placeholder_v2_mtls",
       "community": 51,
-      "norm_label": "0e. `@irctc/service-identity` \u2014 v1 placeholder, v2 mtls"
+      "norm_label": "0e. `@irctc/service-identity` \u2014 v1 placeholder, v2 mtls",
+      "id": "plan_0e_irctc_service_identity_v1_placeholder_v2_mtls"
     },
     {
       "label": "0f. Reuse note for all five packages",
@@ -569,9 +779,9 @@
       "source_file": "plan.md",
       "source_location": "L201",
       "_origin": "ast",
-      "id": "plan_0f_reuse_note_for_all_five_packages",
       "community": 51,
-      "norm_label": "0f. reuse note for all five packages"
+      "norm_label": "0f. reuse note for all five packages",
+      "id": "plan_0f_reuse_note_for_all_five_packages"
     },
     {
       "label": "Phase 1 \u2014 Auth lives in the gateway only",
@@ -579,9 +789,9 @@
       "source_file": "plan.md",
       "source_location": "L208",
       "_origin": "ast",
-      "id": "plan_phase_1_auth_lives_in_the_gateway_only",
       "community": 51,
-      "norm_label": "phase 1 \u2014 auth lives in the gateway only"
+      "norm_label": "phase 1 \u2014 auth lives in the gateway only",
+      "id": "plan_phase_1_auth_lives_in_the_gateway_only"
     },
     {
       "label": "What moves where",
@@ -589,9 +799,9 @@
       "source_file": "plan.md",
       "source_location": "L212",
       "_origin": "ast",
-      "id": "plan_what_moves_where",
       "community": 51,
-      "norm_label": "what moves where"
+      "norm_label": "what moves where",
+      "id": "plan_what_moves_where"
     },
     {
       "label": "Why a tiny package, not a per-service copy, not the full middleware",
@@ -599,9 +809,9 @@
       "source_file": "plan.md",
       "source_location": "L227",
       "_origin": "ast",
-      "id": "plan_why_a_tiny_package_not_a_per_service_copy_not_the_full_middleware",
       "community": 51,
-      "norm_label": "why a tiny package, not a per-service copy, not the full middleware"
+      "norm_label": "why a tiny package, not a per-service copy, not the full middleware",
+      "id": "plan_why_a_tiny_package_not_a_per_service_copy_not_the_full_middleware"
     },
     {
       "label": "New files",
@@ -609,9 +819,9 @@
       "source_file": "plan.md",
       "source_location": "L233",
       "_origin": "ast",
-      "id": "plan_new_files",
       "community": 51,
-      "norm_label": "new files"
+      "norm_label": "new files",
+      "id": "plan_new_files"
     },
     {
       "label": "Files to edit",
@@ -619,9 +829,9 @@
       "source_file": "plan.md",
       "source_location": "L243",
       "_origin": "ast",
-      "id": "plan_files_to_edit",
       "community": 51,
-      "norm_label": "files to edit"
+      "norm_label": "files to edit",
+      "id": "plan_files_to_edit"
     },
     {
       "label": "Verification",
@@ -629,9 +839,9 @@
       "source_file": "plan.md",
       "source_location": "L249",
       "_origin": "ast",
-      "id": "plan_verification",
       "community": 51,
-      "norm_label": "verification"
+      "norm_label": "verification",
+      "id": "plan_verification"
     },
     {
       "label": "Phase 2 \u2014 `apps/api-gateway` service",
@@ -639,9 +849,9 @@
       "source_file": "plan.md",
       "source_location": "L257",
       "_origin": "ast",
-      "id": "plan_phase_2_apps_api_gateway_service",
       "community": 51,
-      "norm_label": "phase 2 \u2014 `apps/api-gateway` service"
+      "norm_label": "phase 2 \u2014 `apps/api-gateway` service",
+      "id": "plan_phase_2_apps_api_gateway_service"
     },
     {
       "label": "`apps/api-gateway/package.json`",
@@ -649,9 +859,9 @@
       "source_file": "plan.md",
       "source_location": "L261",
       "_origin": "ast",
-      "id": "plan_apps_api_gateway_package_json",
       "community": 51,
-      "norm_label": "`apps/api-gateway/package.json`"
+      "norm_label": "`apps/api-gateway/package.json`",
+      "id": "plan_apps_api_gateway_package_json"
     },
     {
       "label": "`apps/api-gateway/tsconfig.json`",
@@ -659,9 +869,9 @@
       "source_file": "plan.md",
       "source_location": "L304",
       "_origin": "ast",
-      "id": "plan_apps_api_gateway_tsconfig_json",
       "community": 51,
-      "norm_label": "`apps/api-gateway/tsconfig.json`"
+      "norm_label": "`apps/api-gateway/tsconfig.json`",
+      "id": "plan_apps_api_gateway_tsconfig_json"
     },
     {
       "label": "File tree",
@@ -669,9 +879,9 @@
       "source_file": "plan.md",
       "source_location": "L308",
       "_origin": "ast",
-      "id": "plan_file_tree",
       "community": 51,
-      "norm_label": "file tree"
+      "norm_label": "file tree",
+      "id": "plan_file_tree"
     },
     {
       "label": "build",
@@ -679,9 +889,9 @@
       "source_file": "plan.md",
       "source_location": "L660",
       "_origin": "ast",
-      "id": "plan_build",
       "community": 17,
-      "norm_label": "build"
+      "norm_label": "build",
+      "id": "plan_build"
     },
     {
       "label": "runtime",
@@ -689,9 +899,9 @@
       "source_file": "plan.md",
       "source_location": "L669",
       "_origin": "ast",
-      "id": "plan_runtime",
       "community": 17,
-      "norm_label": "runtime"
+      "norm_label": "runtime",
+      "id": "plan_runtime"
     },
     {
       "label": "\u2026 notification-service and order-service mirror the above",
@@ -699,9 +909,9 @@
       "source_file": "plan.md",
       "source_location": "L780",
       "_origin": "ast",
-      "id": "plan_notification_service_and_order_service_mirror_the_above",
       "community": 17,
-      "norm_label": "... notification-service and order-service mirror the above"
+      "norm_label": "... notification-service and order-service mirror the above",
+      "id": "plan_notification_service_and_order_service_mirror_the_above"
     },
     {
       "label": "1. send-otp (no auth required)",
@@ -709,9 +919,9 @@
       "source_file": "plan.md",
       "source_location": "L825",
       "_origin": "ast",
-      "id": "plan_1_send_otp_no_auth_required",
       "community": 17,
-      "norm_label": "1. send-otp (no auth required)"
+      "norm_label": "1. send-otp (no auth required)",
+      "id": "plan_1_send_otp_no_auth_required"
     },
     {
       "label": "2. verify-otp (sets auth_token cookie)",
@@ -719,9 +929,9 @@
       "source_file": "plan.md",
       "source_location": "L830",
       "_origin": "ast",
-      "id": "plan_2_verify_otp_sets_auth_token_cookie",
       "community": 17,
-      "norm_label": "2. verify-otp (sets auth_token cookie)"
+      "norm_label": "2. verify-otp (sets auth_token cookie)",
+      "id": "plan_2_verify_otp_sets_auth_token_cookie"
     },
     {
       "label": "3. /auth/sessions (auth required; gateway must inject X-User-Id)",
@@ -729,9 +939,9 @@
       "source_file": "plan.md",
       "source_location": "L835",
       "_origin": "ast",
-      "id": "plan_3_auth_sessions_auth_required_gateway_must_inject_x_user_id",
       "community": 17,
-      "norm_label": "3. /auth/sessions (auth required; gateway must inject x-user-id)"
+      "norm_label": "3. /auth/sessions (auth required; gateway must inject x-user-id)",
+      "id": "plan_3_auth_sessions_auth_required_gateway_must_inject_x_user_id"
     },
     {
       "label": "Expect 200; logs show X-User-Id matches the cookie's sub claim",
@@ -739,9 +949,9 @@
       "source_file": "plan.md",
       "source_location": "L837",
       "_origin": "ast",
-      "id": "plan_expect_200_logs_show_x_user_id_matches_the_cookie_s_sub_claim",
       "community": 17,
-      "norm_label": "expect 200; logs show x-user-id matches the cookie's sub claim"
+      "norm_label": "expect 200; logs show x-user-id matches the cookie's sub claim",
+      "id": "plan_expect_200_logs_show_x_user_id_matches_the_cookie_s_sub_claim"
     },
     {
       "label": "4. Try to forge X-User-Id from outside the gateway",
@@ -749,9 +959,9 @@
       "source_file": "plan.md",
       "source_location": "L843",
       "_origin": "ast",
-      "id": "plan_4_try_to_forge_x_user_id_from_outside_the_gateway",
       "community": 17,
-      "norm_label": "4. try to forge x-user-id from outside the gateway"
+      "norm_label": "4. try to forge x-user-id from outside the gateway",
+      "id": "plan_4_try_to_forge_x_user_id_from_outside_the_gateway"
     },
     {
       "label": "Expect 401 \u2014 no auth cookie",
@@ -759,9 +969,9 @@
       "source_file": "plan.md",
       "source_location": "L846",
       "_origin": "ast",
-      "id": "plan_expect_401_no_auth_cookie",
       "community": 17,
-      "norm_label": "expect 401 \u2014 no auth cookie"
+      "norm_label": "expect 401 \u2014 no auth cookie",
+      "id": "plan_expect_401_no_auth_cookie"
     },
     {
       "label": "5. Direct host-side access must be refused",
@@ -769,9 +979,9 @@
       "source_file": "plan.md",
       "source_location": "L850",
       "_origin": "ast",
-      "id": "plan_5_direct_host_side_access_must_be_refused",
       "community": 17,
-      "norm_label": "5. direct host-side access must be refused"
+      "norm_label": "5. direct host-side access must be refused",
+      "id": "plan_5_direct_host_side_access_must_be_refused"
     },
     {
       "label": "Expect: connection refused (port 4001 not published on host)",
@@ -779,9 +989,9 @@
       "source_file": "plan.md",
       "source_location": "L852",
       "_origin": "ast",
-      "id": "plan_expect_connection_refused_port_4001_not_published_on_host",
       "community": 17,
-      "norm_label": "expect: connection refused (port 4001 not published on host)"
+      "norm_label": "expect: connection refused (port 4001 not published on host)",
+      "id": "plan_expect_connection_refused_port_4001_not_published_on_host"
     },
     {
       "label": "6. Exceed the auth-bucket capacity; expect 429",
@@ -789,9 +999,9 @@
       "source_file": "plan.md",
       "source_location": "L858",
       "_origin": "ast",
-      "id": "plan_6_exceed_the_auth_bucket_capacity_expect_429",
       "community": 17,
-      "norm_label": "6. exceed the auth-bucket capacity; expect 429"
+      "norm_label": "6. exceed the auth-bucket capacity; expect 429",
+      "id": "plan_6_exceed_the_auth_bucket_capacity_expect_429"
     },
     {
       "label": "The auth preset is capacity=10, refill=10/60s. The first 10 requests",
@@ -799,9 +1009,9 @@
       "source_file": "plan.md",
       "source_location": "L859",
       "_origin": "ast",
-      "id": "plan_the_auth_preset_is_capacity_10_refill_10_60s_the_first_10_requests",
       "community": 17,
-      "norm_label": "the auth preset is capacity=10, refill=10/60s. the first 10 requests"
+      "norm_label": "the auth preset is capacity=10, refill=10/60s. the first 10 requests",
+      "id": "plan_the_auth_preset_is_capacity_10_refill_10_60s_the_first_10_requests"
     },
     {
       "label": "pass; further requests fail until tokens refill.",
@@ -809,9 +1019,9 @@
       "source_file": "plan.md",
       "source_location": "L860",
       "_origin": "ast",
-      "id": "plan_pass_further_requests_fail_until_tokens_refill",
       "community": 17,
-      "norm_label": "pass; further requests fail until tokens refill."
+      "norm_label": "pass; further requests fail until tokens refill.",
+      "id": "plan_pass_further_requests_fail_until_tokens_refill"
     },
     {
       "label": "Expect: 10x 200/4xx, 2x 429 with Retry-After header",
@@ -819,9 +1029,9 @@
       "source_file": "plan.md",
       "source_location": "L865",
       "_origin": "ast",
-      "id": "plan_expect_10x_200_4xx_2x_429_with_retry_after_header",
       "community": 17,
-      "norm_label": "expect: 10x 200/4xx, 2x 429 with retry-after header"
+      "norm_label": "expect: 10x 200/4xx, 2x 429 with retry-after header",
+      "id": "plan_expect_10x_200_4xx_2x_429_with_retry_after_header"
     },
     {
       "label": "7. Token-bucket boundary check (regression for the fixed-window bug)",
@@ -829,9 +1039,9 @@
       "source_file": "plan.md",
       "source_location": "L869",
       "_origin": "ast",
-      "id": "plan_7_token_bucket_boundary_check_regression_for_the_fixed_window_bug",
       "community": 17,
-      "norm_label": "7. token-bucket boundary check (regression for the fixed-window bug)"
+      "norm_label": "7. token-bucket boundary check (regression for the fixed-window bug)",
+      "id": "plan_7_token_bucket_boundary_check_regression_for_the_fixed_window_bug"
     },
     {
       "label": "Send a burst of 8 requests at second 59 of one minute and 8 more",
@@ -839,9 +1049,9 @@
       "source_file": "plan.md",
       "source_location": "L870",
       "_origin": "ast",
-      "id": "plan_send_a_burst_of_8_requests_at_second_59_of_one_minute_and_8_more",
       "community": 17,
-      "norm_label": "send a burst of 8 requests at second 59 of one minute and 8 more"
+      "norm_label": "send a burst of 8 requests at second 59 of one minute and 8 more",
+      "id": "plan_send_a_burst_of_8_requests_at_second_59_of_one_minute_and_8_more"
     },
     {
       "label": "at second 0 of the next. With a fixed window, the user gets 16 in",
@@ -849,9 +1059,9 @@
       "source_file": "plan.md",
       "source_location": "L871",
       "_origin": "ast",
-      "id": "plan_at_second_0_of_the_next_with_a_fixed_window_the_user_gets_16_in",
       "community": 17,
-      "norm_label": "at second 0 of the next. with a fixed window, the user gets 16 in"
+      "norm_label": "at second 0 of the next. with a fixed window, the user gets 16 in",
+      "id": "plan_at_second_0_of_the_next_with_a_fixed_window_the_user_gets_16_in"
     },
     {
       "label": "1s; with a token bucket, they get capacity (10) + refill (a few",
@@ -859,9 +1069,9 @@
       "source_file": "plan.md",
       "source_location": "L872",
       "_origin": "ast",
-      "id": "plan_1s_with_a_token_bucket_they_get_capacity_10_refill_a_few",
       "community": 17,
-      "norm_label": "1s; with a token bucket, they get capacity (10) + refill (a few"
+      "norm_label": "1s; with a token bucket, they get capacity (10) + refill (a few",
+      "id": "plan_1s_with_a_token_bucket_they_get_capacity_10_refill_a_few"
     },
     {
       "label": "tokens) across the boundary \u2014 not a doubling.",
@@ -869,9 +1079,9 @@
       "source_file": "plan.md",
       "source_location": "L873",
       "_origin": "ast",
-      "id": "plan_tokens_across_the_boundary_not_a_doubling",
       "community": 17,
-      "norm_label": "tokens) across the boundary \u2014 not a doubling."
+      "norm_label": "tokens) across the boundary \u2014 not a doubling.",
+      "id": "plan_tokens_across_the_boundary_not_a_doubling"
     },
     {
       "label": "Manual check: 'docker exec irctc-redis redis-cli KEYS \"rl:*\"' shows",
@@ -879,9 +1089,9 @@
       "source_file": "plan.md",
       "source_location": "L874",
       "_origin": "ast",
-      "id": "plan_manual_check_docker_exec_irctc_redis_redis_cli_keys_rl_shows",
       "community": 17,
-      "norm_label": "manual check: 'docker exec irctc-redis redis-cli keys \"rl:*\"' shows"
+      "norm_label": "manual check: 'docker exec irctc-redis redis-cli keys \"rl:*\"' shows",
+      "id": "plan_manual_check_docker_exec_irctc_redis_redis_cli_keys_rl_shows"
     },
     {
       "label": "the bucket state, and the gateway access log shows 429s within the",
@@ -889,9 +1099,9 @@
       "source_file": "plan.md",
       "source_location": "L875",
       "_origin": "ast",
-      "id": "plan_the_bucket_state_and_the_gateway_access_log_shows_429s_within_the",
       "community": 17,
-      "norm_label": "the bucket state, and the gateway access log shows 429s within the"
+      "norm_label": "the bucket state, and the gateway access log shows 429s within the",
+      "id": "plan_the_bucket_state_and_the_gateway_access_log_shows_429s_within_the"
     },
     {
       "label": "single second, not across it.",
@@ -899,9 +1109,9 @@
       "source_file": "plan.md",
       "source_location": "L876",
       "_origin": "ast",
-      "id": "plan_single_second_not_across_it",
       "community": 17,
-      "norm_label": "single second, not across it."
+      "norm_label": "single second, not across it.",
+      "id": "plan_single_second_not_across_it"
     },
     {
       "label": "8. Trip the user-service breaker.",
@@ -909,9 +1119,9 @@
       "source_file": "plan.md",
       "source_location": "L882",
       "_origin": "ast",
-      "id": "plan_8_trip_the_user_service_breaker",
       "community": 17,
-      "norm_label": "8. trip the user-service breaker."
+      "norm_label": "8. trip the user-service breaker.",
+      "id": "plan_8_trip_the_user_service_breaker"
     },
     {
       "label": "Stop the user-service container: 'docker compose stop user-service'.",
@@ -919,9 +1129,9 @@
       "source_file": "plan.md",
       "source_location": "L883",
       "_origin": "ast",
-      "id": "plan_stop_the_user_service_container_docker_compose_stop_user_service",
       "community": 17,
-      "norm_label": "stop the user-service container: 'docker compose stop user-service'."
+      "norm_label": "stop the user-service container: 'docker compose stop user-service'.",
+      "id": "plan_stop_the_user_service_container_docker_compose_stop_user_service"
     },
     {
       "label": "Send 6+ requests through the gateway in quick succession:",
@@ -929,9 +1139,9 @@
       "source_file": "plan.md",
       "source_location": "L884",
       "_origin": "ast",
-      "id": "plan_send_6_requests_through_the_gateway_in_quick_succession",
       "community": 17,
-      "norm_label": "send 6+ requests through the gateway in quick succession:"
+      "norm_label": "send 6+ requests through the gateway in quick succession:",
+      "id": "plan_send_6_requests_through_the_gateway_in_quick_succession"
     },
     {
       "label": "Expect: first ~5 requests are 502/504 (or whatever the timeout yields),",
@@ -939,9 +1149,9 @@
       "source_file": "plan.md",
       "source_location": "L888",
       "_origin": "ast",
-      "id": "plan_expect_first_5_requests_are_502_504_or_whatever_the_timeout_yields",
       "community": 17,
-      "norm_label": "expect: first ~5 requests are 502/504 (or whatever the timeout yields),"
+      "norm_label": "expect: first ~5 requests are 502/504 (or whatever the timeout yields),",
+      "id": "plan_expect_first_5_requests_are_502_504_or_whatever_the_timeout_yields"
     },
     {
       "label": "remaining requests are 503 with the body { code: \"CIRCUIT_OPEN\", ... } \u2014",
@@ -949,9 +1159,9 @@
       "source_file": "plan.md",
       "source_location": "L889",
       "_origin": "ast",
-      "id": "plan_remaining_requests_are_503_with_the_body_code_circuit_open",
       "community": 17,
-      "norm_label": "remaining requests are 503 with the body { code: \"circuit_open\", ... } \u2014"
+      "norm_label": "remaining requests are 503 with the body { code: \"circuit_open\", ... } \u2014",
+      "id": "plan_remaining_requests_are_503_with_the_body_code_circuit_open"
     },
     {
       "label": "i.e. the breaker tripped and is now failing fast, no 5s waits.",
@@ -959,9 +1169,9 @@
       "source_file": "plan.md",
       "source_location": "L890",
       "_origin": "ast",
-      "id": "plan_i_e_the_breaker_tripped_and_is_now_failing_fast_no_5s_waits",
       "community": 17,
-      "norm_label": "i.e. the breaker tripped and is now failing fast, no 5s waits."
+      "norm_label": "i.e. the breaker tripped and is now failing fast, no 5s waits.",
+      "id": "plan_i_e_the_breaker_tripped_and_is_now_failing_fast_no_5s_waits"
     },
     {
       "label": "Check the gateway access log: each line includes circuitState:",
@@ -969,9 +1179,9 @@
       "source_file": "plan.md",
       "source_location": "L891",
       "_origin": "ast",
-      "id": "plan_check_the_gateway_access_log_each_line_includes_circuitstate",
       "community": 17,
-      "norm_label": "check the gateway access log: each line includes circuitstate:"
+      "norm_label": "check the gateway access log: each line includes circuitstate:",
+      "id": "plan_check_the_gateway_access_log_each_line_includes_circuitstate"
     },
     {
       "label": "CLOSED on the early calls, OPEN on the later ones.",
@@ -979,9 +1189,9 @@
       "source_file": "plan.md",
       "source_location": "L892",
       "_origin": "ast",
-      "id": "plan_closed_on_the_early_calls_open_on_the_later_ones",
       "community": 17,
-      "norm_label": "closed on the early calls, open on the later ones."
+      "norm_label": "closed on the early calls, open on the later ones.",
+      "id": "plan_closed_on_the_early_calls_open_on_the_later_ones"
     },
     {
       "label": "9. Recovery: 'docker compose start user-service', wait ~30s, retry:",
@@ -989,9 +1199,9 @@
       "source_file": "plan.md",
       "source_location": "L896",
       "_origin": "ast",
-      "id": "plan_9_recovery_docker_compose_start_user_service_wait_30s_retry",
       "community": 17,
-      "norm_label": "9. recovery: 'docker compose start user-service', wait ~30s, retry:"
+      "norm_label": "9. recovery: 'docker compose start user-service', wait ~30s, retry:",
+      "id": "plan_9_recovery_docker_compose_start_user_service_wait_30s_retry"
     },
     {
       "label": "Expect: 503 once more (recoveryTimeoutMs=30_000), then HALF_OPEN allows",
@@ -999,9 +1209,9 @@
       "source_file": "plan.md",
       "source_location": "L898",
       "_origin": "ast",
-      "id": "plan_expect_503_once_more_recoverytimeoutms_30_000_then_half_open_allows",
       "community": 17,
-      "norm_label": "expect: 503 once more (recoverytimeoutms=30_000), then half_open allows"
+      "norm_label": "expect: 503 once more (recoverytimeoutms=30_000), then half_open allows",
+      "id": "plan_expect_503_once_more_recoverytimeoutms_30_000_then_half_open_allows"
     },
     {
       "label": "a probe, success \u2192 CLOSED, subsequent requests return 2xx.",
@@ -1009,9 +1219,9 @@
       "source_file": "plan.md",
       "source_location": "L899",
       "_origin": "ast",
-      "id": "plan_a_probe_success_closed_subsequent_requests_return_2xx",
       "community": 17,
-      "norm_label": "a probe, success \u2192 closed, subsequent requests return 2xx."
+      "norm_label": "a probe, success \u2192 closed, subsequent requests return 2xx.",
+      "id": "plan_a_probe_success_closed_subsequent_requests_return_2xx"
     },
     {
       "label": "Check user-service logs: traceId must be aaaaaaaa\u2026",
@@ -1019,9 +1229,9 @@
       "source_file": "plan.md",
       "source_location": "L910",
       "_origin": "ast",
-      "id": "plan_check_user_service_logs_traceid_must_be_aaaaaaaa",
       "community": 17,
-      "norm_label": "check user-service logs: traceid must be aaaaaaaa..."
+      "norm_label": "check user-service logs: traceid must be aaaaaaaa...",
+      "id": "plan_check_user_service_logs_traceid_must_be_aaaaaaaa"
     },
     {
       "label": "(if Kafka step happens later, notification-service logs share the same traceId)",
@@ -1029,9 +1239,9 @@
       "source_file": "plan.md",
       "source_location": "L911",
       "_origin": "ast",
-      "id": "plan_if_kafka_step_happens_later_notification_service_logs_share_the_same_traceid",
       "community": 17,
-      "norm_label": "(if kafka step happens later, notification-service logs share the same traceid)"
+      "norm_label": "(if kafka step happens later, notification-service logs share the same traceid)",
+      "id": "plan_if_kafka_step_happens_later_notification_service_logs_share_the_same_traceid"
     },
     {
       "label": "package.json",
@@ -10414,216 +10624,6 @@
       "id": "turbo_dev_persistent"
     },
     {
-      "label": "CLAUDE.md",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 19,
-      "norm_label": "claude.md",
-      "id": "claude"
-    },
-    {
-      "label": "CLAUDE.md",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 19,
-      "norm_label": "claude.md",
-      "id": "claude_claude_md"
-    },
-    {
-      "label": "Common Commands",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L5",
-      "_origin": "ast",
-      "community": 19,
-      "norm_label": "common commands",
-      "id": "claude_common_commands"
-    },
-    {
-      "label": "Global Operations",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L7",
-      "_origin": "ast",
-      "community": 19,
-      "norm_label": "global operations",
-      "id": "claude_global_operations"
-    },
-    {
-      "label": "Service-Specific Operations",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L15",
-      "_origin": "ast",
-      "community": 19,
-      "norm_label": "service-specific operations",
-      "id": "claude_service_specific_operations"
-    },
-    {
-      "label": "High-Level Architecture",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L22",
-      "_origin": "ast",
-      "community": 19,
-      "norm_label": "high-level architecture",
-      "id": "claude_high_level_architecture"
-    },
-    {
-      "label": "System Design",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L24",
-      "_origin": "ast",
-      "community": 19,
-      "norm_label": "system design",
-      "id": "claude_system_design"
-    },
-    {
-      "label": "Monorepo Structure",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L28",
-      "_origin": "ast",
-      "community": 19,
-      "norm_label": "monorepo structure",
-      "id": "claude_monorepo_structure"
-    },
-    {
-      "label": "Service Internal Pattern",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L47",
-      "_origin": "ast",
-      "community": 19,
-      "norm_label": "service internal pattern",
-      "id": "claude_service_internal_pattern"
-    },
-    {
-      "label": "Infrastructure Guidelines",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L58",
-      "_origin": "ast",
-      "community": 19,
-      "norm_label": "infrastructure guidelines",
-      "id": "claude_infrastructure_guidelines"
-    },
-    {
-      "label": "Startup Sequence",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L60",
-      "_origin": "ast",
-      "community": 19,
-      "norm_label": "startup sequence",
-      "id": "claude_startup_sequence"
-    },
-    {
-      "label": "Graceful Shutdown",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L65",
-      "_origin": "ast",
-      "community": 19,
-      "norm_label": "graceful shutdown",
-      "id": "claude_graceful_shutdown"
-    },
-    {
-      "label": "Health Monitoring",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L76",
-      "_origin": "ast",
-      "community": 19,
-      "norm_label": "health monitoring",
-      "id": "claude_health_monitoring"
-    },
-    {
-      "label": "Kafka Architecture",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L83",
-      "_origin": "ast",
-      "community": 19,
-      "norm_label": "kafka architecture",
-      "id": "claude_kafka_architecture"
-    },
-    {
-      "label": "Error Handling Flow",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L90",
-      "_origin": "ast",
-      "community": 19,
-      "norm_label": "error handling flow",
-      "id": "claude_error_handling_flow"
-    },
-    {
-      "label": "Error Handling Guidelines",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L97",
-      "_origin": "ast",
-      "community": 19,
-      "norm_label": "error handling guidelines",
-      "id": "claude_error_handling_guidelines"
-    },
-    {
-      "label": "Logging & PII",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L105",
-      "_origin": "ast",
-      "community": 19,
-      "norm_label": "logging & pii",
-      "id": "claude_logging_pii"
-    },
-    {
-      "label": "Idempotency for Side-Effecting Consumers",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L118",
-      "_origin": "ast",
-      "community": 19,
-      "norm_label": "idempotency for side-effecting consumers",
-      "id": "claude_idempotency_for_side_effecting_consumers"
-    },
-    {
-      "label": "Health Probes & Bootstrap Readiness",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L122",
-      "_origin": "ast",
-      "community": 19,
-      "norm_label": "health probes & bootstrap readiness",
-      "id": "claude_health_probes_bootstrap_readiness"
-    },
-    {
-      "label": "graphify",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L127",
-      "_origin": "ast",
-      "community": 19,
-      "norm_label": "graphify",
-      "id": "claude_graphify"
-    },
-    {
-      "label": "JSDoc Guidelines",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L138",
-      "_origin": "ast",
-      "community": 19,
-      "norm_label": "jsdoc guidelines",
-      "id": "claude_jsdoc_guidelines"
-    },
-    {
       "label": "README.md",
       "file_type": "document",
       "source_file": "README.md",
@@ -11558,6 +11558,329 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude",
+      "target": "claude_claude_md"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_claude_md",
+      "target": "claude_common_commands"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L127",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_claude_md",
+      "target": "claude_graphify"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_claude_md",
+      "target": "claude_high_level_architecture"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L138",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_claude_md",
+      "target": "claude_jsdoc_guidelines"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_common_commands",
+      "target": "claude_global_operations"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_common_commands",
+      "target": "claude_service_specific_operations"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_high_level_architecture",
+      "target": "claude_error_handling_flow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L122",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_high_level_architecture",
+      "target": "claude_health_probes_bootstrap_readiness"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L118",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_high_level_architecture",
+      "target": "claude_idempotency_for_side_effecting_consumers"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L58",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_high_level_architecture",
+      "target": "claude_infrastructure_guidelines"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L105",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_high_level_architecture",
+      "target": "claude_logging_pii"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_high_level_architecture",
+      "target": "claude_monorepo_structure"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L45",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_high_level_architecture",
+      "target": "claude_service_internal_pattern"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_high_level_architecture",
+      "target": "claude_system_design"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L65",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_infrastructure_guidelines",
+      "target": "claude_graceful_shutdown"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L76",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_infrastructure_guidelines",
+      "target": "claude_health_monitoring"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L83",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_infrastructure_guidelines",
+      "target": "claude_kafka_architecture"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L60",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_infrastructure_guidelines",
+      "target": "claude_startup_sequence"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L63",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_error_handling_flow",
+      "target": "claude_error_handling_guidelines"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/src/index.ts",
+      "source_location": "L170",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_index",
+      "target": "src_index_resettelemetryfortests"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/src/index.ts",
+      "source_location": "L80",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_index",
+      "target": "src_index_resolveotlptracesurl"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/src/index.ts",
+      "source_location": "L155",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_index",
+      "target": "src_index_shutdowntelemetry"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/src/index.ts",
+      "source_location": "L95",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_index",
+      "target": "src_index_starttelemetry"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/src/index.ts",
+      "source_location": "L53",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_index",
+      "target": "src_index_telemetryoptions"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/src/index.ts",
+      "source_location": "L119",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_index_starttelemetry",
+      "target": "src_index_resolveotlptracesurl"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/src/propagation.ts",
+      "source_location": "L85",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_propagation",
+      "target": "src_propagation_buildconsumerspancontext"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/src/propagation.ts",
+      "source_location": "L66",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_propagation",
+      "target": "src_propagation_extracttracecontextfromkafkaheaders"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/src/propagation.ts",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_propagation",
+      "target": "src_propagation_kafkaheadermap"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/src/propagation.ts",
+      "source_location": "L32",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_propagation",
+      "target": "src_propagation_normalisekafkaheaders"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/src/propagation.ts",
+      "source_location": "L67",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_propagation_extracttracecontextfromkafkaheaders",
+      "target": "src_propagation_normalisekafkaheaders"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/src/propagation.ts",
+      "source_location": "L89",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_propagation_buildconsumerspancontext",
+      "target": "src_propagation_extracttracecontextfromkafkaheaders"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "packages/telemetry/package.json",
       "source_location": "L23",
       "weight": 1.0,
@@ -11824,129 +12147,6 @@
       "confidence_score": 1.0,
       "source": "telemetry_package_devdependencies",
       "target": "telemetry_package_devdependencies_types_node"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "packages/telemetry/src/index.ts",
-      "source_location": "L170",
-      "weight": 1.0,
-      "source": "src_index",
-      "target": "src_index_resettelemetryfortests",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "packages/telemetry/src/index.ts",
-      "source_location": "L80",
-      "weight": 1.0,
-      "source": "src_index",
-      "target": "src_index_resolveotlptracesurl",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "packages/telemetry/src/index.ts",
-      "source_location": "L155",
-      "weight": 1.0,
-      "source": "src_index",
-      "target": "src_index_shutdowntelemetry",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "packages/telemetry/src/index.ts",
-      "source_location": "L95",
-      "weight": 1.0,
-      "source": "src_index",
-      "target": "src_index_starttelemetry",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "packages/telemetry/src/index.ts",
-      "source_location": "L53",
-      "weight": 1.0,
-      "source": "src_index",
-      "target": "src_index_telemetryoptions",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "packages/telemetry/src/index.ts",
-      "source_location": "L119",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_index_starttelemetry",
-      "target": "src_index_resolveotlptracesurl"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "packages/telemetry/src/propagation.ts",
-      "source_location": "L85",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_propagation",
-      "target": "src_propagation_buildconsumerspancontext"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "packages/telemetry/src/propagation.ts",
-      "source_location": "L66",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_propagation",
-      "target": "src_propagation_extracttracecontextfromkafkaheaders"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "packages/telemetry/src/propagation.ts",
-      "source_location": "L22",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_propagation",
-      "target": "src_propagation_kafkaheadermap"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "packages/telemetry/src/propagation.ts",
-      "source_location": "L32",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_propagation",
-      "target": "src_propagation_normalisekafkaheaders"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "packages/telemetry/src/propagation.ts",
-      "source_location": "L67",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_propagation_extracttracecontextfromkafkaheaders",
-      "target": "src_propagation_normalisekafkaheaders"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "packages/telemetry/src/propagation.ts",
-      "source_location": "L89",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_propagation_buildconsumerspancontext",
-      "target": "src_propagation_extracttracecontextfromkafkaheaders"
     },
     {
       "relation": "contains",
@@ -23774,206 +23974,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude",
-      "target": "claude_claude_md"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_claude_md",
-      "target": "claude_common_commands"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L127",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_claude_md",
-      "target": "claude_graphify"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L22",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_claude_md",
-      "target": "claude_high_level_architecture"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L138",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_claude_md",
-      "target": "claude_jsdoc_guidelines"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_common_commands",
-      "target": "claude_global_operations"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_common_commands",
-      "target": "claude_service_specific_operations"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L56",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_high_level_architecture",
-      "target": "claude_error_handling_flow"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L122",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_high_level_architecture",
-      "target": "claude_health_probes_bootstrap_readiness"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L118",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_high_level_architecture",
-      "target": "claude_idempotency_for_side_effecting_consumers"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L58",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_high_level_architecture",
-      "target": "claude_infrastructure_guidelines"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L105",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_high_level_architecture",
-      "target": "claude_logging_pii"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L28",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_high_level_architecture",
-      "target": "claude_monorepo_structure"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L45",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_high_level_architecture",
-      "target": "claude_service_internal_pattern"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L24",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_high_level_architecture",
-      "target": "claude_system_design"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L65",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_infrastructure_guidelines",
-      "target": "claude_graceful_shutdown"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L76",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_infrastructure_guidelines",
-      "target": "claude_health_monitoring"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L83",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_infrastructure_guidelines",
-      "target": "claude_kafka_architecture"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L60",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_infrastructure_guidelines",
-      "target": "claude_startup_sequence"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L63",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_error_handling_flow",
-      "target": "claude_error_handling_guidelines"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "README.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -24863,5 +24863,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "dd02ad709e4f98ba5ab67bf94ef870e0c3ba9033"
+  "built_at_commit": "fc1d4238ae59810267e9bfca7fb0d2e42897d41c"
 }

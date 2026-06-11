@@ -760,8 +760,8 @@
     "semantic_hash": "ba072c863bd8d32ee5e6e6f3e42feb3c"
   },
   "CLAUDE.md": {
-    "mtime": 1781177564.0504267,
-    "ast_hash": "395c635586372f40d25c6f0b114b7f60",
+    "mtime": 1781178680.4897246,
+    "ast_hash": "17bb4545eb849a8386b818d4eab3e9bd",
     "semantic_hash": ""
   },
   "README.md": {
@@ -850,13 +850,13 @@
     "semantic_hash": ""
   },
   "packages/telemetry/src/index.ts": {
-    "mtime": 1781177564.7628186,
-    "ast_hash": "fcd8bd96a3aded4ef469b28d348cb5ec",
+    "mtime": 1781179447.7746577,
+    "ast_hash": "1da39e4f04369065264a322a56960f85",
     "semantic_hash": ""
   },
   "packages/telemetry/src/propagation.ts": {
-    "mtime": 1781177564.7806396,
-    "ast_hash": "e5c8401c01906ee1313c534140658e8d",
+    "mtime": 1781178986.3460734,
+    "ast_hash": "b1d48afb832b3178264d14c3219d17d6",
     "semantic_hash": ""
   },
   "packages/telemetry/tsconfig.json": {
@@ -865,7 +865,7 @@
     "semantic_hash": ""
   },
   "execution.md": {
-    "mtime": 1781177564.1012068,
+    "mtime": 1781178445.445454,
     "ast_hash": "a5a576a2198391982779e33c65c5d125",
     "semantic_hash": ""
   },
