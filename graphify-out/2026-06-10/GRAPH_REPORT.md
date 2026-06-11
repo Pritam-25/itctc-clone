@@ -2,18 +2,18 @@
 
 ## Corpus Check
 
-- 165 files · ~31,488 words
+- 163 files · ~31,877 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
 
-- 1071 nodes · 1229 edges · 83 communities (65 shown, 18 thin omitted)
+- 1072 nodes · 1230 edges · 75 communities (58 shown, 17 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 37 edges (avg confidence: 0.81)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
 
-- Built from commit: `c0acbb43`
+- Built from commit: `6b9423bf`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -22,7 +22,6 @@
 - [[_COMMUNITY_Prisma Generated Types|Prisma Generated Types]]
 - [[_COMMUNITY_User Service Server & DTOs|User Service Server & DTOs]]
 - [[_COMMUNITY_Prisma User Model|Prisma User Model]]
-- [[_COMMUNITY_Architecture & Service Design|Architecture & Service Design]]
 - [[_COMMUNITY_Kafka Client Package|Kafka Client Package]]
 - [[_COMMUNITY_User Service Dependencies|User Service Dependencies]]
 - [[_COMMUNITY_Auth Response & Prisma Client|Auth Response & Prisma Client]]
@@ -46,7 +45,6 @@
 - [[_COMMUNITY_Notification Constants|Notification Constants]]
 - [[_COMMUNITY_Prisma Browser Namespace|Prisma Browser Namespace]]
 - [[_COMMUNITY_User Auth Container & Publisher|User Auth Container & Publisher]]
-- [[_COMMUNITY_User Event Contracts (Kafka)|User Event Contracts (Kafka)]]
 - [[_COMMUNITY_TS Config - Next.js|TS Config - Next.js]]
 - [[_COMMUNITY_Health Service Checks|Health Service Checks]]
 - [[_COMMUNITY_TS Config - User Service|TS Config - User Service]]
@@ -88,16 +86,10 @@
 - [[_COMMUNITY_Community 69|Community 69]]
 - [[_COMMUNITY_Community 70|Community 70]]
 - [[_COMMUNITY_Community 71|Community 71]]
-- [[_COMMUNITY_Community 72|Community 72]]
 - [[_COMMUNITY_Community 73|Community 73]]
 - [[_COMMUNITY_Community 74|Community 74]]
 - [[_COMMUNITY_Community 75|Community 75]]
-- [[_COMMUNITY_Community 76|Community 76]]
-- [[_COMMUNITY_Community 77|Community 77]]
-- [[_COMMUNITY_Community 78|Community 78]]
-- [[_COMMUNITY_Community 79|Community 79]]
 - [[_COMMUNITY_Community 80|Community 80]]
-- [[_COMMUNITY_Community 81|Community 81]]
 
 ## God Nodes (most connected - your core abstractions)
 
@@ -114,21 +106,21 @@
 
 ## Surprising Connections (you probably didn't know these)
 
+- `Async Registration Flow (send-otp -> Kafka -> notification-service)` --implements--> `Error Handling Flow` [INFERRED]
+  apps/user-service/README.md → CLAUDE.md
+- `bootstrap()` --calls--> `createConsumer()` [INFERRED]
+  apps/notification-service/src/container/notification.container.ts → packages/kafka/src/client/consumer.ts
 - `liveCheck()` --calls--> `successResponse()` [INFERRED]
   apps/user-service/src/controllers/health.controller.ts → packages/http/src/response/apiResponse.ts
 - `readyCheck()` --calls--> `successResponse()` [INFERRED]
   apps/user-service/src/controllers/health.controller.ts → packages/http/src/response/apiResponse.ts
-- `Async Registration Flow (send-otp -> Kafka -> notification-service)` --implements--> `Error Handling Flow` [INFERRED]
+- `Async Registration Flow (send-otp -> Kafka -> notification-service)` --implements--> `Startup Sequence` [INFERRED]
   apps/user-service/README.md → CLAUDE.md
-- `getConsumer()` --calls--> `createConsumer()` [INFERRED]
-  apps/notification-service/src/config/kafka.ts → packages/kafka/src/client/consumer.ts
-- `bootstrap()` --calls--> `createConsumer()` [INFERRED]
-  apps/notification-service/src/container/notification.container.ts → packages/kafka/src/client/consumer.ts
 
 ## Import Cycles
 
-- 3-file cycle: `apps/user-service/src/generated/prisma/internal/prismaNamespace.ts -> apps/user-service/src/generated/prisma/models.ts -> apps/user-service/src/generated/prisma/models/User.ts -> apps/user-service/src/generated/prisma/internal/prismaNamespace.ts`
 - 3-file cycle: `apps/user-service/src/generated/prisma/commonInputTypes.ts -> apps/user-service/src/generated/prisma/internal/prismaNamespace.ts -> apps/user-service/src/generated/prisma/models.ts -> apps/user-service/src/generated/prisma/commonInputTypes.ts`
+- 3-file cycle: `apps/user-service/src/generated/prisma/internal/prismaNamespace.ts -> apps/user-service/src/generated/prisma/models.ts -> apps/user-service/src/generated/prisma/models/User.ts -> apps/user-service/src/generated/prisma/internal/prismaNamespace.ts`
 
 ## Hyperedges (group relationships)
 
@@ -136,32 +128,22 @@
 - **Shared @irctc/\* Packages** — claude_pkg_errors, claude_pkg_http, claude_pkg_logger, claude_pkg_middleware, claude_pkg_kafka, claude_pkg_contracts, claude_pkg_telemetry [EXTRACTED 1.00]
 - **user-service Async OTP Email Flow** — user_service_async_registration_flow, user_service_kafka_contract, docker_kafka_topic_otp, claude_notification_service, user_service_redis_keys [INFERRED 0.85]
 
-## Communities (83 total, 18 thin omitted)
+## Communities (75 total, 17 thin omitted)
 
 ### Community 0 - "Prisma Generated Types"
 
 Cohesion: 0.02
 Nodes (98): Args, At, AtLeast, AtLoose, AtStrict, BatchPayload, Boolean, BooleanFieldRefInput (+90 more)
 
-### Community 1 - "User Service Server & DTOs"
-
-Cohesion: 0.17
-Nodes (6): build(), getAuthController(), OtpEventPublisher, SCHEMA_VERSION, SCHEMA_VERSION, UserLoggedInEventPublisher
-
 ### Community 2 - "Prisma User Model"
 
 Cohesion: 0.03
 Nodes (57): AggregateUser, BoolFieldUpdateOperationsInput, DateTimeFieldUpdateOperationsInput, GetUserAggregateType, GetUserGroupByPayload, Prisma\_\_UserClient, StringFieldUpdateOperationsInput, UserAggregateArgs (+49 more)
 
-### Community 3 - "Architecture & Service Design"
-
-Cohesion: 0.29
-Nodes (4): app, router, authControllerPromise, router
-
 ### Community 4 - "Kafka Client Package"
 
-Cohesion: 0.07
-Nodes (9): KafkaProducerManager, KafkaConsumerRunner, LoggerLike, MessageHandler, DLQ_REASONS, DlqReason, KAFKA_HEADERS, RetryPolicies (+1 more)
+Cohesion: 0.05
+Nodes (18): getConsumer(), getProducer(), initKafka(), kafka, getConsumer(), getProducer(), initKafka(), kafka (+10 more)
 
 ### Community 5 - "User Service Dependencies"
 
@@ -170,8 +152,8 @@ Nodes (40): dependencies, bcryptjs, cookie-parser, cors, dotenv, express, helmet
 
 ### Community 6 - "Auth Response & Prisma Client"
 
-Cohesion: 0.12
-Nodes (7): globalForPrisma, AuthMapper, UserMapper, PrismaClient, User, AuthRepository, UserResponseDto
+Cohesion: 0.06
+Nodes (19): app, AuthResponseDto, LoginRequestDto, LoginSchema, VerifyOtpRequestDto, VerifyOtpRequestSchema, globalForPrisma, AuthMapper (+11 more)
 
 ### Community 7 - "TS Config - Service Base"
 
@@ -180,8 +162,8 @@ Nodes (36): compilerOptions, declaration, declarationMap, exactOptionalPropertyT
 
 ### Community 8 - "Env & Server Bootstrap"
 
-Cohesion: 0.09
-Nodes (12): EmailContent, EmailProvider, SendEmailCommand, EmailProviderFactory, EmailProviderFactoryDeps, SendGridProvider, OtpNotificationService, WelcomeNotificationService (+4 more)
+Cohesion: 0.06
+Nodes (17): startServer(), getEmailVendor(), env, bootstrap(), EmailContent, EmailProvider, SendEmailCommand, EmailProviderFactory (+9 more)
 
 ### Community 9 - "HTTP Package Utilities"
 
@@ -250,13 +232,13 @@ Nodes (13): dependencies, devDependencies, @repo/typescript-config, exports, imp
 
 ### Community 22 - "Prisma Filter Types"
 
-Cohesion: 0.14
-Nodes (13): BoolFilter, BoolWithAggregatesFilter, DateTimeFilter, DateTimeWithAggregatesFilter, NestedBoolFilter, NestedBoolWithAggregatesFilter, NestedDateTimeFilter, NestedDateTimeWithAggregatesFilter (+5 more)
+Cohesion: 0.08
+Nodes (20): ModelName, NullTypes, QueryMode, SortOrder, TransactionIsolationLevel, UserScalarFieldEnum, User, BoolFilter (+12 more)
 
 ### Community 23 - "Health Check Endpoints"
 
-Cohesion: 0.13
-Nodes (11): router, AuthController, liveCheck(), readyCheck(), liveCheck(), readyCheck(), HealthChecks, HealthService (+3 more)
+Cohesion: 0.10
+Nodes (15): router, COOKIE_MAX_AGE, COOKIE_NAMES, DURATION_TO_MS, AuthController, liveCheck(), readyCheck(), liveCheck() (+7 more)
 
 ### Community 24 - "Notification Constants"
 
@@ -265,18 +247,13 @@ Nodes (8): IDEMPOTENCY_KEYS, IDEMPOTENCY_STATE, IdempotencyState, KAFKA_HEADERS,
 
 ### Community 25 - "Prisma Browser Namespace"
 
-Cohesion: 0.20
-Nodes (6): AUTH_DURATIONS, ERROR_CODES, ErrorCode, ERROR_MESSAGES, AccessTokenPayload, AuthUser
+Cohesion: 0.06
+Nodes (20): RegisterRequestDto, RegisterSchema, AUTH_DURATIONS, REDIS_KEYS, build(), getAuthController(), ERROR_CODES, ErrorCode (+12 more)
 
 ### Community 26 - "User Auth Container & Publisher"
 
 Cohesion: 0.11
 Nodes (18): Architecture, Build, Database Setup, Development, Environment Variables, Future Roadmap, Installation, IRCTC Clone (+10 more)
-
-### Community 27 - "User Event Contracts (Kafka)"
-
-Cohesion: 0.08
-Nodes (14): env, getConsumer(), getProducer(), initKafka(), kafka, startServer(), getConsumer(), getProducer() (+6 more)
 
 ### Community 28 - "TS Config - Next.js"
 
@@ -351,12 +328,12 @@ Nodes (4): compilerOptions, jsx, extends, $schema
 ### Community 58 - "Community 58"
 
 Cohesion: 0.15
-Nodes (13): 12. Rate limits & abuse prevention, 15. Configuration reference, 2. High-level architecture, 3. Component diagram, 4. Async registration flow (user-service ↔ notification-service), 5. Login flow, 8. Redis data model, Fingerprinting (+5 more)
+Nodes (13): 12. Rate limits & abuse prevention, 15. Configuration reference, 2. High-level architecture, 3. Component diagram, 4. Async registration flow (user-service ↔ notification-service), 7. Session management, 8. Redis data model, See also (+5 more)
 
 ### Community 59 - "Community 59"
 
-Cohesion: 0.33
-Nodes (4): Common Commands, Global Operations, graphify, Service-Specific Operations
+Cohesion: 0.29
+Nodes (5): Common Commands, Global Operations, graphify, JSDoc Guidelines, Service-Specific Operations
 
 ### Community 60 - "Community 60"
 
@@ -413,30 +390,10 @@ Nodes (4): 9. Kafka contract, `OTPRequestedV1` payload, Published events, Why a 
 Cohesion: 0.67
 Nodes (3): 1. Responsibilities & non-responsibilities, Does NOT own, Owns
 
-### Community 72 - "Community 72"
-
-Cohesion: 0.18
-Nodes (7): ModelName, NullTypes, QueryMode, SortOrder, TransactionIsolationLevel, UserScalarFieldEnum, User
-
 ### Community 73 - "Community 73"
 
 Cohesion: 0.22
 Nodes (9): Error Handling Flow, Error Handling Guidelines, Health Probes & Bootstrap Readiness, High-Level Architecture, Idempotency for Side-Effecting Consumers, Logging & PII, Monorepo Structure, Service Internal Pattern (+1 more)
-
-### Community 77 - "Community 77"
-
-Cohesion: 0.18
-Nodes (8): LoginRequestDto, LoginSchema, VerifyOtpRequestDto, VerifyOtpRequestSchema, RegisterRequestDto, RegisterSchema, authControllerPromise, router
-
-### Community 78 - "Community 78"
-
-Cohesion: 0.17
-Nodes (6): REDIS_KEYS, AccessTokenPayload, RefreshTokenPayload, OtpService, RegistrationSessionData, generateOtp()
-
-### Community 79 - "Community 79"
-
-Cohesion: 0.36
-Nodes (4): COOKIE_MAX_AGE, COOKIE_NAMES, DURATION_TO_MS, getDeviceFingerprint()
 
 ### Community 80 - "Community 80"
 
@@ -445,25 +402,25 @@ Nodes (4): OTPRequestedV1, OTPRequestedV1Type, UserLoggedInV1, UserLoggedInV1Typ
 
 ## Knowledge Gaps
 
-- **626 isolated node(s):** `PreToolUse`, `allow`, `name`, `version`, `private` (+621 more)
+- **627 isolated node(s):** `Global Operations`, `Service-Specific Operations`, `System Design`, `Monorepo Structure`, `Service Internal Pattern` (+622 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **18 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **17 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `successResponse()` connect `Health Check Endpoints` to `HTTP Package Utilities`?**
-  _High betweenness centrality (0.050) - this node is a cross-community bridge._
-- **Why does `AuthController` connect `Health Check Endpoints` to `Community 79`?**
-  _High betweenness centrality (0.045) - this node is a cross-community bridge._
-- **What connects `PreToolUse`, `allow`, `name` to the rest of the system?**
-  _627 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _High betweenness centrality (0.042) - this node is a cross-community bridge._
+- **What connects `Global Operations`, `Service-Specific Operations`, `System Design` to the rest of the system?**
+  _628 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Prisma Generated Types` be split into smaller, more focused modules?**
   _Cohesion score 0.020202020202020204 - nodes in this community are weakly interconnected._
 - **Should `Prisma User Model` be split into smaller, more focused modules?**
   _Cohesion score 0.034482758620689655 - nodes in this community are weakly interconnected._
 - **Should `Kafka Client Package` be split into smaller, more focused modules?**
-  _Cohesion score 0.07142857142857142 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.048726467331118496 - nodes in this community are weakly interconnected._
 - **Should `User Service Dependencies` be split into smaller, more focused modules?**
   _Cohesion score 0.04878048780487805 - nodes in this community are weakly interconnected._
+- **Should `Auth Response & Prisma Client` be split into smaller, more focused modules?**
+  _Cohesion score 0.05656565656565657 - nodes in this community are weakly interconnected._
