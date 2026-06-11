@@ -140,6 +140,7 @@ Rules:
 When generating TypeScript:
 
 - Add concise production-grade JSDoc.
+- Trim module/package JSDoc to concise contract-level guidance (e.g., purpose, key API endpoints, and operational side-effects) and avoid walkthroughs/tutorials.
 - Every service class must have a class-level JSDoc.
 - Every public service method must have workflow-oriented JSDoc.
 - Document side effects, Redis usage, Kafka publishing, security behavior, and failure guarantees when relevant.

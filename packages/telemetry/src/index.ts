@@ -1,24 +1,13 @@
 /**
  * @irctc/telemetry
  *
- * OpenTelemetry SDK bootstrap. Each microservice calls {@link startTelemetry}
- * exactly once at boot, right after its infrastructure clients (Redis, Kafka,
- * Prisma) are initialised. The NodeSDK then auto-instruments:
+ * Provides OpenTelemetry SDK bootstrapping. Each microservice calls {@link startTelemetry}
+ * once at boot time to register auto-instrumentations.
  *
- *   - HTTP (incoming + outgoing)         via @opentelemetry/instrumentation-http
- *   - Express                            via @opentelemetry/instrumentation-express
- *   - ioredis (shared Redis client)      via @opentelemetry/instrumentation-ioredis
- *   - kafkajs (producers + consumers)    via @opentelemetry/instrumentation-kafkajs
- *
- * Once started, every active span is automatically picked up by the
- * `@irctc/logger` mixin (it reads the active span from `@opentelemetry/api`),
- * so `traceId` / `spanId` start appearing in log lines without any further
- * wiring at the call site.
- *
- * Producer-side Kafka trace context is written by the default W3C text-map
- * propagator as part of the `kafkajs` publish span — there is no producer
- * helper to call. Consumers MUST use {@link extractTraceContextFromKafkaHeaders}
- * (from `propagation.ts`) to re-attach the parent context before doing work.
+ * Operational Caveats:
+ * - Active spans are automatically read by `@irctc/logger` to inject trace metadata.
+ * - Kafka consumers must call `extractTraceContextFromKafkaHeaders` (from `propagation.ts`)
+ *   to propagate the parent context downstream.
  */
 import { NodeSDK } from "@opentelemetry/sdk-node";
 import { OTLPTraceExporter } from "@opentelemetry/exporter-trace-otlp-http";
@@ -78,7 +67,17 @@ let started = false;
  * append the standard `/v1/traces` path if the caller gave us a base URL.
  */
 function resolveOtlpTracesUrl(endpoint: string): string {
-  const trimmed = endpoint.replace(/\/+$/, "");
+  const trimmed = endpoint.trim().replace(/\/+$/, "");
+  if (!trimmed) {
+    throw new Error(
+      "startTelemetry: 'otlpEndpoint' must be a non-empty absolute URL",
+    );
+  }
+  if (!/^https?:\/\//i.test(trimmed)) {
+    throw new Error(
+      "startTelemetry: 'otlpEndpoint' must start with http:// or https://",
+    );
+  }
   if (trimmed.endsWith("/v1/traces")) return trimmed;
   return `${trimmed}${DEFAULT_OTLP_TRACES_PATH}`;
 }

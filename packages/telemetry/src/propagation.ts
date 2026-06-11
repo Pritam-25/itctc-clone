@@ -40,9 +40,11 @@ export function normaliseKafkaHeaders(headers: unknown): KafkaHeaderMap {
     if (rawValue == null) continue;
 
     if (Array.isArray(rawValue)) {
-      out[key] = rawValue
-        .map((v) => (Buffer.isBuffer(v) ? v.toString("utf8") : String(v)))
-        .join(",");
+      const values = rawValue
+        .map((v) => (Buffer.isBuffer(v) ? v.toString("utf8") : String(v)).trim())
+        .filter(Boolean);
+      if (values.length === 0) continue;
+      out[key] = key === "traceparent" ? (values[0] ?? "") : values.join(",");
       continue;
     }
 
@@ -70,17 +72,16 @@ export function extractTraceContextFromKafkaHeaders(headers: unknown): Context {
 }
 
 /**
- * Convenience helper: extract the trace context AND start a CONSUMER span
- * under it in a single call. The caller still owns `context.with` so the
- * span is the active span for the duration of the handler.
+ * Convenience helper to extract the trace context and construct the child span name.
+ * The caller is responsible for starting and activating the child CONSUMER span using the
+ * returned context and span name (e.g., via context.with/tracer.startSpan).
  *
- * Why both at once: a consumer-side span should always be a child of the
- * producer-side span (if present). Forcing callers to remember both steps
- * has been a recurring bug in earlier iterations of this project.
+ * Why this exists: Separating parent context extraction from the actual span creation
+ * allows the consumer runner to apply the correct tracer/span kind.
  *
  * @param headers - Raw `message.headers` from an `EachMessagePayload`.
  * @param topic   - The Kafka topic. Becomes the span name's suffix.
- * @returns The extracted context (caller wraps with `context.with`).
+ * @returns The extracted context and computed span name.
  */
 export function buildConsumerSpanContext(
   headers: unknown,
