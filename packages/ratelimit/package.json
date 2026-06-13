@@ -1,0 +1,29 @@
+{
+  "name": "@irctc/ratelimit",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "check-types": "tsc --noEmit",
+    "lint": "echo 'no lint configured for packages/ratelimit'",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "ioredis": "^5.11.0"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.19.21",
+    "vitest": "^3.0.5"
+  }
+}
