@@ -10,8 +10,8 @@
     "semantic_hash": ""
   },
   "apps/notification-service/package.json": {
-    "mtime": 1781326268.4205246,
-    "ast_hash": "f540156428471b94cb2d87df1270daf9",
+    "mtime": 1781341111.0282807,
+    "ast_hash": "51606f4833a864c74c623396c496910c",
     "semantic_hash": ""
   },
   "apps/notification-service/src/api/v1/routes/health.routes.ts": {
@@ -140,8 +140,8 @@
     "semantic_hash": "7f8bb815da80ea25e97206701f4c6dce"
   },
   "apps/notification-service/src/server.ts": {
-    "mtime": 1781177562.7475638,
-    "ast_hash": "f17f0b95608bd5e53285d784de7bf759",
+    "mtime": 1781341111.1041918,
+    "ast_hash": "b110cb70756a285d5221d455ccc0bd58",
     "semantic_hash": ""
   },
   "apps/notification-service/src/services/index.ts": {
@@ -170,8 +170,8 @@
     "semantic_hash": ""
   },
   "apps/user-service/package.json": {
-    "mtime": 1781326268.421071,
-    "ast_hash": "2ddb794e8dd410fdefc787fb38e90cd5",
+    "mtime": 1781341111.1310985,
+    "ast_hash": "37a5ebbbfa3c491fe69719982df4e8aa",
     "semantic_hash": ""
   },
   "apps/user-service/prisma.config.ts": {
@@ -375,8 +375,8 @@
     "semantic_hash": "cbc13ade3432b3a5e9cfaed2ddf32e4f"
   },
   "apps/user-service/src/server.ts": {
-    "mtime": 1781177563.8602207,
-    "ast_hash": "fbeb265d372fedc6f0102a8974fa8ad4",
+    "mtime": 1781341111.1911092,
+    "ast_hash": "a939756615f10e24adbf0f6f48e9eeeb",
     "semantic_hash": ""
   },
   "apps/user-service/src/services/auth.service.ts": {
@@ -545,8 +545,8 @@
     "semantic_hash": "5975f937741bf72ae8a886260430a9ba"
   },
   "packages/http/src/constants/statusCodes.ts": {
-    "mtime": 1781340102.8978648,
-    "ast_hash": "4c4af136ecab5c800a0a5e7317bd0e5a",
+    "mtime": 1781340726.139861,
+    "ast_hash": "4de9f9f16370a34ef43431e442b48caf",
     "semantic_hash": ""
   },
   "packages/http/src/context/getRequestId.ts": {
@@ -585,8 +585,8 @@
     "semantic_hash": "4033b3c2538e97f1fd07815b169c105e"
   },
   "packages/kafka/package.json": {
-    "mtime": 1781036308.819912,
-    "ast_hash": "6e48911b1a33983bb8ba17153624f8f5",
+    "mtime": 1781341111.465395,
+    "ast_hash": "7a363c85fb63f0d7846e77824eb3cfec",
     "semantic_hash": ""
   },
   "packages/kafka/src/client/consumer.ts": {
@@ -615,9 +615,9 @@
     "semantic_hash": "88e9adc9099cd6bf14098fbbdfffe441"
   },
   "packages/kafka/src/consumer-runner/kafka-consumer-runner.ts": {
-    "mtime": 1781177564.542093,
-    "ast_hash": "f8e7368307604e8df242693a658eefa6",
-    "semantic_hash": "f8e7368307604e8df242693a658eefa6"
+    "mtime": 1781341111.4869125,
+    "ast_hash": "96d96c8f2b691105c0373723f18b8cbc",
+    "semantic_hash": ""
   },
   "packages/kafka/src/headers/dlq-reasons.ts": {
     "mtime": 1781177564.5564,
@@ -780,8 +780,8 @@
     "semantic_hash": ""
   },
   "docker-compose.yml": {
-    "mtime": 1781036308.7624571,
-    "ast_hash": "7a8789e586607fe0853cd359ad7f660a",
+    "mtime": 1781358052.822038,
+    "ast_hash": "be2e6e983d448635bb6a481c2d70d6bb",
     "semantic_hash": ""
   },
   "packages/eslint-config/README.md": {
@@ -990,8 +990,8 @@
     "semantic_hash": ""
   },
   "apps/api-gateway/src/auth/__tests__/auth.test.ts": {
-    "mtime": 1781340102.810601,
-    "ast_hash": "eb8ae175a93c2a843fe2a0bf59db7aaf",
+    "mtime": 1781340703.2296946,
+    "ast_hash": "9adc42d46c065412c63fe859c2b06aa3",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/auth/cookieNames.ts": {
@@ -1000,8 +1000,8 @@
     "semantic_hash": ""
   },
   "apps/api-gateway/src/auth/gatewayAuthMiddleware.ts": {
-    "mtime": 1781340102.8121161,
-    "ast_hash": "a546d3d1ac2e86ef03887454080734c7",
+    "mtime": 1781340703.3472908,
+    "ast_hash": "bc5794a08bc2f05cb2d1cac898542f10",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/auth/jwtVerifier.ts": {
@@ -1035,128 +1035,143 @@
     "semantic_hash": ""
   },
   "apps/api-gateway/src/app.ts": {
-    "mtime": 1781329705.5332637,
+    "mtime": 1781340703.06627,
     "ast_hash": "9704ad234a4aa99c8f02a34020bb3073",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/config/env.ts": {
-    "mtime": 1781330218.884849,
+    "mtime": 1781340703.4561436,
     "ast_hash": "9e1d14bfd9ead786efabb0ae375496b2",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/config/index.ts": {
-    "mtime": 1781326516.5098965,
+    "mtime": 1781340703.4659061,
     "ast_hash": "73fd0c02a2d1888be9b3a5bab8c2ee9b",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/config/redis.ts": {
-    "mtime": 1781329705.754908,
+    "mtime": 1781340703.5173209,
     "ast_hash": "eb9b09186046fb096448aaa1bdda1633",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/config/routes.ts": {
-    "mtime": 1781332051.1982448,
+    "mtime": 1781340703.53756,
     "ast_hash": "dfa17dd13af6c0f7a8d0ab3bbbd5fe03",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/config/upstreams.ts": {
-    "mtime": 1781329540.7007806,
+    "mtime": 1781340703.5637352,
     "ast_hash": "10ff66e27e2fd60c983b51ff65c30b01",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/health/__tests__/health.test.ts": {
-    "mtime": 1781329705.8158293,
+    "mtime": 1781340703.6637611,
     "ast_hash": "d6282e980d58b96eebd7d00415029521",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/health/health.controller.ts": {
-    "mtime": 1781329705.8264525,
+    "mtime": 1781340703.687847,
     "ast_hash": "06b2ee37fab6159da1bcc1b25e5e55dd",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/health/health.service.ts": {
-    "mtime": 1781329705.8396947,
+    "mtime": 1781340703.736017,
     "ast_hash": "0b61dae40954aa1399b25d41dc23e380",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/proxy/createProxy.ts": {
-    "mtime": 1781339023.9863043,
+    "mtime": 1781340703.830263,
     "ast_hash": "14d4e068948c74ff07e6c29c131b9af5",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/proxy/proxyHeadersMiddleware.ts": {
-    "mtime": 1781329705.8814888,
+    "mtime": 1781340703.8433943,
     "ast_hash": "33555bbded21e215d925909d90106603",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/ratelimit/presets.ts": {
-    "mtime": 1781326544.3665779,
+    "mtime": 1781340703.8608756,
     "ast_hash": "67c7cc4ea06666f6d176062d237885e9",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/ratelimit/rateLimitMiddleware.ts": {
-    "mtime": 1781339496.1111896,
+    "mtime": 1781340703.8897953,
     "ast_hash": "bbf0221cf702e6fed71ab987f98115f8",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/resilience/breakerRegistry.ts": {
-    "mtime": 1781339514.8237128,
+    "mtime": 1781340703.9201715,
     "ast_hash": "f2849137a6996610cf79d130b05671dd",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/resilience/timeouts.ts": {
-    "mtime": 1781329559.8304358,
+    "mtime": 1781340703.940243,
     "ast_hash": "57915b1806541b18796d490114a5a073",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/routes/health.routes.ts": {
-    "mtime": 1781326638.8023107,
+    "mtime": 1781340703.9693978,
     "ast_hash": "9a816adb436d770827df8641b9077a41",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/routes/index.ts": {
-    "mtime": 1781327176.6953554,
+    "mtime": 1781340703.9862196,
     "ast_hash": "6a501c54668cce7d664e6c984269776e",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/routing/mountRoutes.ts": {
-    "mtime": 1781339501.971243,
+    "mtime": 1781340704.0109768,
     "ast_hash": "ff74a957f31bd30fd3bb15dbb289c29a",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/routing/routingTable.ts": {
-    "mtime": 1781335172.0017374,
+    "mtime": 1781340704.0581958,
     "ast_hash": "11eecf4bddd678be3c6992ed11334e04",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/server.ts": {
-    "mtime": 1781329706.0124197,
-    "ast_hash": "550aea5718c03ec4984f4695aaf15dfb",
+    "mtime": 1781341110.9683776,
+    "ast_hash": "d2dc132725265aa4e3c6ed2f9069209f",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/serviceIdentity/verifier.ts": {
-    "mtime": 1781335213.550179,
+    "mtime": 1781340704.199995,
     "ast_hash": "ee7126b020898b1e003d42b955b2e881",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/telemetry/traceContextMiddleware.ts": {
-    "mtime": 1781335230.5583563,
+    "mtime": 1781340704.2315276,
     "ast_hash": "ebbc1b693fb30c95d5732369d238d357",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/utils/errors/errorCodes.ts": {
-    "mtime": 1781326647.1239047,
+    "mtime": 1781340704.2550654,
     "ast_hash": "e85569f2579e9749ea3b0e7be89cb5cd",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/utils/errors/errorMessages.ts": {
-    "mtime": 1781338971.1003807,
+    "mtime": 1781340704.292129,
     "ast_hash": "742c1981985de54649f5047310d1fa49",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/utils/errors/index.ts": {
-    "mtime": 1781326656.9191022,
+    "mtime": 1781340704.3647046,
     "ast_hash": "9d1fb87589ff9f3feb6eb99a0906658d",
+    "semantic_hash": ""
+  },
+  "packages/telemetry/src/instrumentation.ts": {
+    "mtime": 1781363669.6134095,
+    "ast_hash": "de31c85e94b49b7e2c5c2085a27639b5",
+    "semantic_hash": ""
+  },
+  "infra/traefik/dynamic/middlewares.yml": {
+    "mtime": 1781341491.164618,
+    "ast_hash": "28bfaf3f1e4bc8c47143b334727a3f08",
+    "semantic_hash": ""
+  },
+  "infra/traefik/traefik.yml": {
+    "mtime": 1781341613.0934708,
+    "ast_hash": "63d74bfae13908d6f112c87c1810b2da",
     "semantic_hash": ""
   }
 }

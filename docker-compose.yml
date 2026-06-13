@@ -200,6 +200,114 @@ services:
           --config retention.ms=2592000000
         echo "Kafka topics created."
 
+  traefik:
+    image: traefik:v3.1
+    container_name: irctc-traefik
+    restart: always
+    command:
+      - "--configFile=/etc/traefik/traefik.yml"
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8082:8080"
+    volumes:
+      - //var/run/docker.sock:/var/run/docker.sock:ro
+      - ./infra/traefik/traefik.yml:/etc/traefik/traefik.yml:ro
+      - ./infra/traefik/dynamic:/etc/traefik/dynamic:ro
+    networks:
+      - irctc-network
+    depends_on:
+      - api-gateway
+
+  api-gateway:
+    build:
+      context: .
+      dockerfile: apps/api-gateway/Dockerfile
+    container_name: irctc-api-gateway
+    restart: always
+    environment:
+      NODE_ENV: production
+      PORT: 4000
+      REDIS_URL: redis://irctc-redis:6379
+      JWT_SECRET: ${JWT_SECRET}
+      CORS_ORIGINS: ${CORS_ORIGINS}
+      USER_UPSTREAM: http://irctc-user-service:4001
+      NOTIFICATION_UPSTREAM: http://irctc-notification-service:4002
+      RATE_LIMIT_DEFAULT_CAPACITY: 100
+      RATE_LIMIT_DEFAULT_REFILL_PER_SEC: "1.6667"
+      RATE_LIMIT_AUTH_CAPACITY: 10
+      RATE_LIMIT_AUTH_REFILL_PER_SEC: "0.1667"
+      OTEL_EXPORTER_OTLP_ENDPOINT: ${OTEL_EXPORTER_OTLP_ENDPOINT}
+      OTEL_SERVICE_NAME: api-gateway
+      SERVICE_NAME: api-gateway
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.gateway.rule=Host(`localhost`)"
+      - "traefik.http.routers.gateway.entrypoints=web"
+      - "traefik.http.routers.gateway.middlewares=secureHeaders@file,cors@file,retry@file"
+      - "traefik.http.services.gateway.loadbalancer.server.port=4000"
+    ports:
+      - "4000:4000"
+    networks:
+      - irctc-network
+    depends_on:
+      - user-service
+      - notification-service
+      - redis
+
+  user-service:
+    build:
+      context: .
+      dockerfile: apps/user-service/Dockerfile
+    container_name: irctc-user-service
+    restart: always
+    command: sh -c "npx prisma migrate deploy && node dist/server.js"
+    environment:
+      PORT: 4001
+      DATABASE_URL: postgresql://admin:password@irctc-postgres:5432/irctc_db
+      REDIS_URL: redis://irctc-redis:6379
+      KAFKA_BROKERS: irctc-kafka:29092
+      JWT_SECRET: ${JWT_SECRET}
+      JWT_ACCESS_EXPIRES_IN: 15m
+      JWT_REFRESH_EXPIRES_IN: 7d
+      CORS_ORIGINS: ${CORS_ORIGINS}
+      SERVICE_NAME: user-service
+      OTEL_EXPORTER_OTLP_ENDPOINT: ${OTEL_EXPORTER_OTLP_ENDPOINT}
+      OTEL_SERVICE_NAME: user-service
+    expose:
+      - "4001"
+    networks:
+      - irctc-network
+    depends_on:
+      - postgres
+      - redis
+      - kafka
+
+  notification-service:
+    build:
+      context: .
+      dockerfile: apps/notification-service/Dockerfile
+    container_name: irctc-notification-service
+    restart: always
+    environment:
+      PORT: 4002
+      REDIS_URL: redis://irctc-redis:6379
+      KAFKA_BROKERS: irctc-kafka:29092
+      KAFKA_CLIENT_ID: notification-service
+      SERVICE_NAME: notification-service
+      SENDGRID_API_KEY: ${SENDGRID_API_KEY}
+      SENDGRID_SENDER: ${SENDGRID_SENDER}
+      OTEL_EXPORTER_OTLP_ENDPOINT: ${OTEL_EXPORTER_OTLP_ENDPOINT}
+      OTEL_SERVICE_NAME: notification-service
+    expose:
+      - "4002"
+    networks:
+      - irctc-network
+    depends_on:
+      - redis
+      - kafka
+
+
 networks:
   irctc-network:
     driver: bridge
