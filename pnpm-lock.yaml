@@ -38,9 +38,21 @@ importers:
       '@irctc/middleware':
         specifier: workspace:*
         version: link:../../packages/middleware
+      '@irctc/ratelimit':
+        specifier: workspace:*
+        version: link:../../packages/ratelimit
+      '@irctc/resilience':
+        specifier: workspace:*
+        version: link:../../packages/resilience
+      '@irctc/service-identity':
+        specifier: workspace:*
+        version: link:../../packages/service-identity
       '@irctc/telemetry':
         specifier: workspace:*
         version: link:../../packages/telemetry
+      '@opentelemetry/api':
+        specifier: ^1.9.1
+        version: 1.9.1
       '@t3-oss/env-core':
         specifier: ^0.13.11
         version: 0.13.11(typescript@5.9.2)(valibot@1.2.0(typescript@5.9.2))(zod@4.4.3)

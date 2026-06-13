@@ -1,16 +1,16 @@
 # Graph Report - itctc-clone  (2026-06-13)
 
 ## Corpus Check
-- 201 files · ~47,321 words
+- 226 files · ~50,557 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1395 nodes · 1607 edges · 96 communities (83 shown, 13 thin omitted)
-- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 27 edges (avg confidence: 0.8)
+- 1461 nodes · 1680 edges · 106 communities (87 shown, 19 thin omitted)
+- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 33 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `8a058617`
+- Built from commit: `2d990036`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -25,7 +25,6 @@
 - [[_COMMUNITY_Community 7|Community 7]]
 - [[_COMMUNITY_Community 8|Community 8]]
 - [[_COMMUNITY_Community 9|Community 9]]
-- [[_COMMUNITY_Community 10|Community 10]]
 - [[_COMMUNITY_Community 11|Community 11]]
 - [[_COMMUNITY_Community 12|Community 12]]
 - [[_COMMUNITY_Community 13|Community 13]]
@@ -99,12 +98,19 @@
 - [[_COMMUNITY_Community 86|Community 86]]
 - [[_COMMUNITY_Community 87|Community 87]]
 - [[_COMMUNITY_Community 88|Community 88]]
-- [[_COMMUNITY_Community 89|Community 89]]
 - [[_COMMUNITY_Community 90|Community 90]]
 - [[_COMMUNITY_Community 91|Community 91]]
-- [[_COMMUNITY_Community 92|Community 92]]
 - [[_COMMUNITY_Community 93|Community 93]]
-- [[_COMMUNITY_Community 94|Community 94]]
+- [[_COMMUNITY_Community 97|Community 97]]
+- [[_COMMUNITY_Community 100|Community 100]]
+- [[_COMMUNITY_Community 101|Community 101]]
+- [[_COMMUNITY_Community 103|Community 103]]
+- [[_COMMUNITY_Community 105|Community 105]]
+- [[_COMMUNITY_Community 106|Community 106]]
+- [[_COMMUNITY_Community 107|Community 107]]
+- [[_COMMUNITY_Community 108|Community 108]]
+- [[_COMMUNITY_Community 109|Community 109]]
+- [[_COMMUNITY_Community 110|Community 110]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `IRCTC Clone` - 20 edges
@@ -112,21 +118,21 @@
 3. `compilerOptions` - 19 edges
 4. ``user-service`` - 19 edges
 5. `compilerOptions` - 18 edges
-6. `paths` - 15 edges
-7. `successResponse()` - 15 edges
+6. `successResponse()` - 17 edges
+7. `paths` - 15 edges
 8. `compilerOptions` - 15 edges
 9. `AuthService` - 14 edges
 10. `CircuitBreaker` - 13 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `liveCheck()` --calls--> `successResponse()`  [INFERRED]
+  apps/api-gateway/src/health/health.controller.ts → packages/http/src/response/apiResponse.ts
+- `readyCheck()` --calls--> `successResponse()`  [INFERRED]
+  apps/api-gateway/src/health/health.controller.ts → packages/http/src/response/apiResponse.ts
+- `getRateLimitMiddleware()` --calls--> `createRateLimitMiddleware()`  [INFERRED]
+  apps/api-gateway/src/ratelimit/rateLimitMiddleware.ts → packages/ratelimit/src/express/rateLimitMiddleware.ts
 - `bootstrap()` --calls--> `createConsumer()`  [INFERRED]
   apps/notification-service/src/container/notification.container.ts → packages/kafka/src/client/consumer.ts
-- `liveCheck()` --calls--> `successResponse()`  [INFERRED]
-  apps/user-service/src/controllers/health.controller.ts → packages/http/src/response/apiResponse.ts
-- `readyCheck()` --calls--> `successResponse()`  [INFERRED]
-  apps/user-service/src/controllers/health.controller.ts → packages/http/src/response/apiResponse.ts
-- `getConsumer()` --calls--> `createConsumer()`  [INFERRED]
-  apps/notification-service/src/config/kafka.ts → packages/kafka/src/client/consumer.ts
 - `liveCheck()` --calls--> `successResponse()`  [INFERRED]
   apps/notification-service/src/health/health.controller.ts → packages/http/src/response/apiResponse.ts
 
@@ -134,23 +140,23 @@
 - 3-file cycle: `apps/user-service/src/generated/prisma/commonInputTypes.ts -> apps/user-service/src/generated/prisma/internal/prismaNamespace.ts -> apps/user-service/src/generated/prisma/models.ts -> apps/user-service/src/generated/prisma/commonInputTypes.ts`
 - 3-file cycle: `apps/user-service/src/generated/prisma/internal/prismaNamespace.ts -> apps/user-service/src/generated/prisma/models.ts -> apps/user-service/src/generated/prisma/models/User.ts -> apps/user-service/src/generated/prisma/internal/prismaNamespace.ts`
 
-## Communities (96 total, 13 thin omitted)
+## Communities (106 total, 19 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.02
 Nodes (98): Args, At, AtLeast, AtLoose, AtStrict, BatchPayload, Boolean, BooleanFieldRefInput (+90 more)
 
 ### Community 1 - "Community 1"
-Cohesion: 0.12
-Nodes (7): globalForPrisma, AuthMapper, UserMapper, PrismaClient, User, AuthRepository, UserResponseDto
+Cohesion: 0.14
+Nodes (6): globalForPrisma, UserMapper, PrismaClient, User, AuthRepository, UserResponseDto
 
 ### Community 2 - "Community 2"
 Cohesion: 0.03
 Nodes (57): AggregateUser, BoolFieldUpdateOperationsInput, DateTimeFieldUpdateOperationsInput, GetUserAggregateType, GetUserGroupByPayload, Prisma__UserClient, StringFieldUpdateOperationsInput, UserAggregateArgs (+49 more)
 
 ### Community 3 - "Community 3"
-Cohesion: 0.39
-Nodes (3): ERROR_CODES, ErrorCode, ERROR_MESSAGES
+Cohesion: 0.05
+Nodes (42): dependencies, cookie-parser, cors, dotenv, express, helmet, http-proxy-middleware, ioredis (+34 more)
 
 ### Community 4 - "Community 4"
 Cohesion: 0.06
@@ -176,13 +182,9 @@ Nodes (36): 1. send-otp (no auth required), 1s; with a token bucket, they get ca
 Cohesion: 0.05
 Nodes (36): compilerOptions, declaration, declarationMap, exactOptionalPropertyTypes, isolatedModules, jsx, module, moduleDetection (+28 more)
 
-### Community 10 - "Community 10"
-Cohesion: 0.13
-Nodes (11): router, AuthController, liveCheck(), readyCheck(), liveCheck(), readyCheck(), HealthChecks, HealthService (+3 more)
-
 ### Community 11 - "Community 11"
-Cohesion: 0.09
-Nodes (16): statusCode, StatusCodeKey, StatusCodeValue, getRequestId(), getTraceId(), getRequestContext(), RequestContext, requestContextStorage (+8 more)
+Cohesion: 0.06
+Nodes (24): liveCheck(), readyCheck(), liveCheck(), readyCheck(), statusCode, StatusCodeKey, StatusCodeValue, getRequestId() (+16 more)
 
 ### Community 12 - "Community 12"
 Cohesion: 0.06
@@ -201,16 +203,16 @@ Cohesion: 0.18
 Nodes (10): CircuitBreaker, CircuitBreakerRegistry, CircuitBreakerState, CircuitBreakerOptions, CircuitOpenError, DEFAULT_OPTIONS, BackoffOptions, withExponentialBackoff() (+2 more)
 
 ### Community 16 - "Community 16"
-Cohesion: 0.05
-Nodes (38): dependencies, cookie-parser, cors, dotenv, express, helmet, http-proxy-middleware, ioredis (+30 more)
+Cohesion: 0.09
+Nodes (25): app, COOKIE_NAMES, gatewayAuthMiddleware(), optionalGatewayAuthMiddleware(), AccessTokenPayload, verifyAccessToken(), ROUTES, Upstream (+17 more)
 
 ### Community 17 - "Community 17"
 Cohesion: 0.08
 Nodes (26): dependencies, @opentelemetry/api, @opentelemetry/auto-instrumentations-node, @opentelemetry/exporter-trace-otlp-http, @opentelemetry/resources, @opentelemetry/sdk-node, @opentelemetry/sdk-trace-base, @opentelemetry/semantic-conventions (+18 more)
 
 ### Community 18 - "Community 18"
-Cohesion: 0.08
-Nodes (20): ModelName, NullTypes, QueryMode, SortOrder, TransactionIsolationLevel, UserScalarFieldEnum, User, BoolFilter (+12 more)
+Cohesion: 0.14
+Nodes (13): BoolFilter, BoolWithAggregatesFilter, DateTimeFilter, DateTimeWithAggregatesFilter, NestedBoolFilter, NestedBoolWithAggregatesFilter, NestedDateTimeFilter, NestedDateTimeWithAggregatesFilter (+5 more)
 
 ### Community 19 - "Community 19"
 Cohesion: 0.10
@@ -341,8 +343,8 @@ Cohesion: 0.40
 Nodes (3): REDACT_PATHS, __dirname, logger
 
 ### Community 53 - "Community 53"
-Cohesion: 0.40
-Nodes (3): resolveOtlpTracesUrl(), startTelemetry(), TelemetryOptions
+Cohesion: 0.10
+Nodes (24): shutdown(), startServer(), startServer(), ApiError, createErrorResponse(), ErrorInput, ERROR_CODES, ErrorCode (+16 more)
 
 ### Community 54 - "Community 54"
 Cohesion: 0.33
@@ -385,84 +387,88 @@ Cohesion: 0.67
 Nodes (3): 1. Responsibilities & non-responsibilities, Does NOT own, Owns
 
 ### Community 79 - "Community 79"
-Cohesion: 0.21
-Nodes (7): LoginRequestDto, LoginSchema, VerifyOtpRequestSchema, RegisterRequestDto, RegisterSchema, authControllerPromise, router
+Cohesion: 0.08
+Nodes (25): compilerOptions, declaration, declarationMap, exactOptionalPropertyTypes, isolatedModules, jsx, module, moduleDetection (+17 more)
 
 ### Community 80 - "Community 80"
 Cohesion: 0.12
 Nodes (17): dependencies, devDependencies, @repo/typescript-config, @types/node, vitest, exports, import, main (+9 more)
 
 ### Community 81 - "Community 81"
-Cohesion: 0.25
-Nodes (3): AuthResponseDto, VerifyOtpRequestDto, AuthService
+Cohesion: 0.14
+Nodes (9): router, LoginRequestDto, LoginSchema, VerifyOtpRequestSchema, RegisterSchema, authControllerPromise, router, authControllerPromise (+1 more)
 
 ### Community 82 - "Community 82"
-Cohesion: 0.23
-Nodes (6): AUTH_DURATIONS, REDIS_KEYS, AccessTokenPayload, RefreshTokenPayload, RegistrationSessionData, generateOtp()
+Cohesion: 0.13
+Nodes (15): dependencies, devDependencies, @repo/typescript-config, @types/node, exports, import, main, name (+7 more)
 
 ### Community 83 - "Community 83"
 Cohesion: 0.17
 Nodes (6): build(), getAuthController(), OtpEventPublisher, SCHEMA_VERSION, SCHEMA_VERSION, UserLoggedInEventPublisher
 
 ### Community 84 - "Community 84"
-Cohesion: 0.16
-Nodes (18): startServer(), ApiError, createErrorResponse(), ErrorInput, ERROR_CODES, ErrorCode, ErrorContract, ERROR_MESSAGES (+10 more)
+Cohesion: 0.47
+Nodes (3): ERROR_CODES, ErrorCode, ERROR_MESSAGES
 
 ### Community 85 - "Community 85"
+Cohesion: 0.14
+Nodes (8): RegisterRequestDto, AUTH_DURATIONS, REDIS_KEYS, AccessTokenPayload, RefreshTokenPayload, OtpService, RegistrationSessionData, generateOtp()
+
+### Community 86 - "Community 86"
+Cohesion: 0.18
+Nodes (7): ModelName, NullTypes, QueryMode, SortOrder, TransactionIsolationLevel, UserScalarFieldEnum, User
+
+### Community 87 - "Community 87"
+Cohesion: 0.20
+Nodes (4): AuthResponseDto, VerifyOtpRequestDto, AuthMapper, AuthService
+
+### Community 88 - "Community 88"
 Cohesion: 0.36
 Nodes (4): LoggerLike, AllowAllServiceIdentityVerifier, ServiceIdentityResult, ServiceIdentityVerifier
 
-### Community 86 - "Community 86"
-Cohesion: 0.29
-Nodes (4): app, router, authControllerPromise, router
-
-### Community 87 - "Community 87"
-Cohesion: 0.29
-Nodes (6): compilerOptions, composite, outDir, rootDir, extends, include
-
-### Community 88 - "Community 88"
-Cohesion: 0.08
-Nodes (25): compilerOptions, declaration, declarationMap, exactOptionalPropertyTypes, isolatedModules, jsx, module, moduleDetection (+17 more)
-
-### Community 89 - "Community 89"
-Cohesion: 0.13
-Nodes (15): dependencies, devDependencies, @repo/typescript-config, @types/node, exports, import, main, name (+7 more)
-
 ### Community 90 - "Community 90"
-Cohesion: 0.23
-Nodes (6): COOKIE_MAX_AGE, COOKIE_NAMES, DURATION_TO_MS, AccessTokenPayload, AuthUser, getDeviceFingerprint()
-
-### Community 91 - "Community 91"
-Cohesion: 0.54
-Nodes (4): COOKIE_NAMES, gatewayAuthMiddleware(), AccessTokenPayload, verifyAccessToken()
-
-### Community 92 - "Community 92"
 Cohesion: 0.25
 Nodes (7): compilerOptions, composite, outDir, rootDir, types, extends, include
 
-### Community 94 - "Community 94"
+### Community 91 - "Community 91"
+Cohesion: 0.23
+Nodes (6): COOKIE_MAX_AGE, COOKIE_NAMES, DURATION_TO_MS, AccessTokenPayload, AuthUser, getDeviceFingerprint()
+
+### Community 93 - "Community 93"
+Cohesion: 0.29
+Nodes (6): compilerOptions, composite, outDir, rootDir, extends, include
+
+### Community 97 - "Community 97"
+Cohesion: 0.47
+Nodes (4): HealthChecks, HealthService, probeRedis(), probeKafka()
+
+### Community 101 - "Community 101"
+Cohesion: 0.50
+Nodes (3): HealthChecks, HealthService, probeRedis()
+
+### Community 103 - "Community 103"
 Cohesion: 0.67
 Nodes (3): AuthUser, getHeaderString(), readUserFromHeaders()
 
 ## Knowledge Gaps
-- **842 isolated node(s):** `name`, `version`, `private`, `type`, `dev` (+837 more)
+- **859 isolated node(s):** `name`, `version`, `private`, `type`, `dev` (+854 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **13 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **19 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `successResponse()` connect `Community 10` to `Community 11`?**
-  _High betweenness centrality (0.025) - this node is a cross-community bridge._
-- **Why does `AuthController` connect `Community 10` to `Community 90`?**
-  _High betweenness centrality (0.022) - this node is a cross-community bridge._
-- **Why does `AuthResponseDto` connect `Community 81` to `Community 1`, `Community 82`?**
-  _High betweenness centrality (0.014) - this node is a cross-community bridge._
+- **Why does `AuthController` connect `Community 11` to `Community 91`?**
+  _High betweenness centrality (0.017) - this node is a cross-community bridge._
 - **What connects `name`, `version`, `private` to the rest of the system?**
-  _842 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _859 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.020202020202020204 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
-  _Cohesion score 0.11956521739130435 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.14210526315789473 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
   _Cohesion score 0.034482758620689655 - nodes in this community are weakly interconnected._
+- **Should `Community 3` be split into smaller, more focused modules?**
+  _Cohesion score 0.046511627906976744 - nodes in this community are weakly interconnected._
+- **Should `Community 4` be split into smaller, more focused modules?**
+  _Cohesion score 0.06342494714587738 - nodes in this community are weakly interconnected._
