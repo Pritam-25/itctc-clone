@@ -9795,14 +9795,894 @@
       "norm_label": "withexponentialbackoff()"
     },
     {
+      "label": "plan.md",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "plan",
+      "community": 77,
+      "norm_label": "plan.md"
+    },
+    {
+      "label": "API Gateway + Traefik + Distributed Tracing \u2014 Implementation Plan",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "plan_api_gateway_traefik_distributed_tracing_implementation_plan",
+      "community": 84,
+      "norm_label": "api gateway + traefik + distributed tracing \u2014 implementation plan"
+    },
+    {
+      "label": "Context",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "plan_context",
+      "community": 84,
+      "norm_label": "context"
+    },
+    {
+      "label": "Architecture at a glance",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L53",
+      "_origin": "ast",
+      "id": "plan_architecture_at_a_glance",
+      "community": 84,
+      "norm_label": "architecture at a glance"
+    },
+    {
+      "label": "Phase 0 \u2014 New shared packages",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L87",
+      "_origin": "ast",
+      "id": "plan_phase_0_new_shared_packages",
+      "community": 83,
+      "norm_label": "phase 0 \u2014 new shared packages"
+    },
+    {
+      "label": "0a. `@irctc/telemetry`",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L91",
+      "_origin": "ast",
+      "id": "plan_0a_irctc_telemetry",
+      "community": 83,
+      "norm_label": "0a. `@irctc/telemetry`"
+    },
+    {
+      "label": "0b. `@irctc/resilience` \u2014 custom circuit breaker (V1, hand-rolled)",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L102",
+      "_origin": "ast",
+      "id": "plan_0b_irctc_resilience_custom_circuit_breaker_v1_hand_rolled",
+      "community": 83,
+      "norm_label": "0b. `@irctc/resilience` \u2014 custom circuit breaker (v1, hand-rolled)"
+    },
+    {
+      "label": "0c. `@irctc/ratelimit` \u2014 token bucket over Redis (Lua-atomic)",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L153",
+      "_origin": "ast",
+      "id": "plan_0c_irctc_ratelimit_token_bucket_over_redis_lua_atomic",
+      "community": 83,
+      "norm_label": "0c. `@irctc/ratelimit` \u2014 token bucket over redis (lua-atomic)"
+    },
+    {
+      "label": "0d. `@irctc/idempotency` \u2014 three-phase Redis pattern",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L174",
+      "_origin": "ast",
+      "id": "plan_0d_irctc_idempotency_three_phase_redis_pattern",
+      "community": 83,
+      "norm_label": "0d. `@irctc/idempotency` \u2014 three-phase redis pattern"
+    },
+    {
+      "label": "0e. `@irctc/service-identity` \u2014 V1 placeholder, V2 mTLS",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L188",
+      "_origin": "ast",
+      "id": "plan_0e_irctc_service_identity_v1_placeholder_v2_mtls",
+      "community": 83,
+      "norm_label": "0e. `@irctc/service-identity` \u2014 v1 placeholder, v2 mtls"
+    },
+    {
+      "label": "0f. Reuse note for all five packages",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L201",
+      "_origin": "ast",
+      "id": "plan_0f_reuse_note_for_all_five_packages",
+      "community": 83,
+      "norm_label": "0f. reuse note for all five packages"
+    },
+    {
+      "label": "Phase 1 \u2014 Auth lives in the gateway only",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L208",
+      "_origin": "ast",
+      "id": "plan_phase_1_auth_lives_in_the_gateway_only",
+      "community": 88,
+      "norm_label": "phase 1 \u2014 auth lives in the gateway only"
+    },
+    {
+      "label": "What moves where",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L212",
+      "_origin": "ast",
+      "id": "plan_what_moves_where",
+      "community": 88,
+      "norm_label": "what moves where"
+    },
+    {
+      "label": "Why a tiny package, not a per-service copy, not the full middleware",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L227",
+      "_origin": "ast",
+      "id": "plan_why_a_tiny_package_not_a_per_service_copy_not_the_full_middleware",
+      "community": 88,
+      "norm_label": "why a tiny package, not a per-service copy, not the full middleware"
+    },
+    {
+      "label": "New files",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L233",
+      "_origin": "ast",
+      "id": "plan_new_files",
+      "community": 88,
+      "norm_label": "new files"
+    },
+    {
+      "label": "Files to edit",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L243",
+      "_origin": "ast",
+      "id": "plan_files_to_edit",
+      "community": 88,
+      "norm_label": "files to edit"
+    },
+    {
+      "label": "Verification",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L249",
+      "_origin": "ast",
+      "id": "plan_verification",
+      "community": 88,
+      "norm_label": "verification"
+    },
+    {
+      "label": "Phase 2 \u2014 `apps/api-gateway` service",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L257",
+      "_origin": "ast",
+      "id": "plan_phase_2_apps_api_gateway_service",
+      "community": 84,
+      "norm_label": "phase 2 \u2014 `apps/api-gateway` service"
+    },
+    {
+      "label": "`apps/api-gateway/package.json`",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L261",
+      "_origin": "ast",
+      "id": "plan_apps_api_gateway_package_json",
+      "community": 84,
+      "norm_label": "`apps/api-gateway/package.json`"
+    },
+    {
+      "label": "`apps/api-gateway/tsconfig.json`",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L304",
+      "_origin": "ast",
+      "id": "plan_apps_api_gateway_tsconfig_json",
+      "community": 84,
+      "norm_label": "`apps/api-gateway/tsconfig.json`"
+    },
+    {
+      "label": "File tree",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L308",
+      "_origin": "ast",
+      "id": "plan_file_tree",
+      "community": 84,
+      "norm_label": "file tree"
+    },
+    {
+      "label": "build",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L660",
+      "_origin": "ast",
+      "id": "plan_build",
+      "community": 77,
+      "norm_label": "build"
+    },
+    {
+      "label": "runtime",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L669",
+      "_origin": "ast",
+      "id": "plan_runtime",
+      "community": 77,
+      "norm_label": "runtime"
+    },
+    {
+      "label": "\u2026 notification-service and booking-service mirror the above",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L780",
+      "_origin": "ast",
+      "id": "plan_notification_service_and_booking_service_mirror_the_above",
+      "community": 77,
+      "norm_label": "... notification-service and booking-service mirror the above"
+    },
+    {
+      "label": "1. send-otp (no auth required)",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L825",
+      "_origin": "ast",
+      "id": "plan_1_send_otp_no_auth_required",
+      "community": 77,
+      "norm_label": "1. send-otp (no auth required)"
+    },
+    {
+      "label": "2. verify-otp (sets auth_token cookie)",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L830",
+      "_origin": "ast",
+      "id": "plan_2_verify_otp_sets_auth_token_cookie",
+      "community": 77,
+      "norm_label": "2. verify-otp (sets auth_token cookie)"
+    },
+    {
+      "label": "3. /auth/sessions (auth required; gateway must inject X-User-Id)",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L835",
+      "_origin": "ast",
+      "id": "plan_3_auth_sessions_auth_required_gateway_must_inject_x_user_id",
+      "community": 77,
+      "norm_label": "3. /auth/sessions (auth required; gateway must inject x-user-id)"
+    },
+    {
+      "label": "Expect 200; logs show X-User-Id matches the cookie's sub claim",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L837",
+      "_origin": "ast",
+      "id": "plan_expect_200_logs_show_x_user_id_matches_the_cookie_s_sub_claim",
+      "community": 77,
+      "norm_label": "expect 200; logs show x-user-id matches the cookie's sub claim"
+    },
+    {
+      "label": "4. Try to forge X-User-Id from outside the gateway",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L843",
+      "_origin": "ast",
+      "id": "plan_4_try_to_forge_x_user_id_from_outside_the_gateway",
+      "community": 77,
+      "norm_label": "4. try to forge x-user-id from outside the gateway"
+    },
+    {
+      "label": "Expect 401 \u2014 no auth cookie",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L846",
+      "_origin": "ast",
+      "id": "plan_expect_401_no_auth_cookie",
+      "community": 77,
+      "norm_label": "expect 401 \u2014 no auth cookie"
+    },
+    {
+      "label": "5. Direct host-side access must be refused",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L850",
+      "_origin": "ast",
+      "id": "plan_5_direct_host_side_access_must_be_refused",
+      "community": 77,
+      "norm_label": "5. direct host-side access must be refused"
+    },
+    {
+      "label": "Expect: connection refused (port 4001 not published on host)",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L852",
+      "_origin": "ast",
+      "id": "plan_expect_connection_refused_port_4001_not_published_on_host",
+      "community": 77,
+      "norm_label": "expect: connection refused (port 4001 not published on host)"
+    },
+    {
+      "label": "6. Exceed the auth-bucket capacity; expect 429",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L858",
+      "_origin": "ast",
+      "id": "plan_6_exceed_the_auth_bucket_capacity_expect_429",
+      "community": 77,
+      "norm_label": "6. exceed the auth-bucket capacity; expect 429"
+    },
+    {
+      "label": "The auth preset is capacity=10, refill=10/60s. The first 10 requests",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L859",
+      "_origin": "ast",
+      "id": "plan_the_auth_preset_is_capacity_10_refill_10_60s_the_first_10_requests",
+      "community": 77,
+      "norm_label": "the auth preset is capacity=10, refill=10/60s. the first 10 requests"
+    },
+    {
+      "label": "pass; further requests fail until tokens refill.",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L860",
+      "_origin": "ast",
+      "id": "plan_pass_further_requests_fail_until_tokens_refill",
+      "community": 77,
+      "norm_label": "pass; further requests fail until tokens refill."
+    },
+    {
+      "label": "Expect: 10x 200/4xx, 2x 429 with Retry-After header",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L865",
+      "_origin": "ast",
+      "id": "plan_expect_10x_200_4xx_2x_429_with_retry_after_header",
+      "community": 77,
+      "norm_label": "expect: 10x 200/4xx, 2x 429 with retry-after header"
+    },
+    {
+      "label": "7. Token-bucket boundary check (regression for the fixed-window bug)",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L869",
+      "_origin": "ast",
+      "id": "plan_7_token_bucket_boundary_check_regression_for_the_fixed_window_bug",
+      "community": 77,
+      "norm_label": "7. token-bucket boundary check (regression for the fixed-window bug)"
+    },
+    {
+      "label": "Send a burst of 8 requests at second 59 of one minute and 8 more",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L870",
+      "_origin": "ast",
+      "id": "plan_send_a_burst_of_8_requests_at_second_59_of_one_minute_and_8_more",
+      "community": 77,
+      "norm_label": "send a burst of 8 requests at second 59 of one minute and 8 more"
+    },
+    {
+      "label": "at second 0 of the next. With a fixed window, the user gets 16 in",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L871",
+      "_origin": "ast",
+      "id": "plan_at_second_0_of_the_next_with_a_fixed_window_the_user_gets_16_in",
+      "community": 77,
+      "norm_label": "at second 0 of the next. with a fixed window, the user gets 16 in"
+    },
+    {
+      "label": "1s; with a token bucket, they get capacity (10) + refill (a few",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L872",
+      "_origin": "ast",
+      "id": "plan_1s_with_a_token_bucket_they_get_capacity_10_refill_a_few",
+      "community": 77,
+      "norm_label": "1s; with a token bucket, they get capacity (10) + refill (a few"
+    },
+    {
+      "label": "tokens) across the boundary \u2014 not a doubling.",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L873",
+      "_origin": "ast",
+      "id": "plan_tokens_across_the_boundary_not_a_doubling",
+      "community": 77,
+      "norm_label": "tokens) across the boundary \u2014 not a doubling."
+    },
+    {
+      "label": "Manual check: 'docker exec irctc-redis redis-cli KEYS \"rl:*\"' shows",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L874",
+      "_origin": "ast",
+      "id": "plan_manual_check_docker_exec_irctc_redis_redis_cli_keys_rl_shows",
+      "community": 77,
+      "norm_label": "manual check: 'docker exec irctc-redis redis-cli keys \"rl:*\"' shows"
+    },
+    {
+      "label": "the bucket state, and the gateway access log shows 429s within the",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L875",
+      "_origin": "ast",
+      "id": "plan_the_bucket_state_and_the_gateway_access_log_shows_429s_within_the",
+      "community": 77,
+      "norm_label": "the bucket state, and the gateway access log shows 429s within the"
+    },
+    {
+      "label": "single second, not across it.",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L876",
+      "_origin": "ast",
+      "id": "plan_single_second_not_across_it",
+      "community": 77,
+      "norm_label": "single second, not across it."
+    },
+    {
+      "label": "8. Trip the user-service breaker.",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L882",
+      "_origin": "ast",
+      "id": "plan_8_trip_the_user_service_breaker",
+      "community": 77,
+      "norm_label": "8. trip the user-service breaker."
+    },
+    {
+      "label": "Stop the user-service container: 'docker compose stop user-service'.",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L883",
+      "_origin": "ast",
+      "id": "plan_stop_the_user_service_container_docker_compose_stop_user_service",
+      "community": 77,
+      "norm_label": "stop the user-service container: 'docker compose stop user-service'."
+    },
+    {
+      "label": "Send 6+ requests through the gateway in quick succession:",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L884",
+      "_origin": "ast",
+      "id": "plan_send_6_requests_through_the_gateway_in_quick_succession",
+      "community": 77,
+      "norm_label": "send 6+ requests through the gateway in quick succession:"
+    },
+    {
+      "label": "Expect: first ~5 requests are 502/504 (or whatever the timeout yields),",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L888",
+      "_origin": "ast",
+      "id": "plan_expect_first_5_requests_are_502_504_or_whatever_the_timeout_yields",
+      "community": 77,
+      "norm_label": "expect: first ~5 requests are 502/504 (or whatever the timeout yields),"
+    },
+    {
+      "label": "remaining requests are 503 with the body { code: \"CIRCUIT_OPEN\", ... } \u2014",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L889",
+      "_origin": "ast",
+      "id": "plan_remaining_requests_are_503_with_the_body_code_circuit_open",
+      "community": 77,
+      "norm_label": "remaining requests are 503 with the body { code: \"circuit_open\", ... } \u2014"
+    },
+    {
+      "label": "i.e. the breaker tripped and is now failing fast, no 5s waits.",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L890",
+      "_origin": "ast",
+      "id": "plan_i_e_the_breaker_tripped_and_is_now_failing_fast_no_5s_waits",
+      "community": 77,
+      "norm_label": "i.e. the breaker tripped and is now failing fast, no 5s waits."
+    },
+    {
+      "label": "Check the gateway access log: each line includes circuitState:",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L891",
+      "_origin": "ast",
+      "id": "plan_check_the_gateway_access_log_each_line_includes_circuitstate",
+      "community": 77,
+      "norm_label": "check the gateway access log: each line includes circuitstate:"
+    },
+    {
+      "label": "CLOSED on the early calls, OPEN on the later ones.",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L892",
+      "_origin": "ast",
+      "id": "plan_closed_on_the_early_calls_open_on_the_later_ones",
+      "community": 77,
+      "norm_label": "closed on the early calls, open on the later ones."
+    },
+    {
+      "label": "9. Recovery: 'docker compose start user-service', wait ~30s, retry:",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L896",
+      "_origin": "ast",
+      "id": "plan_9_recovery_docker_compose_start_user_service_wait_30s_retry",
+      "community": 77,
+      "norm_label": "9. recovery: 'docker compose start user-service', wait ~30s, retry:"
+    },
+    {
+      "label": "Expect: 503 once more (recoveryTimeoutMs=30_000), then HALF_OPEN allows",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L898",
+      "_origin": "ast",
+      "id": "plan_expect_503_once_more_recoverytimeoutms_30_000_then_half_open_allows",
+      "community": 77,
+      "norm_label": "expect: 503 once more (recoverytimeoutms=30_000), then half_open allows"
+    },
+    {
+      "label": "a probe, success \u2192 CLOSED, subsequent requests return 2xx.",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L899",
+      "_origin": "ast",
+      "id": "plan_a_probe_success_closed_subsequent_requests_return_2xx",
+      "community": 77,
+      "norm_label": "a probe, success \u2192 closed, subsequent requests return 2xx."
+    },
+    {
+      "label": "Check user-service logs: traceId must be aaaaaaaa\u2026",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L910",
+      "_origin": "ast",
+      "id": "plan_check_user_service_logs_traceid_must_be_aaaaaaaa",
+      "community": 77,
+      "norm_label": "check user-service logs: traceid must be aaaaaaaa..."
+    },
+    {
+      "label": "(if Kafka step happens later, notification-service logs share the same traceId)",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L911",
+      "_origin": "ast",
+      "id": "plan_if_kafka_step_happens_later_notification_service_logs_share_the_same_traceid",
+      "community": 77,
+      "norm_label": "(if kafka step happens later, notification-service logs share the same traceid)"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 81,
+      "norm_label": "package.json",
+      "id": "resilience_package"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "community": 81,
+      "norm_label": "name",
+      "id": "resilience_package_name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 81,
+      "norm_label": "version",
+      "id": "resilience_package_version"
+    },
+    {
+      "label": "private",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 81,
+      "norm_label": "private",
+      "id": "resilience_package_private"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 81,
+      "norm_label": "type",
+      "id": "resilience_package_type"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 81,
+      "norm_label": "main",
+      "id": "resilience_package_main"
+    },
+    {
+      "label": "types",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 81,
+      "norm_label": "types",
+      "id": "resilience_package_types"
+    },
+    {
+      "label": "exports",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 81,
+      "norm_label": "exports",
+      "id": "resilience_package_exports"
+    },
+    {
+      "label": "import",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L11",
+      "_origin": "ast",
+      "community": 81,
+      "norm_label": "import",
+      "id": "resilience_package_import"
+    },
+    {
+      "label": "./propagation",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L13",
+      "_origin": "ast",
+      "community": 81,
+      "norm_label": "./propagation",
+      "id": "resilience_package_exports_propagation"
+    },
+    {
+      "label": "types",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L14",
+      "_origin": "ast",
+      "community": 81,
+      "norm_label": "types",
+      "id": "resilience_package_propagation_types"
+    },
+    {
+      "label": "import",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L15",
+      "_origin": "ast",
+      "community": 81,
+      "norm_label": "import",
+      "id": "resilience_package_propagation_import"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L18",
+      "_origin": "ast",
+      "community": 81,
+      "norm_label": "scripts",
+      "id": "resilience_package_scripts"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L19",
+      "_origin": "ast",
+      "community": 81,
+      "norm_label": "build",
+      "id": "resilience_package_scripts_build"
+    },
+    {
+      "label": "check-types",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L20",
+      "_origin": "ast",
+      "community": 81,
+      "norm_label": "check-types",
+      "id": "resilience_package_scripts_check_types"
+    },
+    {
+      "label": "lint",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L21",
+      "_origin": "ast",
+      "community": 81,
+      "norm_label": "lint",
+      "id": "resilience_package_scripts_lint"
+    },
+    {
+      "label": "test",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L22",
+      "_origin": "ast",
+      "community": 81,
+      "norm_label": "test",
+      "id": "resilience_package_scripts_test"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L24",
+      "_origin": "ast",
+      "community": 81,
+      "norm_label": "dependencies",
+      "id": "resilience_package_dependencies"
+    },
+    {
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L25",
+      "_origin": "ast",
+      "community": 81,
+      "norm_label": "devdependencies",
+      "id": "resilience_package_devdependencies"
+    },
+    {
+      "label": "@repo/typescript-config",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L26",
+      "_origin": "ast",
+      "community": 81,
+      "norm_label": "@repo/typescript-config",
+      "id": "resilience_package_devdependencies_repo_typescript_config"
+    },
+    {
+      "label": "@types/node",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L27",
+      "_origin": "ast",
+      "community": 81,
+      "norm_label": "@types/node",
+      "id": "resilience_package_devdependencies_types_node"
+    },
+    {
+      "label": "vitest",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L28",
+      "_origin": "ast",
+      "community": 81,
+      "norm_label": "vitest",
+      "id": "resilience_package_devdependencies_vitest"
+    },
+    {
+      "label": "CircuitBreakerState.ts",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreakerState.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 78,
+      "norm_label": "circuitbreakerstate.ts",
+      "id": "circuit_breaker_circuitbreakerstate"
+    },
+    {
+      "label": "CircuitBreakerState",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreakerState.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 78,
+      "norm_label": "circuitbreakerstate",
+      "id": "circuit_breaker_circuitbreakerstate_circuitbreakerstate"
+    },
+    {
+      "label": "CircuitBreaker.test.ts",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/circuit-breaker/__tests/CircuitBreaker.test.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 78,
+      "norm_label": "circuitbreaker.test.ts",
+      "id": "tests_circuitbreaker_test"
+    },
+    {
+      "label": "types.ts",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/circuit-breaker/types.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 78,
+      "norm_label": "types.ts",
+      "id": "circuit_breaker_types"
+    },
+    {
+      "label": "CircuitBreakerOptions",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/circuit-breaker/types.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 78,
+      "norm_label": "circuitbreakeroptions",
+      "id": "circuit_breaker_types_circuitbreakeroptions"
+    },
+    {
+      "label": "DEFAULT_OPTIONS",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/circuit-breaker/types.ts",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 78,
+      "norm_label": "default_options",
+      "id": "circuit_breaker_types_default_options"
+    },
+    {
+      "label": "CircuitOpenError",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/circuit-breaker/types.ts",
+      "source_location": "L16",
+      "_origin": "ast",
+      "community": 78,
+      "norm_label": "circuitopenerror",
+      "id": "circuit_breaker_types_circuitopenerror"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/circuit-breaker/types.ts",
+      "source_location": "L17",
+      "_origin": "ast",
+      "community": 78,
+      "norm_label": ".constructor()",
+      "id": "circuit_breaker_types_circuitopenerror_constructor"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/index.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 78,
+      "norm_label": "index.ts",
+      "id": "src_index"
+    },
+    {
       "label": "withTimeout.ts",
       "file_type": "code",
       "source_file": "packages/resilience/src/timeout/withTimeout.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "timeout_withtimeout",
       "community": 78,
-      "norm_label": "withtimeout.ts"
+      "norm_label": "withtimeout.ts",
+      "id": "timeout_withtimeout"
     },
     {
       "label": "TimeoutError",
@@ -9810,9 +10690,9 @@
       "source_file": "packages/resilience/src/timeout/withTimeout.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "timeout_withtimeout_timeouterror",
       "community": 78,
-      "norm_label": "timeouterror"
+      "norm_label": "timeouterror",
+      "id": "timeout_withtimeout_timeouterror"
     },
     {
       "label": ".constructor()",
@@ -9820,9 +10700,9 @@
       "source_file": "packages/resilience/src/timeout/withTimeout.ts",
       "source_location": "L2",
       "_origin": "ast",
-      "id": "timeout_withtimeout_timeouterror_constructor",
       "community": 78,
-      "norm_label": ".constructor()"
+      "norm_label": ".constructor()",
+      "id": "timeout_withtimeout_timeouterror_constructor"
     },
     {
       "label": "withTimeout()",
@@ -9830,9 +10710,9 @@
       "source_file": "packages/resilience/src/timeout/withTimeout.ts",
       "source_location": "L12",
       "_origin": "ast",
-      "id": "timeout_withtimeout_withtimeout",
       "community": 78,
-      "norm_label": "withtimeout()"
+      "norm_label": "withtimeout()",
+      "id": "timeout_withtimeout_withtimeout"
     },
     {
       "label": "tsconfig.json",
@@ -9840,9 +10720,9 @@
       "source_file": "packages/resilience/tsconfig.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "resilience_tsconfig",
       "community": 85,
-      "norm_label": "tsconfig.json"
+      "norm_label": "tsconfig.json",
+      "id": "resilience_tsconfig"
     },
     {
       "label": "extends",
@@ -9850,9 +10730,9 @@
       "source_file": "packages/resilience/tsconfig.json",
       "source_location": "L2",
       "_origin": "ast",
-      "id": "resilience_tsconfig_extends",
       "community": 85,
-      "norm_label": "extends"
+      "norm_label": "extends",
+      "id": "resilience_tsconfig_extends"
     },
     {
       "label": "compilerOptions",
@@ -9860,9 +10740,9 @@
       "source_file": "packages/resilience/tsconfig.json",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "resilience_tsconfig_compileroptions",
       "community": 85,
-      "norm_label": "compileroptions"
+      "norm_label": "compileroptions",
+      "id": "resilience_tsconfig_compileroptions"
     },
     {
       "label": "rootDir",
@@ -9870,9 +10750,9 @@
       "source_file": "packages/resilience/tsconfig.json",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "resilience_tsconfig_compileroptions_rootdir",
       "community": 85,
-      "norm_label": "rootdir"
+      "norm_label": "rootdir",
+      "id": "resilience_tsconfig_compileroptions_rootdir"
     },
     {
       "label": "outDir",
@@ -9880,9 +10760,9 @@
       "source_file": "packages/resilience/tsconfig.json",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "resilience_tsconfig_compileroptions_outdir",
       "community": 85,
-      "norm_label": "outdir"
+      "norm_label": "outdir",
+      "id": "resilience_tsconfig_compileroptions_outdir"
     },
     {
       "label": "composite",
@@ -9890,9 +10770,9 @@
       "source_file": "packages/resilience/tsconfig.json",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "resilience_tsconfig_compileroptions_composite",
       "community": 85,
-      "norm_label": "composite"
+      "norm_label": "composite",
+      "id": "resilience_tsconfig_compileroptions_composite"
     },
     {
       "label": "include",
@@ -9900,9 +10780,9 @@
       "source_file": "packages/resilience/tsconfig.json",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "resilience_tsconfig_include",
       "community": 85,
-      "norm_label": "include"
+      "norm_label": "include",
+      "id": "resilience_tsconfig_include"
     },
     {
       "label": "package.json",
@@ -10240,9 +11120,9 @@
       "source_file": "packages/telemetry/src/propagation.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_propagation",
       "community": 89,
-      "norm_label": "propagation.ts"
+      "norm_label": "propagation.ts",
+      "id": "src_propagation"
     },
     {
       "label": "KafkaHeaderMap",
@@ -10250,9 +11130,9 @@
       "source_file": "packages/telemetry/src/propagation.ts",
       "source_location": "L22",
       "_origin": "ast",
-      "id": "src_propagation_kafkaheadermap",
       "community": 89,
-      "norm_label": "kafkaheadermap"
+      "norm_label": "kafkaheadermap",
+      "id": "src_propagation_kafkaheadermap"
     },
     {
       "label": "normaliseKafkaHeaders()",
@@ -10260,9 +11140,9 @@
       "source_file": "packages/telemetry/src/propagation.ts",
       "source_location": "L32",
       "_origin": "ast",
-      "id": "src_propagation_normalisekafkaheaders",
       "community": 89,
-      "norm_label": "normalisekafkaheaders()"
+      "norm_label": "normalisekafkaheaders()",
+      "id": "src_propagation_normalisekafkaheaders"
     },
     {
       "label": "extractTraceContextFromKafkaHeaders()",
@@ -10270,9 +11150,9 @@
       "source_file": "packages/telemetry/src/propagation.ts",
       "source_location": "L70",
       "_origin": "ast",
-      "id": "src_propagation_extracttracecontextfromkafkaheaders",
       "community": 89,
-      "norm_label": "extracttracecontextfromkafkaheaders()"
+      "norm_label": "extracttracecontextfromkafkaheaders()",
+      "id": "src_propagation_extracttracecontextfromkafkaheaders"
     },
     {
       "label": "buildConsumerSpanContext()",
@@ -10280,9 +11160,9 @@
       "source_file": "packages/telemetry/src/propagation.ts",
       "source_location": "L88",
       "_origin": "ast",
-      "id": "src_propagation_buildconsumerspancontext",
       "community": 89,
-      "norm_label": "buildconsumerspancontext()"
+      "norm_label": "buildconsumerspancontext()",
+      "id": "src_propagation_buildconsumerspancontext"
     },
     {
       "label": "tsconfig.json",
@@ -20065,167 +20945,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package",
-      "target": "package_devdependencies"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L17",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package",
-      "target": "package_engines"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package",
-      "target": "package_name"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package",
-      "target": "package_packagemanager"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package",
-      "target": "package_private"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package",
-      "target": "package_scripts"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_scripts",
-      "target": "package_scripts_build"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_scripts",
-      "target": "package_scripts_check_types"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_scripts",
-      "target": "package_scripts_dev"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_scripts",
-      "target": "package_scripts_format"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_scripts",
-      "target": "package_scripts_lint"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_prettier"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_turbo"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_typescript"
-    },
-    {
-      "relation": "imports",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L13",
-      "weight": 1.0,
-      "context": "import",
-      "confidence_score": 1.0,
-      "source": "package_devdependencies_turbo",
-      "target": "turbo"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L18",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_engines",
-      "target": "package_engines_node"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "packages/contracts/package.json",
       "source_location": "L17",
       "weight": 1.0,
@@ -26399,31 +27118,11 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "readme_irctc_clone",
-      "target": "claude_health_monitoring"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
       "source_file": "apps/user-service/README.md",
       "source_location": null,
       "weight": 1.0,
       "source": "user_service_readme",
       "target": "claude_health_monitoring"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "readme_irctc_clone",
-      "target": "claude_kafka_architecture"
     },
     {
       "relation": "implements",
@@ -26444,16 +27143,6 @@
       "confidence_score": 1.0,
       "source": "claude_error_handling_flow",
       "target": "claude_error_handling_guidelines"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "readme_irctc_clone",
-      "target": "claude_error_handling_flow"
     },
     {
       "relation": "references",

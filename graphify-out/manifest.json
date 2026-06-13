@@ -10,8 +10,8 @@
     "semantic_hash": ""
   },
   "apps/notification-service/package.json": {
-    "mtime": 1781036308.6941166,
-    "ast_hash": "05c143b8432ff17d3814aa3e15263a4f",
+    "mtime": 1781323046.739334,
+    "ast_hash": "f540156428471b94cb2d87df1270daf9",
     "semantic_hash": ""
   },
   "apps/notification-service/src/api/v1/routes/health.routes.ts": {
@@ -170,8 +170,8 @@
     "semantic_hash": ""
   },
   "apps/user-service/package.json": {
-    "mtime": 1781036308.7334738,
-    "ast_hash": "cb4ea74601c10f12ec7c656be69a2d4a",
+    "mtime": 1781323040.6932003,
+    "ast_hash": "2ddb794e8dd410fdefc787fb38e90cd5",
     "semantic_hash": ""
   },
   "apps/user-service/prisma.config.ts": {
@@ -925,33 +925,113 @@
     "semantic_hash": ""
   },
   "packages/ratelimit/package.json": {
-    "mtime": 1781319707.479444,
-    "ast_hash": "24086c6bc7ba5596de1ca8333c864096",
+    "mtime": 1781322032.8370788,
+    "ast_hash": "4ff1b0b680eb3aeff54008ee3a4c5e87",
     "semantic_hash": ""
   },
   "packages/ratelimit/src/express/rateLimitMiddleware.ts": {
-    "mtime": 1781321004.7431383,
+    "mtime": 1781323256.9937072,
     "ast_hash": "636613a7eea8ce66423ef41bf69d0c3d",
     "semantic_hash": ""
   },
   "packages/ratelimit/src/index.ts": {
-    "mtime": 1781319781.5508108,
+    "mtime": 1781323257.0026236,
     "ast_hash": "c7a7629b2d545fa8f41a513f060c5e62",
     "semantic_hash": ""
   },
   "packages/ratelimit/src/token-bucket/TokenBucketRateLimiter.ts": {
-    "mtime": 1781321038.7164657,
+    "mtime": 1781323257.0262284,
     "ast_hash": "ecbc3a1d53b1158202b4215d07636597",
     "semantic_hash": ""
   },
   "packages/ratelimit/src/types.ts": {
-    "mtime": 1781319715.7128017,
+    "mtime": 1781323257.0367305,
     "ast_hash": "6a3bb23fe74ad1ecbd3360662350b97b",
     "semantic_hash": ""
   },
   "packages/ratelimit/tsconfig.json": {
-    "mtime": 1781319713.6981714,
+    "mtime": 1781322032.8432362,
+    "ast_hash": "1046236c1d80b324a8aabe514eab031b",
+    "semantic_hash": ""
+  },
+  "packages/service-identity/package.json": {
+    "mtime": 1781322741.896211,
+    "ast_hash": "18100f6fc33c5257d67a331d1b7849b8",
+    "semantic_hash": ""
+  },
+  "packages/service-identity/src/AllowAllServiceIdentityVerifier.ts": {
+    "mtime": 1781326020.9618704,
+    "ast_hash": "ca71153f92107b42c916a978afdb39fe",
+    "semantic_hash": ""
+  },
+  "packages/service-identity/src/__tests__/AllowAllServiceIdentityVerifier.test.ts": {
+    "mtime": 1781326025.9588401,
+    "ast_hash": "0dc08215403478794b867512a6ba18f2",
+    "semantic_hash": ""
+  },
+  "packages/service-identity/src/index.ts": {
+    "mtime": 1781322761.9408298,
+    "ast_hash": "4e14f14b18296d961082a32717497ae4",
+    "semantic_hash": ""
+  },
+  "packages/service-identity/src/types.ts": {
+    "mtime": 1781322751.1696637,
+    "ast_hash": "1963bba6d082224d372641963cec165e",
+    "semantic_hash": ""
+  },
+  "packages/service-identity/tsconfig.json": {
+    "mtime": 1781322745.3992362,
     "ast_hash": "b7940048a65480904fd559e12a9d1304",
+    "semantic_hash": ""
+  },
+  "apps/api-gateway/package.json": {
+    "mtime": 1781323157.5751467,
+    "ast_hash": "b5a753611b44ddcea17b5ed017b3de5a",
+    "semantic_hash": ""
+  },
+  "apps/api-gateway/src/auth/__tests__/auth.test.ts": {
+    "mtime": 1781326124.818162,
+    "ast_hash": "5457b8ecd42631c1fe57660d77d9fd80",
+    "semantic_hash": ""
+  },
+  "apps/api-gateway/src/auth/cookieNames.ts": {
+    "mtime": 1781323013.7213814,
+    "ast_hash": "f66ce9f3c20986fbbc3980ed38a251eb",
+    "semantic_hash": ""
+  },
+  "apps/api-gateway/src/auth/gatewayAuthMiddleware.ts": {
+    "mtime": 1781326119.6703918,
+    "ast_hash": "eaa87140b4d096748bc392a5f90668b5",
+    "semantic_hash": ""
+  },
+  "apps/api-gateway/src/auth/jwtVerifier.ts": {
+    "mtime": 1781323254.4224412,
+    "ast_hash": "669702cde84a7fa8c2b0217f94b8e396",
+    "semantic_hash": ""
+  },
+  "apps/api-gateway/src/auth/upstreamHeaders.ts": {
+    "mtime": 1781323034.1594524,
+    "ast_hash": "282a18c895a0fc08714c5d891fa0cf15",
+    "semantic_hash": ""
+  },
+  "apps/api-gateway/tsconfig.json": {
+    "mtime": 1781323006.7421906,
+    "ast_hash": "f0aecad7258e798ec986168387a3dbca",
+    "semantic_hash": ""
+  },
+  "packages/auth-headers/package.json": {
+    "mtime": 1781322988.1548784,
+    "ast_hash": "3c03f2d6c67787c608e6acf2072a3bcf",
+    "semantic_hash": ""
+  },
+  "packages/auth-headers/src/index.ts": {
+    "mtime": 1781323256.5802493,
+    "ast_hash": "d7c996a3572681b46d429ef823f5b11c",
+    "semantic_hash": ""
+  },
+  "packages/auth-headers/tsconfig.json": {
+    "mtime": 1781323487.9332511,
+    "ast_hash": "16d8641d92e966a7d0e924e36e751c5c",
     "semantic_hash": ""
   }
 }

@@ -1,0 +1,36 @@
+{
+  "extends": "@repo/typescript-config/base.json",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "module": "nodenext",
+    "target": "esnext",
+    "types": ["node"],
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "paths": {
+      "@config/*": ["./src/config/*"],
+      "@config": ["./src/config/index.js"],
+      "@middleware/*": ["./src/middleware/*"],
+      "@middleware": ["./src/middleware/index.js"],
+      "@routes/*": ["./src/routes/*"],
+      "@routes": ["./src/routes/index.js"]
+    },
+    "strict": true,
+    "jsx": "react-jsx",
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "test"
+  ]
+}
