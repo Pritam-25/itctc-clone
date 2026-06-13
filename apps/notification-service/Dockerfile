@@ -28,4 +28,4 @@ COPY --from=build /repo/apps/notification-service/package.json ./apps/notificati
 WORKDIR /repo/apps/notification-service
 EXPOSE 4002
 USER node
-CMD ["node", "dist/server.js"]
+CMD ["node", "--import", "@irctc/telemetry/instrumentation", "dist/server.js"]

@@ -99,32 +99,36 @@ services:
   #   networks:
   #     - irctc-network
 
-  # tempo:
-  #   image: grafana/tempo:latest
-  #   container_name: irctc-tempo
-  #   restart: always
-  #   ports:
-  #     - "4317:4317" # OTLP gRPC
-  #     - "4318:4318" # OTLP HTTP
-  #     - "3200:3200"
-  #   command: ["-config.file=/etc/tempo.yaml"]
-  #   networks:
-  #     - irctc-network
+  tempo:
+    image: grafana/tempo:latest
+    container_name: irctc-tempo
+    restart: always
+    ports:
+      - "4317:4317"   # OTLP gRPC
+      - "4318:4318"   # OTLP HTTP
+      - "3200:3200"   # Tempo query API
+    volumes:
+      - ./infra/tempo/tempo.yml:/etc/tempo.yaml:ro
+      - tempo_data:/var/tempo
+    command: ["-config.file=/etc/tempo.yaml"]
+    networks:
+      - irctc-network
 
-
-  # grafana:
-  #   image: grafana/grafana:latest
-  #   container_name: irctc-grafana
-  #   restart: always
-  #   depends_on:
-  #     - loki
-  #     - tempo
-  #   ports:
-  #     - "3000:3000"
-  #   environment:
-  #     - GF_SECURITY_ADMIN_PASSWORD=admin
-  #   networks:
-  #     - irctc-network
+  grafana:
+    image: grafana/grafana:latest
+    container_name: irctc-grafana
+    restart: always
+    depends_on:
+      - tempo
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - ./infra/grafana/provisioning:/etc/grafana/provisioning:ro
+      - grafana_data:/var/lib/grafana
+    networks:
+      - irctc-network
 
   # --- Management Tools ---
 
@@ -209,15 +213,17 @@ services:
     ports:
       - "80:80"
       - "443:443"
-      - "8082:8080"
+      - "8082:8080"   # Traefik dashboard
+      - "8899:8899"   # Prometheus metrics
     volumes:
-      - //var/run/docker.sock:/var/run/docker.sock:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
       - ./infra/traefik/traefik.yml:/etc/traefik/traefik.yml:ro
       - ./infra/traefik/dynamic:/etc/traefik/dynamic:ro
     networks:
       - irctc-network
     depends_on:
       - api-gateway
+      - tempo
 
   api-gateway:
     build:
@@ -261,7 +267,7 @@ services:
       dockerfile: apps/user-service/Dockerfile
     container_name: irctc-user-service
     restart: always
-    command: sh -c "npx prisma migrate deploy && node dist/server.js"
+    command: sh -c "npx prisma migrate deploy && node --import @irctc/telemetry/instrumentation dist/server.js"
     environment:
       PORT: 4001
       DATABASE_URL: postgresql://admin:password@irctc-postgres:5432/irctc_db
@@ -316,3 +322,5 @@ volumes:
   postgres_data:
   redis_data:
   kafka_data:
+  tempo_data:
+  grafana_data:

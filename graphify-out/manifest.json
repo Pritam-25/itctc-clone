@@ -10,8 +10,8 @@
     "semantic_hash": ""
   },
   "apps/notification-service/package.json": {
-    "mtime": 1781341111.0282807,
-    "ast_hash": "51606f4833a864c74c623396c496910c",
+    "mtime": 1781363996.6765118,
+    "ast_hash": "982801894dd8ff32cdf110f2074995db",
     "semantic_hash": ""
   },
   "apps/notification-service/src/api/v1/routes/health.routes.ts": {
@@ -140,8 +140,8 @@
     "semantic_hash": "7f8bb815da80ea25e97206701f4c6dce"
   },
   "apps/notification-service/src/server.ts": {
-    "mtime": 1781341111.1041918,
-    "ast_hash": "b110cb70756a285d5221d455ccc0bd58",
+    "mtime": 1781371243.8285308,
+    "ast_hash": "e6d48bdd02e5f0dcb552b55c9d3402df",
     "semantic_hash": ""
   },
   "apps/notification-service/src/services/index.ts": {
@@ -170,8 +170,8 @@
     "semantic_hash": ""
   },
   "apps/user-service/package.json": {
-    "mtime": 1781341111.1310985,
-    "ast_hash": "37a5ebbbfa3c491fe69719982df4e8aa",
+    "mtime": 1781363971.453343,
+    "ast_hash": "047e859d3ed69efcc1c86fcef7e7a609",
     "semantic_hash": ""
   },
   "apps/user-service/prisma.config.ts": {
@@ -375,12 +375,12 @@
     "semantic_hash": "cbc13ade3432b3a5e9cfaed2ddf32e4f"
   },
   "apps/user-service/src/server.ts": {
-    "mtime": 1781341111.1911092,
-    "ast_hash": "a939756615f10e24adbf0f6f48e9eeeb",
+    "mtime": 1781371245.1854653,
+    "ast_hash": "ceebe9369065920d7e1e1b9ad44578ff",
     "semantic_hash": ""
   },
   "apps/user-service/src/services/auth.service.ts": {
-    "mtime": 1781177563.9082577,
+    "mtime": 1781369037.9899602,
     "ast_hash": "df60d72afe340f180915f3a0cd13a70e",
     "semantic_hash": ""
   },
@@ -615,8 +615,8 @@
     "semantic_hash": "88e9adc9099cd6bf14098fbbdfffe441"
   },
   "packages/kafka/src/consumer-runner/kafka-consumer-runner.ts": {
-    "mtime": 1781341111.4869125,
-    "ast_hash": "96d96c8f2b691105c0373723f18b8cbc",
+    "mtime": 1781371246.2025907,
+    "ast_hash": "34be85a0c22279e076fd419277434ec4",
     "semantic_hash": ""
   },
   "packages/kafka/src/headers/dlq-reasons.ts": {
@@ -670,9 +670,9 @@
     "semantic_hash": "46d46d67eb36f067a4c50f68b2022c45"
   },
   "packages/logger/src/logger.ts": {
-    "mtime": 1780722808.6131003,
-    "ast_hash": "04b6f5d0c5c5114c14d59cd660a2e297",
-    "semantic_hash": "04b6f5d0c5c5114c14d59cd660a2e297"
+    "mtime": 1781364255.7329206,
+    "ast_hash": "be3dcbed37d766f38a185ffbec10da59",
+    "semantic_hash": ""
   },
   "packages/logger/src/transport.ts": {
     "mtime": 1780851962.3353467,
@@ -715,9 +715,9 @@
     "semantic_hash": "d63e659f70ef9b6c0ed51901d543d76e"
   },
   "packages/middleware/src/requestId.ts": {
-    "mtime": 1780599015.7879846,
-    "ast_hash": "9fb19331040a522e72eaa2085ef9405a",
-    "semantic_hash": "9fb19331040a522e72eaa2085ef9405a"
+    "mtime": 1781364008.5751228,
+    "ast_hash": "437b34d412f1fad961de1170ba855d5c",
+    "semantic_hash": ""
   },
   "packages/middleware/src/requestLogger.ts": {
     "mtime": 1780722953.9344673,
@@ -780,8 +780,8 @@
     "semantic_hash": ""
   },
   "docker-compose.yml": {
-    "mtime": 1781358052.822038,
-    "ast_hash": "be2e6e983d448635bb6a481c2d70d6bb",
+    "mtime": 1781367977.8103366,
+    "ast_hash": "4a405957da7faf26095362f9d1fe0e0a",
     "semantic_hash": ""
   },
   "packages/eslint-config/README.md": {
@@ -845,8 +845,8 @@
     "semantic_hash": ""
   },
   "packages/telemetry/package.json": {
-    "mtime": 1781179652.7384422,
-    "ast_hash": "adfe338f727307a41f0a26719c7c7860",
+    "mtime": 1781363871.1903114,
+    "ast_hash": "66f6598520879808b417264b1cb9c2a3",
     "semantic_hash": ""
   },
   "packages/telemetry/src/index.ts": {
@@ -985,8 +985,8 @@
     "semantic_hash": ""
   },
   "apps/api-gateway/package.json": {
-    "mtime": 1781340102.800314,
-    "ast_hash": "4e5b8ed9838e070be0aae01683f885c0",
+    "mtime": 1781363980.0142732,
+    "ast_hash": "f9709531f9b3387eac71ba705668034f",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/auth/__tests__/auth.test.ts": {
@@ -1080,8 +1080,8 @@
     "semantic_hash": ""
   },
   "apps/api-gateway/src/proxy/createProxy.ts": {
-    "mtime": 1781340703.830263,
-    "ast_hash": "14d4e068948c74ff07e6c29c131b9af5",
+    "mtime": 1781367645.8136964,
+    "ast_hash": "21e24eea06976add460820a76988e45b",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/proxy/proxyHeadersMiddleware.ts": {
@@ -1130,8 +1130,8 @@
     "semantic_hash": ""
   },
   "apps/api-gateway/src/server.ts": {
-    "mtime": 1781341110.9683776,
-    "ast_hash": "d2dc132725265aa4e3c6ed2f9069209f",
+    "mtime": 1781371243.229027,
+    "ast_hash": "0a0928ad4994f6dbf40934e1dd9dfe3f",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/serviceIdentity/verifier.ts": {
@@ -1140,8 +1140,8 @@
     "semantic_hash": ""
   },
   "apps/api-gateway/src/telemetry/traceContextMiddleware.ts": {
-    "mtime": 1781340704.2315276,
-    "ast_hash": "ebbc1b693fb30c95d5732369d238d357",
+    "mtime": 1781364030.2730103,
+    "ast_hash": "70281c001f3178d8191eab95c43bf45b",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/utils/errors/errorCodes.ts": {
@@ -1170,8 +1170,23 @@
     "semantic_hash": ""
   },
   "infra/traefik/traefik.yml": {
-    "mtime": 1781341613.0934708,
-    "ast_hash": "63d74bfae13908d6f112c87c1810b2da",
+    "mtime": 1781365454.245025,
+    "ast_hash": "eaf45ec3071fe1aa555bd10db3ce6a1e",
+    "semantic_hash": ""
+  },
+  "LGTM_stack.md": {
+    "mtime": 1781371245.9116402,
+    "ast_hash": "7b5dae1ef70e955558eea4546303f896",
+    "semantic_hash": ""
+  },
+  "infra/grafana/provisioning/datasources/tempo.yml": {
+    "mtime": 1781364051.6548932,
+    "ast_hash": "3dfe6de868e1e2b5ce15437a99e679ae",
+    "semantic_hash": ""
+  },
+  "infra/tempo/tempo.yml": {
+    "mtime": 1781364041.6764548,
+    "ast_hash": "f3efe71d8663d02737ced099bcc23dbd",
     "semantic_hash": ""
   }
 }

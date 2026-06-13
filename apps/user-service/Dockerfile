@@ -34,4 +34,4 @@ COPY --from=build /repo/apps/user-service/prisma.config.ts ./apps/user-service/p
 WORKDIR /repo/apps/user-service
 EXPOSE 4001
 USER node
-CMD ["node", "dist/server.js"]
+CMD ["node", "--import", "@irctc/telemetry/instrumentation", "dist/server.js"]

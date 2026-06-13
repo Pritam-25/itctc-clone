@@ -35,6 +35,9 @@ export const requestIdMiddleware = (
     (req as any).requestId = requestId;
     (req as any).logger = logger.child({ requestId });
     res.setHeader("X-Request-Id", requestId);
+    // Write back to incoming headers so proxy and other middleware
+    // can read req.headers["x-request-id"] consistently.
+    req.headers["x-request-id"] = requestId;
     next();
   });
 };

@@ -7,7 +7,7 @@ import app from "./app.js";
 import type { Server } from "node:http";
 import { registerErrorMessages } from "@irctc/errors";
 import { ERROR_MESSAGES } from "@utils/errors";
-import { startTelemetry, shutdownTelemetry } from "@irctc/telemetry";
+import { shutdownTelemetry } from "@irctc/telemetry";
 
 const PORT = env.PORT;
 
@@ -86,17 +86,8 @@ const startServer = async () => {
 
   logger.info({ module: "server" }, "All dependencies connected successfully.");
 
-  // Initialize Telemetry SDK
-  const otlpEndpoint =
-    process.env.OTEL_EXPORTER_OTLP_ENDPOINT || "http://localhost:4318";
-  logger.info(
-    { module: "server", endpoint: otlpEndpoint },
-    "Starting OpenTelemetry SDK tracing",
-  );
-  startTelemetry({
-    serviceName: "user-service",
-    otlpEndpoint,
-  });
+  // Telemetry SDK is bootstrapped via --import @irctc/telemetry/instrumentation
+  // before this module loads, ensuring auto-instrumentation patches http/express first.
 
   server = app.listen(PORT, () => {
     logger.info(

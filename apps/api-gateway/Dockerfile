@@ -28,4 +28,4 @@ COPY --from=build /repo/apps/api-gateway/package.json ./apps/api-gateway/package
 WORKDIR /repo/apps/api-gateway
 EXPOSE 4000
 USER node
-CMD ["node", "dist/server.js"]
+CMD ["node", "--import", "@irctc/telemetry/instrumentation", "dist/server.js"]

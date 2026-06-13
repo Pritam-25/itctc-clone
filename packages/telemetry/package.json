@@ -13,6 +13,9 @@
     "./propagation": {
       "types": "./dist/propagation.d.ts",
       "import": "./dist/propagation.js"
+    },
+    "./instrumentation": {
+      "import": "./dist/instrumentation.js"
     }
   },
   "scripts": {

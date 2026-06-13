@@ -1104,20 +1104,10 @@
       "norm_label": "tracecontextmiddleware.ts"
     },
     {
-      "label": "tracer",
-      "file_type": "code",
-      "source_file": "apps/api-gateway/src/telemetry/traceContextMiddleware.ts",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "telemetry_tracecontextmiddleware_tracer",
-      "community": 16,
-      "norm_label": "tracer"
-    },
-    {
       "label": "traceContextMiddleware()",
       "file_type": "code",
       "source_file": "apps/api-gateway/src/telemetry/traceContextMiddleware.ts",
-      "source_location": "L6",
+      "source_location": "L9",
       "_origin": "ast",
       "id": "telemetry_tracecontextmiddleware_tracecontextmiddleware",
       "community": 16,
@@ -1830,7 +1820,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "config_email",
-      "community": 105,
+      "community": 53,
       "norm_label": "email.ts"
     },
     {
@@ -1840,7 +1830,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "config_email_getemailvendor",
-      "community": 105,
+      "community": 53,
       "norm_label": "getemailvendor()"
     },
     {
@@ -1850,7 +1840,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "apps_notification_service_src_config_env_ts_config_env",
-      "community": 105,
+      "community": 53,
       "norm_label": "env.ts"
     },
     {
@@ -1860,7 +1850,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "apps_notification_service_src_config_env_ts_config_env_env",
-      "community": 105,
+      "community": 53,
       "norm_label": "env"
     },
     {
@@ -1870,7 +1860,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "apps_notification_service_src_config_index_ts_config_index",
-      "community": 105,
+      "community": 53,
       "norm_label": "index.ts"
     },
     {
@@ -1880,7 +1870,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "apps_notification_service_src_config_kafka_ts_config_kafka",
-      "community": 109,
+      "community": 53,
       "norm_label": "kafka.ts"
     },
     {
@@ -1890,7 +1880,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "apps_notification_service_src_config_kafka_ts_config_kafka_kafka",
-      "community": 109,
+      "community": 53,
       "norm_label": "kafka"
     },
     {
@@ -1900,7 +1890,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "apps_notification_service_src_config_kafka_ts_config_kafka_getproducer",
-      "community": 109,
+      "community": 53,
       "norm_label": "getproducer()"
     },
     {
@@ -1910,7 +1900,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "apps_notification_service_src_config_kafka_ts_config_kafka_iskafkaproducerready",
-      "community": 109,
+      "community": 53,
       "norm_label": "iskafkaproducerready()"
     },
     {
@@ -1920,7 +1910,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "apps_notification_service_src_config_kafka_ts_config_kafka_disconnectkafka",
-      "community": 109,
+      "community": 53,
       "norm_label": "disconnectkafka()"
     },
     {
@@ -1930,7 +1920,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "apps_notification_service_src_config_kafka_ts_config_kafka_initkafka",
-      "community": 109,
+      "community": 53,
       "norm_label": "initkafka()"
     },
     {
@@ -1940,7 +1930,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "apps_notification_service_src_config_kafka_ts_config_kafka_getconsumer",
-      "community": 106,
+      "community": 53,
       "norm_label": "getconsumer()"
     },
     {
@@ -2240,7 +2230,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "apps_notification_service_src_container_index_ts_container_index",
-      "community": 105,
+      "community": 53,
       "norm_label": "index.ts"
     },
     {
@@ -2250,7 +2240,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "container_notification_container",
-      "community": 105,
+      "community": 53,
       "norm_label": "notification.container.ts"
     },
     {
@@ -2260,7 +2250,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "container_notification_container_bootstrap",
-      "community": 105,
+      "community": 53,
       "norm_label": "bootstrap()"
     },
     {
@@ -2380,7 +2370,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "email_email_provider_sendemailcommand",
-      "community": 107,
+      "community": 4,
       "norm_label": "sendemailcommand"
     },
     {
@@ -2420,7 +2410,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "email_provider_factory_emailvendor",
-      "community": 105,
+      "community": 53,
       "norm_label": "emailvendor"
     },
     {
@@ -2490,7 +2480,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "email_sendgrid_provider_sendgridprovider_send",
-      "community": 107,
+      "community": 4,
       "norm_label": ".send()"
     },
     {
@@ -2620,7 +2610,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "apps_notification_service_src_services_index_ts_services_index",
-      "community": 108,
+      "community": 4,
       "norm_label": "index.ts"
     },
     {
@@ -2630,7 +2620,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "services_otp_notification_service",
-      "community": 108,
+      "community": 4,
       "norm_label": "otp-notification.service.ts"
     },
     {
@@ -2640,7 +2630,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "services_otp_notification_service_otpnotificationservice",
-      "community": 108,
+      "community": 4,
       "norm_label": "otpnotificationservice"
     },
     {
@@ -2650,7 +2640,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "services_otp_notification_service_otpnotificationservice_constructor",
-      "community": 108,
+      "community": 4,
       "norm_label": ".constructor()"
     },
     {
@@ -2660,7 +2650,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "services_otp_notification_service_otpnotificationservice_process",
-      "community": 108,
+      "community": 4,
       "norm_label": ".process()"
     },
     {
@@ -2670,7 +2660,7 @@
       "source_location": "L81",
       "_origin": "ast",
       "id": "services_otp_notification_service_otpnotificationservice_tryvalidate",
-      "community": 108,
+      "community": 4,
       "norm_label": ".tryvalidate()"
     },
     {
@@ -2680,7 +2670,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "services_welcome_notification_service",
-      "community": 108,
+      "community": 4,
       "norm_label": "welcome-notification.service.ts"
     },
     {
@@ -2690,7 +2680,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "services_welcome_notification_service_welcomenotificationservice",
-      "community": 112,
+      "community": 4,
       "norm_label": "welcomenotificationservice"
     },
     {
@@ -2700,7 +2690,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "services_welcome_notification_service_welcomenotificationservice_constructor",
-      "community": 112,
+      "community": 4,
       "norm_label": ".constructor()"
     },
     {
@@ -2710,7 +2700,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "services_welcome_notification_service_welcomenotificationservice_process",
-      "community": 112,
+      "community": 4,
       "norm_label": ".process()"
     },
     {
@@ -2720,7 +2710,7 @@
       "source_location": "L81",
       "_origin": "ast",
       "id": "services_welcome_notification_service_welcomenotificationservice_tryvalidate",
-      "community": 112,
+      "community": 4,
       "norm_label": ".tryvalidate()"
     },
     {
@@ -2730,7 +2720,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "templates_index",
-      "community": 107,
+      "community": 4,
       "norm_label": "index.ts"
     },
     {
@@ -2740,7 +2730,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "templates_otp_email_template",
-      "community": 107,
+      "community": 4,
       "norm_label": "otp-email.template.ts"
     },
     {
@@ -2750,7 +2740,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "templates_otp_email_template_otpemailinput",
-      "community": 107,
+      "community": 4,
       "norm_label": "otpemailinput"
     },
     {
@@ -2760,7 +2750,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "templates_otp_email_template_renderotpemail",
-      "community": 107,
+      "community": 4,
       "norm_label": "renderotpemail()"
     },
     {
@@ -2770,7 +2760,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "templates_welcome_email_template",
-      "community": 107,
+      "community": 4,
       "norm_label": "welcome-email.template.ts"
     },
     {
@@ -2780,7 +2770,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "templates_welcome_email_template_welcomeemailinput",
-      "community": 107,
+      "community": 4,
       "norm_label": "welcomeemailinput"
     },
     {
@@ -2790,7 +2780,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "templates_welcome_email_template_renderwelcomeemail",
-      "community": 107,
+      "community": 4,
       "norm_label": "renderwelcomeemail()"
     },
     {
@@ -3310,7 +3300,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "user_service_package_dependencies_prisma_client",
-      "community": 1,
+      "community": 6,
       "norm_label": "@prisma/client"
     },
     {
@@ -3610,7 +3600,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "apps_user_service_src_api_v1_routes_index_ts_routes_index",
-      "community": 110,
+      "community": 81,
       "norm_label": "index.ts"
     },
     {
@@ -3620,7 +3610,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "apps_user_service_src_api_v1_routes_index_ts_routes_index_router",
-      "community": 110,
+      "community": 81,
       "norm_label": "router"
     },
     {
@@ -3630,7 +3620,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "routes_user_route",
-      "community": 110,
+      "community": 81,
       "norm_label": "user.route.ts"
     },
     {
@@ -3640,7 +3630,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "routes_user_route_router",
-      "community": 110,
+      "community": 81,
       "norm_label": "router"
     },
     {
@@ -3650,7 +3640,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "routes_user_route_authcontrollerpromise",
-      "community": 110,
+      "community": 81,
       "norm_label": "authcontrollerpromise"
     },
     {
@@ -3710,7 +3700,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "apps_user_service_src_config_kafka_ts_config_kafka",
-      "community": 106,
+      "community": 53,
       "norm_label": "kafka.ts"
     },
     {
@@ -3720,7 +3710,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "apps_user_service_src_config_kafka_ts_config_kafka_kafka",
-      "community": 106,
+      "community": 53,
       "norm_label": "kafka"
     },
     {
@@ -3730,7 +3720,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "apps_user_service_src_config_kafka_ts_config_kafka_getproducer",
-      "community": 106,
+      "community": 53,
       "norm_label": "getproducer()"
     },
     {
@@ -3740,7 +3730,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "apps_user_service_src_config_kafka_ts_config_kafka_iskafkaproducerready",
-      "community": 106,
+      "community": 53,
       "norm_label": "iskafkaproducerready()"
     },
     {
@@ -3750,7 +3740,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "apps_user_service_src_config_kafka_ts_config_kafka_disconnectkafka",
-      "community": 106,
+      "community": 53,
       "norm_label": "disconnectkafka()"
     },
     {
@@ -3760,7 +3750,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "apps_user_service_src_config_kafka_ts_config_kafka_initkafka",
-      "community": 106,
+      "community": 53,
       "norm_label": "initkafka()"
     },
     {
@@ -3770,7 +3760,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "apps_user_service_src_config_kafka_ts_config_kafka_getconsumer",
-      "community": 106,
+      "community": 53,
       "norm_label": "getconsumer()"
     },
     {
@@ -4080,7 +4070,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "auth_auth_response_dto",
-      "community": 87,
+      "community": 1,
       "norm_label": "auth-response.dto.ts"
     },
     {
@@ -4090,7 +4080,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "auth_auth_response_dto_authresponsedto",
-      "community": 87,
+      "community": 1,
       "norm_label": "authresponsedto"
     },
     {
@@ -6340,7 +6330,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "middleware_auth_middleware_authuser",
-      "community": 85,
+      "community": 91,
       "norm_label": "authuser"
     },
     {
@@ -6890,7 +6880,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "apps_user_service_src_utils_errors_errorcodes_ts_errors_errorcodes",
-      "community": 111,
+      "community": 85,
       "norm_label": "errorcodes.ts"
     },
     {
@@ -6910,7 +6900,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "errors_errorcodes_errorcode",
-      "community": 111,
+      "community": 85,
       "norm_label": "errorcode"
     },
     {
@@ -6920,7 +6910,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "apps_user_service_src_utils_errors_errormessages_ts_errors_errormessages",
-      "community": 111,
+      "community": 85,
       "norm_label": "errormessages.ts"
     },
     {
@@ -6930,7 +6920,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "apps_user_service_src_utils_errors_errormessages_ts_errors_errormessages_error_messages",
-      "community": 111,
+      "community": 85,
       "norm_label": "error_messages"
     },
     {
@@ -8250,7 +8240,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_apierror",
-      "community": 11,
+      "community": 105,
       "norm_label": "apierror.ts"
     },
     {
@@ -8260,7 +8250,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_apierror_apierror",
-      "community": 11,
+      "community": 105,
       "norm_label": "apierror"
     },
     {
@@ -8270,7 +8260,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "src_apierror_apierror_constructor",
-      "community": 11,
+      "community": 105,
       "norm_label": ".constructor()"
     },
     {
@@ -8280,7 +8270,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_createerrorresponse",
-      "community": 11,
+      "community": 105,
       "norm_label": "createerrorresponse.ts"
     },
     {
@@ -8290,7 +8280,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_createerrorresponse_errorinput",
-      "community": 11,
+      "community": 105,
       "norm_label": "errorinput"
     },
     {
@@ -8300,7 +8290,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_createerrorresponse_createerrorresponse",
-      "community": 11,
+      "community": 105,
       "norm_label": "createerrorresponse()"
     },
     {
@@ -8310,7 +8300,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_errorcodes",
-      "community": 11,
+      "community": 105,
       "norm_label": "errorcodes.ts"
     },
     {
@@ -8320,7 +8310,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_errorcodes_error_codes",
-      "community": 11,
+      "community": 105,
       "norm_label": "error_codes"
     },
     {
@@ -8330,7 +8320,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "src_errorcodes_errorcode",
-      "community": 11,
+      "community": 105,
       "norm_label": "errorcode"
     },
     {
@@ -8340,7 +8330,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_errorcontract",
-      "community": 11,
+      "community": 105,
       "norm_label": "errorcontract.ts"
     },
     {
@@ -8350,7 +8340,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_errorcontract_errorcontract",
-      "community": 11,
+      "community": 105,
       "norm_label": "errorcontract"
     },
     {
@@ -8360,7 +8350,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_errormessages",
-      "community": 11,
+      "community": 105,
       "norm_label": "errormessages.ts"
     },
     {
@@ -8370,7 +8360,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "src_errormessages_error_messages",
-      "community": 11,
+      "community": 105,
       "norm_label": "error_messages"
     },
     {
@@ -8380,7 +8370,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "packages_errors_src_index_ts_src_index",
-      "community": 11,
+      "community": 105,
       "norm_label": "index.ts"
     },
     {
@@ -8390,7 +8380,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_normalizeerror",
-      "community": 11,
+      "community": 105,
       "norm_label": "normalizeerror.ts"
     },
     {
@@ -8400,7 +8390,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_normalizeerror_normalizederror",
-      "community": 11,
+      "community": 105,
       "norm_label": "normalizederror"
     },
     {
@@ -8410,7 +8400,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "src_normalizeerror_error_status_map",
-      "community": 11,
+      "community": 105,
       "norm_label": "error_status_map"
     },
     {
@@ -8420,7 +8410,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "src_normalizeerror_normalizefromcode",
-      "community": 11,
+      "community": 105,
       "norm_label": "normalizefromcode()"
     },
     {
@@ -8430,7 +8420,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "src_normalizeerror_normalizeerror",
-      "community": 11,
+      "community": 105,
       "norm_label": "normalizeerror()"
     },
     {
@@ -8440,7 +8430,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_normalizeprismaerror",
-      "community": 11,
+      "community": 105,
       "norm_label": "normalizeprismaerror.ts"
     },
     {
@@ -8450,7 +8440,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "src_normalizeprismaerror_prismaknownerror",
-      "community": 11,
+      "community": 105,
       "norm_label": "prismaknownerror"
     },
     {
@@ -8460,7 +8450,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_normalizeprismaerror_isprismaknownerror",
-      "community": 11,
+      "community": 105,
       "norm_label": "isprismaknownerror()"
     },
     {
@@ -8470,7 +8460,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_normalizeprismaerror_normalizeprismaerror",
-      "community": 11,
+      "community": 105,
       "norm_label": "normalizeprismaerror()"
     },
     {
@@ -8480,7 +8470,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_registry",
-      "community": 11,
+      "community": 105,
       "norm_label": "registry.ts"
     },
     {
@@ -8490,7 +8480,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_registry_registry",
-      "community": 11,
+      "community": 105,
       "norm_label": "registry"
     },
     {
@@ -8510,7 +8500,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "src_registry_getmessagefromregistry",
-      "community": 11,
+      "community": 105,
       "norm_label": "getmessagefromregistry()"
     },
     {
@@ -9510,7 +9500,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "client_consumer_createconsumer",
-      "community": 106,
+      "community": 53,
       "norm_label": "createconsumer()"
     },
     {
@@ -12084,10 +12074,30 @@
       "norm_label": "import"
     },
     {
-      "label": "scripts",
+      "label": "./instrumentation",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "telemetry_package_exports_instrumentation",
+      "community": 17,
+      "norm_label": "./instrumentation"
+    },
+    {
+      "label": "import",
       "file_type": "code",
       "source_file": "packages/telemetry/package.json",
       "source_location": "L18",
+      "_origin": "ast",
+      "id": "telemetry_package_instrumentation_import",
+      "community": 17,
+      "norm_label": "import"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L21",
       "_origin": "ast",
       "id": "telemetry_package_scripts",
       "community": 17,
@@ -12097,7 +12107,7 @@
       "label": "build",
       "file_type": "code",
       "source_file": "packages/telemetry/package.json",
-      "source_location": "L19",
+      "source_location": "L22",
       "_origin": "ast",
       "id": "telemetry_package_scripts_build",
       "community": 17,
@@ -12107,7 +12117,7 @@
       "label": "check-types",
       "file_type": "code",
       "source_file": "packages/telemetry/package.json",
-      "source_location": "L20",
+      "source_location": "L23",
       "_origin": "ast",
       "id": "telemetry_package_scripts_check_types",
       "community": 17,
@@ -12117,7 +12127,7 @@
       "label": "lint",
       "file_type": "code",
       "source_file": "packages/telemetry/package.json",
-      "source_location": "L21",
+      "source_location": "L24",
       "_origin": "ast",
       "id": "telemetry_package_scripts_lint",
       "community": 17,
@@ -12127,7 +12137,7 @@
       "label": "dependencies",
       "file_type": "code",
       "source_file": "packages/telemetry/package.json",
-      "source_location": "L23",
+      "source_location": "L26",
       "_origin": "ast",
       "id": "telemetry_package_dependencies",
       "community": 17,
@@ -12137,7 +12147,7 @@
       "label": "@opentelemetry/api",
       "file_type": "code",
       "source_file": "packages/telemetry/package.json",
-      "source_location": "L24",
+      "source_location": "L27",
       "_origin": "ast",
       "id": "telemetry_package_dependencies_opentelemetry_api",
       "community": 17,
@@ -12147,7 +12157,7 @@
       "label": "@opentelemetry/auto-instrumentations-node",
       "file_type": "code",
       "source_file": "packages/telemetry/package.json",
-      "source_location": "L25",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "telemetry_package_dependencies_opentelemetry_auto_instrumentations_node",
       "community": 17,
@@ -12157,7 +12167,7 @@
       "label": "@opentelemetry/exporter-trace-otlp-http",
       "file_type": "code",
       "source_file": "packages/telemetry/package.json",
-      "source_location": "L26",
+      "source_location": "L29",
       "_origin": "ast",
       "id": "telemetry_package_dependencies_opentelemetry_exporter_trace_otlp_http",
       "community": 17,
@@ -12167,7 +12177,7 @@
       "label": "@opentelemetry/resources",
       "file_type": "code",
       "source_file": "packages/telemetry/package.json",
-      "source_location": "L27",
+      "source_location": "L30",
       "_origin": "ast",
       "id": "telemetry_package_dependencies_opentelemetry_resources",
       "community": 17,
@@ -12177,7 +12187,7 @@
       "label": "@opentelemetry/sdk-node",
       "file_type": "code",
       "source_file": "packages/telemetry/package.json",
-      "source_location": "L28",
+      "source_location": "L31",
       "_origin": "ast",
       "id": "telemetry_package_dependencies_opentelemetry_sdk_node",
       "community": 17,
@@ -12187,7 +12197,7 @@
       "label": "@opentelemetry/sdk-trace-base",
       "file_type": "code",
       "source_file": "packages/telemetry/package.json",
-      "source_location": "L29",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "telemetry_package_dependencies_opentelemetry_sdk_trace_base",
       "community": 17,
@@ -12197,7 +12207,7 @@
       "label": "@opentelemetry/semantic-conventions",
       "file_type": "code",
       "source_file": "packages/telemetry/package.json",
-      "source_location": "L30",
+      "source_location": "L33",
       "_origin": "ast",
       "id": "telemetry_package_dependencies_opentelemetry_semantic_conventions",
       "community": 17,
@@ -12207,7 +12217,7 @@
       "label": "devDependencies",
       "file_type": "code",
       "source_file": "packages/telemetry/package.json",
-      "source_location": "L32",
+      "source_location": "L35",
       "_origin": "ast",
       "id": "telemetry_package_devdependencies",
       "community": 17,
@@ -12217,7 +12227,7 @@
       "label": "@repo/typescript-config",
       "file_type": "code",
       "source_file": "packages/telemetry/package.json",
-      "source_location": "L33",
+      "source_location": "L36",
       "_origin": "ast",
       "id": "telemetry_package_devdependencies_repo_typescript_config",
       "community": 17,
@@ -12227,7 +12237,7 @@
       "label": "@types/node",
       "file_type": "code",
       "source_file": "packages/telemetry/package.json",
-      "source_location": "L34",
+      "source_location": "L37",
       "_origin": "ast",
       "id": "telemetry_package_devdependencies_types_node",
       "community": 17,
@@ -13172,6 +13182,176 @@
       "id": "claude_jsdoc_guidelines",
       "community": 20,
       "norm_label": "jsdoc guidelines"
+    },
+    {
+      "label": "LGTM_stack.md",
+      "file_type": "document",
+      "source_file": "LGTM_stack.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "lgtm_stack",
+      "community": 106,
+      "norm_label": "lgtm_stack.md"
+    },
+    {
+      "label": "Your Current Setup",
+      "file_type": "document",
+      "source_file": "LGTM_stack.md",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "lgtm_stack_your_current_setup",
+      "community": 106,
+      "norm_label": "your current setup"
+    },
+    {
+      "label": "Why Traces Work Without Alloy",
+      "file_type": "document",
+      "source_file": "LGTM_stack.md",
+      "source_location": "L56",
+      "_origin": "ast",
+      "id": "lgtm_stack_why_traces_work_without_alloy",
+      "community": 106,
+      "norm_label": "why traces work without alloy"
+    },
+    {
+      "label": "Where Alloy Fits",
+      "file_type": "document",
+      "source_file": "LGTM_stack.md",
+      "source_location": "L91",
+      "_origin": "ast",
+      "id": "lgtm_stack_where_alloy_fits",
+      "community": 106,
+      "norm_label": "where alloy fits"
+    },
+    {
+      "label": "Full LGTM Stack",
+      "file_type": "document",
+      "source_file": "LGTM_stack.md",
+      "source_location": "L127",
+      "_origin": "ast",
+      "id": "lgtm_stack_full_lgtm_stack",
+      "community": 106,
+      "norm_label": "full lgtm stack"
+    },
+    {
+      "label": "IRCTC Example",
+      "file_type": "document",
+      "source_file": "LGTM_stack.md",
+      "source_location": "L162",
+      "_origin": "ast",
+      "id": "lgtm_stack_irctc_example",
+      "community": 106,
+      "norm_label": "irctc example"
+    },
+    {
+      "label": "Tempo (Traces)",
+      "file_type": "document",
+      "source_file": "LGTM_stack.md",
+      "source_location": "L176",
+      "_origin": "ast",
+      "id": "lgtm_stack_tempo_traces",
+      "community": 106,
+      "norm_label": "tempo (traces)"
+    },
+    {
+      "label": "Loki (Logs)",
+      "file_type": "document",
+      "source_file": "LGTM_stack.md",
+      "source_location": "L202",
+      "_origin": "ast",
+      "id": "lgtm_stack_loki_logs",
+      "community": 106,
+      "norm_label": "loki (logs)"
+    },
+    {
+      "label": "Prometheus (Metrics)",
+      "file_type": "document",
+      "source_file": "LGTM_stack.md",
+      "source_location": "L228",
+      "_origin": "ast",
+      "id": "lgtm_stack_prometheus_metrics",
+      "community": 106,
+      "norm_label": "prometheus (metrics)"
+    },
+    {
+      "label": "Grafana",
+      "file_type": "document",
+      "source_file": "LGTM_stack.md",
+      "source_location": "L245",
+      "_origin": "ast",
+      "id": "lgtm_stack_grafana",
+      "community": 106,
+      "norm_label": "grafana"
+    },
+    {
+      "label": "What You Have Right Now",
+      "file_type": "document",
+      "source_file": "LGTM_stack.md",
+      "source_location": "L265",
+      "_origin": "ast",
+      "id": "lgtm_stack_what_you_have_right_now",
+      "community": 106,
+      "norm_label": "what you have right now"
+    },
+    {
+      "label": "What You Need Next",
+      "file_type": "document",
+      "source_file": "LGTM_stack.md",
+      "source_location": "L287",
+      "_origin": "ast",
+      "id": "lgtm_stack_what_you_need_next",
+      "community": 106,
+      "norm_label": "what you need next"
+    },
+    {
+      "label": "Phase 1 (already done)",
+      "file_type": "document",
+      "source_file": "LGTM_stack.md",
+      "source_location": "L289",
+      "_origin": "ast",
+      "id": "lgtm_stack_phase_1_already_done",
+      "community": 106,
+      "norm_label": "phase 1 (already done)"
+    },
+    {
+      "label": "Phase 2",
+      "file_type": "document",
+      "source_file": "LGTM_stack.md",
+      "source_location": "L303",
+      "_origin": "ast",
+      "id": "lgtm_stack_phase_2",
+      "community": 106,
+      "norm_label": "phase 2"
+    },
+    {
+      "label": "Phase 3",
+      "file_type": "document",
+      "source_file": "LGTM_stack.md",
+      "source_location": "L325",
+      "_origin": "ast",
+      "id": "lgtm_stack_phase_3",
+      "community": 106,
+      "norm_label": "phase 3"
+    },
+    {
+      "label": "Phase 4",
+      "file_type": "document",
+      "source_file": "LGTM_stack.md",
+      "source_location": "L345",
+      "_origin": "ast",
+      "id": "lgtm_stack_phase_4",
+      "community": 106,
+      "norm_label": "phase 4"
+    },
+    {
+      "label": "One sentence summary",
+      "file_type": "document",
+      "source_file": "LGTM_stack.md",
+      "source_location": "L361",
+      "_origin": "ast",
+      "id": "lgtm_stack_one_sentence_summary",
+      "community": 106,
+      "norm_label": "one sentence summary"
     },
     {
       "label": "README.md",
@@ -16174,16 +16354,6 @@
       "confidence_score": 1.0,
       "source": "telemetry_tracecontextmiddleware",
       "target": "telemetry_tracecontextmiddleware_tracecontextmiddleware"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/api-gateway/src/telemetry/traceContextMiddleware.ts",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "telemetry_tracecontextmiddleware",
-      "target": "telemetry_tracecontextmiddleware_tracer"
     },
     {
       "relation": "contains",
@@ -29565,6 +29735,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "packages/telemetry/package.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "telemetry_package_exports",
+      "target": "telemetry_package_exports_instrumentation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/package.json",
       "source_location": "L13",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -29600,6 +29780,16 @@
       "confidence_score": 1.0,
       "source": "telemetry_package_exports_propagation",
       "target": "telemetry_package_propagation_types"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "telemetry_package_exports_instrumentation",
+      "target": "telemetry_package_instrumentation_import",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -29789,9 +29979,9 @@
       "source_file": "packages/telemetry/src/instrumentation.ts",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_instrumentation",
-      "target": "src_index_starttelemetry",
-      "confidence_score": 1.0
+      "target": "src_index_starttelemetry"
     },
     {
       "relation": "contains",
@@ -30604,6 +30794,166 @@
       "confidence_score": 1.0,
       "source": "claude_error_handling_flow",
       "target": "claude_error_handling_guidelines"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "LGTM_stack.md",
+      "source_location": "L127",
+      "weight": 1.0,
+      "source": "lgtm_stack",
+      "target": "lgtm_stack_full_lgtm_stack",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "LGTM_stack.md",
+      "source_location": "L162",
+      "weight": 1.0,
+      "source": "lgtm_stack",
+      "target": "lgtm_stack_irctc_example",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "LGTM_stack.md",
+      "source_location": "L265",
+      "weight": 1.0,
+      "source": "lgtm_stack",
+      "target": "lgtm_stack_what_you_have_right_now",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "LGTM_stack.md",
+      "source_location": "L287",
+      "weight": 1.0,
+      "source": "lgtm_stack",
+      "target": "lgtm_stack_what_you_need_next",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "LGTM_stack.md",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "lgtm_stack",
+      "target": "lgtm_stack_where_alloy_fits",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "LGTM_stack.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "lgtm_stack",
+      "target": "lgtm_stack_why_traces_work_without_alloy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "LGTM_stack.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "lgtm_stack",
+      "target": "lgtm_stack_your_current_setup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "LGTM_stack.md",
+      "source_location": "L245",
+      "weight": 1.0,
+      "source": "lgtm_stack_irctc_example",
+      "target": "lgtm_stack_grafana",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "LGTM_stack.md",
+      "source_location": "L202",
+      "weight": 1.0,
+      "source": "lgtm_stack_irctc_example",
+      "target": "lgtm_stack_loki_logs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "LGTM_stack.md",
+      "source_location": "L228",
+      "weight": 1.0,
+      "source": "lgtm_stack_irctc_example",
+      "target": "lgtm_stack_prometheus_metrics",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "LGTM_stack.md",
+      "source_location": "L176",
+      "weight": 1.0,
+      "source": "lgtm_stack_irctc_example",
+      "target": "lgtm_stack_tempo_traces",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "LGTM_stack.md",
+      "source_location": "L361",
+      "weight": 1.0,
+      "source": "lgtm_stack_what_you_need_next",
+      "target": "lgtm_stack_one_sentence_summary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "LGTM_stack.md",
+      "source_location": "L289",
+      "weight": 1.0,
+      "source": "lgtm_stack_what_you_need_next",
+      "target": "lgtm_stack_phase_1_already_done",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "LGTM_stack.md",
+      "source_location": "L303",
+      "weight": 1.0,
+      "source": "lgtm_stack_what_you_need_next",
+      "target": "lgtm_stack_phase_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "LGTM_stack.md",
+      "source_location": "L325",
+      "weight": 1.0,
+      "source": "lgtm_stack_what_you_need_next",
+      "target": "lgtm_stack_phase_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "LGTM_stack.md",
+      "source_location": "L345",
+      "weight": 1.0,
+      "source": "lgtm_stack_what_you_need_next",
+      "target": "lgtm_stack_phase_4",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -32057,5 +32407,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "18367144ddb73931fef219b2cbe26e843bdd200c"
+  "built_at_commit": "9a3d481e67de39eec897031935a067bc72d0fb49"
 }

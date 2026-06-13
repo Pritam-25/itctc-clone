@@ -5,7 +5,7 @@ import app from "./app.js";
 import type { Server } from "node:http";
 import { registerErrorMessages } from "@irctc/errors";
 import { ERROR_MESSAGES } from "./utils/errors/index.js";
-import { startTelemetry, shutdownTelemetry } from "@irctc/telemetry";
+import { shutdownTelemetry } from "@irctc/telemetry";
 
 const PORT = env.PORT;
 
@@ -73,17 +73,8 @@ const startServer = async () => {
   // Initialize Redis client connection
   await initRedis();
 
-  // Initialize Telemetry SDK
-  const otlpEndpoint =
-    env.OTEL_EXPORTER_OTLP_ENDPOINT || "http://localhost:4318";
-  logger.info(
-    { module: "server", endpoint: otlpEndpoint },
-    "Starting OpenTelemetry SDK tracing",
-  );
-  startTelemetry({
-    serviceName: "api-gateway",
-    otlpEndpoint,
-  });
+  // Telemetry SDK is bootstrapped via --import @irctc/telemetry/instrumentation
+  // before this module loads, ensuring auto-instrumentation patches http/express first.
 
   logger.info({ module: "server" }, "All dependencies connected successfully.");
 
