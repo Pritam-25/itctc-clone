@@ -39,6 +39,10 @@ export class CircuitBreakerRegistry {
         },
       });
       this.breakers.set(name, breaker);
+    } else if (options && Object.keys(options).length > 0) {
+      throw new Error(
+        `CircuitBreaker "${name}" already exists; options can only be set on first registration`,
+      );
     }
     return breaker;
   }

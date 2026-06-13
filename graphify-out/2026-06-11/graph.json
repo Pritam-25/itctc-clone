@@ -694,14 +694,14 @@
       "norm_label": "runtime"
     },
     {
-      "label": "\u2026 notification-service and order-service mirror the above",
+      "label": "\u2026 notification-service and booking-service mirror the above",
       "file_type": "document",
       "source_file": "plan.md",
       "source_location": "L780",
       "_origin": "ast",
       "id": "plan_notification_service_and_order_service_mirror_the_above",
       "community": 17,
-      "norm_label": "... notification-service and order-service mirror the above"
+      "norm_label": "... notification-service and booking-service mirror the above"
     },
     {
       "label": "1. send-otp (no auth required)",

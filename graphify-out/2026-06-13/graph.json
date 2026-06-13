@@ -2781,7 +2781,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "auth_register_request_dto_registerrequestdto",
-      "community": 3,
+      "community": 46,
       "norm_label": "registerrequestdto"
     },
     {
@@ -5041,7 +5041,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "apps_user_service_src_server_ts_src_server",
-      "community": 77,
+      "community": 27,
       "norm_label": "server.ts"
     },
     {
@@ -5051,7 +5051,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "apps_user_service_src_server_ts_src_server_shutdown",
-      "community": 77,
+      "community": 27,
       "norm_label": "shutdown()"
     },
     {
@@ -5061,7 +5061,7 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "apps_user_service_src_server_ts_src_server_startserver",
-      "community": 77,
+      "community": 13,
       "norm_label": "startserver()"
     },
     {
@@ -5521,7 +5521,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "errors_errormessages_error_messages",
-      "community": 77,
+      "community": 27,
       "norm_label": "error_messages"
     },
     {
@@ -6811,7 +6811,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_registry_registererrormessages",
-      "community": 77,
+      "community": 13,
       "norm_label": "registererrormessages()"
     },
     {
@@ -8895,6 +8895,1046 @@
       "norm_label": "exclude"
     },
     {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "resilience_package",
+      "community": 81,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "resilience_package_name",
+      "community": 81,
+      "norm_label": "name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "resilience_package_version",
+      "community": 81,
+      "norm_label": "version"
+    },
+    {
+      "label": "private",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "resilience_package_private",
+      "community": 81,
+      "norm_label": "private"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "resilience_package_type",
+      "community": 81,
+      "norm_label": "type"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "resilience_package_main",
+      "community": 81,
+      "norm_label": "main"
+    },
+    {
+      "label": "types",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "resilience_package_types",
+      "community": 81,
+      "norm_label": "types"
+    },
+    {
+      "label": "exports",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "resilience_package_exports",
+      "community": 81,
+      "norm_label": "exports"
+    },
+    {
+      "label": "import",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "resilience_package_import",
+      "community": 81,
+      "norm_label": "import"
+    },
+    {
+      "label": "./propagation",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "resilience_package_exports_propagation",
+      "community": 81,
+      "norm_label": "./propagation"
+    },
+    {
+      "label": "types",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "resilience_package_propagation_types",
+      "community": 81,
+      "norm_label": "types"
+    },
+    {
+      "label": "import",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "resilience_package_propagation_import",
+      "community": 81,
+      "norm_label": "import"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "resilience_package_scripts",
+      "community": 81,
+      "norm_label": "scripts"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "resilience_package_scripts_build",
+      "community": 81,
+      "norm_label": "build"
+    },
+    {
+      "label": "check-types",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "resilience_package_scripts_check_types",
+      "community": 81,
+      "norm_label": "check-types"
+    },
+    {
+      "label": "lint",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "resilience_package_scripts_lint",
+      "community": 81,
+      "norm_label": "lint"
+    },
+    {
+      "label": "test",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "resilience_package_scripts_test",
+      "community": 81,
+      "norm_label": "test"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "resilience_package_dependencies",
+      "community": 81,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "resilience_package_devdependencies",
+      "community": 81,
+      "norm_label": "devdependencies"
+    },
+    {
+      "label": "@repo/typescript-config",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "resilience_package_devdependencies_repo_typescript_config",
+      "community": 81,
+      "norm_label": "@repo/typescript-config"
+    },
+    {
+      "label": "@types/node",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "resilience_package_devdependencies_types_node",
+      "community": 81,
+      "norm_label": "@types/node"
+    },
+    {
+      "label": "vitest",
+      "file_type": "code",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "resilience_package_devdependencies_vitest",
+      "community": 81,
+      "norm_label": "vitest"
+    },
+    {
+      "label": "CircuitBreaker.ts",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "circuit_breaker_circuitbreaker",
+      "community": 78,
+      "norm_label": "circuitbreaker.ts"
+    },
+    {
+      "label": "CircuitBreaker",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "circuit_breaker_circuitbreaker_circuitbreaker",
+      "community": 78,
+      "norm_label": "circuitbreaker"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "circuit_breaker_circuitbreaker_circuitbreaker_constructor",
+      "community": 78,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": ".execute()",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L47",
+      "_origin": "ast",
+      "id": "circuit_breaker_circuitbreaker_circuitbreaker_execute",
+      "community": 78,
+      "norm_label": ".execute()"
+    },
+    {
+      "label": ".getState()",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L86",
+      "_origin": "ast",
+      "id": "circuit_breaker_circuitbreaker_circuitbreaker_getstate",
+      "community": 78,
+      "norm_label": ".getstate()"
+    },
+    {
+      "label": ".checkRecoveryTimeout()",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L94",
+      "_origin": "ast",
+      "id": "circuit_breaker_circuitbreaker_circuitbreaker_checkrecoverytimeout",
+      "community": 78,
+      "norm_label": ".checkrecoverytimeout()"
+    },
+    {
+      "label": ".handleSuccess()",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L106",
+      "_origin": "ast",
+      "id": "circuit_breaker_circuitbreaker_circuitbreaker_handlesuccess",
+      "community": 78,
+      "norm_label": ".handlesuccess()"
+    },
+    {
+      "label": ".handleFailure()",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L120",
+      "_origin": "ast",
+      "id": "circuit_breaker_circuitbreaker_circuitbreaker_handlefailure",
+      "community": 78,
+      "norm_label": ".handlefailure()"
+    },
+    {
+      "label": ".transitionTo()",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L137",
+      "_origin": "ast",
+      "id": "circuit_breaker_circuitbreaker_circuitbreaker_transitionto",
+      "community": 78,
+      "norm_label": ".transitionto()"
+    },
+    {
+      "label": "CircuitBreakerRegistry.ts",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreakerRegistry.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "circuit_breaker_circuitbreakerregistry",
+      "community": 78,
+      "norm_label": "circuitbreakerregistry.ts"
+    },
+    {
+      "label": "CircuitBreakerRegistry",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreakerRegistry.ts",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "circuit_breaker_circuitbreakerregistry_circuitbreakerregistry",
+      "community": 78,
+      "norm_label": "circuitbreakerregistry"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreakerRegistry.ts",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "circuit_breaker_circuitbreakerregistry_circuitbreakerregistry_constructor",
+      "community": 78,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": ".get()",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreakerRegistry.ts",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "circuit_breaker_circuitbreakerregistry_circuitbreakerregistry_get",
+      "community": 78,
+      "norm_label": ".get()"
+    },
+    {
+      "label": ".clear()",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreakerRegistry.ts",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "circuit_breaker_circuitbreakerregistry_circuitbreakerregistry_clear",
+      "community": 78,
+      "norm_label": ".clear()"
+    },
+    {
+      "label": "CircuitBreakerState.ts",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreakerState.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "circuit_breaker_circuitbreakerstate",
+      "community": 78,
+      "norm_label": "circuitbreakerstate.ts"
+    },
+    {
+      "label": "CircuitBreakerState",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreakerState.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "circuit_breaker_circuitbreakerstate_circuitbreakerstate",
+      "community": 78,
+      "norm_label": "circuitbreakerstate"
+    },
+    {
+      "label": "CircuitBreaker.test.ts",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/circuit-breaker/__tests/CircuitBreaker.test.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "tests_circuitbreaker_test",
+      "community": 78,
+      "norm_label": "circuitbreaker.test.ts"
+    },
+    {
+      "label": "types.ts",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/circuit-breaker/types.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "circuit_breaker_types",
+      "community": 78,
+      "norm_label": "types.ts"
+    },
+    {
+      "label": "CircuitBreakerOptions",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/circuit-breaker/types.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "circuit_breaker_types_circuitbreakeroptions",
+      "community": 78,
+      "norm_label": "circuitbreakeroptions"
+    },
+    {
+      "label": "DEFAULT_OPTIONS",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/circuit-breaker/types.ts",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "circuit_breaker_types_default_options",
+      "community": 78,
+      "norm_label": "default_options"
+    },
+    {
+      "label": "CircuitOpenError",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/circuit-breaker/types.ts",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "circuit_breaker_types_circuitopenerror",
+      "community": 78,
+      "norm_label": "circuitopenerror"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/circuit-breaker/types.ts",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "circuit_breaker_types_circuitopenerror_constructor",
+      "community": 78,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/index.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "packages_resilience_src_index_ts_src_index",
+      "community": 78,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "ExponentialBackoff.ts",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/retry/ExponentialBackoff.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "retry_exponentialbackoff",
+      "community": 78,
+      "norm_label": "exponentialbackoff.ts"
+    },
+    {
+      "label": "BackoffOptions",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/retry/ExponentialBackoff.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "retry_exponentialbackoff_backoffoptions",
+      "community": 78,
+      "norm_label": "backoffoptions"
+    },
+    {
+      "label": "withExponentialBackoff()",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/retry/ExponentialBackoff.ts",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "retry_exponentialbackoff_withexponentialbackoff",
+      "community": 78,
+      "norm_label": "withexponentialbackoff()"
+    },
+    {
+      "label": "withTimeout.ts",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/timeout/withTimeout.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "timeout_withtimeout",
+      "community": 78,
+      "norm_label": "withtimeout.ts"
+    },
+    {
+      "label": "TimeoutError",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/timeout/withTimeout.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "timeout_withtimeout_timeouterror",
+      "community": 78,
+      "norm_label": "timeouterror"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/timeout/withTimeout.ts",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "timeout_withtimeout_timeouterror_constructor",
+      "community": 78,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": "withTimeout()",
+      "file_type": "code",
+      "source_file": "packages/resilience/src/timeout/withTimeout.ts",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "timeout_withtimeout_withtimeout",
+      "community": 78,
+      "norm_label": "withtimeout()"
+    },
+    {
+      "label": "tsconfig.json",
+      "file_type": "code",
+      "source_file": "packages/resilience/tsconfig.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "resilience_tsconfig",
+      "community": 85,
+      "norm_label": "tsconfig.json"
+    },
+    {
+      "label": "extends",
+      "file_type": "code",
+      "source_file": "packages/resilience/tsconfig.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "resilience_tsconfig_extends",
+      "community": 85,
+      "norm_label": "extends"
+    },
+    {
+      "label": "compilerOptions",
+      "file_type": "code",
+      "source_file": "packages/resilience/tsconfig.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "resilience_tsconfig_compileroptions",
+      "community": 85,
+      "norm_label": "compileroptions"
+    },
+    {
+      "label": "rootDir",
+      "file_type": "code",
+      "source_file": "packages/resilience/tsconfig.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "resilience_tsconfig_compileroptions_rootdir",
+      "community": 85,
+      "norm_label": "rootdir"
+    },
+    {
+      "label": "outDir",
+      "file_type": "code",
+      "source_file": "packages/resilience/tsconfig.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "resilience_tsconfig_compileroptions_outdir",
+      "community": 85,
+      "norm_label": "outdir"
+    },
+    {
+      "label": "composite",
+      "file_type": "code",
+      "source_file": "packages/resilience/tsconfig.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "resilience_tsconfig_compileroptions_composite",
+      "community": 85,
+      "norm_label": "composite"
+    },
+    {
+      "label": "include",
+      "file_type": "code",
+      "source_file": "packages/resilience/tsconfig.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "resilience_tsconfig_include",
+      "community": 85,
+      "norm_label": "include"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "telemetry_package",
+      "community": 79,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "telemetry_package_name",
+      "community": 79,
+      "norm_label": "name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "telemetry_package_version",
+      "community": 79,
+      "norm_label": "version"
+    },
+    {
+      "label": "private",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "telemetry_package_private",
+      "community": 79,
+      "norm_label": "private"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "telemetry_package_type",
+      "community": 79,
+      "norm_label": "type"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "telemetry_package_main",
+      "community": 79,
+      "norm_label": "main"
+    },
+    {
+      "label": "types",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "telemetry_package_types",
+      "community": 79,
+      "norm_label": "types"
+    },
+    {
+      "label": "exports",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "telemetry_package_exports",
+      "community": 79,
+      "norm_label": "exports"
+    },
+    {
+      "label": "import",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "telemetry_package_import",
+      "community": 79,
+      "norm_label": "import"
+    },
+    {
+      "label": "./propagation",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "telemetry_package_exports_propagation",
+      "community": 79,
+      "norm_label": "./propagation"
+    },
+    {
+      "label": "types",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "telemetry_package_propagation_types",
+      "community": 79,
+      "norm_label": "types"
+    },
+    {
+      "label": "import",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "telemetry_package_propagation_import",
+      "community": 79,
+      "norm_label": "import"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "telemetry_package_scripts",
+      "community": 79,
+      "norm_label": "scripts"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "telemetry_package_scripts_build",
+      "community": 79,
+      "norm_label": "build"
+    },
+    {
+      "label": "check-types",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "telemetry_package_scripts_check_types",
+      "community": 79,
+      "norm_label": "check-types"
+    },
+    {
+      "label": "lint",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "telemetry_package_scripts_lint",
+      "community": 79,
+      "norm_label": "lint"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "telemetry_package_dependencies",
+      "community": 79,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "@opentelemetry/api",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "telemetry_package_dependencies_opentelemetry_api",
+      "community": 79,
+      "norm_label": "@opentelemetry/api"
+    },
+    {
+      "label": "@opentelemetry/auto-instrumentations-node",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "telemetry_package_dependencies_opentelemetry_auto_instrumentations_node",
+      "community": 79,
+      "norm_label": "@opentelemetry/auto-instrumentations-node"
+    },
+    {
+      "label": "@opentelemetry/exporter-trace-otlp-http",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "telemetry_package_dependencies_opentelemetry_exporter_trace_otlp_http",
+      "community": 79,
+      "norm_label": "@opentelemetry/exporter-trace-otlp-http"
+    },
+    {
+      "label": "@opentelemetry/resources",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "telemetry_package_dependencies_opentelemetry_resources",
+      "community": 79,
+      "norm_label": "@opentelemetry/resources"
+    },
+    {
+      "label": "@opentelemetry/sdk-node",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "telemetry_package_dependencies_opentelemetry_sdk_node",
+      "community": 79,
+      "norm_label": "@opentelemetry/sdk-node"
+    },
+    {
+      "label": "@opentelemetry/sdk-trace-base",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "telemetry_package_dependencies_opentelemetry_sdk_trace_base",
+      "community": 79,
+      "norm_label": "@opentelemetry/sdk-trace-base"
+    },
+    {
+      "label": "@opentelemetry/semantic-conventions",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "telemetry_package_dependencies_opentelemetry_semantic_conventions",
+      "community": 79,
+      "norm_label": "@opentelemetry/semantic-conventions"
+    },
+    {
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "telemetry_package_devdependencies",
+      "community": 79,
+      "norm_label": "devdependencies"
+    },
+    {
+      "label": "@repo/typescript-config",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "telemetry_package_devdependencies_repo_typescript_config",
+      "community": 79,
+      "norm_label": "@repo/typescript-config"
+    },
+    {
+      "label": "@types/node",
+      "file_type": "code",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "telemetry_package_devdependencies_types_node",
+      "community": 79,
+      "norm_label": "@types/node"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "packages/telemetry/src/index.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "packages_telemetry_src_index_ts_src_index",
+      "community": 87,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "TelemetryOptions",
+      "file_type": "code",
+      "source_file": "packages/telemetry/src/index.ts",
+      "source_location": "L42",
+      "_origin": "ast",
+      "id": "src_index_telemetryoptions",
+      "community": 87,
+      "norm_label": "telemetryoptions"
+    },
+    {
+      "label": "resolveOtlpTracesUrl()",
+      "file_type": "code",
+      "source_file": "packages/telemetry/src/index.ts",
+      "source_location": "L69",
+      "_origin": "ast",
+      "id": "src_index_resolveotlptracesurl",
+      "community": 87,
+      "norm_label": "resolveotlptracesurl()"
+    },
+    {
+      "label": "startTelemetry()",
+      "file_type": "code",
+      "source_file": "packages/telemetry/src/index.ts",
+      "source_location": "L94",
+      "_origin": "ast",
+      "id": "src_index_starttelemetry",
+      "community": 87,
+      "norm_label": "starttelemetry()"
+    },
+    {
+      "label": "shutdownTelemetry()",
+      "file_type": "code",
+      "source_file": "packages/telemetry/src/index.ts",
+      "source_location": "L154",
+      "_origin": "ast",
+      "id": "src_index_shutdowntelemetry",
+      "community": 87,
+      "norm_label": "shutdowntelemetry()"
+    },
+    {
+      "label": "__resetTelemetryForTests()",
+      "file_type": "code",
+      "source_file": "packages/telemetry/src/index.ts",
+      "source_location": "L169",
+      "_origin": "ast",
+      "id": "src_index_resettelemetryfortests",
+      "community": 87,
+      "norm_label": "__resettelemetryfortests()"
+    },
+    {
+      "label": "propagation.ts",
+      "file_type": "code",
+      "source_file": "packages/telemetry/src/propagation.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_propagation",
+      "community": 89,
+      "norm_label": "propagation.ts"
+    },
+    {
+      "label": "KafkaHeaderMap",
+      "file_type": "code",
+      "source_file": "packages/telemetry/src/propagation.ts",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "src_propagation_kafkaheadermap",
+      "community": 89,
+      "norm_label": "kafkaheadermap"
+    },
+    {
+      "label": "normaliseKafkaHeaders()",
+      "file_type": "code",
+      "source_file": "packages/telemetry/src/propagation.ts",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "src_propagation_normalisekafkaheaders",
+      "community": 89,
+      "norm_label": "normalisekafkaheaders()"
+    },
+    {
+      "label": "extractTraceContextFromKafkaHeaders()",
+      "file_type": "code",
+      "source_file": "packages/telemetry/src/propagation.ts",
+      "source_location": "L68",
+      "_origin": "ast",
+      "id": "src_propagation_extracttracecontextfromkafkaheaders",
+      "community": 89,
+      "norm_label": "extracttracecontextfromkafkaheaders()"
+    },
+    {
+      "label": "buildConsumerSpanContext()",
+      "file_type": "code",
+      "source_file": "packages/telemetry/src/propagation.ts",
+      "source_location": "L86",
+      "_origin": "ast",
+      "id": "src_propagation_buildconsumerspancontext",
+      "community": 89,
+      "norm_label": "buildconsumerspancontext()"
+    },
+    {
+      "label": "tsconfig.json",
+      "file_type": "code",
+      "source_file": "packages/telemetry/tsconfig.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "telemetry_tsconfig",
+      "community": 86,
+      "norm_label": "tsconfig.json"
+    },
+    {
+      "label": "extends",
+      "file_type": "code",
+      "source_file": "packages/telemetry/tsconfig.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "telemetry_tsconfig_extends",
+      "community": 86,
+      "norm_label": "extends"
+    },
+    {
+      "label": "compilerOptions",
+      "file_type": "code",
+      "source_file": "packages/telemetry/tsconfig.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "telemetry_tsconfig_compileroptions",
+      "community": 86,
+      "norm_label": "compileroptions"
+    },
+    {
+      "label": "rootDir",
+      "file_type": "code",
+      "source_file": "packages/telemetry/tsconfig.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "telemetry_tsconfig_compileroptions_rootdir",
+      "community": 86,
+      "norm_label": "rootdir"
+    },
+    {
+      "label": "outDir",
+      "file_type": "code",
+      "source_file": "packages/telemetry/tsconfig.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "telemetry_tsconfig_compileroptions_outdir",
+      "community": 86,
+      "norm_label": "outdir"
+    },
+    {
+      "label": "composite",
+      "file_type": "code",
+      "source_file": "packages/telemetry/tsconfig.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "telemetry_tsconfig_compileroptions_composite",
+      "community": 86,
+      "norm_label": "composite"
+    },
+    {
+      "label": "include",
+      "file_type": "code",
+      "source_file": "packages/telemetry/tsconfig.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "telemetry_tsconfig_include",
+      "community": 86,
+      "norm_label": "include"
+    },
+    {
       "label": "base.json",
       "file_type": "code",
       "source_file": "packages/typescript-config/base.json",
@@ -10555,6 +11595,16 @@
       "norm_label": "see also"
     },
     {
+      "label": "execution.md",
+      "file_type": "document",
+      "source_file": "execution.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "execution",
+      "community": 90,
+      "norm_label": "execution.md"
+    },
+    {
       "label": "README.md",
       "file_type": "document",
       "source_file": "packages/eslint-config/README.md",
@@ -10573,6 +11623,576 @@
       "id": "eslint_config_readme_turbo_eslint_config",
       "community": 54,
       "norm_label": "`@turbo/eslint-config`"
+    },
+    {
+      "label": "plan.md",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "plan",
+      "community": 77,
+      "norm_label": "plan.md"
+    },
+    {
+      "label": "API Gateway + Traefik + Distributed Tracing \u2014 Implementation Plan",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "plan_api_gateway_traefik_distributed_tracing_implementation_plan",
+      "community": 84,
+      "norm_label": "api gateway + traefik + distributed tracing \u2014 implementation plan"
+    },
+    {
+      "label": "Context",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "plan_context",
+      "community": 84,
+      "norm_label": "context"
+    },
+    {
+      "label": "Architecture at a glance",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L53",
+      "_origin": "ast",
+      "id": "plan_architecture_at_a_glance",
+      "community": 84,
+      "norm_label": "architecture at a glance"
+    },
+    {
+      "label": "Phase 0 \u2014 New shared packages",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L87",
+      "_origin": "ast",
+      "id": "plan_phase_0_new_shared_packages",
+      "community": 83,
+      "norm_label": "phase 0 \u2014 new shared packages"
+    },
+    {
+      "label": "0a. `@irctc/telemetry`",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L91",
+      "_origin": "ast",
+      "id": "plan_0a_irctc_telemetry",
+      "community": 83,
+      "norm_label": "0a. `@irctc/telemetry`"
+    },
+    {
+      "label": "0b. `@irctc/resilience` \u2014 custom circuit breaker (V1, hand-rolled)",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L102",
+      "_origin": "ast",
+      "id": "plan_0b_irctc_resilience_custom_circuit_breaker_v1_hand_rolled",
+      "community": 83,
+      "norm_label": "0b. `@irctc/resilience` \u2014 custom circuit breaker (v1, hand-rolled)"
+    },
+    {
+      "label": "0c. `@irctc/ratelimit` \u2014 token bucket over Redis (Lua-atomic)",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L153",
+      "_origin": "ast",
+      "id": "plan_0c_irctc_ratelimit_token_bucket_over_redis_lua_atomic",
+      "community": 83,
+      "norm_label": "0c. `@irctc/ratelimit` \u2014 token bucket over redis (lua-atomic)"
+    },
+    {
+      "label": "0d. `@irctc/idempotency` \u2014 three-phase Redis pattern",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L174",
+      "_origin": "ast",
+      "id": "plan_0d_irctc_idempotency_three_phase_redis_pattern",
+      "community": 83,
+      "norm_label": "0d. `@irctc/idempotency` \u2014 three-phase redis pattern"
+    },
+    {
+      "label": "0e. `@irctc/service-identity` \u2014 V1 placeholder, V2 mTLS",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L188",
+      "_origin": "ast",
+      "id": "plan_0e_irctc_service_identity_v1_placeholder_v2_mtls",
+      "community": 83,
+      "norm_label": "0e. `@irctc/service-identity` \u2014 v1 placeholder, v2 mtls"
+    },
+    {
+      "label": "0f. Reuse note for all five packages",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L201",
+      "_origin": "ast",
+      "id": "plan_0f_reuse_note_for_all_five_packages",
+      "community": 83,
+      "norm_label": "0f. reuse note for all five packages"
+    },
+    {
+      "label": "Phase 1 \u2014 Auth lives in the gateway only",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L208",
+      "_origin": "ast",
+      "id": "plan_phase_1_auth_lives_in_the_gateway_only",
+      "community": 88,
+      "norm_label": "phase 1 \u2014 auth lives in the gateway only"
+    },
+    {
+      "label": "What moves where",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L212",
+      "_origin": "ast",
+      "id": "plan_what_moves_where",
+      "community": 88,
+      "norm_label": "what moves where"
+    },
+    {
+      "label": "Why a tiny package, not a per-service copy, not the full middleware",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L227",
+      "_origin": "ast",
+      "id": "plan_why_a_tiny_package_not_a_per_service_copy_not_the_full_middleware",
+      "community": 88,
+      "norm_label": "why a tiny package, not a per-service copy, not the full middleware"
+    },
+    {
+      "label": "New files",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L233",
+      "_origin": "ast",
+      "id": "plan_new_files",
+      "community": 88,
+      "norm_label": "new files"
+    },
+    {
+      "label": "Files to edit",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L243",
+      "_origin": "ast",
+      "id": "plan_files_to_edit",
+      "community": 88,
+      "norm_label": "files to edit"
+    },
+    {
+      "label": "Verification",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L249",
+      "_origin": "ast",
+      "id": "plan_verification",
+      "community": 88,
+      "norm_label": "verification"
+    },
+    {
+      "label": "Phase 2 \u2014 `apps/api-gateway` service",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L257",
+      "_origin": "ast",
+      "id": "plan_phase_2_apps_api_gateway_service",
+      "community": 84,
+      "norm_label": "phase 2 \u2014 `apps/api-gateway` service"
+    },
+    {
+      "label": "`apps/api-gateway/package.json`",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L261",
+      "_origin": "ast",
+      "id": "plan_apps_api_gateway_package_json",
+      "community": 84,
+      "norm_label": "`apps/api-gateway/package.json`"
+    },
+    {
+      "label": "`apps/api-gateway/tsconfig.json`",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L304",
+      "_origin": "ast",
+      "id": "plan_apps_api_gateway_tsconfig_json",
+      "community": 84,
+      "norm_label": "`apps/api-gateway/tsconfig.json`"
+    },
+    {
+      "label": "File tree",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L308",
+      "_origin": "ast",
+      "id": "plan_file_tree",
+      "community": 84,
+      "norm_label": "file tree"
+    },
+    {
+      "label": "build",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L660",
+      "_origin": "ast",
+      "id": "plan_build",
+      "community": 77,
+      "norm_label": "build"
+    },
+    {
+      "label": "runtime",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L669",
+      "_origin": "ast",
+      "id": "plan_runtime",
+      "community": 77,
+      "norm_label": "runtime"
+    },
+    {
+      "label": "\u2026 notification-service and booking-service mirror the above",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L780",
+      "_origin": "ast",
+      "id": "plan_notification_service_and_order_service_mirror_the_above",
+      "community": 77,
+      "norm_label": "... notification-service and booking-service mirror the above"
+    },
+    {
+      "label": "1. send-otp (no auth required)",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L825",
+      "_origin": "ast",
+      "id": "plan_1_send_otp_no_auth_required",
+      "community": 77,
+      "norm_label": "1. send-otp (no auth required)"
+    },
+    {
+      "label": "2. verify-otp (sets auth_token cookie)",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L830",
+      "_origin": "ast",
+      "id": "plan_2_verify_otp_sets_auth_token_cookie",
+      "community": 77,
+      "norm_label": "2. verify-otp (sets auth_token cookie)"
+    },
+    {
+      "label": "3. /auth/sessions (auth required; gateway must inject X-User-Id)",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L835",
+      "_origin": "ast",
+      "id": "plan_3_auth_sessions_auth_required_gateway_must_inject_x_user_id",
+      "community": 77,
+      "norm_label": "3. /auth/sessions (auth required; gateway must inject x-user-id)"
+    },
+    {
+      "label": "Expect 200; logs show X-User-Id matches the cookie's sub claim",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L837",
+      "_origin": "ast",
+      "id": "plan_expect_200_logs_show_x_user_id_matches_the_cookie_s_sub_claim",
+      "community": 77,
+      "norm_label": "expect 200; logs show x-user-id matches the cookie's sub claim"
+    },
+    {
+      "label": "4. Try to forge X-User-Id from outside the gateway",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L843",
+      "_origin": "ast",
+      "id": "plan_4_try_to_forge_x_user_id_from_outside_the_gateway",
+      "community": 77,
+      "norm_label": "4. try to forge x-user-id from outside the gateway"
+    },
+    {
+      "label": "Expect 401 \u2014 no auth cookie",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L846",
+      "_origin": "ast",
+      "id": "plan_expect_401_no_auth_cookie",
+      "community": 77,
+      "norm_label": "expect 401 \u2014 no auth cookie"
+    },
+    {
+      "label": "5. Direct host-side access must be refused",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L850",
+      "_origin": "ast",
+      "id": "plan_5_direct_host_side_access_must_be_refused",
+      "community": 77,
+      "norm_label": "5. direct host-side access must be refused"
+    },
+    {
+      "label": "Expect: connection refused (port 4001 not published on host)",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L852",
+      "_origin": "ast",
+      "id": "plan_expect_connection_refused_port_4001_not_published_on_host",
+      "community": 77,
+      "norm_label": "expect: connection refused (port 4001 not published on host)"
+    },
+    {
+      "label": "6. Exceed the auth-bucket capacity; expect 429",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L858",
+      "_origin": "ast",
+      "id": "plan_6_exceed_the_auth_bucket_capacity_expect_429",
+      "community": 77,
+      "norm_label": "6. exceed the auth-bucket capacity; expect 429"
+    },
+    {
+      "label": "The auth preset is capacity=10, refill=10/60s. The first 10 requests",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L859",
+      "_origin": "ast",
+      "id": "plan_the_auth_preset_is_capacity_10_refill_10_60s_the_first_10_requests",
+      "community": 77,
+      "norm_label": "the auth preset is capacity=10, refill=10/60s. the first 10 requests"
+    },
+    {
+      "label": "pass; further requests fail until tokens refill.",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L860",
+      "_origin": "ast",
+      "id": "plan_pass_further_requests_fail_until_tokens_refill",
+      "community": 77,
+      "norm_label": "pass; further requests fail until tokens refill."
+    },
+    {
+      "label": "Expect: 10x 200/4xx, 2x 429 with Retry-After header",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L865",
+      "_origin": "ast",
+      "id": "plan_expect_10x_200_4xx_2x_429_with_retry_after_header",
+      "community": 77,
+      "norm_label": "expect: 10x 200/4xx, 2x 429 with retry-after header"
+    },
+    {
+      "label": "7. Token-bucket boundary check (regression for the fixed-window bug)",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L869",
+      "_origin": "ast",
+      "id": "plan_7_token_bucket_boundary_check_regression_for_the_fixed_window_bug",
+      "community": 77,
+      "norm_label": "7. token-bucket boundary check (regression for the fixed-window bug)"
+    },
+    {
+      "label": "Send a burst of 8 requests at second 59 of one minute and 8 more",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L870",
+      "_origin": "ast",
+      "id": "plan_send_a_burst_of_8_requests_at_second_59_of_one_minute_and_8_more",
+      "community": 77,
+      "norm_label": "send a burst of 8 requests at second 59 of one minute and 8 more"
+    },
+    {
+      "label": "at second 0 of the next. With a fixed window, the user gets 16 in",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L871",
+      "_origin": "ast",
+      "id": "plan_at_second_0_of_the_next_with_a_fixed_window_the_user_gets_16_in",
+      "community": 77,
+      "norm_label": "at second 0 of the next. with a fixed window, the user gets 16 in"
+    },
+    {
+      "label": "1s; with a token bucket, they get capacity (10) + refill (a few",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L872",
+      "_origin": "ast",
+      "id": "plan_1s_with_a_token_bucket_they_get_capacity_10_refill_a_few",
+      "community": 77,
+      "norm_label": "1s; with a token bucket, they get capacity (10) + refill (a few"
+    },
+    {
+      "label": "tokens) across the boundary \u2014 not a doubling.",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L873",
+      "_origin": "ast",
+      "id": "plan_tokens_across_the_boundary_not_a_doubling",
+      "community": 77,
+      "norm_label": "tokens) across the boundary \u2014 not a doubling."
+    },
+    {
+      "label": "Manual check: 'docker exec irctc-redis redis-cli KEYS \"rl:*\"' shows",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L874",
+      "_origin": "ast",
+      "id": "plan_manual_check_docker_exec_irctc_redis_redis_cli_keys_rl_shows",
+      "community": 77,
+      "norm_label": "manual check: 'docker exec irctc-redis redis-cli keys \"rl:*\"' shows"
+    },
+    {
+      "label": "the bucket state, and the gateway access log shows 429s within the",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L875",
+      "_origin": "ast",
+      "id": "plan_the_bucket_state_and_the_gateway_access_log_shows_429s_within_the",
+      "community": 77,
+      "norm_label": "the bucket state, and the gateway access log shows 429s within the"
+    },
+    {
+      "label": "single second, not across it.",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L876",
+      "_origin": "ast",
+      "id": "plan_single_second_not_across_it",
+      "community": 77,
+      "norm_label": "single second, not across it."
+    },
+    {
+      "label": "8. Trip the user-service breaker.",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L882",
+      "_origin": "ast",
+      "id": "plan_8_trip_the_user_service_breaker",
+      "community": 77,
+      "norm_label": "8. trip the user-service breaker."
+    },
+    {
+      "label": "Stop the user-service container: 'docker compose stop user-service'.",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L883",
+      "_origin": "ast",
+      "id": "plan_stop_the_user_service_container_docker_compose_stop_user_service",
+      "community": 77,
+      "norm_label": "stop the user-service container: 'docker compose stop user-service'."
+    },
+    {
+      "label": "Send 6+ requests through the gateway in quick succession:",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L884",
+      "_origin": "ast",
+      "id": "plan_send_6_requests_through_the_gateway_in_quick_succession",
+      "community": 77,
+      "norm_label": "send 6+ requests through the gateway in quick succession:"
+    },
+    {
+      "label": "Expect: first ~5 requests are 502/504 (or whatever the timeout yields),",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L888",
+      "_origin": "ast",
+      "id": "plan_expect_first_5_requests_are_502_504_or_whatever_the_timeout_yields",
+      "community": 77,
+      "norm_label": "expect: first ~5 requests are 502/504 (or whatever the timeout yields),"
+    },
+    {
+      "label": "remaining requests are 503 with the body { code: \"CIRCUIT_OPEN\", ... } \u2014",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L889",
+      "_origin": "ast",
+      "id": "plan_remaining_requests_are_503_with_the_body_code_circuit_open",
+      "community": 77,
+      "norm_label": "remaining requests are 503 with the body { code: \"circuit_open\", ... } \u2014"
+    },
+    {
+      "label": "i.e. the breaker tripped and is now failing fast, no 5s waits.",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L890",
+      "_origin": "ast",
+      "id": "plan_i_e_the_breaker_tripped_and_is_now_failing_fast_no_5s_waits",
+      "community": 77,
+      "norm_label": "i.e. the breaker tripped and is now failing fast, no 5s waits."
+    },
+    {
+      "label": "Check the gateway access log: each line includes circuitState:",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L891",
+      "_origin": "ast",
+      "id": "plan_check_the_gateway_access_log_each_line_includes_circuitstate",
+      "community": 77,
+      "norm_label": "check the gateway access log: each line includes circuitstate:"
+    },
+    {
+      "label": "CLOSED on the early calls, OPEN on the later ones.",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L892",
+      "_origin": "ast",
+      "id": "plan_closed_on_the_early_calls_open_on_the_later_ones",
+      "community": 77,
+      "norm_label": "closed on the early calls, open on the later ones."
+    },
+    {
+      "label": "9. Recovery: 'docker compose start user-service', wait ~30s, retry:",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L896",
+      "_origin": "ast",
+      "id": "plan_9_recovery_docker_compose_start_user_service_wait_30s_retry",
+      "community": 77,
+      "norm_label": "9. recovery: 'docker compose start user-service', wait ~30s, retry:"
+    },
+    {
+      "label": "Expect: 503 once more (recoveryTimeoutMs=30_000), then HALF_OPEN allows",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L898",
+      "_origin": "ast",
+      "id": "plan_expect_503_once_more_recoverytimeoutms_30_000_then_half_open_allows",
+      "community": 77,
+      "norm_label": "expect: 503 once more (recoverytimeoutms=30_000), then half_open allows"
+    },
+    {
+      "label": "a probe, success \u2192 CLOSED, subsequent requests return 2xx.",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L899",
+      "_origin": "ast",
+      "id": "plan_a_probe_success_closed_subsequent_requests_return_2xx",
+      "community": 77,
+      "norm_label": "a probe, success \u2192 closed, subsequent requests return 2xx."
+    },
+    {
+      "label": "Check user-service logs: traceId must be aaaaaaaa\u2026",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L910",
+      "_origin": "ast",
+      "id": "plan_check_user_service_logs_traceid_must_be_aaaaaaaa",
+      "community": 77,
+      "norm_label": "check user-service logs: traceid must be aaaaaaaa..."
+    },
+    {
+      "label": "(if Kafka step happens later, notification-service logs share the same traceId)",
+      "file_type": "document",
+      "source_file": "plan.md",
+      "source_location": "L911",
+      "_origin": "ast",
+      "id": "plan_if_kafka_step_happens_later_notification_service_logs_share_the_same_traceid",
+      "community": 77,
+      "norm_label": "(if kafka step happens later, notification-service logs share the same traceid)"
     },
     {
       "label": "System Architecture Diagram (ASCII)",
@@ -11190,9 +12810,9 @@
       "source_file": "apps/notification-service/src/config/env.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_notification_service_src_config_env_ts_config_env",
-      "target": "apps_notification_service_src_config_env_ts_config_env_env",
-      "confidence_score": 1.0
+      "target": "apps_notification_service_src_config_env_ts_config_env_env"
     },
     {
       "relation": "imports",
@@ -11201,9 +12821,9 @@
       "source_file": "apps/notification-service/src/config/env.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_notification_service_src_config_env_ts_config_env",
-      "target": "email_provider_factory_emailvendor",
-      "confidence_score": 1.0
+      "target": "email_provider_factory_emailvendor"
     },
     {
       "relation": "contains",
@@ -21474,6 +23094,1564 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "resilience_package",
+      "target": "resilience_package_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "resilience_package",
+      "target": "resilience_package_devdependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "resilience_package",
+      "target": "resilience_package_exports",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "resilience_package",
+      "target": "resilience_package_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "resilience_package",
+      "target": "resilience_package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "resilience_package",
+      "target": "resilience_package_private",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "resilience_package",
+      "target": "resilience_package_scripts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "resilience_package",
+      "target": "resilience_package_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "resilience_package",
+      "target": "resilience_package_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "resilience_package",
+      "target": "resilience_package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "resilience_package_exports",
+      "target": "resilience_package_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "resilience_package_exports",
+      "target": "resilience_package_exports_propagation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "resilience_package_exports",
+      "target": "resilience_package_import",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "resilience_package_exports_propagation",
+      "target": "resilience_package_propagation_import",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "resilience_package_exports_propagation",
+      "target": "resilience_package_propagation_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "resilience_package_scripts",
+      "target": "resilience_package_scripts_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "resilience_package_scripts",
+      "target": "resilience_package_scripts_check_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "resilience_package_scripts",
+      "target": "resilience_package_scripts_lint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "resilience_package_scripts",
+      "target": "resilience_package_scripts_test",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "resilience_package_devdependencies",
+      "target": "resilience_package_devdependencies_repo_typescript_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "resilience_package_devdependencies",
+      "target": "resilience_package_devdependencies_types_node",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/package.json",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "resilience_package_devdependencies",
+      "target": "resilience_package_devdependencies_vitest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreaker",
+      "target": "circuit_breaker_circuitbreaker_circuitbreaker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreaker",
+      "target": "circuit_breaker_circuitbreakerstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreaker",
+      "target": "circuit_breaker_circuitbreakerstate_circuitbreakerstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreaker",
+      "target": "circuit_breaker_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreaker",
+      "target": "circuit_breaker_types_circuitbreakeroptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreaker",
+      "target": "circuit_breaker_types_circuitopenerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreaker",
+      "target": "circuit_breaker_types_default_options",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreaker",
+      "target": "timeout_withtimeout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreaker",
+      "target": "timeout_withtimeout_withtimeout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreakerRegistry.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreakerregistry",
+      "target": "circuit_breaker_circuitbreaker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/index.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "packages_resilience_src_index_ts_src_index",
+      "target": "circuit_breaker_circuitbreaker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/__tests/CircuitBreaker.test.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "tests_circuitbreaker_test",
+      "target": "circuit_breaker_circuitbreaker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L94",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreaker_circuitbreaker",
+      "target": "circuit_breaker_circuitbreaker_circuitbreaker_checkrecoverytimeout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreaker_circuitbreaker",
+      "target": "circuit_breaker_circuitbreaker_circuitbreaker_constructor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreaker_circuitbreaker",
+      "target": "circuit_breaker_circuitbreaker_circuitbreaker_execute",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreaker_circuitbreaker",
+      "target": "circuit_breaker_circuitbreaker_circuitbreaker_getstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L120",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreaker_circuitbreaker",
+      "target": "circuit_breaker_circuitbreaker_circuitbreaker_handlefailure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreaker_circuitbreaker",
+      "target": "circuit_breaker_circuitbreaker_circuitbreaker_handlesuccess",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L137",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreaker_circuitbreaker",
+      "target": "circuit_breaker_circuitbreaker_circuitbreaker_transitionto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreaker_circuitbreaker",
+      "target": "circuit_breaker_circuitbreakerstate_circuitbreakerstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreakerRegistry.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreakerregistry",
+      "target": "circuit_breaker_circuitbreaker_circuitbreaker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreakerRegistry.ts",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreakerregistry_circuitbreakerregistry_get",
+      "target": "circuit_breaker_circuitbreaker_circuitbreaker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "re-export",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/index.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "packages_resilience_src_index_ts_src_index",
+      "target": "circuit_breaker_circuitbreaker_circuitbreaker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/__tests/CircuitBreaker.test.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "tests_circuitbreaker_test",
+      "target": "circuit_breaker_circuitbreaker_circuitbreaker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreaker_circuitbreaker_constructor",
+      "target": "circuit_breaker_circuitbreakerstate_circuitbreakerstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreaker_circuitbreaker_constructor",
+      "target": "circuit_breaker_types_circuitbreakeroptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreaker_circuitbreaker_execute",
+      "target": "circuit_breaker_circuitbreaker_circuitbreaker_checkrecoverytimeout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreaker_circuitbreaker_execute",
+      "target": "circuit_breaker_circuitbreaker_circuitbreaker_handlefailure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L75",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreaker_circuitbreaker_execute",
+      "target": "circuit_breaker_circuitbreaker_circuitbreaker_handlesuccess",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreaker_circuitbreaker_execute",
+      "target": "timeout_withtimeout_withtimeout"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L87",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreaker_circuitbreaker_getstate",
+      "target": "circuit_breaker_circuitbreaker_circuitbreaker_checkrecoverytimeout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreaker_circuitbreaker_getstate",
+      "target": "circuit_breaker_circuitbreakerstate_circuitbreakerstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L98",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreaker_circuitbreaker_checkrecoverytimeout",
+      "target": "circuit_breaker_circuitbreaker_circuitbreaker_transitionto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L110",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreaker_circuitbreaker_handlesuccess",
+      "target": "circuit_breaker_circuitbreaker_circuitbreaker_transitionto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L124",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreaker_circuitbreaker_handlefailure",
+      "target": "circuit_breaker_circuitbreaker_circuitbreaker_transitionto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreaker.ts",
+      "source_location": "L137",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreaker_circuitbreaker_transitionto",
+      "target": "circuit_breaker_circuitbreakerstate_circuitbreakerstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreakerRegistry.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreakerregistry",
+      "target": "circuit_breaker_circuitbreakerregistry_circuitbreakerregistry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreakerRegistry.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreakerregistry",
+      "target": "circuit_breaker_circuitbreakerstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreakerRegistry.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreakerregistry",
+      "target": "circuit_breaker_circuitbreakerstate_circuitbreakerstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreakerRegistry.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreakerregistry",
+      "target": "circuit_breaker_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreakerRegistry.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreakerregistry",
+      "target": "circuit_breaker_types_circuitbreakeroptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/index.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "packages_resilience_src_index_ts_src_index",
+      "target": "circuit_breaker_circuitbreakerregistry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreakerRegistry.ts",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreakerregistry_circuitbreakerregistry",
+      "target": "circuit_breaker_circuitbreakerregistry_circuitbreakerregistry_clear",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreakerRegistry.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreakerregistry_circuitbreakerregistry",
+      "target": "circuit_breaker_circuitbreakerregistry_circuitbreakerregistry_constructor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreakerRegistry.ts",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreakerregistry_circuitbreakerregistry",
+      "target": "circuit_breaker_circuitbreakerregistry_circuitbreakerregistry_get",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreakerRegistry.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreakerregistry_circuitbreakerregistry",
+      "target": "circuit_breaker_circuitbreakerstate_circuitbreakerstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "re-export",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/index.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "packages_resilience_src_index_ts_src_index",
+      "target": "circuit_breaker_circuitbreakerregistry_circuitbreakerregistry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreakerRegistry.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreakerregistry_circuitbreakerregistry_constructor",
+      "target": "circuit_breaker_circuitbreakerstate_circuitbreakerstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreakerRegistry.ts",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreakerregistry_circuitbreakerregistry_get",
+      "target": "circuit_breaker_types_circuitbreakeroptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/CircuitBreakerState.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "circuit_breaker_circuitbreakerstate",
+      "target": "circuit_breaker_circuitbreakerstate_circuitbreakerstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/index.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "packages_resilience_src_index_ts_src_index",
+      "target": "circuit_breaker_circuitbreakerstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/__tests/CircuitBreaker.test.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "tests_circuitbreaker_test",
+      "target": "circuit_breaker_circuitbreakerstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "re-export",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/index.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "packages_resilience_src_index_ts_src_index",
+      "target": "circuit_breaker_circuitbreakerstate_circuitbreakerstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/__tests/CircuitBreaker.test.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "tests_circuitbreaker_test",
+      "target": "circuit_breaker_circuitbreakerstate_circuitbreakerstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/__tests/CircuitBreaker.test.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "tests_circuitbreaker_test",
+      "target": "circuit_breaker_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/__tests/CircuitBreaker.test.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "tests_circuitbreaker_test",
+      "target": "circuit_breaker_types_circuitopenerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/__tests/CircuitBreaker.test.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "tests_circuitbreaker_test",
+      "target": "timeout_withtimeout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/__tests/CircuitBreaker.test.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "tests_circuitbreaker_test",
+      "target": "timeout_withtimeout_timeouterror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/types.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "circuit_breaker_types",
+      "target": "circuit_breaker_types_circuitbreakeroptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/types.ts",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "circuit_breaker_types",
+      "target": "circuit_breaker_types_circuitopenerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/types.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "circuit_breaker_types",
+      "target": "circuit_breaker_types_default_options",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/index.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "packages_resilience_src_index_ts_src_index",
+      "target": "circuit_breaker_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "re-export",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/index.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "packages_resilience_src_index_ts_src_index",
+      "target": "circuit_breaker_types_circuitbreakeroptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "re-export",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/index.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "packages_resilience_src_index_ts_src_index",
+      "target": "circuit_breaker_types_default_options",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/circuit-breaker/types.ts",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "circuit_breaker_types_circuitopenerror",
+      "target": "circuit_breaker_types_circuitopenerror_constructor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "re-export",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/index.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "packages_resilience_src_index_ts_src_index",
+      "target": "circuit_breaker_types_circuitopenerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/index.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "packages_resilience_src_index_ts_src_index",
+      "target": "retry_exponentialbackoff",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "re-export",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/index.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "packages_resilience_src_index_ts_src_index",
+      "target": "retry_exponentialbackoff_backoffoptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "re-export",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/index.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "packages_resilience_src_index_ts_src_index",
+      "target": "retry_exponentialbackoff_withexponentialbackoff",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/index.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "packages_resilience_src_index_ts_src_index",
+      "target": "timeout_withtimeout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "re-export",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/index.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "packages_resilience_src_index_ts_src_index",
+      "target": "timeout_withtimeout_timeouterror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "re-export",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/index.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "packages_resilience_src_index_ts_src_index",
+      "target": "timeout_withtimeout_withtimeout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/retry/ExponentialBackoff.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "retry_exponentialbackoff",
+      "target": "retry_exponentialbackoff_backoffoptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/retry/ExponentialBackoff.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "retry_exponentialbackoff",
+      "target": "retry_exponentialbackoff_withexponentialbackoff",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/timeout/withTimeout.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "timeout_withtimeout",
+      "target": "timeout_withtimeout_timeouterror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/timeout/withTimeout.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "timeout_withtimeout",
+      "target": "timeout_withtimeout_withtimeout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/src/timeout/withTimeout.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "timeout_withtimeout_timeouterror",
+      "target": "timeout_withtimeout_timeouterror_constructor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/tsconfig.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "resilience_tsconfig",
+      "target": "resilience_tsconfig_compileroptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/tsconfig.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "resilience_tsconfig",
+      "target": "resilience_tsconfig_extends",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/tsconfig.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "resilience_tsconfig",
+      "target": "resilience_tsconfig_include",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/tsconfig.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "resilience_tsconfig_compileroptions",
+      "target": "resilience_tsconfig_compileroptions_composite",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/tsconfig.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "resilience_tsconfig_compileroptions",
+      "target": "resilience_tsconfig_compileroptions_outdir",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/resilience/tsconfig.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "resilience_tsconfig_compileroptions",
+      "target": "resilience_tsconfig_compileroptions_rootdir",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "telemetry_package",
+      "target": "telemetry_package_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "telemetry_package",
+      "target": "telemetry_package_devdependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "telemetry_package",
+      "target": "telemetry_package_exports",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "telemetry_package",
+      "target": "telemetry_package_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "telemetry_package",
+      "target": "telemetry_package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "telemetry_package",
+      "target": "telemetry_package_private",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "telemetry_package",
+      "target": "telemetry_package_scripts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "telemetry_package",
+      "target": "telemetry_package_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "telemetry_package",
+      "target": "telemetry_package_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "telemetry_package",
+      "target": "telemetry_package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "telemetry_package_exports",
+      "target": "telemetry_package_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "telemetry_package_exports",
+      "target": "telemetry_package_exports_propagation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "telemetry_package_exports",
+      "target": "telemetry_package_import",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "telemetry_package_exports_propagation",
+      "target": "telemetry_package_propagation_import",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "telemetry_package_exports_propagation",
+      "target": "telemetry_package_propagation_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "telemetry_package_scripts",
+      "target": "telemetry_package_scripts_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "telemetry_package_scripts",
+      "target": "telemetry_package_scripts_check_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "telemetry_package_scripts",
+      "target": "telemetry_package_scripts_lint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "telemetry_package_dependencies",
+      "target": "telemetry_package_dependencies_opentelemetry_api",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "telemetry_package_dependencies",
+      "target": "telemetry_package_dependencies_opentelemetry_auto_instrumentations_node",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "telemetry_package_dependencies",
+      "target": "telemetry_package_dependencies_opentelemetry_exporter_trace_otlp_http",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "telemetry_package_dependencies",
+      "target": "telemetry_package_dependencies_opentelemetry_resources",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "telemetry_package_dependencies",
+      "target": "telemetry_package_dependencies_opentelemetry_sdk_node",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "telemetry_package_dependencies",
+      "target": "telemetry_package_dependencies_opentelemetry_sdk_trace_base",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "telemetry_package_dependencies",
+      "target": "telemetry_package_dependencies_opentelemetry_semantic_conventions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "telemetry_package_devdependencies",
+      "target": "telemetry_package_devdependencies_repo_typescript_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/package.json",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "telemetry_package_devdependencies",
+      "target": "telemetry_package_devdependencies_types_node",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/src/index.ts",
+      "source_location": "L169",
+      "weight": 1.0,
+      "source": "packages_telemetry_src_index_ts_src_index",
+      "target": "src_index_resettelemetryfortests",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/src/index.ts",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "packages_telemetry_src_index_ts_src_index",
+      "target": "src_index_resolveotlptracesurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/src/index.ts",
+      "source_location": "L154",
+      "weight": 1.0,
+      "source": "packages_telemetry_src_index_ts_src_index",
+      "target": "src_index_shutdowntelemetry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/src/index.ts",
+      "source_location": "L94",
+      "weight": 1.0,
+      "source": "packages_telemetry_src_index_ts_src_index",
+      "target": "src_index_starttelemetry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/src/index.ts",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "packages_telemetry_src_index_ts_src_index",
+      "target": "src_index_telemetryoptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/src/index.ts",
+      "source_location": "L118",
+      "weight": 1.0,
+      "source": "src_index_starttelemetry",
+      "target": "src_index_resolveotlptracesurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/src/propagation.ts",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "src_propagation",
+      "target": "src_propagation_buildconsumerspancontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/src/propagation.ts",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "src_propagation",
+      "target": "src_propagation_extracttracecontextfromkafkaheaders",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/src/propagation.ts",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "src_propagation",
+      "target": "src_propagation_kafkaheadermap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/src/propagation.ts",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "src_propagation",
+      "target": "src_propagation_normalisekafkaheaders",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/src/propagation.ts",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "src_propagation_extracttracecontextfromkafkaheaders",
+      "target": "src_propagation_normalisekafkaheaders",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/src/propagation.ts",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "src_propagation_buildconsumerspancontext",
+      "target": "src_propagation_extracttracecontextfromkafkaheaders",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/tsconfig.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "telemetry_tsconfig",
+      "target": "telemetry_tsconfig_compileroptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/tsconfig.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "telemetry_tsconfig",
+      "target": "telemetry_tsconfig_extends",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/tsconfig.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "telemetry_tsconfig",
+      "target": "telemetry_tsconfig_include",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/tsconfig.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "telemetry_tsconfig_compileroptions",
+      "target": "telemetry_tsconfig_compileroptions_composite",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/tsconfig.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "telemetry_tsconfig_compileroptions",
+      "target": "telemetry_tsconfig_compileroptions_outdir",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/telemetry/tsconfig.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "telemetry_tsconfig_compileroptions",
+      "target": "telemetry_tsconfig_compileroptions_rootdir",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "packages/typescript-config/base.json",
       "source_location": "L3",
       "weight": 1.0,
@@ -23192,6 +26370,566 @@
       "target": "eslint_config_readme_turbo_eslint_config"
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L825",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_1_send_otp_no_auth_required",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L872",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_1s_with_a_token_bucket_they_get_capacity_10_refill_a_few",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L830",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_2_verify_otp_sets_auth_token_cookie",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L835",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_3_auth_sessions_auth_required_gateway_must_inject_x_user_id",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L843",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_4_try_to_forge_x_user_id_from_outside_the_gateway",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L850",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_5_direct_host_side_access_must_be_refused",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L858",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_6_exceed_the_auth_bucket_capacity_expect_429",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L869",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_7_token_bucket_boundary_check_regression_for_the_fixed_window_bug",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L882",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_8_trip_the_user_service_breaker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L896",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_9_recovery_docker_compose_start_user_service_wait_30s_retry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L899",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_a_probe_success_closed_subsequent_requests_return_2xx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_api_gateway_traefik_distributed_tracing_implementation_plan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L871",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_at_second_0_of_the_next_with_a_fixed_window_the_user_gets_16_in",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L660",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L891",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_check_the_gateway_access_log_each_line_includes_circuitstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L910",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_check_user_service_logs_traceid_must_be_aaaaaaaa",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L892",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_closed_on_the_early_calls_open_on_the_later_ones",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L865",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_expect_10x_200_4xx_2x_429_with_retry_after_header",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L837",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_expect_200_logs_show_x_user_id_matches_the_cookie_s_sub_claim",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L846",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_expect_401_no_auth_cookie",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L898",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_expect_503_once_more_recoverytimeoutms_30_000_then_half_open_allows",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L852",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_expect_connection_refused_port_4001_not_published_on_host",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L888",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_expect_first_5_requests_are_502_504_or_whatever_the_timeout_yields",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L890",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_i_e_the_breaker_tripped_and_is_now_failing_fast_no_5s_waits",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L911",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_if_kafka_step_happens_later_notification_service_logs_share_the_same_traceid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L874",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_manual_check_docker_exec_irctc_redis_redis_cli_keys_rl_shows",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L780",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_notification_service_and_order_service_mirror_the_above",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L860",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_pass_further_requests_fail_until_tokens_refill",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L889",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_remaining_requests_are_503_with_the_body_code_circuit_open",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L669",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_runtime",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L884",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_send_6_requests_through_the_gateway_in_quick_succession",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L870",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_send_a_burst_of_8_requests_at_second_59_of_one_minute_and_8_more",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L876",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_single_second_not_across_it",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L883",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_stop_the_user_service_container_docker_compose_stop_user_service",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L859",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_the_auth_preset_is_capacity_10_refill_10_60s_the_first_10_requests",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L875",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_the_bucket_state_and_the_gateway_access_log_shows_429s_within_the",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L873",
+      "weight": 1.0,
+      "source": "plan",
+      "target": "plan_tokens_across_the_boundary_not_a_doubling",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "plan_api_gateway_traefik_distributed_tracing_implementation_plan",
+      "target": "plan_architecture_at_a_glance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "plan_api_gateway_traefik_distributed_tracing_implementation_plan",
+      "target": "plan_context",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L87",
+      "weight": 1.0,
+      "source": "plan_api_gateway_traefik_distributed_tracing_implementation_plan",
+      "target": "plan_phase_0_new_shared_packages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L208",
+      "weight": 1.0,
+      "source": "plan_api_gateway_traefik_distributed_tracing_implementation_plan",
+      "target": "plan_phase_1_auth_lives_in_the_gateway_only",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L257",
+      "weight": 1.0,
+      "source": "plan_api_gateway_traefik_distributed_tracing_implementation_plan",
+      "target": "plan_phase_2_apps_api_gateway_service",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "plan_phase_0_new_shared_packages",
+      "target": "plan_0a_irctc_telemetry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "plan_phase_0_new_shared_packages",
+      "target": "plan_0b_irctc_resilience_custom_circuit_breaker_v1_hand_rolled",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L153",
+      "weight": 1.0,
+      "source": "plan_phase_0_new_shared_packages",
+      "target": "plan_0c_irctc_ratelimit_token_bucket_over_redis_lua_atomic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L174",
+      "weight": 1.0,
+      "source": "plan_phase_0_new_shared_packages",
+      "target": "plan_0d_irctc_idempotency_three_phase_redis_pattern",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L188",
+      "weight": 1.0,
+      "source": "plan_phase_0_new_shared_packages",
+      "target": "plan_0e_irctc_service_identity_v1_placeholder_v2_mtls",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L201",
+      "weight": 1.0,
+      "source": "plan_phase_0_new_shared_packages",
+      "target": "plan_0f_reuse_note_for_all_five_packages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L243",
+      "weight": 1.0,
+      "source": "plan_phase_1_auth_lives_in_the_gateway_only",
+      "target": "plan_files_to_edit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L233",
+      "weight": 1.0,
+      "source": "plan_phase_1_auth_lives_in_the_gateway_only",
+      "target": "plan_new_files",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L249",
+      "weight": 1.0,
+      "source": "plan_phase_1_auth_lives_in_the_gateway_only",
+      "target": "plan_verification",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L212",
+      "weight": 1.0,
+      "source": "plan_phase_1_auth_lives_in_the_gateway_only",
+      "target": "plan_what_moves_where",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L227",
+      "weight": 1.0,
+      "source": "plan_phase_1_auth_lives_in_the_gateway_only",
+      "target": "plan_why_a_tiny_package_not_a_per_service_copy_not_the_full_middleware",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L261",
+      "weight": 1.0,
+      "source": "plan_phase_2_apps_api_gateway_service",
+      "target": "plan_apps_api_gateway_package_json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L304",
+      "weight": 1.0,
+      "source": "plan_phase_2_apps_api_gateway_service",
+      "target": "plan_apps_api_gateway_tsconfig_json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plan.md",
+      "source_location": "L308",
+      "weight": 1.0,
+      "source": "plan_phase_2_apps_api_gateway_service",
+      "target": "plan_file_tree",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -23372,5 +27110,5 @@
       "source_file": "apps/user-service/README.md"
     }
   ],
-  "built_at_commit": "4a65b94fbb48bd2e47ffd3c0ee811a4616c810ee"
+  "built_at_commit": "843af39971273e1e6df4f5d704d236ba9c18642a"
 }

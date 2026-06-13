@@ -1,4 +1,4 @@
-# Graph Report - itctc-clone (2026-06-10)
+# Graph Report - irctc-clone (2026-06-10)
 
 ## Corpus Check
 

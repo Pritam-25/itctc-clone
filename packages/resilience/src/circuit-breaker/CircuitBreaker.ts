@@ -31,13 +31,42 @@ export class CircuitBreaker {
     },
   ) {
     this.name = options.name;
-    this.failureThreshold =
+
+    const failureThreshold =
       options.failureThreshold ?? DEFAULT_OPTIONS.failureThreshold;
-    this.recoveryTimeoutMs =
-      options.recoveryTimeoutMs ?? DEFAULT_OPTIONS.recoveryTimeoutMs;
-    this.halfOpenMaxTrials =
+    if (!Number.isFinite(failureThreshold) || failureThreshold < 1) {
+      throw new RangeError(
+        `failureThreshold must be a finite integer >= 1, got ${failureThreshold}`,
+      );
+    }
+    this.failureThreshold = Math.floor(failureThreshold);
+
+    const halfOpenMaxTrials =
       options.halfOpenMaxTrials ?? DEFAULT_OPTIONS.halfOpenMaxTrials;
-    this.timeoutMs = options.timeoutMs ?? DEFAULT_OPTIONS.timeoutMs;
+    if (!Number.isFinite(halfOpenMaxTrials) || halfOpenMaxTrials < 1) {
+      throw new RangeError(
+        `halfOpenMaxTrials must be a finite integer >= 1, got ${halfOpenMaxTrials}`,
+      );
+    }
+    this.halfOpenMaxTrials = Math.floor(halfOpenMaxTrials);
+
+    const recoveryTimeoutMs =
+      options.recoveryTimeoutMs ?? DEFAULT_OPTIONS.recoveryTimeoutMs;
+    if (!Number.isFinite(recoveryTimeoutMs) || recoveryTimeoutMs < 0) {
+      throw new RangeError(
+        `recoveryTimeoutMs must be a finite number >= 0, got ${recoveryTimeoutMs}`,
+      );
+    }
+    this.recoveryTimeoutMs = recoveryTimeoutMs;
+
+    const timeoutMs = options.timeoutMs ?? DEFAULT_OPTIONS.timeoutMs;
+    if (!Number.isFinite(timeoutMs) || timeoutMs < 0) {
+      throw new RangeError(
+        `timeoutMs must be a finite number >= 0, got ${timeoutMs}`,
+      );
+    }
+    this.timeoutMs = timeoutMs;
+
     this.onStateChange = options.onStateChange;
   }
 
@@ -122,7 +151,15 @@ export class CircuitBreaker {
       this.inFlightProbes = Math.max(0, this.inFlightProbes - 1);
       if (this.state === CircuitBreakerState.HALF_OPEN) {
         this.transitionTo(CircuitBreakerState.OPEN);
+      } else if (this.state === CircuitBreakerState.CLOSED) {
+        // A concurrent probe may have already closed the circuit;
+        // still count this failure to avoid undercounting.
+        this.failureCount++;
+        if (this.failureCount >= this.failureThreshold) {
+          this.transitionTo(CircuitBreakerState.OPEN);
+        }
       }
+      return;
     } else if (this.state === CircuitBreakerState.CLOSED) {
       this.failureCount++;
       if (this.failureCount >= this.failureThreshold) {

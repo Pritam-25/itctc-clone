@@ -660,9 +660,9 @@
     "semantic_hash": "85776755817cc867d8cb9e8d6daccbb3"
   },
   "packages/logger/src/constants.ts": {
-    "mtime": 1780424081.319629,
-    "ast_hash": "f9d31ceaddb87b993c3d3c28ad7ce914",
-    "semantic_hash": "f9d31ceaddb87b993c3d3c28ad7ce914"
+    "mtime": 1781188471.9399183,
+    "ast_hash": "dbf9e950997f51df9f7d8ca16c110993",
+    "semantic_hash": ""
   },
   "packages/logger/src/index.ts": {
     "mtime": 1780484667.2043605,
@@ -845,33 +845,83 @@
     "semantic_hash": ""
   },
   "packages/telemetry/package.json": {
-    "mtime": 1781176006.2960596,
-    "ast_hash": "7a2a92376c4ba8c33b90935aae949602",
+    "mtime": 1781179652.7384422,
+    "ast_hash": "adfe338f727307a41f0a26719c7c7860",
     "semantic_hash": ""
   },
   "packages/telemetry/src/index.ts": {
-    "mtime": 1781177564.7628186,
-    "ast_hash": "fcd8bd96a3aded4ef469b28d348cb5ec",
+    "mtime": 1781179652.740113,
+    "ast_hash": "1dc28fafe619ef82134e8a2edae28a63",
     "semantic_hash": ""
   },
   "packages/telemetry/src/propagation.ts": {
-    "mtime": 1781177564.7806396,
-    "ast_hash": "e5c8401c01906ee1313c534140658e8d",
+    "mtime": 1781179652.74176,
+    "ast_hash": "e82a2b7661c9296675f77cb125426779",
     "semantic_hash": ""
   },
   "packages/telemetry/tsconfig.json": {
-    "mtime": 1781172850.773996,
-    "ast_hash": "b7940048a65480904fd559e12a9d1304",
+    "mtime": 1781179652.7422879,
+    "ast_hash": "1046236c1d80b324a8aabe514eab031b",
     "semantic_hash": ""
   },
   "execution.md": {
-    "mtime": 1781177564.1012068,
-    "ast_hash": "a5a576a2198391982779e33c65c5d125",
+    "mtime": 1781179652.5958834,
+    "ast_hash": "a27a86551084b551b0fc116108a4f3c8",
     "semantic_hash": ""
   },
   "plan.md": {
-    "mtime": 1781177565.1373942,
-    "ast_hash": "ebdeb09adc13d693c2bd0d844b269e68",
+    "mtime": 1781179652.7439356,
+    "ast_hash": "82cd81cf4964060e8f9076742b65aa3d",
+    "semantic_hash": ""
+  },
+  "packages/resilience/package.json": {
+    "mtime": 1781188086.122264,
+    "ast_hash": "85449993660c44aa99876ce15e4a0b7c",
+    "semantic_hash": ""
+  },
+  "packages/resilience/src/circuit-breaker/CircuitBreaker.ts": {
+    "mtime": 1781188935.137406,
+    "ast_hash": "05bc3c4cc0b24103514fe17d71e23cbe",
+    "semantic_hash": ""
+  },
+  "packages/resilience/src/circuit-breaker/CircuitBreakerRegistry.ts": {
+    "mtime": 1781187978.6344218,
+    "ast_hash": "d9d40ef740300bbc408a4fb72bf6d70d",
+    "semantic_hash": ""
+  },
+  "packages/resilience/src/circuit-breaker/CircuitBreakerState.ts": {
+    "mtime": 1781187950.51563,
+    "ast_hash": "b4f89042e7f02ae96ee8a806739787f6",
+    "semantic_hash": ""
+  },
+  "packages/resilience/src/circuit-breaker/__tests/CircuitBreaker.test.ts": {
+    "mtime": 1781188139.8073266,
+    "ast_hash": "24164a7570ccf9d84d8f8692a1c68bbe",
+    "semantic_hash": ""
+  },
+  "packages/resilience/src/circuit-breaker/types.ts": {
+    "mtime": 1781187956.0973916,
+    "ast_hash": "c93f709cfef3492a7a00cc614c346a73",
+    "semantic_hash": ""
+  },
+  "packages/resilience/src/index.ts": {
+    "mtime": 1781187992.7183774,
+    "ast_hash": "5da0535631d226afa3413de98d729bbd",
+    "semantic_hash": ""
+  },
+  "packages/resilience/src/retry/ExponentialBackoff.ts": {
+    "mtime": 1781187983.7342672,
+    "ast_hash": "9442139973abb3abafe7f99dd25ba585",
+    "semantic_hash": ""
+  },
+  "packages/resilience/src/timeout/withTimeout.ts": {
+    "mtime": 1781187962.3837934,
+    "ast_hash": "554102a4e68250cdfb33a32a775f68a8",
+    "semantic_hash": ""
+  },
+  "packages/resilience/tsconfig.json": {
+    "mtime": 1781185445.1121335,
+    "ast_hash": "1046236c1d80b324a8aabe514eab031b",
     "semantic_hash": ""
   }
 }

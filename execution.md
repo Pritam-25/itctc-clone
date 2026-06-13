@@ -46,7 +46,7 @@ PR 5 — @irctc/service-identity (~5 files, half a day)
 PR 6 — @irctc/auth-headers (~3 files, half a day)
 
 - packages/auth-headers/{package.json, tsconfig.json, src/index.ts}.
-- Add the dep to user-service, notification-service, order-service package.json files. No service code uses it yet — the import is in package.json only.
+- Add the dep to user-service, notification-service, booking-service package.json files. No service code uses it yet — the import is in package.json only.
 - Why sixth: the gateway needs this contract ready when it lands. The user-service migration to header-trust is a separate follow-up PR (F1) that uses this package.
 
 PR 7 — apps/api-gateway (the big one, ~25 files, 2–3 days)
@@ -60,7 +60,7 @@ PR 8 — one-line startTelemetry() in each service's server.ts (3 PRs or 1 PR wi
 
 - apps/user-service/src/server.ts: await startTelemetry({ serviceName: 'user-service' }) after initRedis().
 - apps/notification-service/src/server.ts: same, before bootstrap().
-- apps/order-service/src/server.ts: same.
+- apps/booking-service/src/server.ts: same.
 - Why eighth: the SDK is bootstrap once per process. If you forget the order in notification-service, the first consumed Kafka message is untraced.
 - Can be split as 3 small PRs or one PR with 3 commits. Three small PRs is cleaner for review.
 
@@ -72,9 +72,9 @@ PR 9 — KafkaConsumerRunner consumer-side context.with(...) wrap (~1 file, half
 
 PR 10 — Traefik + per-service Dockerfiles + docker-compose.yml (half a day)
 
-- apps/api-gateway/Dockerfile, apps/user-service/Dockerfile, apps/notification-service/Dockerfile, apps/order-service/Dockerfile.
+- apps/api-gateway/Dockerfile, apps/user-service/Dockerfile, apps/notification-service/Dockerfile, apps/booking-service/Dockerfile.
 - infra/traefik/traefik.yml, infra/traefik/dynamic/middlewares.yml.
-- docker-compose.yml updates: add traefik, api-gateway, user-service, notification-service, order-service services. Per-service apps get expose: instead of ports:. Add healthcheck: blocks per service.
+- docker-compose.yml updates: add traefik, api-gateway, user-service, notification-service, booking-service services. Per-service apps get expose: instead of ports:. Add healthcheck: blocks per service.
 - docker compose config validates the compose file. docker compose up -d --build brings the whole stack up.
 - Why last: the network-isolation change (expose: instead of ports:) only makes sense once the gateway can actually answer on the host. Until PR 7 is in, breaking the host-port-4001 dev workflow would
   block everyone.
@@ -131,5 +131,5 @@ What not to do
 - Don't skip the unit tests in PRs 2, 3, 4. The custom circuit breaker and the Lua-based rate limiter both deserve regression coverage. The gateway's wrapper is thin enough that the bugs will be in the
   shared package, not the wrapper.
 
-The plan in D:\dev\itctc-clone\plan.md already mirrors this order in its closing "Suggested implementation order" section. When you're ready to start, kick off with PR 1 (@irctc/telemetry) and I'll work
+The plan in D:\dev\irctc-clone\plan.md already mirrors this order in its closing "Suggested implementation order" section. When you're ready to start, kick off with PR 1 (@irctc/telemetry) and I'll work
 through them in sequence.
