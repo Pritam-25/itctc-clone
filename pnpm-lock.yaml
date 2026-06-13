@@ -135,6 +135,9 @@ importers:
       '@irctc/middleware':
         specifier: workspace:*
         version: link:../../packages/middleware
+      '@irctc/telemetry':
+        specifier: workspace:*
+        version: link:../../packages/telemetry
       '@sendgrid/mail':
         specifier: ^8.1.6
         version: 8.1.6
@@ -208,6 +211,9 @@ importers:
       '@irctc/middleware':
         specifier: workspace:*
         version: link:../../packages/middleware
+      '@irctc/telemetry':
+        specifier: workspace:*
+        version: link:../../packages/telemetry
       '@prisma/adapter-pg':
         specifier: ^7.8.0
         version: 7.8.0
@@ -367,6 +373,12 @@ importers:
       '@irctc/logger':
         specifier: workspace:*
         version: link:../logger
+      '@irctc/telemetry':
+        specifier: workspace:*
+        version: link:../telemetry
+      '@opentelemetry/api':
+        specifier: 1.9.1
+        version: 1.9.1
       kafkajs:
         specifier: ^2.2.4
         version: 2.2.4
