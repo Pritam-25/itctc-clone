@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "tsx watch ./src/server.ts",
+    "dev": "tsx watch --import @irctc/telemetry/instrumentation ./src/server.ts",
     "build": "tsc && tsc-alias",
     "test": "echo 'Add test script here'"
   },

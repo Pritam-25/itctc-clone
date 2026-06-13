@@ -1,0 +1,35 @@
+http:
+  routers:
+    dashboard:
+      rule: "PathPrefix(`/api`) || PathPrefix(`/dashboard`)"
+      service: "api@internal"
+      entryPoints:
+        - dashboard
+      middlewares:
+        - secureHeaders
+        - traefik-dashboard-auth
+
+  middlewares:
+    secureHeaders:
+      headers:
+        stsIncludeSubdomains: true
+        stsSeconds: 31536000
+        browserXssFilter: true
+        contentTypeNosniff: true
+        frameDeny: true
+    cors:
+      headers:
+        accessControlAllowMethods: "GET,POST,PUT,PATCH,DELETE,OPTIONS"
+        accessControlAllowHeaders: "Content-Type,Authorization,X-Request-Id,traceparent,baggage"
+        accessControlExposeHeaders: "X-Request-Id,X-Trace-Id"
+        accessControlAllowCredentials: "true"
+        accessControlMaxAge: "600"
+    retry:
+      retry:
+        attempts: 3
+        initialInterval: "100ms"
+    traefik-dashboard-auth:
+      basicAuth:
+        users:
+          - "admin:$apr1$3Ig6rp7H$aXALwPZoLAvj30Ya6trjH."
+

@@ -51,7 +51,7 @@ export const createProxy = (
   return async (req: Request, res: Response, next: NextFunction) => {
     const startTime = Date.now();
     const traceId = res.getHeader("X-Trace-Id") || "";
-    const reqId = req.headers["x-request-id"] || "";
+    const reqId = (req as any).requestId || req.headers["x-request-id"] || "";
     const userId =
       (req as Request & { user?: AuthUser }).user?.userId || "anonymous";
 
@@ -84,19 +84,35 @@ export const createProxy = (
       });
 
       const durationMs = Date.now() - startTime;
-      logger.info(
-        {
-          module: "proxy",
-          upstream: upstream.name,
-          statusCode: res.statusCode,
-          durationMs,
-          requestId: reqId,
-          traceId,
-          userId,
-          circuitState: breaker.getState(),
-        },
-        `Proxy request to ${upstream.name} succeeded`,
-      );
+      if (res.statusCode >= 500) {
+        logger.error(
+          {
+            module: "proxy",
+            upstream: upstream.name,
+            statusCode: res.statusCode,
+            durationMs,
+            requestId: reqId,
+            traceId,
+            userId,
+            circuitState: breaker.getState(),
+          },
+          `Proxy request to ${upstream.name} failed`,
+        );
+      } else {
+        logger.info(
+          {
+            module: "proxy",
+            upstream: upstream.name,
+            statusCode: res.statusCode,
+            durationMs,
+            requestId: reqId,
+            traceId,
+            userId,
+            circuitState: breaker.getState(),
+          },
+          `Proxy request to ${upstream.name} succeeded`,
+        );
+      }
     } catch (err: unknown) {
       const error = err as Error;
       const durationMs = Date.now() - startTime;

@@ -1,0 +1,45 @@
+# yaml-language-server: $schema=https://json.schemastore.org/traefik-v3.json
+global:
+  checkNewVersion: false
+  sendAnonymousUsage: false
+
+api:
+  dashboard: true
+  insecure: false
+
+entryPoints:
+  web:
+    address: ":80"
+  websecure:
+    address: ":443"
+  metrics:
+    address: ":8899"
+  dashboard:
+    address: ":8080"
+
+providers:
+  docker:
+    exposedByDefault: false
+    network: irctc-network
+  file:
+    directory: /etc/traefik/dynamic
+    watch: true
+
+log:
+  level: INFO
+  format: common
+
+accessLog:
+  format: common
+
+metrics:
+  prometheus:
+    entryPoint: metrics
+    addEntryPointsLabels: true
+    addRoutersLabels: true
+    addServicesLabels: true
+
+tracing:
+  otlp:
+    http:
+      endpoint: "http://irctc-tempo:4318/v1/traces"

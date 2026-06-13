@@ -7,7 +7,7 @@ import { disconnectKafka } from "@config/kafka.js";
 import { disconnectRedis } from "@config/redis.js";
 import { bootstrap } from "@container/index.js";
 import app from "./app.js";
-import { startTelemetry, shutdownTelemetry } from "@irctc/telemetry";
+import { shutdownTelemetry } from "@irctc/telemetry";
 
 const PORT = env.PORT;
 
@@ -93,17 +93,8 @@ const shutdown = async (signal: NodeJS.Signals, exitCode: number = 0) => {
 const startServer = async () => {
   logger.info({ module: "server" }, "Bootstrapping dependencies...");
 
-  // Initialize Telemetry SDK
-  const otlpEndpoint =
-    process.env.OTEL_EXPORTER_OTLP_ENDPOINT || "http://localhost:4318";
-  logger.info(
-    { module: "server", endpoint: otlpEndpoint },
-    "Starting OpenTelemetry SDK tracing",
-  );
-  startTelemetry({
-    serviceName: "notification-service",
-    otlpEndpoint,
-  });
+  // Telemetry SDK is bootstrapped via --import @irctc/telemetry/instrumentation
+  // before this module loads, ensuring auto-instrumentation patches http/express first.
 
   // Bootstrap the Kafka consumers. This awaits:
   //   1. Producer connect (for DLQ writes)

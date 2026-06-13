@@ -84,7 +84,7 @@ export class AuthController {
    * Retrieves all active sessions for the authenticated user.
    */
   async getSessions(req: Request, res: Response) {
-    const userId = (req as any).user.userId;
+    const userId = req.user!.userId;
     const sessions = await this.service.getSessions(userId);
 
     return res
@@ -97,7 +97,7 @@ export class AuthController {
    */
   async revokeSession(req: Request, res: Response) {
     const { sessionId } = req.params;
-    const userId = (req as any).user.userId;
+    const userId = req.user!.userId;
 
     if (!sessionId) {
       throw new ApiError(
@@ -117,7 +117,7 @@ export class AuthController {
    * Retrieves the profile of the currently authenticated user.
    */
   async me(req: Request, res: Response) {
-    const userId = (req as any).user.userId;
+    const userId = req.user!.userId;
 
     // Use service to find user instead of accessing repo directly
     const user = await this.service.getUserById(userId);
