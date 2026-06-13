@@ -204,7 +204,7 @@ Clone the repository:
 
 ```bash
 git clone <repository-url>
-cd itctc-clone
+cd irctc-clone
 ```
 
 Install dependencies:

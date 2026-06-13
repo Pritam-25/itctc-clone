@@ -41,7 +41,9 @@ export function normaliseKafkaHeaders(headers: unknown): KafkaHeaderMap {
 
     if (Array.isArray(rawValue)) {
       const values = rawValue
-        .map((v) => (Buffer.isBuffer(v) ? v.toString("utf8") : String(v)).trim())
+        .map((v) =>
+          (Buffer.isBuffer(v) ? v.toString("utf8") : String(v)).trim(),
+        )
         .filter(Boolean);
       if (values.length === 0) continue;
       out[key] = key === "traceparent" ? (values[0] ?? "") : values.join(",");
