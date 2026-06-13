@@ -930,8 +930,8 @@
     "semantic_hash": ""
   },
   "packages/ratelimit/src/express/rateLimitMiddleware.ts": {
-    "mtime": 1781319777.9084532,
-    "ast_hash": "48a97595e112836a0e16af236f02f206",
+    "mtime": 1781321004.7431383,
+    "ast_hash": "636613a7eea8ce66423ef41bf69d0c3d",
     "semantic_hash": ""
   },
   "packages/ratelimit/src/index.ts": {
@@ -940,8 +940,8 @@
     "semantic_hash": ""
   },
   "packages/ratelimit/src/token-bucket/TokenBucketRateLimiter.ts": {
-    "mtime": 1781320213.3285332,
-    "ast_hash": "bcf2956b35e044e524a5e3f401e25481",
+    "mtime": 1781321038.7164657,
+    "ast_hash": "ecbc3a1d53b1158202b4215d07636597",
     "semantic_hash": ""
   },
   "packages/ratelimit/src/types.ts": {

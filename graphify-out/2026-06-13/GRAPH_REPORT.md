@@ -7,7 +7,7 @@
 
 ## Summary
 
-- 1265 nodes · 1490 edges · 90 communities (77 shown, 13 thin omitted)
+- 1268 nodes · 1490 edges · 93 communities (78 shown, 15 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 37 edges (avg confidence: 0.81)
 - Token cost: 0 input · 0 output
 
@@ -104,32 +104,35 @@
 - [[_COMMUNITY_Community 87|Community 87]]
 - [[_COMMUNITY_Community 88|Community 88]]
 - [[_COMMUNITY_Community 89|Community 89]]
+- [[_COMMUNITY_Community 90|Community 90]]
+- [[_COMMUNITY_Community 91|Community 91]]
+- [[_COMMUNITY_Community 92|Community 92]]
 
 ## God Nodes (most connected - your core abstractions)
 
 1. `IRCTC Clone` - 23 edges
-2. `user-service` - 19 edges
-3. `compilerOptions` - 19 edges
+2. `compilerOptions` - 19 edges
+3. `user-service` - 19 edges
 4. `compilerOptions` - 18 edges
-5. `compilerOptions` - 15 edges
-6. `paths` - 15 edges
-7. `successResponse()` - 15 edges
+5. `paths` - 15 edges
+6. `successResponse()` - 15 edges
+7. `compilerOptions` - 15 edges
 8. `AuthService` - 14 edges
 9. `CircuitBreaker` - 13 edges
 10. `AuthController` - 12 edges
 
 ## Surprising Connections (you probably didn't know these)
 
-- `Async Registration Flow (send-otp -> Kafka -> notification-service)` --implements--> `Error Handling Flow` [INFERRED]
-  apps/user-service/README.md → CLAUDE.md
 - `bootstrap()` --calls--> `createConsumer()` [INFERRED]
   apps/notification-service/src/container/notification.container.ts → packages/kafka/src/client/consumer.ts
 - `liveCheck()` --calls--> `successResponse()` [INFERRED]
   apps/user-service/src/controllers/health.controller.ts → packages/http/src/response/apiResponse.ts
 - `readyCheck()` --calls--> `successResponse()` [INFERRED]
   apps/user-service/src/controllers/health.controller.ts → packages/http/src/response/apiResponse.ts
-- `IRCTC Clone` --references--> `Error Handling Flow` [EXTRACTED]
-  README.md → CLAUDE.md
+- `Async Registration Flow (send-otp -> Kafka -> notification-service)` --implements--> `Error Handling Flow` [INFERRED]
+  apps/user-service/README.md → CLAUDE.md
+- `getConsumer()` --calls--> `createConsumer()` [INFERRED]
+  apps/notification-service/src/config/kafka.ts → packages/kafka/src/client/consumer.ts
 
 ## Import Cycles
 
@@ -142,7 +145,7 @@
 - **Shared @irctc/\* Packages** — claude_pkg_errors, claude_pkg_http, claude_pkg_logger, claude_pkg_middleware, claude_pkg_kafka, claude_pkg_contracts, claude_pkg_telemetry [EXTRACTED 1.00]
 - **user-service Async OTP Email Flow** — user_service_async_registration_flow, user_service_kafka_contract, docker_kafka_topic_otp, claude_notification_service, user_service_redis_keys [INFERRED 0.85]
 
-## Communities (90 total, 13 thin omitted)
+## Communities (93 total, 15 thin omitted)
 
 ### Community 0 - "Prisma Generated Types"
 
@@ -156,8 +159,8 @@ Nodes (57): AggregateUser, BoolFieldUpdateOperationsInput, DateTimeFieldUpdateOp
 
 ### Community 3 - "Community 3"
 
-Cohesion: 0.18
-Nodes (8): LoginRequestDto, LoginSchema, VerifyOtpRequestDto, VerifyOtpRequestSchema, RegisterRequestDto, RegisterSchema, authControllerPromise, router
+Cohesion: 0.19
+Nodes (7): LoginRequestDto, LoginSchema, VerifyOtpRequestDto, VerifyOtpRequestSchema, RegisterSchema, authControllerPromise, router
 
 ### Community 4 - "Kafka Client Package"
 
@@ -441,8 +444,8 @@ Nodes (9): Error Handling Flow, Error Handling Guidelines, Health Probes & Boots
 
 ### Community 76 - "Community 76"
 
-Cohesion: 0.17
-Nodes (6): REDIS_KEYS, AccessTokenPayload, RefreshTokenPayload, OtpService, RegistrationSessionData, generateOtp()
+Cohesion: 0.27
+Nodes (6): RegisterRequestDto, REDIS_KEYS, AccessTokenPayload, RefreshTokenPayload, RegistrationSessionData, generateOtp()
 
 ### Community 77 - "Community 77"
 
@@ -451,8 +454,8 @@ Nodes (36): 1. send-otp (no auth required), 1s; with a token bucket, they get ca
 
 ### Community 78 - "Community 78"
 
-Cohesion: 0.12
-Nodes (17): CircuitBreaker, CircuitBreakerRegistry, CircuitBreakerState, CircuitBreakerOptions, CircuitOpenError, DEFAULT_OPTIONS, createRateLimitMiddleware(), RateLimitMiddlewareOptions (+9 more)
+Cohesion: 0.18
+Nodes (10): CircuitBreaker, CircuitBreakerRegistry, CircuitBreakerState, CircuitBreakerOptions, CircuitOpenError, DEFAULT_OPTIONS, BackoffOptions, withExponentialBackoff() (+2 more)
 
 ### Community 79 - "Community 79"
 
@@ -504,22 +507,27 @@ Nodes (6): Files to edit, New files, Phase 1 — Auth lives in the gateway only,
 Cohesion: 0.60
 Nodes (4): buildConsumerSpanContext(), extractTraceContextFromKafkaHeaders(), KafkaHeaderMap, normaliseKafkaHeaders()
 
+### Community 90 - "Community 90"
+
+Cohesion: 0.35
+Nodes (6): createRateLimitMiddleware(), RateLimitMiddlewareOptions, LoggerLike, RateLimitResult, TokenBucketOptions, TokenBucketRateLimiter
+
 ## Knowledge Gaps
 
-- **744 isolated node(s):** `name`, `version`, `private`, `type`, `main` (+739 more)
+- **743 isolated node(s):** `name`, `version`, `private`, `type`, `dev` (+738 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **13 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **15 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `successResponse()` connect `Health Check Endpoints` to `HTTP Package Utilities`?**
-  _High betweenness centrality (0.029) - this node is a cross-community bridge._
-- **Why does `@prisma/client` connect `User Service Dependencies` to `Auth Response & Prisma Client`?**
-  _High betweenness centrality (0.029) - this node is a cross-community bridge._
+  _High betweenness centrality (0.036) - this node is a cross-community bridge._
+- **Why does `AuthController` connect `Health Check Endpoints` to `Community 47`?**
+  _High betweenness centrality (0.032) - this node is a cross-community bridge._
 - **What connects `name`, `version`, `private` to the rest of the system?**
-  _745 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _744 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Prisma Generated Types` be split into smaller, more focused modules?**
   _Cohesion score 0.020202020202020204 - nodes in this community are weakly interconnected._
 - **Should `Prisma User Model` be split into smaller, more focused modules?**
