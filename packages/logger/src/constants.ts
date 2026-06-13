@@ -1,4 +1,5 @@
 export const REDACT_PATHS = [
+  "email",
   "password",
   "confirmPassword",
 
