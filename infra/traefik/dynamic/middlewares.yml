@@ -1,4 +1,14 @@
 http:
+  routers:
+    dashboard:
+      rule: "PathPrefix(`/api`) || PathPrefix(`/dashboard`)"
+      service: "api@internal"
+      entryPoints:
+        - dashboard
+      middlewares:
+        - secureHeaders
+        - traefik-dashboard-auth
+
   middlewares:
     secureHeaders:
       headers:
@@ -18,3 +28,8 @@ http:
       retry:
         attempts: 3
         initialInterval: "100ms"
+    traefik-dashboard-auth:
+      basicAuth:
+        users:
+          - "admin:$apr1$3Ig6rp7H$aXALwPZoLAvj30Ya6trjH."
+

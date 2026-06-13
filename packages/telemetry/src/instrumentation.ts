@@ -11,12 +11,13 @@
 import { startTelemetry } from "./index.js";
 
 const serviceName =
-  process.env.OTEL_SERVICE_NAME ??
-  process.env.SERVICE_NAME ??
+  process.env.OTEL_SERVICE_NAME?.trim() ||
+  process.env.SERVICE_NAME?.trim() ||
   "unknown-service";
 
 const otlpEndpoint =
-  process.env.OTEL_EXPORTER_OTLP_ENDPOINT ?? "http://localhost:4318";
+  process.env.OTEL_EXPORTER_OTLP_ENDPOINT?.trim() ||
+  "http://localhost:4318";
 
 startTelemetry({
   serviceName,

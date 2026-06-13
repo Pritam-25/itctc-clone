@@ -245,9 +245,9 @@
     "semantic_hash": "7d6b3a994dcb27f69ad10dd0730db6d5"
   },
   "apps/user-service/src/controllers/auth.controller.ts": {
-    "mtime": 1780851960.4651804,
-    "ast_hash": "55d79a7d33485c4a31adef495eaa0e45",
-    "semantic_hash": "55d79a7d33485c4a31adef495eaa0e45"
+    "mtime": 1781375951.856428,
+    "ast_hash": "255197633a47ed7b199ac0e1a0bbf9c4",
+    "semantic_hash": ""
   },
   "apps/user-service/src/controllers/health.controller.ts": {
     "mtime": 1781177563.314953,
@@ -355,14 +355,14 @@
     "semantic_hash": "c64451a7114471cd4667013d465bda02"
   },
   "apps/user-service/src/middleware/auth.middleware.ts": {
-    "mtime": 1781375838.822814,
-    "ast_hash": "e07a72fde1a3762572f390d5974821b7",
+    "mtime": 1781376063.66163,
+    "ast_hash": "3b12af3ec92c1f9252b94cfeb1a05c7f",
     "semantic_hash": ""
   },
   "apps/user-service/src/middleware/session.middleware.ts": {
-    "mtime": 1780851961.561584,
-    "ast_hash": "cfa21e74c8c7f699d948a01a67c05577",
-    "semantic_hash": "cfa21e74c8c7f699d948a01a67c05577"
+    "mtime": 1781376048.2418313,
+    "ast_hash": "ab25f5552f918c877a0c3e8dce36c90f",
+    "semantic_hash": ""
   },
   "apps/user-service/src/repository/auth.repo.ts": {
     "mtime": 1780851961.578108,
@@ -780,8 +780,8 @@
     "semantic_hash": ""
   },
   "docker-compose.yml": {
-    "mtime": 1781367977.8103366,
-    "ast_hash": "4a405957da7faf26095362f9d1fe0e0a",
+    "mtime": 1781376803.825289,
+    "ast_hash": "a27ec116552395864ae05ea144bd8a1f",
     "semantic_hash": ""
   },
   "packages/eslint-config/README.md": {
@@ -1160,18 +1160,18 @@
     "semantic_hash": ""
   },
   "packages/telemetry/src/instrumentation.ts": {
-    "mtime": 1781363669.6134095,
-    "ast_hash": "de31c85e94b49b7e2c5c2085a27639b5",
+    "mtime": 1781376814.1893167,
+    "ast_hash": "3b87a9a601df8d04c21547f0b7cc1b8f",
     "semantic_hash": ""
   },
   "infra/traefik/dynamic/middlewares.yml": {
-    "mtime": 1781341491.164618,
-    "ast_hash": "28bfaf3f1e4bc8c47143b334727a3f08",
+    "mtime": 1781376788.6020553,
+    "ast_hash": "de6695919d96bfd69b06317692c21e3f",
     "semantic_hash": ""
   },
   "infra/traefik/traefik.yml": {
-    "mtime": 1781365454.245025,
-    "ast_hash": "eaf45ec3071fe1aa555bd10db3ce6a1e",
+    "mtime": 1781376793.3123443,
+    "ast_hash": "3f61a6fa7aa400d145e98fa1b5544085",
     "semantic_hash": ""
   },
   "LGTM_stack.md": {
