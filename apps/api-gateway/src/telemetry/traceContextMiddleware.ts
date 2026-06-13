@@ -12,9 +12,16 @@ export const traceContextMiddleware: RequestHandler = (
     const traceId = span.spanContext().traceId;
     res.setHeader("X-Trace-Id", traceId);
 
-    res.on("finish", () => {
-      span.end();
-    });
+    let spanEnded = false;
+    const endSpan = () => {
+      if (!spanEnded) {
+        spanEnded = true;
+        span.end();
+      }
+    };
+
+    res.on("finish", endSpan);
+    res.on("close", endSpan);
 
     next();
   });

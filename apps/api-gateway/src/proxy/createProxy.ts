@@ -130,7 +130,7 @@ export const createProxy = (
         );
       } else if (error.name === "TimeoutError") {
         apiError = new ApiError(
-          statusCode.badGateway,
+          statusCode.gatewayTimeout,
           ERROR_CODES.SERVICE_UNAVAILABLE,
           "Upstream request timed out",
         );

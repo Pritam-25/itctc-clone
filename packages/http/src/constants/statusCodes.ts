@@ -13,6 +13,7 @@ export const statusCode = {
   internalError: 500,
   badGateway: 502,
   serviceUnavailable: 503,
+  gatewayTimeout: 504,
 } as const;
 
 export type StatusCodeKey = keyof typeof statusCode;

@@ -14,7 +14,7 @@ export const routingTable: RouteEntry[] = Object.entries(ROUTES).map(
     prefix,
     upstream: config.upstream,
     rewrite: config.rewrite,
-    auth: config.auth as "required" | "optional" | "none",
-    rateLimit: config.rateLimit as "default" | "auth",
+    auth: config.auth,
+    rateLimit: config.rateLimit,
   }),
 );

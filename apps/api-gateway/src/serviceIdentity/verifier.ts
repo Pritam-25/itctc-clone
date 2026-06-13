@@ -1,8 +1,7 @@
 import { AllowAllServiceIdentityVerifier } from "@irctc/service-identity";
 import { logger } from "@irctc/logger";
-import { ApiError } from "@irctc/errors";
+import { ApiError, ERROR_CODES, ERROR_MESSAGES } from "@irctc/errors";
 import { statusCode } from "@irctc/http";
-import { ERROR_CODES } from "@irctc/errors";
 import type { Request, Response, NextFunction, RequestHandler } from "express";
 
 const verifierInstance = new AllowAllServiceIdentityVerifier(logger);
@@ -18,7 +17,8 @@ export const serviceIdentityMiddleware: RequestHandler = async (
       throw new ApiError(
         statusCode.forbidden,
         ERROR_CODES.FORBIDDEN,
-        `Service identity verification failed: ${result.reason}`,
+        ERROR_MESSAGES[ERROR_CODES.FORBIDDEN],
+        { reason: result.reason },
       );
     }
     next();
