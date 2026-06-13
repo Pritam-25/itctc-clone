@@ -1,61 +1,39 @@
 import type { Request, Response, NextFunction } from "express";
-import jwt from "jsonwebtoken";
-import { env } from "@config/env.js";
+import { readUserFromHeaders, type AuthUser } from "@irctc/auth-headers";
 import { ApiError } from "@irctc/errors";
 import { statusCode } from "@irctc/http";
 import { ERROR_CODES } from "@utils/errors";
-import { COOKIE_NAMES } from "@utils/constants/cookie.js";
 
-interface AccessTokenPayload {
-  sub: string;
-  email: string;
-  sessionId: string;
-  type: "access";
+declare global {
+  namespace Express {
+    interface Request {
+      user?: AuthUser;
+    }
+  }
 }
 
-export interface AuthUser {
-  userId: string;
-  email?: string;
-  sessionId: string;
-}
 
-export const authMiddleware = (
+/**
+ * Middleware to require a trusted user context propagated from the API Gateway.
+ * Validates the presence of identity headers and attaches the decoded user metadata.
+ */
+export const requireUser = (
   req: Request,
   res: Response,
   next: NextFunction,
 ) => {
-  const token = req.cookies[COOKIE_NAMES.ACCESS_TOKEN];
+  const user = readUserFromHeaders(req.headers);
 
-  if (!token) {
+  if (!user) {
     throw new ApiError(
       statusCode.unauthorized,
       ERROR_CODES.ACCESS_TOKEN_MISSING,
     );
   }
 
-  try {
-    const decoded = jwt.verify(token, env.JWT_SECRET) as AccessTokenPayload;
+  // Attach user information to the request for downstream middlewares and controllers
+  req.user = user;
 
-    if (decoded.type !== "access") {
-      throw new ApiError(
-        statusCode.unauthorized,
-        ERROR_CODES.INVALID_TOKEN_TYPE,
-      );
-    }
-
-    // Attach user information to the request
-    (req as any).user = {
-      userId: decoded.sub,
-      email: decoded.email,
-      sessionId: decoded.sessionId,
-    };
-
-    next();
-  } catch (error) {
-    if (error instanceof ApiError) throw error;
-    throw new ApiError(
-      statusCode.unauthorized,
-      ERROR_CODES.REFRESH_TOKEN_INVALID,
-    );
-  }
+  next();
 };
+

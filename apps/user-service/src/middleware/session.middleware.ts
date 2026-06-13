@@ -5,14 +5,13 @@ import { statusCode } from "@irctc/http";
 import { ERROR_CODES } from "@utils/errors";
 import { REDIS_KEYS } from "@utils/constants/redis-keys.js";
 import { AUTH_DURATIONS } from "@utils/constants/auth.js";
-import type { AuthUser } from "./auth.middleware.js";
 
 export const sessionMiddleware = async (
   req: Request,
   res: Response,
   next: NextFunction,
 ) => {
-  const user = (req as any).user as AuthUser;
+  const user = req.user;
 
   if (!user || !user.sessionId) {
     throw new ApiError(

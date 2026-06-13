@@ -1,7 +1,7 @@
 import { Router } from "express";
 import type { Request, Response } from "express";
 import { statusCode, successResponse } from "@irctc/http";
-import { authMiddleware } from "@middleware/auth.middleware.js";
+import { requireUser } from "@middleware/auth.middleware.js";
 import { sessionMiddleware } from "@middleware/session.middleware.js";
 import { asyncHandler } from "@irctc/middleware";
 import { getAuthController } from "@container/index.js";
@@ -12,7 +12,7 @@ let authControllerPromise = getAuthController();
 
 router.get(
   "/me",
-  authMiddleware,
+  requireUser,
   sessionMiddleware,
   asyncHandler(async (req, res, next) => {
     const ctrl = await authControllerPromise;

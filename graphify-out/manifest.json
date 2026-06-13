@@ -185,8 +185,8 @@
     "semantic_hash": "bb3c0585b8783d83d110d47493bef000"
   },
   "apps/user-service/src/api/v1/routes/auth.routes.ts": {
-    "mtime": 1781177563.0300634,
-    "ast_hash": "17218d03fe02b9150cf10f1e1d0438e2",
+    "mtime": 1781375784.1681433,
+    "ast_hash": "88df1d72f1722de73ec51ecc1aa511de",
     "semantic_hash": ""
   },
   "apps/user-service/src/api/v1/routes/health.routes.ts": {
@@ -200,8 +200,8 @@
     "semantic_hash": ""
   },
   "apps/user-service/src/api/v1/routes/user.route.ts": {
-    "mtime": 1781177563.0821483,
-    "ast_hash": "e0f886a1fa4482c83f8d7965270f667c",
+    "mtime": 1781375777.3209925,
+    "ast_hash": "9a9bc764b238755040d8192c61a8d9bb",
     "semantic_hash": ""
   },
   "apps/user-service/src/app.ts": {
@@ -355,9 +355,9 @@
     "semantic_hash": "c64451a7114471cd4667013d465bda02"
   },
   "apps/user-service/src/middleware/auth.middleware.ts": {
-    "mtime": 1780851961.533216,
-    "ast_hash": "e10b3ab63703575d447f8b3a17e23bd7",
-    "semantic_hash": "e10b3ab63703575d447f8b3a17e23bd7"
+    "mtime": 1781375838.822814,
+    "ast_hash": "e07a72fde1a3762572f390d5974821b7",
+    "semantic_hash": ""
   },
   "apps/user-service/src/middleware/session.middleware.ts": {
     "mtime": 1780851961.561584,

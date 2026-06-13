@@ -2,7 +2,7 @@ import { Router } from "express";
 import { asyncHandler, validateSchema } from "@irctc/middleware";
 import { getAuthController } from "@container/index.js";
 import { RegisterSchema, VerifyOtpRequestSchema, LoginSchema } from "@dto/auth";
-import { authMiddleware } from "@middleware/auth.middleware.js";
+import { requireUser } from "@middleware/auth.middleware.js";
 import { sessionMiddleware } from "@middleware/session.middleware.js";
 
 const router: Router = Router();
@@ -48,7 +48,7 @@ router.post(
 
 router.post(
   "/logout",
-  authMiddleware,
+  requireUser,
   sessionMiddleware,
   asyncHandler(async (req, res, next) => {
     const ctrl = await authControllerPromise;
@@ -58,7 +58,7 @@ router.post(
 
 router.post(
   "/logout-all",
-  authMiddleware,
+  requireUser,
   sessionMiddleware,
   asyncHandler(async (req, res, next) => {
     const ctrl = await authControllerPromise;
@@ -68,7 +68,7 @@ router.post(
 
 router.get(
   "/sessions",
-  authMiddleware,
+  requireUser,
   sessionMiddleware,
   asyncHandler(async (req, res, next) => {
     const ctrl = await authControllerPromise;
@@ -78,7 +78,7 @@ router.get(
 
 router.delete(
   "/sessions/:sessionId",
-  authMiddleware,
+  requireUser,
   sessionMiddleware,
   asyncHandler(async (req, res, next) => {
     const ctrl = await authControllerPromise;
