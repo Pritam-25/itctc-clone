@@ -38,36 +38,48 @@ export function createRateLimitMiddleware(
   const { limiter, keyFn, capacity, refillPerSec, onLimit } = opts;
 
   return async (req: Request, res: Response, next: NextFunction) => {
-    const key = keyFn(req);
-
+    let key: string;
     try {
-      const result = await limiter.consume(key, { capacity, refillPerSec });
+      key = keyFn(req);
+    } catch (err) {
+      next(err);
+      return;
+    }
 
-      res.setHeader("X-RateLimit-Limit", capacity);
-      res.setHeader("X-RateLimit-Remaining", result.remaining);
-
-      if (result.allowed) {
-        next();
-        return;
-      }
-
-      // Denied — set Retry-After (in seconds, rounded up)
-      const retryAfterSec = Math.ceil(result.resetMs / 1000);
-      res.setHeader("Retry-After", retryAfterSec);
-
-      if (onLimit) {
-        onLimit(req, res);
-        return;
-      }
-
-      res.status(429).json({
-        success: false,
-        message: "Too many requests. Please try again later.",
-        retryAfterMs: result.resetMs,
-      });
+    let result;
+    try {
+      result = await limiter.consume(key, { capacity, refillPerSec });
     } catch {
       // If the rate limiter is down, fail open — don't block traffic
       next();
+      return;
     }
+
+    res.setHeader("X-RateLimit-Limit", capacity);
+    res.setHeader("X-RateLimit-Remaining", result.remaining);
+
+    if (result.allowed) {
+      next();
+      return;
+    }
+
+    // Denied — set Retry-After (in seconds, rounded up)
+    const retryAfterSec = Math.ceil(result.resetMs / 1000);
+    res.setHeader("Retry-After", retryAfterSec);
+
+    if (onLimit) {
+      try {
+        onLimit(req, res);
+      } catch (err) {
+        next(err);
+      }
+      return;
+    }
+
+    res.status(429).json({
+      success: false,
+      message: "Too many requests. Please try again later.",
+      retryAfterMs: result.resetMs,
+    });
   };
 }

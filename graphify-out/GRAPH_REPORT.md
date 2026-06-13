@@ -2,18 +2,18 @@
 
 ## Corpus Check
 
-- 179 files · ~44,946 words
+- 185 files · ~46,029 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
 
-- 1226 nodes · 1431 edges · 90 communities (76 shown, 14 thin omitted)
-- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 37 edges (avg confidence: 0.81)
+- 1268 nodes · 1490 edges · 93 communities (78 shown, 15 thin omitted)
+- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 37 edges (avg confidence: 0.81)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
 
-- Built from commit: `cadfa8f6`
+- Built from commit: `a2d36b39`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -71,10 +71,8 @@
 - [[_COMMUNITY_Community 50|Community 50]]
 - [[_COMMUNITY_Community 51|Community 51]]
 - [[_COMMUNITY_Community 52|Community 52]]
-- [[_COMMUNITY_Community 53|Community 53]]
 - [[_COMMUNITY_Community 54|Community 54]]
 - [[_COMMUNITY_Community 55|Community 55]]
-- [[_COMMUNITY_Community 56|Community 56]]
 - [[_COMMUNITY_Community 57|Community 57]]
 - [[_COMMUNITY_Community 58|Community 58]]
 - [[_COMMUNITY_Community 59|Community 59]]
@@ -106,7 +104,9 @@
 - [[_COMMUNITY_Community 87|Community 87]]
 - [[_COMMUNITY_Community 88|Community 88]]
 - [[_COMMUNITY_Community 89|Community 89]]
+- [[_COMMUNITY_Community 90|Community 90]]
 - [[_COMMUNITY_Community 91|Community 91]]
+- [[_COMMUNITY_Community 92|Community 92]]
 
 ## God Nodes (most connected - your core abstractions)
 
@@ -131,8 +131,8 @@
   apps/user-service/src/controllers/health.controller.ts → packages/http/src/response/apiResponse.ts
 - `Async Registration Flow (send-otp -> Kafka -> notification-service)` --implements--> `Error Handling Flow` [INFERRED]
   apps/user-service/README.md → CLAUDE.md
-- `IRCTC Clone` --references--> `Error Handling Flow` [EXTRACTED]
-  README.md → CLAUDE.md
+- `getConsumer()` --calls--> `createConsumer()` [INFERRED]
+  apps/notification-service/src/config/kafka.ts → packages/kafka/src/client/consumer.ts
 
 ## Import Cycles
 
@@ -145,17 +145,12 @@
 - **Shared @irctc/\* Packages** — claude_pkg_errors, claude_pkg_http, claude_pkg_logger, claude_pkg_middleware, claude_pkg_kafka, claude_pkg_contracts, claude_pkg_telemetry [EXTRACTED 1.00]
 - **user-service Async OTP Email Flow** — user_service_async_registration_flow, user_service_kafka_contract, docker_kafka_topic_otp, claude_notification_service, user_service_redis_keys [INFERRED 0.85]
 
-## Communities (90 total, 14 thin omitted)
+## Communities (93 total, 15 thin omitted)
 
 ### Community 0 - "Prisma Generated Types"
 
 Cohesion: 0.02
 Nodes (98): Args, At, AtLeast, AtLoose, AtStrict, BatchPayload, Boolean, BooleanFieldRefInput (+90 more)
-
-### Community 1 - "User Service Server & DTOs"
-
-Cohesion: 0.06
-Nodes (24): RegisterRequestDto, RegisterSchema, AUTH_DURATIONS, COOKIE_MAX_AGE, COOKIE_NAMES, DURATION_TO_MS, REDIS_KEYS, build() (+16 more)
 
 ### Community 2 - "Prisma User Model"
 
@@ -164,8 +159,8 @@ Nodes (57): AggregateUser, BoolFieldUpdateOperationsInput, DateTimeFieldUpdateOp
 
 ### Community 3 - "Community 3"
 
-Cohesion: 0.06
-Nodes (19): app, AuthResponseDto, LoginRequestDto, LoginSchema, VerifyOtpRequestDto, VerifyOtpRequestSchema, globalForPrisma, AuthMapper (+11 more)
+Cohesion: 0.19
+Nodes (7): LoginRequestDto, LoginSchema, VerifyOtpRequestDto, VerifyOtpRequestSchema, RegisterSchema, authControllerPromise, router
 
 ### Community 4 - "Kafka Client Package"
 
@@ -179,18 +174,13 @@ Nodes (40): dependencies, bcryptjs, cookie-parser, cors, dotenv, express, helmet
 
 ### Community 6 - "Auth Response & Prisma Client"
 
-Cohesion: 0.14
-Nodes (6): globalForPrisma, AuthMapper, UserMapper, PrismaClient, User, AuthRepository
+Cohesion: 0.09
+Nodes (9): AuthResponseDto, globalForPrisma, AuthMapper, UserMapper, PrismaClient, User, AuthRepository, AuthService (+1 more)
 
 ### Community 7 - "TS Config - Service Base"
 
 Cohesion: 0.05
 Nodes (36): compilerOptions, declaration, declarationMap, exactOptionalPropertyTypes, isolatedModules, jsx, module, moduleDetection (+28 more)
-
-### Community 7 - "TS Config - Service Base"
-
-Cohesion: 0.09
-Nodes (16): statusCode, StatusCodeKey, StatusCodeValue, getRequestId(), getTraceId(), getRequestContext(), RequestContext, requestContextStorage (+8 more)
 
 ### Community 8 - "Env & Server Bootstrap"
 
@@ -199,95 +189,10 @@ Nodes (17): env, startServer(), getEmailVendor(), bootstrap(), EmailContent, Ema
 
 ### Community 9 - "HTTP Package Utilities"
 
-Cohesion: 0.16
-Nodes (18): startServer(), ApiError, createErrorResponse(), ErrorInput, ERROR_CODES, ErrorCode, ErrorContract, ERROR_MESSAGES (+10 more)
+Cohesion: 0.09
+Nodes (16): statusCode, StatusCodeKey, StatusCodeValue, getRequestId(), getTraceId(), getRequestContext(), RequestContext, requestContextStorage (+8 more)
 
 ### Community 10 - "Notification Service Dependencies"
-
-Cohesion: 0.14
-Nodes (13): BoolFilter, BoolWithAggregatesFilter, DateTimeFilter, DateTimeWithAggregatesFilter, NestedBoolFilter, NestedBoolWithAggregatesFilter, NestedDateTimeFilter, NestedDateTimeWithAggregatesFilter (+5 more)
-
-### Community 11 - "TS Config - Package Base"
-
-Cohesion: 0.10
-Nodes (20): devDependencies, eslint, eslint-config-prettier, @eslint/js, eslint-plugin-only-warn, eslint-plugin-react, eslint-plugin-react-hooks, eslint-plugin-turbo (+12 more)
-
-### Community 12 - "Root Workspace Config"
-
-Cohesion: 0.11
-Nodes (18): dependencies, @irctc/errors, @irctc/http, @irctc/logger, zod, devDependencies, @repo/typescript-config, @types/express (+10 more)
-
-### Community 13 - "Errors Package Core"
-
-Cohesion: 0.12
-Nodes (16): dependencies, @irctc/errors, @opentelemetry/api, devDependencies, @repo/typescript-config, @types/node, exports, import (+8 more)
-
-### Community 14 - "ESLint Config Package"
-
-Cohesion: 0.12
-Nodes (16): dependencies, @opentelemetry/api, pino, devDependencies, pino-pretty, @repo/typescript-config, exports, import (+8 more)
-
-### Community 15 - "HTTP Package Dependencies"
-
-Cohesion: 0.12
-Nodes (16): compilerOptions, declaration, declarationMap, esModuleInterop, incremental, isolatedModules, lib, module (+8 more)
-
-### Community 16 - "Telemetry/Library Deps"
-
-Cohesion: 0.13
-Nodes (11): router, AuthController, liveCheck(), readyCheck(), liveCheck(), readyCheck(), HealthChecks, HealthService (+3 more)
-
-### Community 17 - "Kafka Package Dependencies"
-
-Cohesion: 0.05
-Nodes (36): 1. send-otp (no auth required), 1s; with a token bucket, they get capacity (10) + refill (a few, 2. verify-otp (sets auth_token cookie), 3. /auth/sessions (auth required; gateway must inject X-User-Id), 4. Try to forge X-User-Id from outside the gateway, 5. Direct host-side access must be refused, 6. Exceed the auth-bucket capacity; expect 429, 7. Token-bucket boundary check (regression for the fixed-window bug) (+28 more)
-
-### Community 18 - "Logger Package"
-
-Cohesion: 0.15
-Nodes (13): dependencies, devDependencies, @repo/typescript-config, exports, import, main, name, private (+5 more)
-
-### Community 19 - "TS Config - Base"
-
-Cohesion: 0.10
-Nodes (19): Common Commands, Error Handling Flow, Error Handling Guidelines, Global Operations, Graceful Shutdown, graphify, Health Monitoring, Health Probes & Bootstrap Readiness (+11 more)
-
-### Community 20 - "Middleware Dependencies"
-
-Cohesion: 0.20
-Nodes (9): compilerOptions, allowJs, jsx, module, moduleResolution, noEmit, plugins, extends (+1 more)
-
-### Community 21 - "Contracts Package"
-
-Cohesion: 0.29
-Nodes (6): compilerOptions, outDir, rootDir, exclude, extends, include
-
-### Community 22 - "Prisma Filter Types"
-
-Cohesion: 0.29
-Nodes (6): compilerOptions, outDir, rootDir, exclude, extends, include
-
-### Community 23 - "Health Check Endpoints"
-
-Cohesion: 0.29
-Nodes (4): config, LogOptions, PrismaClient, PrismaClientConstructor
-
-### Community 24 - "Notification Constants"
-
-Cohesion: 0.29
-Nodes (6): compilerOptions, outDir, rootDir, exclude, extends, include
-
-### Community 25 - "Prisma Browser Namespace"
-
-Cohesion: 0.29
-Nodes (6): compilerOptions, outDir, rootDir, exclude, extends, include
-
-### Community 26 - "User Auth Container & Publisher"
-
-Cohesion: 0.29
-Nodes (6): license, name, private, publishConfig, access, version
-
-### Community 27 - "Community 27"
 
 Cohesion: 0.06
 Nodes (33): dependencies, cors, dotenv, express, helmet, ioredis, @irctc/contracts, @irctc/errors (+25 more)
@@ -304,8 +209,8 @@ Nodes (29): devDependencies, prettier, turbo, typescript, engines, node, name, p
 
 ### Community 13 - "Errors Package Core"
 
-Cohesion: 0.18
-Nodes (16): ApiError, createErrorResponse(), ErrorInput, ERROR_CODES, ErrorCode, ErrorContract, ERROR_MESSAGES, ERROR_STATUS_MAP (+8 more)
+Cohesion: 0.16
+Nodes (18): startServer(), ApiError, createErrorResponse(), ErrorInput, ERROR_CODES, ErrorCode, ErrorContract, ERROR_MESSAGES (+10 more)
 
 ### Community 14 - "ESLint Config Package"
 
@@ -369,13 +274,13 @@ Nodes (6): build(), getAuthController(), OtpEventPublisher, SCHEMA_VERSION, SCHE
 
 ### Community 26 - "User Auth Container & Publisher"
 
-Cohesion: 0.11
-Nodes (17): Architecture, Build, Database Setup, Development, Environment Variables, Future Roadmap, Installation, IRCTC Clone (+9 more)
+Cohesion: 0.10
+Nodes (20): dependencies, ioredis, devDependencies, @repo/typescript-config, @types/express, @types/node, vitest, exports (+12 more)
 
 ### Community 27 - "Community 27"
 
-Cohesion: 0.17
-Nodes (8): startServer(), AUTH_DURATIONS, ERROR_CODES, ErrorCode, ERROR_MESSAGES, AccessTokenPayload, AuthUser, registerErrorMessages()
+Cohesion: 0.20
+Nodes (6): AUTH_DURATIONS, ERROR_CODES, ErrorCode, ERROR_MESSAGES, AccessTokenPayload, AuthUser
 
 ### Community 28 - "TS Config - Next.js"
 
@@ -402,17 +307,7 @@ Nodes (6): compilerOptions, outDir, rootDir, exclude, extends, include
 Cohesion: 0.29
 Nodes (6): compilerOptions, outDir, rootDir, exclude, extends, include
 
-### Community 51 - "Community 51"
-
-Cohesion: 0.29
-Nodes (7): 0a. `@irctc/telemetry`, 0b. `@irctc/resilience` — custom circuit breaker (V1, hand-rolled), 0c. `@irctc/ratelimit` — token bucket over Redis (Lua-atomic), 0d. `@irctc/idempotency` — three-phase Redis pattern, 0e. `@irctc/service-identity` — V1 placeholder, V2 mTLS, 0f. Reuse note for all five packages, Phase 0 — New shared packages
-
-### Community 52 - "Community 52"
-
-Cohesion: 0.29
-Nodes (7): API Gateway + Traefik + Distributed Tracing — Implementation Plan, `apps/api-gateway/package.json`, `apps/api-gateway/tsconfig.json`, Architecture at a glance, Context, File tree, Phase 2 — `apps/api-gateway` service
-
-### Community 53 - "Community 53"
+### Community 33 - "Prisma Internal Class"
 
 Cohesion: 0.29
 Nodes (4): config, LogOptions, PrismaClient, PrismaClientConstructor
@@ -457,10 +352,20 @@ Nodes (3): REDACT_PATHS, \_\_dirname, logger
 Cohesion: 0.40
 Nodes (4): compilerOptions, jsx, extends, $schema
 
+### Community 46 - "Community 46"
+
+Cohesion: 0.11
+Nodes (17): Architecture, Build, Database Setup, Development, Environment Variables, Future Roadmap, Installation, IRCTC Clone (+9 more)
+
 ### Community 47 - "Community 47"
 
 Cohesion: 0.36
 Nodes (4): COOKIE_MAX_AGE, COOKIE_NAMES, DURATION_TO_MS, getDeviceFingerprint()
+
+### Community 52 - "Community 52"
+
+Cohesion: 0.25
+Nodes (8): Backend, Cache, Database, Infrastructure, Messaging, Observability, Technology Stack, Validation
 
 ### Community 58 - "Community 58"
 
@@ -479,8 +384,8 @@ Nodes (8): Graceful Shutdown, Health Monitoring, Infrastructure Guidelines, Kafk
 
 ### Community 61 - "Community 61"
 
-Cohesion: 0.25
-Nodes (8): Backend, Cache, Database, Infrastructure, Messaging, Observability, Technology Stack, Validation
+Cohesion: 0.29
+Nodes (6): compilerOptions, composite, outDir, rootDir, extends, include
 
 ### Community 62 - "Community 62"
 
@@ -539,8 +444,8 @@ Nodes (9): Error Handling Flow, Error Handling Guidelines, Health Probes & Boots
 
 ### Community 76 - "Community 76"
 
-Cohesion: 0.17
-Nodes (6): REDIS_KEYS, AccessTokenPayload, RefreshTokenPayload, OtpService, RegistrationSessionData, generateOtp()
+Cohesion: 0.27
+Nodes (6): RegisterRequestDto, REDIS_KEYS, AccessTokenPayload, RefreshTokenPayload, RegistrationSessionData, generateOtp()
 
 ### Community 77 - "Community 77"
 
@@ -602,32 +507,32 @@ Nodes (6): Files to edit, New files, Phase 1 — Auth lives in the gateway only,
 Cohesion: 0.60
 Nodes (4): buildConsumerSpanContext(), extractTraceContextFromKafkaHeaders(), KafkaHeaderMap, normaliseKafkaHeaders()
 
-### Community 91 - "Community 91"
+### Community 90 - "Community 90"
 
-Cohesion: 0.20
-Nodes (4): AuthResponseDto, VerifyOtpRequestDto, AuthService, UserResponseDto
+Cohesion: 0.35
+Nodes (6): createRateLimitMiddleware(), RateLimitMiddlewareOptions, LoggerLike, RateLimitResult, TokenBucketOptions, TokenBucketRateLimiter
 
 ## Knowledge Gaps
 
-- **723 isolated node(s):** `Overview`, `Architecture`, `User Service`, `Search Service`, `Booking Service` (+718 more)
+- **743 isolated node(s):** `name`, `version`, `private`, `type`, `dev` (+738 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **14 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **15 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `successResponse()` connect `Telemetry/Library Deps` to `TS Config - Service Base`?**
-  _High betweenness centrality (0.041) - this node is a cross-community bridge._
-- **Why does `AuthController` connect `Telemetry/Library Deps` to `User Service Server & DTOs`?**
-  _High betweenness centrality (0.037) - this node is a cross-community bridge._
+- **Why does `successResponse()` connect `Health Check Endpoints` to `HTTP Package Utilities`?**
+  _High betweenness centrality (0.036) - this node is a cross-community bridge._
+- **Why does `AuthController` connect `Health Check Endpoints` to `Community 47`?**
+  _High betweenness centrality (0.032) - this node is a cross-community bridge._
 - **What connects `name`, `version`, `private` to the rest of the system?**
-  _702 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _744 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Prisma Generated Types` be split into smaller, more focused modules?**
   _Cohesion score 0.020202020202020204 - nodes in this community are weakly interconnected._
-- **Should `User Service Server & DTOs` be split into smaller, more focused modules?**
-  _Cohesion score 0.056261343012704176 - nodes in this community are weakly interconnected._
 - **Should `Prisma User Model` be split into smaller, more focused modules?**
   _Cohesion score 0.034482758620689655 - nodes in this community are weakly interconnected._
-- **Should `Community 3` be split into smaller, more focused modules?**
-  _Cohesion score 0.05656565656565657 - nodes in this community are weakly interconnected._
+- **Should `Kafka Client Package` be split into smaller, more focused modules?**
+  _Cohesion score 0.048726467331118496 - nodes in this community are weakly interconnected._
+- **Should `User Service Dependencies` be split into smaller, more focused modules?**
+  _Cohesion score 0.04878048780487805 - nodes in this community are weakly interconnected._

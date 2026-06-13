@@ -8,10 +8,13 @@ import type {
 /**
  * Atomic Redis Lua script implementing the token bucket algorithm.
  *
+ * Uses redis.call("TIME") for a single authoritative clock so multi-node
+ * deployments refill tokens against the same timeline regardless of
+ * application-instance clock skew.
+ *
  * KEYS[1] = rate limit key (e.g. "rl:user:123")
  * ARGV[1] = capacity (max tokens)
  * ARGV[2] = refillPerSec (tokens added per second)
- * ARGV[3] = nowMs (current time in milliseconds)
  *
  * Returns: { allowed (0|1), remaining (int), resetMs (int) }
  */
@@ -19,7 +22,10 @@ const LUA_SCRIPT = `
 local key          = KEYS[1]
 local capacity     = tonumber(ARGV[1])
 local refillPerSec = tonumber(ARGV[2])
-local nowMs        = tonumber(ARGV[3])
+
+-- Use Redis server time as the single authoritative clock
+local timeResult = redis.call("TIME")
+local nowMs      = tonumber(timeResult[1]) * 1000 + math.floor(tonumber(timeResult[2]) / 1000)
 
 local tokens     = tonumber(redis.call("HGET", key, "tokens"))
 local lastRefill = tonumber(redis.call("HGET", key, "lastRefill"))
@@ -62,6 +68,9 @@ return { allowed, remaining, resetMs }
  * Each call to `consume()` is a single Redis round-trip (EVALSHA with
  * EVAL fallback). The Lua script handles refill, consume, TTL, and
  * retry-after computation atomically — no race conditions.
+ *
+ * Time is derived from Redis server time (not application Date.now())
+ * to avoid clock-skew issues in multi-node deployments.
  */
 export class TokenBucketRateLimiter {
   private readonly redis: Redis;
@@ -97,10 +106,8 @@ export class TokenBucketRateLimiter {
       );
     }
 
-    const nowMs = Date.now();
-
     try {
-      const result = await this.evalLua(key, capacity, refillPerSec, nowMs);
+      const result = await this.evalLua(key, capacity, refillPerSec);
       return result;
     } catch (err) {
       this.logger?.error(
@@ -119,7 +126,6 @@ export class TokenBucketRateLimiter {
     key: string,
     capacity: number,
     refillPerSec: number,
-    nowMs: number,
   ): Promise<RateLimitResult> {
     // Try EVALSHA first (fast path) if we have a cached SHA
     if (this.scriptSha) {
@@ -130,7 +136,6 @@ export class TokenBucketRateLimiter {
           key,
           capacity.toString(),
           refillPerSec.toString(),
-          nowMs.toString(),
         );
         return this.parseResult(raw);
       } catch (err: unknown) {
@@ -153,7 +158,6 @@ export class TokenBucketRateLimiter {
       key,
       capacity.toString(),
       refillPerSec.toString(),
-      nowMs.toString(),
     );
     return this.parseResult(raw);
   }

@@ -1,10 +1,13 @@
 --[[
   Token Bucket Rate Limiter — Atomic Redis Lua Script
 
+  Uses redis.call("TIME") for a single authoritative clock so multi-node
+  deployments refill tokens against the same timeline regardless of
+  application-instance clock skew.
+
   KEYS[1] = rate limit key (e.g. "rl:user:123")
   ARGV[1] = capacity (max tokens)
   ARGV[2] = refillPerSec (tokens added per second)
-  ARGV[3] = nowMs (current time in milliseconds)
 
   Returns: { allowed (0|1), remaining (int), resetMs (int) }
 ]]
@@ -12,7 +15,10 @@
 local key          = KEYS[1]
 local capacity     = tonumber(ARGV[1])
 local refillPerSec = tonumber(ARGV[2])
-local nowMs        = tonumber(ARGV[3])
+
+-- Use Redis server time as the single authoritative clock
+local timeResult = redis.call("TIME")
+local nowMs      = tonumber(timeResult[1]) * 1000 + math.floor(tonumber(timeResult[2]) / 1000)
 
 -- Read current state
 local tokens     = tonumber(redis.call("HGET", key, "tokens"))
