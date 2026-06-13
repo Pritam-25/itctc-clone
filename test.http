@@ -1,4 +1,4 @@
-@apiV1 = http://localhost:4001/api/v1
+@apiV1 = http://localhost:4000/api/v1
 @authBase = {{apiV1}}/auth
 
 ###

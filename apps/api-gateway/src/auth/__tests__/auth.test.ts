@@ -137,7 +137,10 @@ describe("api-gateway auth module", () => {
 
       gatewayAuthMiddleware(req, res, next);
 
-      expect(res.setHeader).toHaveBeenCalledWith("Vary", "Accept-Encoding, Cookie, X-User-Id");
+      expect(res.setHeader).toHaveBeenCalledWith(
+        "Vary",
+        "Accept-Encoding, Cookie, X-User-Id",
+      );
       expect(next).toHaveBeenCalled();
     });
 

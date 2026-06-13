@@ -10,7 +10,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "api_gateway_package",
-      "community": 16,
+      "community": 3,
       "norm_label": "package.json"
     },
     {
@@ -20,7 +20,7 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "api_gateway_package_name",
-      "community": 16,
+      "community": 3,
       "norm_label": "name"
     },
     {
@@ -30,7 +30,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "api_gateway_package_version",
-      "community": 16,
+      "community": 3,
       "norm_label": "version"
     },
     {
@@ -40,7 +40,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "api_gateway_package_private",
-      "community": 16,
+      "community": 3,
       "norm_label": "private"
     },
     {
@@ -50,7 +50,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "api_gateway_package_type",
-      "community": 16,
+      "community": 3,
       "norm_label": "type"
     },
     {
@@ -60,7 +60,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "api_gateway_package_scripts",
-      "community": 16,
+      "community": 3,
       "norm_label": "scripts"
     },
     {
@@ -70,7 +70,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "api_gateway_package_scripts_dev",
-      "community": 16,
+      "community": 3,
       "norm_label": "dev"
     },
     {
@@ -80,7 +80,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "api_gateway_package_scripts_build",
-      "community": 16,
+      "community": 3,
       "norm_label": "build"
     },
     {
@@ -90,7 +90,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "api_gateway_package_scripts_start",
-      "community": 16,
+      "community": 3,
       "norm_label": "start"
     },
     {
@@ -100,7 +100,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "api_gateway_package_scripts_check_types",
-      "community": 16,
+      "community": 3,
       "norm_label": "check-types"
     },
     {
@@ -110,7 +110,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "api_gateway_package_scripts_test",
-      "community": 16,
+      "community": 3,
       "norm_label": "test"
     },
     {
@@ -120,7 +120,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "api_gateway_package_dependencies",
-      "community": 16,
+      "community": 3,
       "norm_label": "dependencies"
     },
     {
@@ -130,7 +130,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "api_gateway_package_dependencies_irctc_auth_headers",
-      "community": 16,
+      "community": 3,
       "norm_label": "@irctc/auth-headers"
     },
     {
@@ -140,7 +140,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "api_gateway_package_dependencies_irctc_contracts",
-      "community": 16,
+      "community": 3,
       "norm_label": "@irctc/contracts"
     },
     {
@@ -150,7 +150,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "api_gateway_package_dependencies_irctc_errors",
-      "community": 16,
+      "community": 3,
       "norm_label": "@irctc/errors"
     },
     {
@@ -160,7 +160,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "api_gateway_package_dependencies_irctc_http",
-      "community": 16,
+      "community": 3,
       "norm_label": "@irctc/http"
     },
     {
@@ -170,7 +170,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "api_gateway_package_dependencies_irctc_logger",
-      "community": 16,
+      "community": 3,
       "norm_label": "@irctc/logger"
     },
     {
@@ -180,218 +180,278 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "api_gateway_package_dependencies_irctc_middleware",
-      "community": 16,
+      "community": 3,
       "norm_label": "@irctc/middleware"
+    },
+    {
+      "label": "@irctc/ratelimit",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/package.json",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "api_gateway_package_dependencies_irctc_ratelimit",
+      "community": 3,
+      "norm_label": "@irctc/ratelimit"
+    },
+    {
+      "label": "@irctc/resilience",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/package.json",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "api_gateway_package_dependencies_irctc_resilience",
+      "community": 3,
+      "norm_label": "@irctc/resilience"
+    },
+    {
+      "label": "@irctc/service-identity",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/package.json",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "api_gateway_package_dependencies_irctc_service_identity",
+      "community": 3,
+      "norm_label": "@irctc/service-identity"
     },
     {
       "label": "@irctc/telemetry",
       "file_type": "code",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L20",
+      "source_location": "L23",
       "_origin": "ast",
       "id": "api_gateway_package_dependencies_irctc_telemetry",
-      "community": 16,
+      "community": 3,
       "norm_label": "@irctc/telemetry"
+    },
+    {
+      "label": "@opentelemetry/api",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/package.json",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "api_gateway_package_dependencies_opentelemetry_api",
+      "community": 3,
+      "norm_label": "@opentelemetry/api"
     },
     {
       "label": "cookie-parser",
       "file_type": "code",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L21",
+      "source_location": "L25",
       "_origin": "ast",
       "id": "api_gateway_package_dependencies_cookie_parser",
-      "community": 16,
+      "community": 3,
       "norm_label": "cookie-parser"
     },
     {
       "label": "cors",
       "file_type": "code",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L22",
+      "source_location": "L26",
       "_origin": "ast",
       "id": "api_gateway_package_dependencies_cors",
-      "community": 16,
+      "community": 3,
       "norm_label": "cors"
     },
     {
       "label": "dotenv",
       "file_type": "code",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L23",
+      "source_location": "L27",
       "_origin": "ast",
       "id": "api_gateway_package_dependencies_dotenv",
-      "community": 16,
+      "community": 3,
       "norm_label": "dotenv"
     },
     {
       "label": "express",
       "file_type": "code",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L24",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "api_gateway_package_dependencies_express",
-      "community": 16,
+      "community": 3,
       "norm_label": "express"
     },
     {
       "label": "helmet",
       "file_type": "code",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L25",
+      "source_location": "L29",
       "_origin": "ast",
       "id": "api_gateway_package_dependencies_helmet",
-      "community": 16,
+      "community": 3,
       "norm_label": "helmet"
     },
     {
       "label": "http-proxy-middleware",
       "file_type": "code",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L26",
+      "source_location": "L30",
       "_origin": "ast",
       "id": "api_gateway_package_dependencies_http_proxy_middleware",
-      "community": 16,
+      "community": 3,
       "norm_label": "http-proxy-middleware"
     },
     {
       "label": "ioredis",
       "file_type": "code",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L27",
+      "source_location": "L31",
       "_origin": "ast",
       "id": "api_gateway_package_dependencies_ioredis",
-      "community": 16,
+      "community": 3,
       "norm_label": "ioredis"
     },
     {
       "label": "jsonwebtoken",
       "file_type": "code",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L28",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "api_gateway_package_dependencies_jsonwebtoken",
-      "community": 16,
+      "community": 3,
       "norm_label": "jsonwebtoken"
     },
     {
       "label": "zod",
       "file_type": "code",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L29",
+      "source_location": "L33",
       "_origin": "ast",
       "id": "api_gateway_package_dependencies_zod",
-      "community": 16,
+      "community": 3,
       "norm_label": "zod"
     },
     {
       "label": "@t3-oss/env-core",
       "file_type": "code",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L30",
+      "source_location": "L34",
       "_origin": "ast",
       "id": "api_gateway_package_dependencies_t3_oss_env_core",
-      "community": 16,
+      "community": 3,
       "norm_label": "@t3-oss/env-core"
     },
     {
       "label": "devDependencies",
       "file_type": "code",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L32",
+      "source_location": "L36",
       "_origin": "ast",
       "id": "api_gateway_package_devdependencies",
-      "community": 16,
+      "community": 3,
       "norm_label": "devdependencies"
     },
     {
       "label": "@repo/typescript-config",
       "file_type": "code",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L33",
+      "source_location": "L37",
       "_origin": "ast",
       "id": "api_gateway_package_devdependencies_repo_typescript_config",
-      "community": 16,
+      "community": 3,
       "norm_label": "@repo/typescript-config"
     },
     {
       "label": "@types/cookie-parser",
       "file_type": "code",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L34",
+      "source_location": "L38",
       "_origin": "ast",
       "id": "api_gateway_package_devdependencies_types_cookie_parser",
-      "community": 16,
+      "community": 3,
       "norm_label": "@types/cookie-parser"
     },
     {
       "label": "@types/cors",
       "file_type": "code",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L35",
+      "source_location": "L39",
       "_origin": "ast",
       "id": "api_gateway_package_devdependencies_types_cors",
-      "community": 16,
+      "community": 3,
       "norm_label": "@types/cors"
     },
     {
       "label": "@types/express",
       "file_type": "code",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L36",
+      "source_location": "L40",
       "_origin": "ast",
       "id": "api_gateway_package_devdependencies_types_express",
-      "community": 16,
+      "community": 3,
       "norm_label": "@types/express"
     },
     {
       "label": "@types/jsonwebtoken",
       "file_type": "code",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L37",
+      "source_location": "L41",
       "_origin": "ast",
       "id": "api_gateway_package_devdependencies_types_jsonwebtoken",
-      "community": 16,
+      "community": 3,
       "norm_label": "@types/jsonwebtoken"
     },
     {
       "label": "@types/node",
       "file_type": "code",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L38",
+      "source_location": "L42",
       "_origin": "ast",
       "id": "api_gateway_package_devdependencies_types_node",
-      "community": 16,
+      "community": 3,
       "norm_label": "@types/node"
     },
     {
       "label": "tsc-alias",
       "file_type": "code",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L39",
+      "source_location": "L43",
       "_origin": "ast",
       "id": "api_gateway_package_devdependencies_tsc_alias",
-      "community": 16,
+      "community": 3,
       "norm_label": "tsc-alias"
     },
     {
       "label": "tsx",
       "file_type": "code",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L40",
+      "source_location": "L44",
       "_origin": "ast",
       "id": "api_gateway_package_devdependencies_tsx",
-      "community": 16,
+      "community": 3,
       "norm_label": "tsx"
     },
     {
       "label": "vitest",
       "file_type": "code",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L41",
+      "source_location": "L45",
       "_origin": "ast",
       "id": "api_gateway_package_devdependencies_vitest",
-      "community": 16,
+      "community": 3,
       "norm_label": "vitest"
+    },
+    {
+      "label": "app.ts",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/app.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_api_gateway_src_app_ts_src_app",
+      "community": 16,
+      "norm_label": "app.ts"
+    },
+    {
+      "label": "app",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/app.ts",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "apps_api_gateway_src_app_ts_src_app_app",
+      "community": 16,
+      "norm_label": "app"
     },
     {
       "label": "auth.test.ts",
@@ -400,7 +460,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_auth_test",
-      "community": 91,
+      "community": 16,
       "norm_label": "auth.test.ts"
     },
     {
@@ -410,7 +470,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "auth_cookienames",
-      "community": 91,
+      "community": 16,
       "norm_label": "cookienames.ts"
     },
     {
@@ -420,7 +480,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "auth_cookienames_cookie_names",
-      "community": 91,
+      "community": 16,
       "norm_label": "cookie_names"
     },
     {
@@ -430,18 +490,38 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "auth_gatewayauthmiddleware",
-      "community": 91,
+      "community": 16,
       "norm_label": "gatewayauthmiddleware.ts"
+    },
+    {
+      "label": "ensureVaryUserId()",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/auth/gatewayAuthMiddleware.ts",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "auth_gatewayauthmiddleware_ensurevaryuserid",
+      "community": 16,
+      "norm_label": "ensurevaryuserid()"
     },
     {
       "label": "gatewayAuthMiddleware()",
       "file_type": "code",
       "source_file": "apps/api-gateway/src/auth/gatewayAuthMiddleware.ts",
-      "source_location": "L13",
+      "source_location": "L36",
       "_origin": "ast",
       "id": "auth_gatewayauthmiddleware_gatewayauthmiddleware",
-      "community": 91,
+      "community": 16,
       "norm_label": "gatewayauthmiddleware()"
+    },
+    {
+      "label": "optionalGatewayAuthMiddleware()",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/auth/gatewayAuthMiddleware.ts",
+      "source_location": "L82",
+      "_origin": "ast",
+      "id": "auth_gatewayauthmiddleware_optionalgatewayauthmiddleware",
+      "community": 16,
+      "norm_label": "optionalgatewayauthmiddleware()"
     },
     {
       "label": "jwtVerifier.ts",
@@ -450,7 +530,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "auth_jwtverifier",
-      "community": 91,
+      "community": 16,
       "norm_label": "jwtverifier.ts"
     },
     {
@@ -460,7 +540,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "auth_jwtverifier_accesstokenpayload",
-      "community": 91,
+      "community": 16,
       "norm_label": "accesstokenpayload"
     },
     {
@@ -470,7 +550,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "auth_jwtverifier_verifyaccesstoken",
-      "community": 91,
+      "community": 16,
       "norm_label": "verifyaccesstoken()"
     },
     {
@@ -480,8 +560,608 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "auth_upstreamheaders",
-      "community": 95,
+      "community": 114,
       "norm_label": "upstreamheaders.ts"
+    },
+    {
+      "label": "env.ts",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/config/env.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_api_gateway_src_config_env_ts_config_env",
+      "community": 95,
+      "norm_label": "env.ts"
+    },
+    {
+      "label": "env",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/config/env.ts",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "apps_api_gateway_src_config_env_ts_config_env_env",
+      "community": 95,
+      "norm_label": "env"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/config/index.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_api_gateway_src_config_index_ts_config_index",
+      "community": 16,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "redis.ts",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/config/redis.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_api_gateway_src_config_redis_ts_config_redis",
+      "community": 92,
+      "norm_label": "redis.ts"
+    },
+    {
+      "label": "globalForRedis",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/config/redis.ts",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "apps_api_gateway_src_config_redis_ts_config_redis_globalforredis",
+      "community": 92,
+      "norm_label": "globalforredis"
+    },
+    {
+      "label": "createRedisClient()",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/config/redis.ts",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "apps_api_gateway_src_config_redis_ts_config_redis_createredisclient",
+      "community": 92,
+      "norm_label": "createredisclient()"
+    },
+    {
+      "label": "initRedis()",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/config/redis.ts",
+      "source_location": "L56",
+      "_origin": "ast",
+      "id": "apps_api_gateway_src_config_redis_ts_config_redis_initredis",
+      "community": 92,
+      "norm_label": "initredis()"
+    },
+    {
+      "label": "disconnectRedis()",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/config/redis.ts",
+      "source_location": "L89",
+      "_origin": "ast",
+      "id": "apps_api_gateway_src_config_redis_ts_config_redis_disconnectredis",
+      "community": 92,
+      "norm_label": "disconnectredis()"
+    },
+    {
+      "label": "routes.ts",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/config/routes.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "config_routes",
+      "community": 16,
+      "norm_label": "routes.ts"
+    },
+    {
+      "label": "ROUTES",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/config/routes.ts",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "config_routes_routes",
+      "community": 16,
+      "norm_label": "routes"
+    },
+    {
+      "label": "upstreams.ts",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/config/upstreams.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "config_upstreams",
+      "community": 16,
+      "norm_label": "upstreams.ts"
+    },
+    {
+      "label": "Upstream",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/config/upstreams.ts",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "config_upstreams_upstream",
+      "community": 16,
+      "norm_label": "upstream"
+    },
+    {
+      "label": "UpstreamUrl",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/config/upstreams.ts",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "config_upstreams_upstreamurl",
+      "community": 16,
+      "norm_label": "upstreamurl"
+    },
+    {
+      "label": "health.test.ts",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/health/__tests__/health.test.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "tests_health_test",
+      "community": 104,
+      "norm_label": "health.test.ts"
+    },
+    {
+      "label": "health.controller.ts",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/health/health.controller.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_api_gateway_src_health_health_controller_ts_health_health_controller",
+      "community": 10,
+      "norm_label": "health.controller.ts"
+    },
+    {
+      "label": "liveCheck()",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/health/health.controller.ts",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "apps_api_gateway_src_health_health_controller_ts_health_health_controller_livecheck",
+      "community": 10,
+      "norm_label": "livecheck()"
+    },
+    {
+      "label": "readyCheck()",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/health/health.controller.ts",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "apps_api_gateway_src_health_health_controller_ts_health_health_controller_readycheck",
+      "community": 10,
+      "norm_label": "readycheck()"
+    },
+    {
+      "label": "health.service.ts",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/health/health.service.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_api_gateway_src_health_health_service_ts_health_health_service",
+      "community": 94,
+      "norm_label": "health.service.ts"
+    },
+    {
+      "label": "HealthChecks",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/health/health.service.ts",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "apps_api_gateway_src_health_health_service_ts_health_health_service_healthchecks",
+      "community": 94,
+      "norm_label": "healthchecks"
+    },
+    {
+      "label": "probeRedis()",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/health/health.service.ts",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "apps_api_gateway_src_health_health_service_ts_health_health_service_proberedis",
+      "community": 94,
+      "norm_label": "proberedis()"
+    },
+    {
+      "label": "HealthService",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/health/health.service.ts",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "apps_api_gateway_src_health_health_service_ts_health_health_service_healthservice",
+      "community": 94,
+      "norm_label": "healthservice"
+    },
+    {
+      "label": ".runReadinessChecks()",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/health/health.service.ts",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "apps_api_gateway_src_health_health_service_ts_health_health_service_healthservice_runreadinesschecks",
+      "community": 94,
+      "norm_label": ".runreadinesschecks()"
+    },
+    {
+      "label": "createProxy.ts",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/proxy/createProxy.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "proxy_createproxy",
+      "community": 16,
+      "norm_label": "createproxy.ts"
+    },
+    {
+      "label": "createProxy()",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/proxy/createProxy.ts",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "proxy_createproxy_createproxy",
+      "community": 16,
+      "norm_label": "createproxy()"
+    },
+    {
+      "label": "proxyHeadersMiddleware.ts",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/proxy/proxyHeadersMiddleware.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "proxy_proxyheadersmiddleware",
+      "community": 16,
+      "norm_label": "proxyheadersmiddleware.ts"
+    },
+    {
+      "label": "proxyHeadersMiddleware()",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/proxy/proxyHeadersMiddleware.ts",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "proxy_proxyheadersmiddleware_proxyheadersmiddleware",
+      "community": 16,
+      "norm_label": "proxyheadersmiddleware()"
+    },
+    {
+      "label": "presets.ts",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/ratelimit/presets.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "ratelimit_presets",
+      "community": 16,
+      "norm_label": "presets.ts"
+    },
+    {
+      "label": "RATELIMIT_PRESETS",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/ratelimit/presets.ts",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "ratelimit_presets_ratelimit_presets",
+      "community": 16,
+      "norm_label": "ratelimit_presets"
+    },
+    {
+      "label": "RateLimitPresetName",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/ratelimit/presets.ts",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "ratelimit_presets_ratelimitpresetname",
+      "community": 16,
+      "norm_label": "ratelimitpresetname"
+    },
+    {
+      "label": "rateLimitMiddleware.ts",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/ratelimit/rateLimitMiddleware.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "ratelimit_ratelimitmiddleware",
+      "community": 16,
+      "norm_label": "ratelimitmiddleware.ts"
+    },
+    {
+      "label": "rateLimiter",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/ratelimit/rateLimitMiddleware.ts",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "ratelimit_ratelimitmiddleware_ratelimiter",
+      "community": 16,
+      "norm_label": "ratelimiter"
+    },
+    {
+      "label": "getRateLimitMiddleware()",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/ratelimit/rateLimitMiddleware.ts",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "ratelimit_ratelimitmiddleware_getratelimitmiddleware",
+      "community": 16,
+      "norm_label": "getratelimitmiddleware()"
+    },
+    {
+      "label": "breakerRegistry.ts",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/resilience/breakerRegistry.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "resilience_breakerregistry",
+      "community": 16,
+      "norm_label": "breakerregistry.ts"
+    },
+    {
+      "label": "breakerRegistry",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/resilience/breakerRegistry.ts",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "resilience_breakerregistry_breakerregistry",
+      "community": 16,
+      "norm_label": "breakerregistry"
+    },
+    {
+      "label": "registeredBreakers",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/resilience/breakerRegistry.ts",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "resilience_breakerregistry_registeredbreakers",
+      "community": 16,
+      "norm_label": "registeredbreakers"
+    },
+    {
+      "label": "getBreaker()",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/resilience/breakerRegistry.ts",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "resilience_breakerregistry_getbreaker",
+      "community": 16,
+      "norm_label": "getbreaker()"
+    },
+    {
+      "label": "timeouts.ts",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/resilience/timeouts.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "resilience_timeouts",
+      "community": 16,
+      "norm_label": "timeouts.ts"
+    },
+    {
+      "label": "TIMEOUTS",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/resilience/timeouts.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "resilience_timeouts_timeouts",
+      "community": 16,
+      "norm_label": "timeouts"
+    },
+    {
+      "label": "health.routes.ts",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/routes/health.routes.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_api_gateway_src_routes_health_routes_ts_routes_health_routes",
+      "community": 96,
+      "norm_label": "health.routes.ts"
+    },
+    {
+      "label": "router",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/routes/health.routes.ts",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "apps_api_gateway_src_routes_health_routes_ts_routes_health_routes_router",
+      "community": 96,
+      "norm_label": "router"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/routes/index.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_api_gateway_src_routes_index_ts_routes_index",
+      "community": 98,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "router",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/routes/index.ts",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "apps_api_gateway_src_routes_index_ts_routes_index_router",
+      "community": 98,
+      "norm_label": "router"
+    },
+    {
+      "label": "mountRoutes.ts",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/routing/mountRoutes.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "routing_mountroutes",
+      "community": 16,
+      "norm_label": "mountroutes.ts"
+    },
+    {
+      "label": "mountRoutes()",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/routing/mountRoutes.ts",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "routing_mountroutes_mountroutes",
+      "community": 16,
+      "norm_label": "mountroutes()"
+    },
+    {
+      "label": "routingTable.ts",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/routing/routingTable.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "routing_routingtable",
+      "community": 16,
+      "norm_label": "routingtable.ts"
+    },
+    {
+      "label": "RouteEntry",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/routing/routingTable.ts",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "routing_routingtable_routeentry",
+      "community": 16,
+      "norm_label": "routeentry"
+    },
+    {
+      "label": "routingTable",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/routing/routingTable.ts",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "routing_routingtable_routingtable",
+      "community": 16,
+      "norm_label": "routingtable"
+    },
+    {
+      "label": "server.ts",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/server.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_api_gateway_src_server_ts_src_server",
+      "community": 53,
+      "norm_label": "server.ts"
+    },
+    {
+      "label": "shutdown()",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/server.ts",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "apps_api_gateway_src_server_ts_src_server_shutdown",
+      "community": 53,
+      "norm_label": "shutdown()"
+    },
+    {
+      "label": "startServer()",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/server.ts",
+      "source_location": "L65",
+      "_origin": "ast",
+      "id": "apps_api_gateway_src_server_ts_src_server_startserver",
+      "community": 53,
+      "norm_label": "startserver()"
+    },
+    {
+      "label": "verifier.ts",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/serviceIdentity/verifier.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "serviceidentity_verifier",
+      "community": 16,
+      "norm_label": "verifier.ts"
+    },
+    {
+      "label": "verifierInstance",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/serviceIdentity/verifier.ts",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "serviceidentity_verifier_verifierinstance",
+      "community": 16,
+      "norm_label": "verifierinstance"
+    },
+    {
+      "label": "serviceIdentityMiddleware()",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/serviceIdentity/verifier.ts",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "serviceidentity_verifier_serviceidentitymiddleware",
+      "community": 16,
+      "norm_label": "serviceidentitymiddleware()"
+    },
+    {
+      "label": "traceContextMiddleware.ts",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/telemetry/traceContextMiddleware.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "telemetry_tracecontextmiddleware",
+      "community": 16,
+      "norm_label": "tracecontextmiddleware.ts"
+    },
+    {
+      "label": "tracer",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/telemetry/traceContextMiddleware.ts",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "telemetry_tracecontextmiddleware_tracer",
+      "community": 16,
+      "norm_label": "tracer"
+    },
+    {
+      "label": "traceContextMiddleware()",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/telemetry/traceContextMiddleware.ts",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "telemetry_tracecontextmiddleware_tracecontextmiddleware",
+      "community": 16,
+      "norm_label": "tracecontextmiddleware()"
+    },
+    {
+      "label": "errorCodes.ts",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/utils/errors/errorCodes.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_api_gateway_src_utils_errors_errorcodes_ts_errors_errorcodes",
+      "community": 100,
+      "norm_label": "errorcodes.ts"
+    },
+    {
+      "label": "errorMessages.ts",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/utils/errors/errorMessages.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_api_gateway_src_utils_errors_errormessages_ts_errors_errormessages",
+      "community": 99,
+      "norm_label": "errormessages.ts"
+    },
+    {
+      "label": "ERROR_MESSAGES",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/utils/errors/errorMessages.ts",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "apps_api_gateway_src_utils_errors_errormessages_ts_errors_errormessages_error_messages",
+      "community": 99,
+      "norm_label": "error_messages"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "apps/api-gateway/src/utils/errors/index.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_api_gateway_src_utils_errors_index_ts_errors_index",
+      "community": 85,
+      "norm_label": "index.ts"
     },
     {
       "label": "tsconfig.json",
@@ -490,7 +1170,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "api_gateway_tsconfig",
-      "community": 88,
+      "community": 79,
       "norm_label": "tsconfig.json"
     },
     {
@@ -500,7 +1180,7 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "api_gateway_tsconfig_extends",
-      "community": 88,
+      "community": 79,
       "norm_label": "extends"
     },
     {
@@ -510,7 +1190,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "api_gateway_tsconfig_compileroptions",
-      "community": 88,
+      "community": 79,
       "norm_label": "compileroptions"
     },
     {
@@ -520,7 +1200,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "api_gateway_tsconfig_compileroptions_rootdir",
-      "community": 88,
+      "community": 79,
       "norm_label": "rootdir"
     },
     {
@@ -530,7 +1210,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "api_gateway_tsconfig_compileroptions_outdir",
-      "community": 88,
+      "community": 79,
       "norm_label": "outdir"
     },
     {
@@ -540,7 +1220,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "api_gateway_tsconfig_compileroptions_module",
-      "community": 88,
+      "community": 79,
       "norm_label": "module"
     },
     {
@@ -550,7 +1230,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "api_gateway_tsconfig_compileroptions_target",
-      "community": 88,
+      "community": 79,
       "norm_label": "target"
     },
     {
@@ -560,7 +1240,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "api_gateway_tsconfig_compileroptions_types",
-      "community": 88,
+      "community": 79,
       "norm_label": "types"
     },
     {
@@ -570,7 +1250,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "api_gateway_tsconfig_compileroptions_sourcemap",
-      "community": 88,
+      "community": 79,
       "norm_label": "sourcemap"
     },
     {
@@ -580,7 +1260,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "api_gateway_tsconfig_compileroptions_declaration",
-      "community": 88,
+      "community": 79,
       "norm_label": "declaration"
     },
     {
@@ -590,7 +1270,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "api_gateway_tsconfig_compileroptions_declarationmap",
-      "community": 88,
+      "community": 79,
       "norm_label": "declarationmap"
     },
     {
@@ -600,7 +1280,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "api_gateway_tsconfig_compileroptions_nouncheckedindexedaccess",
-      "community": 88,
+      "community": 79,
       "norm_label": "nouncheckedindexedaccess"
     },
     {
@@ -610,7 +1290,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "api_gateway_tsconfig_compileroptions_exactoptionalpropertytypes",
-      "community": 88,
+      "community": 79,
       "norm_label": "exactoptionalpropertytypes"
     },
     {
@@ -620,7 +1300,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "api_gateway_tsconfig_compileroptions_paths",
-      "community": 88,
+      "community": 79,
       "norm_label": "paths"
     },
     {
@@ -630,7 +1310,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "api_gateway_tsconfig_paths_config",
-      "community": 88,
+      "community": 79,
       "norm_label": "@config/*"
     },
     {
@@ -640,7 +1320,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "api_gateway_tsconfig_paths_middleware",
-      "community": 88,
+      "community": 79,
       "norm_label": "@middleware/*"
     },
     {
@@ -650,7 +1330,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "api_gateway_tsconfig_paths_routes",
-      "community": 88,
+      "community": 79,
       "norm_label": "@routes/*"
     },
     {
@@ -660,7 +1340,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "api_gateway_tsconfig_compileroptions_strict",
-      "community": 88,
+      "community": 79,
       "norm_label": "strict"
     },
     {
@@ -670,7 +1350,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "api_gateway_tsconfig_compileroptions_jsx",
-      "community": 88,
+      "community": 79,
       "norm_label": "jsx"
     },
     {
@@ -680,7 +1360,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "api_gateway_tsconfig_compileroptions_verbatimmodulesyntax",
-      "community": 88,
+      "community": 79,
       "norm_label": "verbatimmodulesyntax"
     },
     {
@@ -690,7 +1370,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "api_gateway_tsconfig_compileroptions_isolatedmodules",
-      "community": 88,
+      "community": 79,
       "norm_label": "isolatedmodules"
     },
     {
@@ -700,7 +1380,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "api_gateway_tsconfig_compileroptions_nouncheckedsideeffectimports",
-      "community": 88,
+      "community": 79,
       "norm_label": "nouncheckedsideeffectimports"
     },
     {
@@ -710,7 +1390,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "api_gateway_tsconfig_compileroptions_moduledetection",
-      "community": 88,
+      "community": 79,
       "norm_label": "moduledetection"
     },
     {
@@ -720,7 +1400,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "api_gateway_tsconfig_compileroptions_skiplibcheck",
-      "community": 88,
+      "community": 79,
       "norm_label": "skiplibcheck"
     },
     {
@@ -730,7 +1410,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "api_gateway_tsconfig_include",
-      "community": 88,
+      "community": 79,
       "norm_label": "include"
     },
     {
@@ -740,7 +1420,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "api_gateway_tsconfig_exclude",
-      "community": 88,
+      "community": 79,
       "norm_label": "exclude"
     },
     {
@@ -1100,7 +1780,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "apps_notification_service_src_api_v1_routes_health_routes_ts_routes_health_routes",
-      "community": 10,
+      "community": 108,
       "norm_label": "health.routes.ts"
     },
     {
@@ -1110,7 +1790,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "apps_notification_service_src_api_v1_routes_health_routes_ts_routes_health_routes_router",
-      "community": 10,
+      "community": 108,
       "norm_label": "router"
     },
     {
@@ -1579,7 +2259,7 @@
       "source_file": "apps/notification-service/src/health/health.controller.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "health_health_controller",
+      "id": "apps_notification_service_src_health_health_controller_ts_health_health_controller",
       "community": 10,
       "norm_label": "health.controller.ts"
     },
@@ -1589,7 +2269,7 @@
       "source_file": "apps/notification-service/src/health/health.controller.ts",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "health_health_controller_livecheck",
+      "id": "apps_notification_service_src_health_health_controller_ts_health_health_controller_livecheck",
       "community": 10,
       "norm_label": "livecheck()"
     },
@@ -1599,7 +2279,7 @@
       "source_file": "apps/notification-service/src/health/health.controller.ts",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "health_health_controller_readycheck",
+      "id": "apps_notification_service_src_health_health_controller_ts_health_health_controller_readycheck",
       "community": 10,
       "norm_label": "readycheck()"
     },
@@ -1609,8 +2289,8 @@
       "source_file": "apps/notification-service/src/health/health.service.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "health_health_service",
-      "community": 10,
+      "id": "apps_notification_service_src_health_health_service_ts_health_health_service",
+      "community": 97,
       "norm_label": "health.service.ts"
     },
     {
@@ -1619,8 +2299,8 @@
       "source_file": "apps/notification-service/src/health/health.service.ts",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "health_health_service_healthchecks",
-      "community": 10,
+      "id": "apps_notification_service_src_health_health_service_ts_health_health_service_healthchecks",
+      "community": 97,
       "norm_label": "healthchecks"
     },
     {
@@ -1629,8 +2309,8 @@
       "source_file": "apps/notification-service/src/health/health.service.ts",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "health_health_service_proberedis",
-      "community": 10,
+      "id": "apps_notification_service_src_health_health_service_ts_health_health_service_proberedis",
+      "community": 97,
       "norm_label": "proberedis()"
     },
     {
@@ -1640,7 +2320,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "health_health_service_probekafka",
-      "community": 10,
+      "community": 97,
       "norm_label": "probekafka()"
     },
     {
@@ -1649,8 +2329,8 @@
       "source_file": "apps/notification-service/src/health/health.service.ts",
       "source_location": "L38",
       "_origin": "ast",
-      "id": "health_health_service_healthservice",
-      "community": 10,
+      "id": "apps_notification_service_src_health_health_service_ts_health_health_service_healthservice",
+      "community": 97,
       "norm_label": "healthservice"
     },
     {
@@ -1659,8 +2339,8 @@
       "source_file": "apps/notification-service/src/health/health.service.ts",
       "source_location": "L39",
       "_origin": "ast",
-      "id": "health_health_service_healthservice_runreadinesschecks",
-      "community": 10,
+      "id": "apps_notification_service_src_health_health_service_ts_health_health_service_healthservice_runreadinesschecks",
+      "community": 97,
       "norm_label": ".runreadinesschecks()"
     },
     {
@@ -2860,7 +3540,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "routes_auth_routes",
-      "community": 79,
+      "community": 81,
       "norm_label": "auth.routes.ts"
     },
     {
@@ -2870,7 +3550,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "routes_auth_routes_router",
-      "community": 79,
+      "community": 81,
       "norm_label": "router"
     },
     {
@@ -2880,7 +3560,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "routes_auth_routes_authcontrollerpromise",
-      "community": 79,
+      "community": 81,
       "norm_label": "authcontrollerpromise"
     },
     {
@@ -2909,8 +3589,8 @@
       "source_file": "apps/user-service/src/api/v1/routes/index.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "routes_index",
-      "community": 86,
+      "id": "apps_user_service_src_api_v1_routes_index_ts_routes_index",
+      "community": 102,
       "norm_label": "index.ts"
     },
     {
@@ -2919,8 +3599,8 @@
       "source_file": "apps/user-service/src/api/v1/routes/index.ts",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "routes_index_router",
-      "community": 86,
+      "id": "apps_user_service_src_api_v1_routes_index_ts_routes_index_router",
+      "community": 102,
       "norm_label": "router"
     },
     {
@@ -2930,7 +3610,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "routes_user_route",
-      "community": 86,
+      "community": 102,
       "norm_label": "user.route.ts"
     },
     {
@@ -2940,7 +3620,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "routes_user_route_router",
-      "community": 86,
+      "community": 102,
       "norm_label": "router"
     },
     {
@@ -2950,7 +3630,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "routes_user_route_authcontrollerpromise",
-      "community": 86,
+      "community": 102,
       "norm_label": "authcontrollerpromise"
     },
     {
@@ -2960,7 +3640,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "apps_user_service_src_app_ts_src_app",
-      "community": 86,
+      "community": 109,
       "norm_label": "app.ts"
     },
     {
@@ -2970,7 +3650,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "apps_user_service_src_app_ts_src_app_app",
-      "community": 86,
+      "community": 109,
       "norm_label": "app"
     },
     {
@@ -3210,7 +3890,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "controllers_auth_controller",
-      "community": 90,
+      "community": 91,
       "norm_label": "auth.controller.ts"
     },
     {
@@ -3370,7 +4050,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "controllers_index",
-      "community": 90,
+      "community": 91,
       "norm_label": "index.ts"
     },
     {
@@ -3390,7 +4070,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "auth_auth_response_dto_authresponsedto",
-      "community": 81,
+      "community": 87,
       "norm_label": "authresponsedto"
     },
     {
@@ -3400,7 +4080,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "auth_index",
-      "community": 79,
+      "community": 81,
       "norm_label": "index.ts"
     },
     {
@@ -3410,7 +4090,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "auth_login_request_dto",
-      "community": 79,
+      "community": 81,
       "norm_label": "login-request.dto.ts"
     },
     {
@@ -3420,7 +4100,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "auth_login_request_dto_loginschema",
-      "community": 79,
+      "community": 81,
       "norm_label": "loginschema"
     },
     {
@@ -3430,7 +4110,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "auth_login_request_dto_loginrequestdto",
-      "community": 79,
+      "community": 81,
       "norm_label": "loginrequestdto"
     },
     {
@@ -3440,7 +4120,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "auth_otp_request_dto",
-      "community": 79,
+      "community": 81,
       "norm_label": "otp-request.dto.ts"
     },
     {
@@ -3450,7 +4130,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "auth_otp_request_dto_verifyotprequestschema",
-      "community": 79,
+      "community": 81,
       "norm_label": "verifyotprequestschema"
     },
     {
@@ -3470,7 +4150,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "auth_register_request_dto",
-      "community": 79,
+      "community": 81,
       "norm_label": "register-request.dto.ts"
     },
     {
@@ -3480,7 +4160,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "auth_register_request_dto_registerschema",
-      "community": 79,
+      "community": 81,
       "norm_label": "registerschema"
     },
     {
@@ -3490,7 +4170,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "auth_register_request_dto_registerrequestdto",
-      "community": 79,
+      "community": 85,
       "norm_label": "registerrequestdto"
     },
     {
@@ -3630,7 +4310,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "prisma_browser",
-      "community": 18,
+      "community": 86,
       "norm_label": "browser.ts"
     },
     {
@@ -3640,7 +4320,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "prisma_browser_user",
-      "community": 18,
+      "community": 86,
       "norm_label": "user"
     },
     {
@@ -3820,7 +4500,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "prisma_enums",
-      "community": 18,
+      "community": 86,
       "norm_label": "enums.ts"
     },
     {
@@ -4890,7 +5570,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "internal_prismanamespacebrowser",
-      "community": 18,
+      "community": 86,
       "norm_label": "prismanamespacebrowser.ts"
     },
     {
@@ -4900,7 +5580,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "internal_prismanamespacebrowser_nulltypes",
-      "community": 18,
+      "community": 86,
       "norm_label": "nulltypes"
     },
     {
@@ -4910,7 +5590,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "internal_prismanamespacebrowser_modelname",
-      "community": 18,
+      "community": 86,
       "norm_label": "modelname"
     },
     {
@@ -4920,7 +5600,7 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "internal_prismanamespacebrowser_transactionisolationlevel",
-      "community": 18,
+      "community": 86,
       "norm_label": "transactionisolationlevel"
     },
     {
@@ -4930,7 +5610,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "internal_prismanamespacebrowser_userscalarfieldenum",
-      "community": 18,
+      "community": 86,
       "norm_label": "userscalarfieldenum"
     },
     {
@@ -4940,7 +5620,7 @@
       "source_location": "L90",
       "_origin": "ast",
       "id": "internal_prismanamespacebrowser_sortorder",
-      "community": 18,
+      "community": 86,
       "norm_label": "sortorder"
     },
     {
@@ -4950,7 +5630,7 @@
       "source_location": "L97",
       "_origin": "ast",
       "id": "internal_prismanamespacebrowser_querymode",
-      "community": 18,
+      "community": 86,
       "norm_label": "querymode"
     },
     {
@@ -4960,7 +5640,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "prisma_models",
-      "community": 18,
+      "community": 86,
       "norm_label": "models.ts"
     },
     {
@@ -5620,7 +6300,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "middleware_auth_middleware",
-      "community": 90,
+      "community": 91,
       "norm_label": "auth.middleware.ts"
     },
     {
@@ -5630,7 +6310,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "middleware_auth_middleware_accesstokenpayload",
-      "community": 90,
+      "community": 91,
       "norm_label": "accesstokenpayload"
     },
     {
@@ -5640,7 +6320,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "middleware_auth_middleware_authuser",
-      "community": 90,
+      "community": 91,
       "norm_label": "authuser"
     },
     {
@@ -5650,7 +6330,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "middleware_auth_middleware_authmiddleware",
-      "community": 90,
+      "community": 91,
       "norm_label": "authmiddleware()"
     },
     {
@@ -5660,7 +6340,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "middleware_session_middleware",
-      "community": 82,
+      "community": 85,
       "norm_label": "session.middleware.ts"
     },
     {
@@ -5670,7 +6350,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "middleware_session_middleware_sessionmiddleware",
-      "community": 82,
+      "community": 85,
       "norm_label": "sessionmiddleware()"
     },
     {
@@ -5750,7 +6430,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "apps_user_service_src_server_ts_src_server",
-      "community": 3,
+      "community": 53,
       "norm_label": "server.ts"
     },
     {
@@ -5760,7 +6440,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "apps_user_service_src_server_ts_src_server_shutdown",
-      "community": 3,
+      "community": 53,
       "norm_label": "shutdown()"
     },
     {
@@ -5770,7 +6450,7 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "apps_user_service_src_server_ts_src_server_startserver",
-      "community": 84,
+      "community": 53,
       "norm_label": "startserver()"
     },
     {
@@ -5780,7 +6460,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "services_auth_service",
-      "community": 82,
+      "community": 85,
       "norm_label": "auth.service.ts"
     },
     {
@@ -5790,7 +6470,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "services_auth_service_accesstokenpayload",
-      "community": 82,
+      "community": 85,
       "norm_label": "accesstokenpayload"
     },
     {
@@ -5800,7 +6480,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "services_auth_service_refreshtokenpayload",
-      "community": 82,
+      "community": 85,
       "norm_label": "refreshtokenpayload"
     },
     {
@@ -5810,7 +6490,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "services_auth_service_authservice",
-      "community": 81,
+      "community": 87,
       "norm_label": "authservice"
     },
     {
@@ -5830,7 +6510,7 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "services_auth_service_authservice_generateaccesstoken",
-      "community": 81,
+      "community": 87,
       "norm_label": ".generateaccesstoken()"
     },
     {
@@ -5840,7 +6520,7 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "services_auth_service_authservice_generaterefreshtoken",
-      "community": 81,
+      "community": 87,
       "norm_label": ".generaterefreshtoken()"
     },
     {
@@ -5850,7 +6530,7 @@
       "source_location": "L103",
       "_origin": "ast",
       "id": "services_auth_service_authservice_login",
-      "community": 81,
+      "community": 87,
       "norm_label": ".login()"
     },
     {
@@ -5860,7 +6540,7 @@
       "source_location": "L217",
       "_origin": "ast",
       "id": "services_auth_service_authservice_refresh",
-      "community": 81,
+      "community": 87,
       "norm_label": ".refresh()"
     },
     {
@@ -5870,7 +6550,7 @@
       "source_location": "L324",
       "_origin": "ast",
       "id": "services_auth_service_authservice_getsessions",
-      "community": 81,
+      "community": 87,
       "norm_label": ".getsessions()"
     },
     {
@@ -5880,7 +6560,7 @@
       "source_location": "L353",
       "_origin": "ast",
       "id": "services_auth_service_authservice_revokesession",
-      "community": 81,
+      "community": 87,
       "norm_label": ".revokesession()"
     },
     {
@@ -5890,7 +6570,7 @@
       "source_location": "L385",
       "_origin": "ast",
       "id": "services_auth_service_authservice_logout",
-      "community": 81,
+      "community": 87,
       "norm_label": ".logout()"
     },
     {
@@ -5900,7 +6580,7 @@
       "source_location": "L404",
       "_origin": "ast",
       "id": "services_auth_service_authservice_logoutall",
-      "community": 81,
+      "community": 87,
       "norm_label": ".logoutall()"
     },
     {
@@ -5910,7 +6590,7 @@
       "source_location": "L429",
       "_origin": "ast",
       "id": "services_auth_service_authservice_getuserbyid",
-      "community": 81,
+      "community": 87,
       "norm_label": ".getuserbyid()"
     },
     {
@@ -5920,7 +6600,7 @@
       "source_location": "L458",
       "_origin": "ast",
       "id": "services_auth_service_authservice_sendotp",
-      "community": 82,
+      "community": 85,
       "norm_label": ".sendotp()"
     },
     {
@@ -5930,7 +6610,7 @@
       "source_location": "L531",
       "_origin": "ast",
       "id": "services_auth_service_authservice_verifyandregister",
-      "community": 81,
+      "community": 87,
       "norm_label": ".verifyandregister()"
     },
     {
@@ -5940,7 +6620,7 @@
       "source_location": "L575",
       "_origin": "ast",
       "id": "services_auth_service_authservice_registeruser",
-      "community": 81,
+      "community": 87,
       "norm_label": ".registeruser()"
     },
     {
@@ -6030,7 +6710,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "services_otp_service",
-      "community": 82,
+      "community": 85,
       "norm_label": "otp.service.ts"
     },
     {
@@ -6040,7 +6720,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "services_otp_service_registrationsessiondata",
-      "community": 82,
+      "community": 85,
       "norm_label": "registrationsessiondata"
     },
     {
@@ -6050,7 +6730,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "services_otp_service_otpservice",
-      "community": 93,
+      "community": 89,
       "norm_label": "otpservice"
     },
     {
@@ -6060,7 +6740,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "services_otp_service_otpservice_storeotp",
-      "community": 93,
+      "community": 89,
       "norm_label": ".storeotp()"
     },
     {
@@ -6070,7 +6750,7 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "services_otp_service_otpservice_storeregistrationsession",
-      "community": 93,
+      "community": 89,
       "norm_label": ".storeregistrationsession()"
     },
     {
@@ -6080,7 +6760,7 @@
       "source_location": "L72",
       "_origin": "ast",
       "id": "services_otp_service_otpservice_getregistrationsession",
-      "community": 93,
+      "community": 89,
       "norm_label": ".getregistrationsession()"
     },
     {
@@ -6090,7 +6770,7 @@
       "source_location": "L83",
       "_origin": "ast",
       "id": "services_otp_service_otpservice_deleteregistrationsession",
-      "community": 93,
+      "community": 89,
       "norm_label": ".deleteregistrationsession()"
     },
     {
@@ -6100,7 +6780,7 @@
       "source_location": "L93",
       "_origin": "ast",
       "id": "services_otp_service_otpservice_verifyotp",
-      "community": 93,
+      "community": 89,
       "norm_label": ".verifyotp()"
     },
     {
@@ -6110,7 +6790,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "constants_auth",
-      "community": 82,
+      "community": 85,
       "norm_label": "auth.ts"
     },
     {
@@ -6120,7 +6800,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "constants_auth_auth_durations",
-      "community": 82,
+      "community": 85,
       "norm_label": "auth_durations"
     },
     {
@@ -6130,7 +6810,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "constants_cookie",
-      "community": 90,
+      "community": 91,
       "norm_label": "cookie.ts"
     },
     {
@@ -6140,7 +6820,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "constants_cookie_cookie_names",
-      "community": 90,
+      "community": 91,
       "norm_label": "cookie_names"
     },
     {
@@ -6150,7 +6830,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "constants_cookie_duration_to_ms",
-      "community": 90,
+      "community": 91,
       "norm_label": "duration_to_ms"
     },
     {
@@ -6160,7 +6840,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "constants_cookie_cookie_max_age",
-      "community": 90,
+      "community": 91,
       "norm_label": "cookie_max_age"
     },
     {
@@ -6170,7 +6850,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "constants_redis_keys",
-      "community": 82,
+      "community": 85,
       "norm_label": "redis-keys.ts"
     },
     {
@@ -6180,7 +6860,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "constants_redis_keys_redis_keys",
-      "community": 82,
+      "community": 85,
       "norm_label": "redis_keys"
     },
     {
@@ -6189,8 +6869,8 @@
       "source_file": "apps/user-service/src/utils/errors/errorCodes.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "errors_errorcodes",
-      "community": 3,
+      "id": "apps_user_service_src_utils_errors_errorcodes_ts_errors_errorcodes",
+      "community": 84,
       "norm_label": "errorcodes.ts"
     },
     {
@@ -6200,7 +6880,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "errors_errorcodes_error_codes",
-      "community": 3,
+      "community": 85,
       "norm_label": "error_codes"
     },
     {
@@ -6210,7 +6890,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "errors_errorcodes_errorcode",
-      "community": 3,
+      "community": 84,
       "norm_label": "errorcode"
     },
     {
@@ -6219,8 +6899,8 @@
       "source_file": "apps/user-service/src/utils/errors/errorMessages.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "errors_errormessages",
-      "community": 3,
+      "id": "apps_user_service_src_utils_errors_errormessages_ts_errors_errormessages",
+      "community": 84,
       "norm_label": "errormessages.ts"
     },
     {
@@ -6229,8 +6909,8 @@
       "source_file": "apps/user-service/src/utils/errors/errorMessages.ts",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "errors_errormessages_error_messages",
-      "community": 3,
+      "id": "apps_user_service_src_utils_errors_errormessages_ts_errors_errormessages_error_messages",
+      "community": 84,
       "norm_label": "error_messages"
     },
     {
@@ -6239,8 +6919,8 @@
       "source_file": "apps/user-service/src/utils/errors/index.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "errors_index",
-      "community": 3,
+      "id": "apps_user_service_src_utils_errors_index_ts_errors_index",
+      "community": 113,
       "norm_label": "index.ts"
     },
     {
@@ -6250,7 +6930,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "utils_fingerprint",
-      "community": 90,
+      "community": 91,
       "norm_label": "fingerprint.ts"
     },
     {
@@ -6260,7 +6940,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "utils_fingerprint_getdevicefingerprint",
-      "community": 90,
+      "community": 91,
       "norm_label": "getdevicefingerprint()"
     },
     {
@@ -6270,7 +6950,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "utils_generate_otp",
-      "community": 82,
+      "community": 85,
       "norm_label": "generate-otp.ts"
     },
     {
@@ -6280,7 +6960,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "utils_generate_otp_generateotp",
-      "community": 82,
+      "community": 85,
       "norm_label": "generateotp()"
     },
     {
@@ -6820,7 +7500,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "auth_headers_package",
-      "community": 89,
+      "community": 82,
       "norm_label": "package.json"
     },
     {
@@ -6830,7 +7510,7 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "auth_headers_package_name",
-      "community": 89,
+      "community": 82,
       "norm_label": "name"
     },
     {
@@ -6840,7 +7520,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "auth_headers_package_version",
-      "community": 89,
+      "community": 82,
       "norm_label": "version"
     },
     {
@@ -6850,7 +7530,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "auth_headers_package_private",
-      "community": 89,
+      "community": 82,
       "norm_label": "private"
     },
     {
@@ -6860,7 +7540,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "auth_headers_package_type",
-      "community": 89,
+      "community": 82,
       "norm_label": "type"
     },
     {
@@ -6870,7 +7550,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "auth_headers_package_main",
-      "community": 89,
+      "community": 82,
       "norm_label": "main"
     },
     {
@@ -6880,7 +7560,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "auth_headers_package_types",
-      "community": 89,
+      "community": 82,
       "norm_label": "types"
     },
     {
@@ -6890,7 +7570,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "auth_headers_package_exports",
-      "community": 89,
+      "community": 82,
       "norm_label": "exports"
     },
     {
@@ -6900,7 +7580,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "auth_headers_package_import",
-      "community": 89,
+      "community": 82,
       "norm_label": "import"
     },
     {
@@ -6910,7 +7590,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "auth_headers_package_scripts",
-      "community": 89,
+      "community": 82,
       "norm_label": "scripts"
     },
     {
@@ -6920,7 +7600,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "auth_headers_package_scripts_build",
-      "community": 89,
+      "community": 82,
       "norm_label": "build"
     },
     {
@@ -6930,7 +7610,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "auth_headers_package_scripts_check_types",
-      "community": 89,
+      "community": 82,
       "norm_label": "check-types"
     },
     {
@@ -6940,7 +7620,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "auth_headers_package_dependencies",
-      "community": 89,
+      "community": 82,
       "norm_label": "dependencies"
     },
     {
@@ -6950,7 +7630,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "auth_headers_package_devdependencies",
-      "community": 89,
+      "community": 82,
       "norm_label": "devdependencies"
     },
     {
@@ -6960,7 +7640,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "auth_headers_package_devdependencies_repo_typescript_config",
-      "community": 89,
+      "community": 82,
       "norm_label": "@repo/typescript-config"
     },
     {
@@ -6970,7 +7650,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "auth_headers_package_devdependencies_types_node",
-      "community": 89,
+      "community": 82,
       "norm_label": "@types/node"
     },
     {
@@ -6980,7 +7660,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "packages_auth_headers_src_index_ts_src_index",
-      "community": 94,
+      "community": 103,
       "norm_label": "index.ts"
     },
     {
@@ -6990,7 +7670,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_index_authuser",
-      "community": 94,
+      "community": 103,
       "norm_label": "authuser"
     },
     {
@@ -7000,7 +7680,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_index_getheaderstring",
-      "community": 94,
+      "community": 103,
       "norm_label": "getheaderstring()"
     },
     {
@@ -7010,7 +7690,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "src_index_readuserfromheaders",
-      "community": 94,
+      "community": 103,
       "norm_label": "readuserfromheaders()"
     },
     {
@@ -7020,7 +7700,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "auth_headers_tsconfig",
-      "community": 92,
+      "community": 90,
       "norm_label": "tsconfig.json"
     },
     {
@@ -7030,7 +7710,7 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "auth_headers_tsconfig_extends",
-      "community": 92,
+      "community": 90,
       "norm_label": "extends"
     },
     {
@@ -7040,7 +7720,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "auth_headers_tsconfig_compileroptions",
-      "community": 92,
+      "community": 90,
       "norm_label": "compileroptions"
     },
     {
@@ -7050,7 +7730,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "auth_headers_tsconfig_compileroptions_rootdir",
-      "community": 92,
+      "community": 90,
       "norm_label": "rootdir"
     },
     {
@@ -7060,7 +7740,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "auth_headers_tsconfig_compileroptions_outdir",
-      "community": 92,
+      "community": 90,
       "norm_label": "outdir"
     },
     {
@@ -7070,7 +7750,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "auth_headers_tsconfig_compileroptions_composite",
-      "community": 92,
+      "community": 90,
       "norm_label": "composite"
     },
     {
@@ -7080,7 +7760,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "auth_headers_tsconfig_compileroptions_types",
-      "community": 92,
+      "community": 90,
       "norm_label": "types"
     },
     {
@@ -7090,7 +7770,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "auth_headers_tsconfig_include",
-      "community": 92,
+      "community": 90,
       "norm_label": "include"
     },
     {
@@ -7550,7 +8230,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_apierror",
-      "community": 84,
+      "community": 101,
       "norm_label": "apierror.ts"
     },
     {
@@ -7560,7 +8240,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_apierror_apierror",
-      "community": 84,
+      "community": 101,
       "norm_label": "apierror"
     },
     {
@@ -7570,7 +8250,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "src_apierror_apierror_constructor",
-      "community": 84,
+      "community": 101,
       "norm_label": ".constructor()"
     },
     {
@@ -7580,7 +8260,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_createerrorresponse",
-      "community": 84,
+      "community": 101,
       "norm_label": "createerrorresponse.ts"
     },
     {
@@ -7590,7 +8270,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_createerrorresponse_errorinput",
-      "community": 84,
+      "community": 101,
       "norm_label": "errorinput"
     },
     {
@@ -7600,7 +8280,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_createerrorresponse_createerrorresponse",
-      "community": 84,
+      "community": 101,
       "norm_label": "createerrorresponse()"
     },
     {
@@ -7610,7 +8290,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_errorcodes",
-      "community": 84,
+      "community": 101,
       "norm_label": "errorcodes.ts"
     },
     {
@@ -7620,7 +8300,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_errorcodes_error_codes",
-      "community": 84,
+      "community": 101,
       "norm_label": "error_codes"
     },
     {
@@ -7630,7 +8310,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "src_errorcodes_errorcode",
-      "community": 84,
+      "community": 101,
       "norm_label": "errorcode"
     },
     {
@@ -7640,7 +8320,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_errorcontract",
-      "community": 84,
+      "community": 101,
       "norm_label": "errorcontract.ts"
     },
     {
@@ -7650,7 +8330,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_errorcontract_errorcontract",
-      "community": 84,
+      "community": 101,
       "norm_label": "errorcontract"
     },
     {
@@ -7660,7 +8340,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_errormessages",
-      "community": 84,
+      "community": 101,
       "norm_label": "errormessages.ts"
     },
     {
@@ -7670,7 +8350,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "src_errormessages_error_messages",
-      "community": 84,
+      "community": 101,
       "norm_label": "error_messages"
     },
     {
@@ -7680,7 +8360,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "packages_errors_src_index_ts_src_index",
-      "community": 84,
+      "community": 101,
       "norm_label": "index.ts"
     },
     {
@@ -7690,7 +8370,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_normalizeerror",
-      "community": 84,
+      "community": 101,
       "norm_label": "normalizeerror.ts"
     },
     {
@@ -7700,7 +8380,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_normalizeerror_normalizederror",
-      "community": 84,
+      "community": 101,
       "norm_label": "normalizederror"
     },
     {
@@ -7710,7 +8390,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "src_normalizeerror_error_status_map",
-      "community": 84,
+      "community": 101,
       "norm_label": "error_status_map"
     },
     {
@@ -7720,7 +8400,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "src_normalizeerror_normalizefromcode",
-      "community": 84,
+      "community": 101,
       "norm_label": "normalizefromcode()"
     },
     {
@@ -7730,7 +8410,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "src_normalizeerror_normalizeerror",
-      "community": 84,
+      "community": 101,
       "norm_label": "normalizeerror()"
     },
     {
@@ -7740,7 +8420,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_normalizeprismaerror",
-      "community": 84,
+      "community": 101,
       "norm_label": "normalizeprismaerror.ts"
     },
     {
@@ -7750,7 +8430,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "src_normalizeprismaerror_prismaknownerror",
-      "community": 84,
+      "community": 101,
       "norm_label": "prismaknownerror"
     },
     {
@@ -7760,7 +8440,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_normalizeprismaerror_isprismaknownerror",
-      "community": 84,
+      "community": 101,
       "norm_label": "isprismaknownerror()"
     },
     {
@@ -7770,7 +8450,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_normalizeprismaerror_normalizeprismaerror",
-      "community": 84,
+      "community": 101,
       "norm_label": "normalizeprismaerror()"
     },
     {
@@ -7780,7 +8460,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_registry",
-      "community": 84,
+      "community": 101,
       "norm_label": "registry.ts"
     },
     {
@@ -7790,7 +8470,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_registry_registry",
-      "community": 84,
+      "community": 101,
       "norm_label": "registry"
     },
     {
@@ -7800,7 +8480,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_registry_registererrormessages",
-      "community": 84,
+      "community": 53,
       "norm_label": "registererrormessages()"
     },
     {
@@ -7810,7 +8490,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "src_registry_getmessagefromregistry",
-      "community": 84,
+      "community": 101,
       "norm_label": "getmessagefromregistry()"
     },
     {
@@ -8347,7 +9027,7 @@
       "label": "StatusCodeKey",
       "file_type": "code",
       "source_file": "packages/http/src/constants/statusCodes.ts",
-      "source_location": "L18",
+      "source_location": "L19",
       "_origin": "ast",
       "id": "constants_statuscodes_statuscodekey",
       "community": 11,
@@ -8357,7 +9037,7 @@
       "label": "StatusCodeValue",
       "file_type": "code",
       "source_file": "packages/http/src/constants/statusCodes.ts",
-      "source_location": "L19",
+      "source_location": "L20",
       "_origin": "ast",
       "id": "constants_statuscodes_statuscodevalue",
       "community": 11,
@@ -11080,7 +11760,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_allowallserviceidentityverifier",
-      "community": 85,
+      "community": 88,
       "norm_label": "allowallserviceidentityverifier.ts"
     },
     {
@@ -11090,7 +11770,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_allowallserviceidentityverifier_allowallserviceidentityverifier",
-      "community": 85,
+      "community": 88,
       "norm_label": "allowallserviceidentityverifier"
     },
     {
@@ -11100,7 +11780,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_allowallserviceidentityverifier_allowallserviceidentityverifier_constructor",
-      "community": 85,
+      "community": 88,
       "norm_label": ".constructor()"
     },
     {
@@ -11110,7 +11790,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_allowallserviceidentityverifier_allowallserviceidentityverifier_verify",
-      "community": 85,
+      "community": 88,
       "norm_label": ".verify()"
     },
     {
@@ -11120,7 +11800,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_allowallserviceidentityverifier_test",
-      "community": 85,
+      "community": 88,
       "norm_label": "allowallserviceidentityverifier.test.ts"
     },
     {
@@ -11130,7 +11810,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "packages_service_identity_src_index_ts_src_index",
-      "community": 85,
+      "community": 88,
       "norm_label": "index.ts"
     },
     {
@@ -11140,7 +11820,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "packages_service_identity_src_types_ts_src_types",
-      "community": 85,
+      "community": 88,
       "norm_label": "types.ts"
     },
     {
@@ -11150,7 +11830,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "src_types_serviceidentityresult",
-      "community": 85,
+      "community": 88,
       "norm_label": "serviceidentityresult"
     },
     {
@@ -11160,7 +11840,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_types_serviceidentityverifier",
-      "community": 85,
+      "community": 88,
       "norm_label": "serviceidentityverifier"
     },
     {
@@ -11170,7 +11850,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "packages_service_identity_src_types_ts_src_types_loggerlike",
-      "community": 85,
+      "community": 88,
       "norm_label": "loggerlike"
     },
     {
@@ -11180,7 +11860,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "service_identity_tsconfig",
-      "community": 87,
+      "community": 93,
       "norm_label": "tsconfig.json"
     },
     {
@@ -11190,7 +11870,7 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "service_identity_tsconfig_extends",
-      "community": 87,
+      "community": 93,
       "norm_label": "extends"
     },
     {
@@ -11200,7 +11880,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "service_identity_tsconfig_compileroptions",
-      "community": 87,
+      "community": 93,
       "norm_label": "compileroptions"
     },
     {
@@ -11210,7 +11890,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "service_identity_tsconfig_compileroptions_rootdir",
-      "community": 87,
+      "community": 93,
       "norm_label": "rootdir"
     },
     {
@@ -11220,7 +11900,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "service_identity_tsconfig_compileroptions_outdir",
-      "community": 87,
+      "community": 93,
       "norm_label": "outdir"
     },
     {
@@ -11230,7 +11910,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "service_identity_tsconfig_compileroptions_composite",
-      "community": 87,
+      "community": 93,
       "norm_label": "composite"
     },
     {
@@ -11240,7 +11920,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "service_identity_tsconfig_include",
-      "community": 87,
+      "community": 93,
       "norm_label": "include"
     },
     {
@@ -13969,7 +14649,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L32",
+      "source_location": "L36",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "api_gateway_package",
@@ -14079,7 +14759,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L21",
+      "source_location": "L25",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "api_gateway_package_dependencies",
@@ -14089,7 +14769,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L22",
+      "source_location": "L26",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "api_gateway_package_dependencies",
@@ -14099,7 +14779,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L23",
+      "source_location": "L27",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "api_gateway_package_dependencies",
@@ -14109,7 +14789,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L24",
+      "source_location": "L28",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "api_gateway_package_dependencies",
@@ -14119,7 +14799,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L25",
+      "source_location": "L29",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "api_gateway_package_dependencies",
@@ -14129,7 +14809,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L26",
+      "source_location": "L30",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "api_gateway_package_dependencies",
@@ -14139,7 +14819,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L27",
+      "source_location": "L31",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "api_gateway_package_dependencies",
@@ -14213,13 +14893,43 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "api_gateway_package_dependencies",
+      "target": "api_gateway_package_dependencies_irctc_ratelimit"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/package.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "api_gateway_package_dependencies",
+      "target": "api_gateway_package_dependencies_irctc_resilience"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/package.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "api_gateway_package_dependencies",
+      "target": "api_gateway_package_dependencies_irctc_service_identity"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/package.json",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "api_gateway_package_dependencies",
       "target": "api_gateway_package_dependencies_irctc_telemetry"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L28",
+      "source_location": "L32",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "api_gateway_package_dependencies",
@@ -14229,7 +14939,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L30",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "api_gateway_package_dependencies",
+      "target": "api_gateway_package_dependencies_opentelemetry_api"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/package.json",
+      "source_location": "L34",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "api_gateway_package_dependencies",
@@ -14239,7 +14959,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L29",
+      "source_location": "L33",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "api_gateway_package_dependencies",
@@ -14249,7 +14969,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L33",
+      "source_location": "L37",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "api_gateway_package_devdependencies",
@@ -14259,7 +14979,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L39",
+      "source_location": "L43",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "api_gateway_package_devdependencies",
@@ -14269,7 +14989,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L40",
+      "source_location": "L44",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "api_gateway_package_devdependencies",
@@ -14279,7 +14999,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L34",
+      "source_location": "L38",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "api_gateway_package_devdependencies",
@@ -14289,7 +15009,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L35",
+      "source_location": "L39",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "api_gateway_package_devdependencies",
@@ -14299,7 +15019,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L36",
+      "source_location": "L40",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "api_gateway_package_devdependencies",
@@ -14309,7 +15029,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L37",
+      "source_location": "L41",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "api_gateway_package_devdependencies",
@@ -14319,7 +15039,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L38",
+      "source_location": "L42",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "api_gateway_package_devdependencies",
@@ -14329,11 +15049,87 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/api-gateway/package.json",
-      "source_location": "L41",
+      "source_location": "L45",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "api_gateway_package_devdependencies",
       "target": "api_gateway_package_devdependencies_vitest"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/app.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "apps_api_gateway_src_app_ts_src_app",
+      "target": "apps_api_gateway_src_app_ts_src_app_app",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/app.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "apps_api_gateway_src_app_ts_src_app",
+      "target": "routing_mountroutes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/app.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "apps_api_gateway_src_app_ts_src_app",
+      "target": "routing_mountroutes_mountroutes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/app.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "apps_api_gateway_src_app_ts_src_app",
+      "target": "serviceidentity_verifier",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/app.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "apps_api_gateway_src_app_ts_src_app",
+      "target": "serviceidentity_verifier_serviceidentitymiddleware",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/app.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "apps_api_gateway_src_app_ts_src_app",
+      "target": "telemetry_tracecontextmiddleware",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/app.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "apps_api_gateway_src_app_ts_src_app",
+      "target": "telemetry_tracecontextmiddleware_tracecontextmiddleware",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -14437,11 +15233,31 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/api-gateway/src/auth/gatewayAuthMiddleware.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "auth_gatewayauthmiddleware",
+      "target": "auth_gatewayauthmiddleware_ensurevaryuserid"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/auth/gatewayAuthMiddleware.ts",
       "source_location": "L13",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "auth_gatewayauthmiddleware",
       "target": "auth_gatewayauthmiddleware_gatewayauthmiddleware"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/auth/gatewayAuthMiddleware.ts",
+      "source_location": "L72",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "auth_gatewayauthmiddleware",
+      "target": "auth_gatewayauthmiddleware_optionalgatewayauthmiddleware"
     },
     {
       "relation": "imports_from",
@@ -14466,6 +15282,39 @@
       "target": "auth_jwtverifier_verifyaccesstoken"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/routing/mountRoutes.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routing_mountroutes",
+      "target": "auth_gatewayauthmiddleware"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/auth/gatewayAuthMiddleware.ts",
+      "source_location": "L77",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "auth_gatewayauthmiddleware_gatewayauthmiddleware",
+      "target": "auth_gatewayauthmiddleware_ensurevaryuserid"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/auth/gatewayAuthMiddleware.ts",
+      "source_location": "L120",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "auth_gatewayauthmiddleware_optionalgatewayauthmiddleware",
+      "target": "auth_gatewayauthmiddleware_ensurevaryuserid"
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -14475,6 +15324,39 @@
       "weight": 1.0,
       "source": "auth_gatewayauthmiddleware_gatewayauthmiddleware",
       "target": "auth_jwtverifier_verifyaccesstoken"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/routing/mountRoutes.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routing_mountroutes",
+      "target": "auth_gatewayauthmiddleware_gatewayauthmiddleware"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/api-gateway/src/auth/gatewayAuthMiddleware.ts",
+      "source_location": "L93",
+      "weight": 1.0,
+      "source": "auth_gatewayauthmiddleware_optionalgatewayauthmiddleware",
+      "target": "auth_jwtverifier_verifyaccesstoken"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/routing/mountRoutes.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routing_mountroutes",
+      "target": "auth_gatewayauthmiddleware_optionalgatewayauthmiddleware"
     },
     {
       "relation": "contains",
@@ -14495,6 +15377,784 @@
       "confidence_score": 1.0,
       "source": "auth_jwtverifier",
       "target": "auth_jwtverifier_verifyaccesstoken"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/config/env.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_api_gateway_src_config_env_ts_config_env",
+      "target": "apps_api_gateway_src_config_env_ts_config_env_env",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/config/index.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "apps_api_gateway_src_config_index_ts_config_index",
+      "target": "config_routes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "re-export",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/config/index.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "apps_api_gateway_src_config_index_ts_config_index",
+      "target": "config_routes_routes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/config/index.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "apps_api_gateway_src_config_index_ts_config_index",
+      "target": "config_upstreams",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "re-export",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/config/index.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "apps_api_gateway_src_config_index_ts_config_index",
+      "target": "config_upstreams_upstream",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/config/redis.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "apps_api_gateway_src_config_redis_ts_config_redis",
+      "target": "apps_api_gateway_src_config_redis_ts_config_redis_createredisclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/config/redis.ts",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "apps_api_gateway_src_config_redis_ts_config_redis",
+      "target": "apps_api_gateway_src_config_redis_ts_config_redis_disconnectredis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/config/redis.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_api_gateway_src_config_redis_ts_config_redis",
+      "target": "apps_api_gateway_src_config_redis_ts_config_redis_globalforredis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/config/redis.ts",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "apps_api_gateway_src_config_redis_ts_config_redis",
+      "target": "apps_api_gateway_src_config_redis_ts_config_redis_initredis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/config/routes.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "config_routes",
+      "target": "config_routes_routes"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/config/routes.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "config_routes",
+      "target": "config_upstreams"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/routing/routingTable.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routing_routingtable",
+      "target": "config_routes"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/routing/routingTable.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routing_routingtable",
+      "target": "config_routes_routes"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/config/upstreams.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "config_upstreams",
+      "target": "config_upstreams_upstream"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/config/upstreams.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "config_upstreams",
+      "target": "config_upstreams_upstreamurl"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/proxy/createProxy.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "proxy_createproxy",
+      "target": "config_upstreams"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/routing/routingTable.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routing_routingtable",
+      "target": "config_upstreams"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/proxy/createProxy.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "proxy_createproxy",
+      "target": "config_upstreams_upstream"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/routing/routingTable.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routing_routingtable",
+      "target": "config_upstreams_upstream"
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/routing/routingTable.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routing_routingtable_routeentry",
+      "target": "config_upstreams_upstream"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/health/health.controller.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_api_gateway_src_health_health_controller_ts_health_health_controller",
+      "target": "apps_api_gateway_src_health_health_controller_ts_health_health_controller_livecheck",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/health/health.controller.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "apps_api_gateway_src_health_health_controller_ts_health_health_controller",
+      "target": "apps_api_gateway_src_health_health_controller_ts_health_health_controller_readycheck",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "apps/api-gateway/src/health/health.controller.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "apps_api_gateway_src_health_health_controller_ts_health_health_controller_livecheck",
+      "target": "response_apiresponse_successresponse"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "apps/api-gateway/src/health/health.controller.ts",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "apps_api_gateway_src_health_health_controller_ts_health_health_controller_readycheck",
+      "target": "response_apiresponse_successresponse"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/health/health.service.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "apps_api_gateway_src_health_health_service_ts_health_health_service",
+      "target": "apps_api_gateway_src_health_health_service_ts_health_health_service_healthchecks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/health/health.service.ts",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "apps_api_gateway_src_health_health_service_ts_health_health_service",
+      "target": "apps_api_gateway_src_health_health_service_ts_health_health_service_healthservice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/health/health.service.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "apps_api_gateway_src_health_health_service_ts_health_health_service",
+      "target": "apps_api_gateway_src_health_health_service_ts_health_health_service_proberedis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/health/health.service.ts",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "apps_api_gateway_src_health_health_service_ts_health_health_service_healthservice_runreadinesschecks",
+      "target": "apps_api_gateway_src_health_health_service_ts_health_health_service_proberedis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/health/health.service.ts",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "apps_api_gateway_src_health_health_service_ts_health_health_service_healthservice",
+      "target": "apps_api_gateway_src_health_health_service_ts_health_health_service_healthservice_runreadinesschecks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/proxy/createProxy.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "proxy_createproxy",
+      "target": "proxy_createproxy_createproxy"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/proxy/createProxy.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "proxy_createproxy",
+      "target": "resilience_breakerregistry"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/proxy/createProxy.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "proxy_createproxy",
+      "target": "resilience_breakerregistry_getbreaker"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/routing/mountRoutes.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routing_mountroutes",
+      "target": "proxy_createproxy"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/api-gateway/src/proxy/createProxy.ts",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "proxy_createproxy_createproxy",
+      "target": "resilience_breakerregistry_getbreaker"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/routing/mountRoutes.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routing_mountroutes",
+      "target": "proxy_createproxy_createproxy"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/api-gateway/src/routing/mountRoutes.ts",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "routing_mountroutes_mountroutes",
+      "target": "proxy_createproxy_createproxy"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/proxy/proxyHeadersMiddleware.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "proxy_proxyheadersmiddleware",
+      "target": "proxy_proxyheadersmiddleware_proxyheadersmiddleware"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/routing/mountRoutes.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routing_mountroutes",
+      "target": "proxy_proxyheadersmiddleware"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/routing/mountRoutes.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routing_mountroutes",
+      "target": "proxy_proxyheadersmiddleware_proxyheadersmiddleware"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/ratelimit/presets.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "ratelimit_presets",
+      "target": "ratelimit_presets_ratelimit_presets"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/ratelimit/presets.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "ratelimit_presets",
+      "target": "ratelimit_presets_ratelimitpresetname"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/ratelimit/rateLimitMiddleware.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "ratelimit_ratelimitmiddleware",
+      "target": "ratelimit_presets"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/ratelimit/rateLimitMiddleware.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "ratelimit_ratelimitmiddleware",
+      "target": "ratelimit_presets_ratelimit_presets"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/ratelimit/rateLimitMiddleware.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "ratelimit_ratelimitmiddleware",
+      "target": "ratelimit_presets_ratelimitpresetname"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/ratelimit/rateLimitMiddleware.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "ratelimit_ratelimitmiddleware",
+      "target": "ratelimit_ratelimitmiddleware_getratelimitmiddleware"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/ratelimit/rateLimitMiddleware.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "ratelimit_ratelimitmiddleware",
+      "target": "ratelimit_ratelimitmiddleware_ratelimiter"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/routing/mountRoutes.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routing_mountroutes",
+      "target": "ratelimit_ratelimitmiddleware"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "apps/api-gateway/src/ratelimit/rateLimitMiddleware.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "ratelimit_ratelimitmiddleware_getratelimitmiddleware",
+      "target": "express_ratelimitmiddleware_createratelimitmiddleware"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/routing/mountRoutes.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routing_mountroutes",
+      "target": "ratelimit_ratelimitmiddleware_getratelimitmiddleware"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/api-gateway/src/routing/mountRoutes.ts",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "routing_mountroutes_mountroutes",
+      "target": "ratelimit_ratelimitmiddleware_getratelimitmiddleware"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/resilience/breakerRegistry.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "resilience_breakerregistry",
+      "target": "resilience_breakerregistry_breakerregistry"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/resilience/breakerRegistry.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "resilience_breakerregistry",
+      "target": "resilience_breakerregistry_getbreaker"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/resilience/breakerRegistry.ts",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "resilience_breakerregistry",
+      "target": "resilience_breakerregistry_registeredbreakers"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/resilience/breakerRegistry.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "resilience_breakerregistry",
+      "target": "resilience_timeouts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/resilience/breakerRegistry.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "resilience_breakerregistry",
+      "target": "resilience_timeouts_timeouts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/resilience/timeouts.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "resilience_timeouts",
+      "target": "resilience_timeouts_timeouts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/routes/health.routes.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "apps_api_gateway_src_routes_health_routes_ts_routes_health_routes",
+      "target": "apps_api_gateway_src_routes_health_routes_ts_routes_health_routes_router",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/routes/index.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "apps_api_gateway_src_routes_index_ts_routes_index",
+      "target": "apps_api_gateway_src_routes_index_ts_routes_index_router",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/routing/mountRoutes.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routing_mountroutes",
+      "target": "routing_mountroutes_mountroutes"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/routing/mountRoutes.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routing_mountroutes",
+      "target": "routing_routingtable"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/routing/mountRoutes.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routing_mountroutes",
+      "target": "routing_routingtable_routingtable"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/routing/routingTable.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routing_routingtable",
+      "target": "routing_routingtable_routeentry"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/routing/routingTable.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routing_routingtable",
+      "target": "routing_routingtable_routingtable"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/server.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "apps_api_gateway_src_server_ts_src_server",
+      "target": "apps_api_gateway_src_server_ts_src_server_shutdown",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/server.ts",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "apps_api_gateway_src_server_ts_src_server",
+      "target": "apps_api_gateway_src_server_ts_src_server_startserver",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "apps/api-gateway/src/server.ts",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "apps_api_gateway_src_server_ts_src_server_shutdown",
+      "target": "src_index_shutdowntelemetry"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "apps/api-gateway/src/server.ts",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "apps_api_gateway_src_server_ts_src_server_startserver",
+      "target": "src_index_starttelemetry"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "apps/api-gateway/src/server.ts",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "apps_api_gateway_src_server_ts_src_server_startserver",
+      "target": "src_registry_registererrormessages"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/serviceIdentity/verifier.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "serviceidentity_verifier",
+      "target": "serviceidentity_verifier_serviceidentitymiddleware"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/serviceIdentity/verifier.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "serviceidentity_verifier",
+      "target": "serviceidentity_verifier_verifierinstance"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/telemetry/traceContextMiddleware.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "telemetry_tracecontextmiddleware",
+      "target": "telemetry_tracecontextmiddleware_tracecontextmiddleware"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/telemetry/traceContextMiddleware.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "telemetry_tracecontextmiddleware",
+      "target": "telemetry_tracecontextmiddleware_tracer"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/utils/errors/errorMessages.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "apps_api_gateway_src_utils_errors_errormessages_ts_errors_errormessages",
+      "target": "apps_api_gateway_src_utils_errors_errormessages_ts_errors_errormessages_error_messages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "re-export",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api-gateway/src/utils/errors/index.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "apps_api_gateway_src_utils_errors_index_ts_errors_index",
+      "target": "errors_errorcodes_error_codes",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -15097,39 +16757,6 @@
       "target": "apps_notification_service_src_api_v1_routes_health_routes_ts_routes_health_routes_router"
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/notification-service/src/api/v1/routes/health.routes.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_notification_service_src_api_v1_routes_health_routes_ts_routes_health_routes",
-      "target": "health_health_controller"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/notification-service/src/api/v1/routes/health.routes.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_notification_service_src_api_v1_routes_health_routes_ts_routes_health_routes",
-      "target": "health_health_controller_livecheck"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/notification-service/src/api/v1/routes/health.routes.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_notification_service_src_api_v1_routes_health_routes_ts_routes_health_routes",
-      "target": "health_health_controller_readycheck"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/notification-service/src/app.ts",
@@ -15612,8 +17239,8 @@
       "source_location": "L5",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "health_health_controller",
-      "target": "health_health_controller_livecheck"
+      "source": "apps_notification_service_src_health_health_controller_ts_health_health_controller",
+      "target": "apps_notification_service_src_health_health_controller_ts_health_health_controller_livecheck"
     },
     {
       "relation": "contains",
@@ -15622,30 +17249,8 @@
       "source_location": "L14",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "health_health_controller",
-      "target": "health_health_controller_readycheck"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/notification-service/src/health/health.controller.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "health_health_controller",
-      "target": "health_health_service"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/notification-service/src/health/health.controller.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "health_health_controller",
-      "target": "health_health_service_healthservice"
+      "source": "apps_notification_service_src_health_health_controller_ts_health_health_controller",
+      "target": "apps_notification_service_src_health_health_controller_ts_health_health_controller_readycheck"
     },
     {
       "relation": "calls",
@@ -15655,7 +17260,7 @@
       "source_file": "apps/notification-service/src/health/health.controller.ts",
       "source_location": "L7",
       "weight": 1.0,
-      "source": "health_health_controller_livecheck",
+      "source": "apps_notification_service_src_health_health_controller_ts_health_health_controller_livecheck",
       "target": "response_apiresponse_successresponse"
     },
     {
@@ -15666,7 +17271,7 @@
       "source_file": "apps/notification-service/src/health/health.controller.ts",
       "source_location": "L27",
       "weight": 1.0,
-      "source": "health_health_controller_readycheck",
+      "source": "apps_notification_service_src_health_health_controller_ts_health_health_controller_readycheck",
       "target": "response_apiresponse_successresponse"
     },
     {
@@ -15676,8 +17281,8 @@
       "source_location": "L5",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "health_health_service",
-      "target": "health_health_service_healthchecks"
+      "source": "apps_notification_service_src_health_health_service_ts_health_health_service",
+      "target": "apps_notification_service_src_health_health_service_ts_health_health_service_healthchecks"
     },
     {
       "relation": "contains",
@@ -15686,18 +17291,8 @@
       "source_location": "L38",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "health_health_service",
-      "target": "health_health_service_healthservice"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/notification-service/src/health/health.service.ts",
-      "source_location": "L24",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "health_health_service",
-      "target": "health_health_service_probekafka"
+      "source": "apps_notification_service_src_health_health_service_ts_health_health_service",
+      "target": "apps_notification_service_src_health_health_service_ts_health_health_service_healthservice"
     },
     {
       "relation": "contains",
@@ -15706,8 +17301,18 @@
       "source_location": "L10",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "health_health_service",
-      "target": "health_health_service_proberedis"
+      "source": "apps_notification_service_src_health_health_service_ts_health_health_service",
+      "target": "apps_notification_service_src_health_health_service_ts_health_health_service_proberedis"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/notification-service/src/health/health.service.ts",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_notification_service_src_health_health_service_ts_health_health_service",
+      "target": "health_health_service_probekafka"
     },
     {
       "relation": "calls",
@@ -15717,8 +17322,8 @@
       "source_location": "L40",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "health_health_service_healthservice_runreadinesschecks",
-      "target": "health_health_service_proberedis"
+      "source": "apps_notification_service_src_health_health_service_ts_health_health_service_healthservice_runreadinesschecks",
+      "target": "apps_notification_service_src_health_health_service_ts_health_health_service_proberedis"
     },
     {
       "relation": "calls",
@@ -15728,7 +17333,7 @@
       "source_location": "L40",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "health_health_service_healthservice_runreadinesschecks",
+      "source": "apps_notification_service_src_health_health_service_ts_health_health_service_healthservice_runreadinesschecks",
       "target": "health_health_service_probekafka"
     },
     {
@@ -15738,8 +17343,8 @@
       "source_location": "L39",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "health_health_service_healthservice",
-      "target": "health_health_service_healthservice_runreadinesschecks"
+      "source": "apps_notification_service_src_health_health_service_ts_health_health_service_healthservice",
+      "target": "apps_notification_service_src_health_health_service_ts_health_health_service_healthservice_runreadinesschecks"
     },
     {
       "relation": "contains",
@@ -17106,6 +18711,17 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "apps/user-service/src/api/v1/routes/index.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_user_service_src_api_v1_routes_index_ts_routes_index",
+      "target": "routes_auth_routes"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "apps/user-service/src/api/v1/routes/auth.routes.ts",
       "source_location": "L4",
       "weight": 1.0,
@@ -17167,17 +18783,6 @@
       "target": "routes_auth_routes_router"
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/api/v1/routes/index.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_index",
-      "target": "routes_auth_routes"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/user-service/src/api/v1/routes/health.routes.ts",
@@ -17188,25 +18793,14 @@
       "target": "apps_user_service_src_api_v1_routes_health_routes_ts_routes_health_routes_router"
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/app.ts",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_user_service_src_app_ts_src_app",
-      "target": "routes_index"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/user-service/src/api/v1/routes/index.ts",
       "source_location": "L6",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "routes_index",
-      "target": "routes_index_router"
+      "source": "apps_user_service_src_api_v1_routes_index_ts_routes_index",
+      "target": "apps_user_service_src_api_v1_routes_index_ts_routes_index_router"
     },
     {
       "relation": "imports_from",
@@ -17216,7 +18810,7 @@
       "source_location": "L3",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "routes_index",
+      "source": "apps_user_service_src_api_v1_routes_index_ts_routes_index",
       "target": "routes_user_route"
     },
     {
@@ -17616,17 +19210,6 @@
       "confidence_score": 1.0,
       "source": "controllers_auth_controller",
       "target": "errors_errorcodes_error_codes"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/controllers/auth.controller.ts",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "controllers_auth_controller",
-      "target": "errors_index"
     },
     {
       "relation": "imports_from",
@@ -20680,17 +22263,6 @@
       "target": "errors_errorcodes_error_codes"
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/middleware/auth.middleware.ts",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "middleware_auth_middleware",
-      "target": "errors_index"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/user-service/src/middleware/auth.middleware.ts",
@@ -20798,17 +22370,6 @@
       "target": "errors_errorcodes_error_codes"
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/middleware/session.middleware.ts",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "middleware_session_middleware",
-      "target": "errors_index"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/user-service/src/middleware/session.middleware.ts",
@@ -20900,28 +22461,6 @@
       "target": "apps_user_service_src_server_ts_src_server_startserver"
     },
     {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/server.ts",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_user_service_src_server_ts_src_server",
-      "target": "errors_errormessages_error_messages"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/server.ts",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_user_service_src_server_ts_src_server",
-      "target": "errors_index"
-    },
-    {
       "relation": "calls",
       "context": "call",
       "confidence": "INFERRED",
@@ -20997,17 +22536,6 @@
       "confidence_score": 1.0,
       "source": "services_auth_service",
       "target": "errors_errorcodes_error_codes"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/auth.service.ts",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_auth_service",
-      "target": "errors_index"
     },
     {
       "relation": "contains",
@@ -21461,17 +22989,6 @@
       "target": "errors_errorcodes_error_codes"
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/services/otp.service.ts",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_otp_service",
-      "target": "errors_index"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/user-service/src/services/otp.service.ts",
@@ -21598,7 +23115,7 @@
       "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "errors_errorcodes",
+      "source": "apps_user_service_src_utils_errors_errorcodes_ts_errors_errorcodes",
       "target": "errors_errorcodes_error_codes"
     },
     {
@@ -21608,30 +23125,8 @@
       "source_location": "L24",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "errors_errorcodes",
+      "source": "apps_user_service_src_utils_errors_errorcodes_ts_errors_errorcodes",
       "target": "errors_errorcodes_errorcode"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/utils/errors/errorMessages.ts",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "errors_errormessages",
-      "target": "errors_errorcodes"
-    },
-    {
-      "relation": "re_exports",
-      "context": "export",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/utils/errors/index.ts",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "errors_index",
-      "target": "errors_errorcodes"
     },
     {
       "relation": "imports",
@@ -21641,7 +23136,7 @@
       "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "errors_errormessages",
+      "source": "apps_user_service_src_utils_errors_errormessages_ts_errors_errormessages",
       "target": "errors_errorcodes_error_codes"
     },
     {
@@ -21652,7 +23147,7 @@
       "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "errors_errormessages",
+      "source": "apps_user_service_src_utils_errors_errormessages_ts_errors_errormessages",
       "target": "errors_errorcodes_errorcode"
     },
     {
@@ -21661,20 +23156,9 @@
       "source_file": "apps/user-service/src/utils/errors/errorMessages.ts",
       "source_location": "L3",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "errors_errormessages",
-      "target": "errors_errormessages_error_messages"
-    },
-    {
-      "relation": "re_exports",
-      "context": "export",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/user-service/src/utils/errors/index.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "errors_index",
-      "target": "errors_errormessages"
+      "source": "apps_user_service_src_utils_errors_errormessages_ts_errors_errormessages",
+      "target": "apps_user_service_src_utils_errors_errormessages_ts_errors_errormessages_error_messages",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -22401,7 +23885,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "packages/auth-headers/src/index.ts",
-      "source_location": "L20",
+      "source_location": "L22",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "packages_auth_headers_src_index_ts_src_index",
@@ -22412,7 +23896,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "packages/auth-headers/src/index.ts",
-      "source_location": "L23",
+      "source_location": "L25",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_index_readuserfromheaders",
@@ -22442,7 +23926,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "packages/auth-headers/tsconfig.json",
-      "source_location": "L8",
+      "source_location": "L9",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "auth_headers_tsconfig",
@@ -22484,9 +23968,9 @@
       "source_file": "packages/auth-headers/tsconfig.json",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_headers_tsconfig_compileroptions",
-      "target": "auth_headers_tsconfig_compileroptions_types",
-      "confidence_score": 1.0
+      "target": "auth_headers_tsconfig_compileroptions_types"
     },
     {
       "relation": "contains",
@@ -27618,7 +29102,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "packages/service-identity/src/AllowAllServiceIdentityVerifier.ts",
-      "source_location": "L4",
+      "source_location": "L8",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_allowallserviceidentityverifier",
@@ -27672,7 +29156,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "packages/service-identity/src/AllowAllServiceIdentityVerifier.ts",
-      "source_location": "L5",
+      "source_location": "L9",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_allowallserviceidentityverifier_allowallserviceidentityverifier",
@@ -27682,7 +29166,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "packages/service-identity/src/AllowAllServiceIdentityVerifier.ts",
-      "source_location": "L7",
+      "source_location": "L11",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_allowallserviceidentityverifier_allowallserviceidentityverifier",
@@ -27693,7 +29177,7 @@
       "context": "type",
       "confidence": "EXTRACTED",
       "source_file": "packages/service-identity/src/AllowAllServiceIdentityVerifier.ts",
-      "source_location": "L4",
+      "source_location": "L8",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_allowallserviceidentityverifier_allowallserviceidentityverifier",
@@ -27715,7 +29199,7 @@
       "context": "generic_arg",
       "confidence": "EXTRACTED",
       "source_file": "packages/service-identity/src/AllowAllServiceIdentityVerifier.ts",
-      "source_location": "L7",
+      "source_location": "L11",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_allowallserviceidentityverifier_allowallserviceidentityverifier_verify",
@@ -30428,5 +31912,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "8a058617fb4f1a99752a6d30287a4ccb84d0416c"
+  "built_at_commit": "3e83fa0d18f41d2dcb47bc7522ba5d1742f8d498"
 }
