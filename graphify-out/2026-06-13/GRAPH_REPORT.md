@@ -1,19 +1,19 @@
-# Graph Report - irctc-clone (2026-06-13)
+# Graph Report - itctc-clone (2026-06-13)
 
 ## Corpus Check
 
-- 179 files · ~44,647 words
+- 185 files · ~46,029 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
 
-- 1228 nodes · 1432 edges · 100 communities (81 shown, 19 thin omitted)
-- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 37 edges (avg confidence: 0.81)
+- 1268 nodes · 1490 edges · 93 communities (78 shown, 15 thin omitted)
+- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 37 edges (avg confidence: 0.81)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
 
-- Built from commit: `50087a6a`
+- Built from commit: `a2d36b39`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -90,7 +90,6 @@
 - [[_COMMUNITY_Community 71|Community 71]]
 - [[_COMMUNITY_Community 72|Community 72]]
 - [[_COMMUNITY_Community 73|Community 73]]
-- [[_COMMUNITY_Community 74|Community 74]]
 - [[_COMMUNITY_Community 75|Community 75]]
 - [[_COMMUNITY_Community 76|Community 76]]
 - [[_COMMUNITY_Community 77|Community 77]]
@@ -105,19 +104,13 @@
 - [[_COMMUNITY_Community 87|Community 87]]
 - [[_COMMUNITY_Community 88|Community 88]]
 - [[_COMMUNITY_Community 89|Community 89]]
+- [[_COMMUNITY_Community 90|Community 90]]
 - [[_COMMUNITY_Community 91|Community 91]]
 - [[_COMMUNITY_Community 92|Community 92]]
-- [[_COMMUNITY_Community 93|Community 93]]
-- [[_COMMUNITY_Community 94|Community 94]]
-- [[_COMMUNITY_Community 95|Community 95]]
-- [[_COMMUNITY_Community 96|Community 96]]
-- [[_COMMUNITY_Community 97|Community 97]]
-- [[_COMMUNITY_Community 98|Community 98]]
-- [[_COMMUNITY_Community 99|Community 99]]
 
 ## God Nodes (most connected - your core abstractions)
 
-1. `IRCTC Clone` - 24 edges
+1. `IRCTC Clone` - 23 edges
 2. `compilerOptions` - 19 edges
 3. `user-service` - 19 edges
 4. `compilerOptions` - 18 edges
@@ -152,7 +145,7 @@
 - **Shared @irctc/\* Packages** — claude_pkg_errors, claude_pkg_http, claude_pkg_logger, claude_pkg_middleware, claude_pkg_kafka, claude_pkg_contracts, claude_pkg_telemetry [EXTRACTED 1.00]
 - **user-service Async OTP Email Flow** — user_service_async_registration_flow, user_service_kafka_contract, docker_kafka_topic_otp, claude_notification_service, user_service_redis_keys [INFERRED 0.85]
 
-## Communities (100 total, 19 thin omitted)
+## Communities (93 total, 15 thin omitted)
 
 ### Community 0 - "Prisma Generated Types"
 
@@ -166,13 +159,13 @@ Nodes (57): AggregateUser, BoolFieldUpdateOperationsInput, DateTimeFieldUpdateOp
 
 ### Community 3 - "Community 3"
 
-Cohesion: 0.21
-Nodes (6): LoginSchema, VerifyOtpRequestSchema, RegisterRequestDto, RegisterSchema, authControllerPromise, router
+Cohesion: 0.19
+Nodes (7): LoginRequestDto, LoginSchema, VerifyOtpRequestDto, VerifyOtpRequestSchema, RegisterSchema, authControllerPromise, router
 
 ### Community 4 - "Kafka Client Package"
 
-Cohesion: 0.07
-Nodes (9): KafkaProducerManager, KafkaConsumerRunner, LoggerLike, MessageHandler, DLQ_REASONS, DlqReason, KAFKA_HEADERS, RetryPolicies (+1 more)
+Cohesion: 0.05
+Nodes (18): getConsumer(), getProducer(), initKafka(), kafka, getConsumer(), getProducer(), initKafka(), kafka (+10 more)
 
 ### Community 5 - "User Service Dependencies"
 
@@ -181,8 +174,8 @@ Nodes (40): dependencies, bcryptjs, cookie-parser, cors, dotenv, express, helmet
 
 ### Community 6 - "Auth Response & Prisma Client"
 
-Cohesion: 0.14
-Nodes (6): globalForPrisma, AuthMapper, UserMapper, PrismaClient, User, AuthRepository
+Cohesion: 0.09
+Nodes (9): AuthResponseDto, globalForPrisma, AuthMapper, UserMapper, PrismaClient, User, AuthRepository, AuthService (+1 more)
 
 ### Community 7 - "TS Config - Service Base"
 
@@ -191,8 +184,8 @@ Nodes (36): compilerOptions, declaration, declarationMap, exactOptionalPropertyT
 
 ### Community 8 - "Env & Server Bootstrap"
 
-Cohesion: 0.25
-Nodes (6): EmailContent, EmailProvider, SendEmailCommand, EmailProviderFactory, EmailProviderFactoryDeps, SendGridProvider
+Cohesion: 0.06
+Nodes (17): env, startServer(), getEmailVendor(), bootstrap(), EmailContent, EmailProvider, SendEmailCommand, EmailProviderFactory (+9 more)
 
 ### Community 9 - "HTTP Package Utilities"
 
@@ -261,8 +254,8 @@ Nodes (13): dependencies, devDependencies, @repo/typescript-config, exports, imp
 
 ### Community 22 - "Prisma Filter Types"
 
-Cohesion: 0.14
-Nodes (13): BoolFilter, BoolWithAggregatesFilter, DateTimeFilter, DateTimeWithAggregatesFilter, NestedBoolFilter, NestedBoolWithAggregatesFilter, NestedDateTimeFilter, NestedDateTimeWithAggregatesFilter (+5 more)
+Cohesion: 0.08
+Nodes (20): ModelName, NullTypes, QueryMode, SortOrder, TransactionIsolationLevel, UserScalarFieldEnum, User, BoolFilter (+12 more)
 
 ### Community 23 - "Health Check Endpoints"
 
@@ -281,13 +274,13 @@ Nodes (6): build(), getAuthController(), OtpEventPublisher, SCHEMA_VERSION, SCHE
 
 ### Community 26 - "User Auth Container & Publisher"
 
-Cohesion: 0.11
-Nodes (18): Architecture, Build, Database Setup, Development, Environment Variables, Future Roadmap, Installation, IRCTC Clone (+10 more)
+Cohesion: 0.10
+Nodes (20): dependencies, ioredis, devDependencies, @repo/typescript-config, @types/express, @types/node, vitest, exports (+12 more)
 
 ### Community 27 - "Community 27"
 
-Cohesion: 0.19
-Nodes (7): REDIS_KEYS, ERROR_CODES, ErrorCode, ERROR_MESSAGES, AccessTokenPayload, AuthUser, RegistrationSessionData
+Cohesion: 0.20
+Nodes (6): AUTH_DURATIONS, ERROR_CODES, ErrorCode, ERROR_MESSAGES, AccessTokenPayload, AuthUser
 
 ### Community 28 - "TS Config - Next.js"
 
@@ -361,13 +354,18 @@ Nodes (4): compilerOptions, jsx, extends, $schema
 
 ### Community 46 - "Community 46"
 
-Cohesion: 0.38
-Nodes (4): AUTH_DURATIONS, AccessTokenPayload, RefreshTokenPayload, generateOtp()
+Cohesion: 0.11
+Nodes (17): Architecture, Build, Database Setup, Development, Environment Variables, Future Roadmap, Installation, IRCTC Clone (+9 more)
 
 ### Community 47 - "Community 47"
 
 Cohesion: 0.36
 Nodes (4): COOKIE_MAX_AGE, COOKIE_NAMES, DURATION_TO_MS, getDeviceFingerprint()
+
+### Community 52 - "Community 52"
+
+Cohesion: 0.25
+Nodes (8): Backend, Cache, Database, Infrastructure, Messaging, Observability, Technology Stack, Validation
 
 ### Community 58 - "Community 58"
 
@@ -386,8 +384,8 @@ Nodes (8): Graceful Shutdown, Health Monitoring, Infrastructure Guidelines, Kafk
 
 ### Community 61 - "Community 61"
 
-Cohesion: 0.25
-Nodes (8): Backend, Cache, Database, Infrastructure, Messaging, Observability, Technology Stack, Validation
+Cohesion: 0.29
+Nodes (6): compilerOptions, composite, outDir, rootDir, extends, include
 
 ### Community 62 - "Community 62"
 
@@ -443,6 +441,11 @@ Nodes (4): app, router, authControllerPromise, router
 
 Cohesion: 0.22
 Nodes (9): Error Handling Flow, Error Handling Guidelines, Health Probes & Bootstrap Readiness, High-Level Architecture, Idempotency for Side-Effecting Consumers, Logging & PII, Monorepo Structure, Service Internal Pattern (+1 more)
+
+### Community 76 - "Community 76"
+
+Cohesion: 0.27
+Nodes (6): RegisterRequestDto, REDIS_KEYS, AccessTokenPayload, RefreshTokenPayload, RegistrationSessionData, generateOtp()
 
 ### Community 77 - "Community 77"
 
@@ -504,57 +507,32 @@ Nodes (6): Files to edit, New files, Phase 1 — Auth lives in the gateway only,
 Cohesion: 0.60
 Nodes (4): buildConsumerSpanContext(), extractTraceContextFromKafkaHeaders(), KafkaHeaderMap, normaliseKafkaHeaders()
 
-### Community 91 - "Community 91"
+### Community 90 - "Community 90"
 
-Cohesion: 0.18
-Nodes (5): AuthResponseDto, LoginRequestDto, VerifyOtpRequestDto, AuthService, UserResponseDto
-
-### Community 92 - "Community 92"
-
-Cohesion: 0.18
-Nodes (7): ModelName, NullTypes, QueryMode, SortOrder, TransactionIsolationLevel, UserScalarFieldEnum, User
-
-### Community 93 - "Community 93"
-
-Cohesion: 0.25
-Nodes (6): getConsumer(), getProducer(), initKafka(), kafka, getConsumer(), createConsumer()
-
-### Community 95 - "Community 95"
-
-Cohesion: 0.29
-Nodes (4): OtpEmailInput, renderOtpEmail(), renderWelcomeEmail(), WelcomeEmailInput
-
-### Community 96 - "Community 96"
-
-Cohesion: 0.33
-Nodes (3): env, getEmailVendor(), EmailVendor
-
-### Community 98 - "Community 98"
-
-Cohesion: 0.40
-Nodes (3): getProducer(), initKafka(), kafka
+Cohesion: 0.35
+Nodes (6): createRateLimitMiddleware(), RateLimitMiddlewareOptions, LoggerLike, RateLimitResult, TokenBucketOptions, TokenBucketRateLimiter
 
 ## Knowledge Gaps
 
-- **725 isolated node(s):** `name`, `version`, `private`, `type`, `main` (+720 more)
+- **743 isolated node(s):** `name`, `version`, `private`, `type`, `dev` (+738 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **19 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **15 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `AuthController` connect `Health Check Endpoints` to `Community 47`?**
-  _High betweenness centrality (0.025) - this node is a cross-community bridge._
 - **Why does `successResponse()` connect `Health Check Endpoints` to `HTTP Package Utilities`?**
-  _High betweenness centrality (0.024) - this node is a cross-community bridge._
-- **Why does `AuthResponseDto` connect `Community 91` to `Community 46`, `Auth Response & Prisma Client`?**
-  _High betweenness centrality (0.018) - this node is a cross-community bridge._
+  _High betweenness centrality (0.036) - this node is a cross-community bridge._
+- **Why does `AuthController` connect `Health Check Endpoints` to `Community 47`?**
+  _High betweenness centrality (0.032) - this node is a cross-community bridge._
 - **What connects `name`, `version`, `private` to the rest of the system?**
-  _726 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _744 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Prisma Generated Types` be split into smaller, more focused modules?**
   _Cohesion score 0.020202020202020204 - nodes in this community are weakly interconnected._
 - **Should `Prisma User Model` be split into smaller, more focused modules?**
   _Cohesion score 0.034482758620689655 - nodes in this community are weakly interconnected._
 - **Should `Kafka Client Package` be split into smaller, more focused modules?**
-  _Cohesion score 0.07142857142857142 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.048726467331118496 - nodes in this community are weakly interconnected._
+- **Should `User Service Dependencies` be split into smaller, more focused modules?**
+  _Cohesion score 0.04878048780487805 - nodes in this community are weakly interconnected._

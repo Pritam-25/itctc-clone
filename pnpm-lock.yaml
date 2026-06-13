@@ -307,6 +307,25 @@ importers:
         specifier: ^4.17.21
         version: 4.17.25
 
+  packages/ratelimit:
+    dependencies:
+      ioredis:
+        specifier: ^5.11.0
+        version: 5.11.0
+    devDependencies:
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
+      '@types/express':
+        specifier: ^4.17.21
+        version: 4.17.25
+      '@types/node':
+        specifier: ^22.19.21
+        version: 22.19.21
+      vitest:
+        specifier: ^3.0.5
+        version: 3.2.6(@types/node@22.19.21)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
+
   packages/resilience:
     devDependencies:
       '@repo/typescript-config':
@@ -5986,7 +6005,7 @@ snapshots:
 
   estree-walker@3.0.3:
     dependencies:
-      '@types/estree': 1.0.8
+      '@types/estree': 1.0.9
 
   esutils@2.0.3: {}
 

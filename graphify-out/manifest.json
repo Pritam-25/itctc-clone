@@ -445,8 +445,8 @@
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1781316331.0780182,
-    "ast_hash": "a40d3436f0b8189f359f80519a42d680",
+    "mtime": 1781318312.1136878,
+    "ast_hash": "b9d011f1c6603ca8d4668e864a909202",
     "semantic_hash": ""
   },
   "packages/contracts/package.json": {
@@ -660,7 +660,7 @@
     "semantic_hash": "85776755817cc867d8cb9e8d6daccbb3"
   },
   "packages/logger/src/constants.ts": {
-    "mtime": 1781317224.3410327,
+    "mtime": 1781320213.1026528,
     "ast_hash": "ab1a977b65b9200b14655791e66109fa",
     "semantic_hash": ""
   },
@@ -765,7 +765,7 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1781316331.113345,
+    "mtime": 1781320214.3826482,
     "ast_hash": "072d7734a70280a05f024e470e9c5276",
     "semantic_hash": ""
   },
@@ -855,7 +855,7 @@
     "semantic_hash": ""
   },
   "packages/telemetry/src/propagation.ts": {
-    "mtime": 1781316276.789926,
+    "mtime": 1781320213.654264,
     "ast_hash": "638a986e2051d901d9212034c2490d00",
     "semantic_hash": ""
   },
@@ -865,63 +865,93 @@
     "semantic_hash": ""
   },
   "execution.md": {
-    "mtime": 1781317140.0060477,
+    "mtime": 1781320212.3150268,
     "ast_hash": "2e68be9488f4770402201432c201ef13",
     "semantic_hash": ""
   },
   "plan.md": {
-    "mtime": 1781317139.990836,
+    "mtime": 1781320214.3150055,
     "ast_hash": "54917bbd261fe2742c29675a062ea38d",
     "semantic_hash": ""
   },
   "packages/resilience/package.json": {
-    "mtime": 1781188086.122264,
+    "mtime": 1781318312.1156821,
     "ast_hash": "85449993660c44aa99876ce15e4a0b7c",
     "semantic_hash": ""
   },
   "packages/resilience/src/circuit-breaker/CircuitBreaker.ts": {
-    "mtime": 1781317813.1422377,
+    "mtime": 1781320213.4501832,
     "ast_hash": "2d641e4eb88edd1ccfd44b0bf102fe7e",
     "semantic_hash": ""
   },
   "packages/resilience/src/circuit-breaker/CircuitBreakerRegistry.ts": {
-    "mtime": 1781317793.0304687,
+    "mtime": 1781320213.4691727,
     "ast_hash": "eeaa03d3ab56ac39f71515e3bd405267",
     "semantic_hash": ""
   },
   "packages/resilience/src/circuit-breaker/CircuitBreakerState.ts": {
-    "mtime": 1781187950.51563,
+    "mtime": 1781320213.4839582,
     "ast_hash": "b4f89042e7f02ae96ee8a806739787f6",
     "semantic_hash": ""
   },
   "packages/resilience/src/circuit-breaker/__tests/CircuitBreaker.test.ts": {
-    "mtime": 1781188139.8073266,
+    "mtime": 1781320213.4063911,
     "ast_hash": "24164a7570ccf9d84d8f8692a1c68bbe",
     "semantic_hash": ""
   },
   "packages/resilience/src/circuit-breaker/types.ts": {
-    "mtime": 1781187956.0973916,
+    "mtime": 1781320213.5005183,
     "ast_hash": "c93f709cfef3492a7a00cc614c346a73",
     "semantic_hash": ""
   },
   "packages/resilience/src/index.ts": {
-    "mtime": 1781187992.7183774,
+    "mtime": 1781320213.5099864,
     "ast_hash": "5da0535631d226afa3413de98d729bbd",
     "semantic_hash": ""
   },
   "packages/resilience/src/retry/ExponentialBackoff.ts": {
-    "mtime": 1781317937.7435677,
+    "mtime": 1781320213.5411997,
     "ast_hash": "424f283848d54b7c596ae17a634e9dfb",
     "semantic_hash": ""
   },
   "packages/resilience/src/timeout/withTimeout.ts": {
-    "mtime": 1781187962.3837934,
+    "mtime": 1781320213.5675814,
     "ast_hash": "554102a4e68250cdfb33a32a775f68a8",
     "semantic_hash": ""
   },
   "packages/resilience/tsconfig.json": {
-    "mtime": 1781185445.1121335,
+    "mtime": 1781318312.1254327,
     "ast_hash": "1046236c1d80b324a8aabe514eab031b",
+    "semantic_hash": ""
+  },
+  "packages/ratelimit/package.json": {
+    "mtime": 1781319707.479444,
+    "ast_hash": "24086c6bc7ba5596de1ca8333c864096",
+    "semantic_hash": ""
+  },
+  "packages/ratelimit/src/express/rateLimitMiddleware.ts": {
+    "mtime": 1781321004.7431383,
+    "ast_hash": "636613a7eea8ce66423ef41bf69d0c3d",
+    "semantic_hash": ""
+  },
+  "packages/ratelimit/src/index.ts": {
+    "mtime": 1781319781.5508108,
+    "ast_hash": "c7a7629b2d545fa8f41a513f060c5e62",
+    "semantic_hash": ""
+  },
+  "packages/ratelimit/src/token-bucket/TokenBucketRateLimiter.ts": {
+    "mtime": 1781321038.7164657,
+    "ast_hash": "ecbc3a1d53b1158202b4215d07636597",
+    "semantic_hash": ""
+  },
+  "packages/ratelimit/src/types.ts": {
+    "mtime": 1781319715.7128017,
+    "ast_hash": "6a3bb23fe74ad1ecbd3360662350b97b",
+    "semantic_hash": ""
+  },
+  "packages/ratelimit/tsconfig.json": {
+    "mtime": 1781319713.6981714,
+    "ast_hash": "b7940048a65480904fd559e12a9d1304",
     "semantic_hash": ""
   }
 }
