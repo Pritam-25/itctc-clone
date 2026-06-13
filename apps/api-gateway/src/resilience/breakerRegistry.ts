@@ -1,5 +1,6 @@
 import { CircuitBreakerRegistry, CircuitBreakerState } from "@irctc/resilience";
 import { logger } from "@irctc/logger";
+import { TIMEOUTS } from "./timeouts.js";
 
 export const breakerRegistry = new CircuitBreakerRegistry({
   onStateChange: (
@@ -25,7 +26,7 @@ export const getBreaker = (circuitName: string) => {
     failureThreshold: 5,
     recoveryTimeoutMs: 30000,
     halfOpenMaxTrials: 1,
-    timeoutMs: 5000,
+    timeoutMs: TIMEOUTS[circuitName] ?? 5000,
   });
   registeredBreakers.add(circuitName);
   return breaker;

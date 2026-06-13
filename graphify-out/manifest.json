@@ -545,9 +545,9 @@
     "semantic_hash": "5975f937741bf72ae8a886260430a9ba"
   },
   "packages/http/src/constants/statusCodes.ts": {
-    "mtime": 1780457741.1884172,
-    "ast_hash": "dd98ca8ddc8758291dc6ababcd598047",
-    "semantic_hash": "dd98ca8ddc8758291dc6ababcd598047"
+    "mtime": 1781338999.2280684,
+    "ast_hash": "4de9f9f16370a34ef43431e442b48caf",
+    "semantic_hash": ""
   },
   "packages/http/src/context/getRequestId.ts": {
     "mtime": 1780457741.1964145,
@@ -865,7 +865,7 @@
     "semantic_hash": ""
   },
   "execution.md": {
-    "mtime": 1781320212.3150268,
+    "mtime": 1781339374.0027168,
     "ast_hash": "2e68be9488f4770402201432c201ef13",
     "semantic_hash": ""
   },
@@ -1000,8 +1000,8 @@
     "semantic_hash": ""
   },
   "apps/api-gateway/src/auth/gatewayAuthMiddleware.ts": {
-    "mtime": 1781329705.6474593,
-    "ast_hash": "a9fdc7fcb85f7825326bfbf989aab419",
+    "mtime": 1781338977.8398423,
+    "ast_hash": "bc5794a08bc2f05cb2d1cac898542f10",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/auth/jwtVerifier.ts": {
@@ -1080,8 +1080,8 @@
     "semantic_hash": ""
   },
   "apps/api-gateway/src/proxy/createProxy.ts": {
-    "mtime": 1781333320.2993138,
-    "ast_hash": "e04b8a9d9337931759e34b5d65d299d8",
+    "mtime": 1781339023.9863043,
+    "ast_hash": "14d4e068948c74ff07e6c29c131b9af5",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/proxy/proxyHeadersMiddleware.ts": {
@@ -1095,13 +1095,13 @@
     "semantic_hash": ""
   },
   "apps/api-gateway/src/ratelimit/rateLimitMiddleware.ts": {
-    "mtime": 1781329705.8989465,
-    "ast_hash": "64939db0831804d2c7e2b6b4fd9b5384",
+    "mtime": 1781339496.1111896,
+    "ast_hash": "bbf0221cf702e6fed71ab987f98115f8",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/resilience/breakerRegistry.ts": {
-    "mtime": 1781330909.98057,
-    "ast_hash": "6d5a273e86331102fc30d70169681af9",
+    "mtime": 1781339514.8237128,
+    "ast_hash": "f2849137a6996610cf79d130b05671dd",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/resilience/timeouts.ts": {
@@ -1120,13 +1120,13 @@
     "semantic_hash": ""
   },
   "apps/api-gateway/src/routing/mountRoutes.ts": {
-    "mtime": 1781326610.467433,
-    "ast_hash": "bcf162f5bdac694e68d36d8471a3534a",
+    "mtime": 1781339501.971243,
+    "ast_hash": "ff74a957f31bd30fd3bb15dbb289c29a",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/routing/routingTable.ts": {
-    "mtime": 1781329705.9749968,
-    "ast_hash": "ceb778a6cba9d273fa037c8af7147303",
+    "mtime": 1781335172.0017374,
+    "ast_hash": "11eecf4bddd678be3c6992ed11334e04",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/server.ts": {
@@ -1135,13 +1135,13 @@
     "semantic_hash": ""
   },
   "apps/api-gateway/src/serviceIdentity/verifier.ts": {
-    "mtime": 1781329706.0254037,
-    "ast_hash": "78ffc8c958bb79e57b237b22cfb044cd",
+    "mtime": 1781335213.550179,
+    "ast_hash": "ee7126b020898b1e003d42b955b2e881",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/telemetry/traceContextMiddleware.ts": {
-    "mtime": 1781329706.0409913,
-    "ast_hash": "f8d34205977b19e395009fd390da0cca",
+    "mtime": 1781335230.5583563,
+    "ast_hash": "ebbc1b693fb30c95d5732369d238d357",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/utils/errors/errorCodes.ts": {
@@ -1150,8 +1150,8 @@
     "semantic_hash": ""
   },
   "apps/api-gateway/src/utils/errors/errorMessages.ts": {
-    "mtime": 1781326651.24824,
-    "ast_hash": "e1f0bbe1818fe331975364d41b75b133",
+    "mtime": 1781338971.1003807,
+    "ast_hash": "742c1981985de54649f5047310d1fa49",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/utils/errors/index.ts": {

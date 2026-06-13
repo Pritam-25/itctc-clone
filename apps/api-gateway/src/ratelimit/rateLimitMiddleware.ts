@@ -17,15 +17,12 @@ export const getRateLimitMiddleware = (
   return createRateLimitMiddleware({
     limiter: rateLimiter,
     keyFn: (req: Request) => {
-      // Per plan: key is per userId ?? ip
-      const userId = req.headers["x-user-id"];
+      // Key on verified userId when authenticated, fall back to IP for anonymous requests
+      const user = (req as Request & { user?: any }).user;
       const ip = req.ip || req.socket.remoteAddress || "unknown-ip";
 
-      if (Array.isArray(userId)) {
-        return `rl:${userId[0]}`;
-      }
-      if (userId) {
-        return `rl:${userId}`;
+      if (user?.userId) {
+        return `rl:${user.userId}`;
       }
       return `rl:${ip}`;
     },
