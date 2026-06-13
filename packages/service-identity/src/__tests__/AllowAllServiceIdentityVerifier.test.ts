@@ -16,7 +16,7 @@ describe("AllowAllServiceIdentityVerifier", () => {
 
     expect(result).toEqual({ ok: true, serviceId: "unknown" });
     expect(mockLogger.info).toHaveBeenCalledWith(
-      { headers },
+      {},
       expect.stringContaining(
         "AllowAllServiceIdentityVerifier: verifying request",
       ),

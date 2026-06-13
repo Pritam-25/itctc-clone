@@ -49,8 +49,21 @@ export const gatewayAuthMiddleware: RequestHandler = (
   req.headers[HEADER_USER_EMAIL] = user.email;
   req.headers[HEADER_SESSION_ID] = user.sessionId;
 
-  // 5. Set Vary header for cache safety
-  res.setHeader("Vary", "X-User-Id");
+  // 5. Set Vary header for cache safety (append X-User-Id if not present)
+  const currentVary = res.getHeader("Vary");
+  const current = Array.isArray(currentVary)
+    ? currentVary.join(",")
+    : String(currentVary ?? "");
+  const varyParts = current
+    .split(",")
+    .map((v) => v.trim())
+    .filter(Boolean);
+
+  const hasUserId = varyParts.some((v) => v.toLowerCase() === "x-user-id");
+  if (!hasUserId) {
+    varyParts.push("X-User-Id");
+  }
+  res.setHeader("Vary", varyParts.join(", "));
 
   next();
 };

@@ -10,7 +10,7 @@ export class AllowAllServiceIdentityVerifier implements ServiceIdentityVerifier 
 
   async verify(headers: IncomingHttpHeaders): Promise<ServiceIdentityResult> {
     this.logger?.info(
-      { headers },
+      {},
       "AllowAllServiceIdentityVerifier: verifying request (permissive allow-all)",
     );
     return { ok: true, serviceId: "unknown" };

@@ -960,13 +960,13 @@
     "semantic_hash": ""
   },
   "packages/service-identity/src/AllowAllServiceIdentityVerifier.ts": {
-    "mtime": 1781323257.2054982,
-    "ast_hash": "9fe44dc011acfda55ef232af10bcf73c",
+    "mtime": 1781326020.9618704,
+    "ast_hash": "ca71153f92107b42c916a978afdb39fe",
     "semantic_hash": ""
   },
   "packages/service-identity/src/__tests__/AllowAllServiceIdentityVerifier.test.ts": {
-    "mtime": 1781323257.2002304,
-    "ast_hash": "9145219d8d84ce79cefdc4159668e922",
+    "mtime": 1781326025.9588401,
+    "ast_hash": "0dc08215403478794b867512a6ba18f2",
     "semantic_hash": ""
   },
   "packages/service-identity/src/index.ts": {
@@ -990,8 +990,8 @@
     "semantic_hash": ""
   },
   "apps/api-gateway/src/auth/__tests__/auth.test.ts": {
-    "mtime": 1781323254.3654723,
-    "ast_hash": "b193fb620c78da1d0424bc47dd2d7f1f",
+    "mtime": 1781326124.818162,
+    "ast_hash": "5457b8ecd42631c1fe57660d77d9fd80",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/auth/cookieNames.ts": {
@@ -1000,8 +1000,8 @@
     "semantic_hash": ""
   },
   "apps/api-gateway/src/auth/gatewayAuthMiddleware.ts": {
-    "mtime": 1781323254.3939142,
-    "ast_hash": "9711849a315873bde78cfcb6772d21a7",
+    "mtime": 1781326119.6703918,
+    "ast_hash": "eaa87140b4d096748bc392a5f90668b5",
     "semantic_hash": ""
   },
   "apps/api-gateway/src/auth/jwtVerifier.ts": {

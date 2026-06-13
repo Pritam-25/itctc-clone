@@ -90,6 +90,7 @@ describe("api-gateway auth module", () => {
       } as unknown as Request;
 
       const res = {
+        getHeader: vi.fn().mockReturnValue(undefined),
         setHeader: vi.fn(),
       } as unknown as Response;
 
@@ -103,6 +104,40 @@ describe("api-gateway auth module", () => {
       expect(req.headers["x-user-custom"]).toBeUndefined();
       expect(req.headers["other-header"]).toBe("keep-me");
       expect(res.setHeader).toHaveBeenCalledWith("Vary", "X-User-Id");
+      expect(next).toHaveBeenCalled();
+    });
+
+    it("should preserve existing Vary headers and append X-User-Id", () => {
+      const payload = {
+        sub: "user-123",
+        email: "user@example.com",
+        sessionId: "session-456",
+        type: "access",
+      };
+      const token = jwt.sign(payload, secret);
+
+      const req = {
+        cookies: {
+          [COOKIE_NAMES.accessToken]: token,
+        },
+        headers: {},
+      } as unknown as Request;
+
+      let varyHeader = "Accept-Encoding, Cookie";
+      const res = {
+        getHeader: vi.fn().mockImplementation(() => varyHeader),
+        setHeader: vi.fn().mockImplementation((name, val) => {
+          if (name === "Vary") {
+            varyHeader = val;
+          }
+        }),
+      } as unknown as Response;
+
+      const next = vi.fn() as NextFunction;
+
+      gatewayAuthMiddleware(req, res, next);
+
+      expect(res.setHeader).toHaveBeenCalledWith("Vary", "Accept-Encoding, Cookie, X-User-Id");
       expect(next).toHaveBeenCalled();
     });
 
