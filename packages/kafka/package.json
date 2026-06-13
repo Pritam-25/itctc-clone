@@ -16,7 +16,9 @@
   },
   "dependencies": {
     "kafkajs": "^2.2.4",
-    "@irctc/logger": "workspace:*"
+    "@irctc/logger": "workspace:*",
+    "@opentelemetry/api": "1.9.1",
+    "@irctc/telemetry": "workspace:*"
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",

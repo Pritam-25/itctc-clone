@@ -16,6 +16,7 @@
     "@irctc/logger": "workspace:*",
     "@irctc/middleware": "workspace:*",
     "@irctc/kafka": "workspace:*",
+    "@irctc/telemetry": "workspace:*",
     "@prisma/adapter-pg": "^7.8.0",
     "@prisma/client": "^7.8.0",
     "@t3-oss/env-core": "^0.13.11",

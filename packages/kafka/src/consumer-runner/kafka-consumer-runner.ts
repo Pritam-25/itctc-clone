@@ -1,4 +1,6 @@
 import type { Consumer, EachMessagePayload } from "kafkajs";
+import { context } from "@opentelemetry/api";
+import { extractTraceContextFromKafkaHeaders } from "@irctc/telemetry/propagation";
 
 /**
  * Minimal logger surface — the @irctc/logger returns a Pino logger, but
@@ -36,6 +38,7 @@ export class KafkaConsumerRunner {
   constructor(
     private readonly consumer: Consumer,
     private readonly logger: LoggerLike,
+    private readonly propagateTraceContext: boolean = true,
   ) {}
 
   async run(topic: string, handler: MessageHandler): Promise<void> {
@@ -52,7 +55,14 @@ export class KafkaConsumerRunner {
 
     await this.consumer.run({
       eachMessage: async (payload) => {
-        await handler(payload);
+        if (this.propagateTraceContext) {
+          const parentCtx = extractTraceContextFromKafkaHeaders(
+            payload.message.headers,
+          );
+          await context.with(parentCtx, () => handler(payload));
+        } else {
+          await handler(payload);
+        }
       },
     });
   }

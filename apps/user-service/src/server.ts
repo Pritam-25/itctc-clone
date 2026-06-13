@@ -7,6 +7,7 @@ import app from "./app.js";
 import type { Server } from "node:http";
 import { registerErrorMessages } from "@irctc/errors";
 import { ERROR_MESSAGES } from "@utils/errors";
+import { startTelemetry, shutdownTelemetry } from "@irctc/telemetry";
 
 const PORT = env.PORT;
 
@@ -53,6 +54,7 @@ const shutdown = async (signal: NodeJS.Signals) => {
     disconnectKafka(),
     disconnectRedis(),
     prisma.$disconnect(),
+    shutdownTelemetry(),
   ]);
 
   const failures = teardownResults.filter(
@@ -83,6 +85,18 @@ const startServer = async () => {
   await Promise.all([prisma.$connect(), initRedis(), initKafka()]);
 
   logger.info({ module: "server" }, "All dependencies connected successfully.");
+
+  // Initialize Telemetry SDK
+  const otlpEndpoint =
+    process.env.OTEL_EXPORTER_OTLP_ENDPOINT || "http://localhost:4318";
+  logger.info(
+    { module: "server", endpoint: otlpEndpoint },
+    "Starting OpenTelemetry SDK tracing",
+  );
+  startTelemetry({
+    serviceName: "user-service",
+    otlpEndpoint,
+  });
 
   server = app.listen(PORT, () => {
     logger.info(

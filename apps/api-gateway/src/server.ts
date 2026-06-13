@@ -73,17 +73,17 @@ const startServer = async () => {
   // Initialize Redis client connection
   await initRedis();
 
-  // Initialize Telemetry SDK if endpoint is configured
-  if (env.OTEL_EXPORTER_OTLP_ENDPOINT) {
-    logger.info(
-      { module: "server", endpoint: env.OTEL_EXPORTER_OTLP_ENDPOINT },
-      "Starting OpenTelemetry SDK tracing",
-    );
-    startTelemetry({
-      serviceName: "api-gateway",
-      otlpEndpoint: env.OTEL_EXPORTER_OTLP_ENDPOINT,
-    });
-  }
+  // Initialize Telemetry SDK
+  const otlpEndpoint =
+    env.OTEL_EXPORTER_OTLP_ENDPOINT || "http://localhost:4318";
+  logger.info(
+    { module: "server", endpoint: otlpEndpoint },
+    "Starting OpenTelemetry SDK tracing",
+  );
+  startTelemetry({
+    serviceName: "api-gateway",
+    otlpEndpoint,
+  });
 
   logger.info({ module: "server" }, "All dependencies connected successfully.");
 

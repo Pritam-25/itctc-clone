@@ -17,6 +17,7 @@
     "@irctc/middleware": "workspace:*",
     "@irctc/contracts": "workspace:*",
     "@irctc/kafka": "workspace:*",
+    "@irctc/telemetry": "workspace:*",
     "@sendgrid/mail": "^8.1.6",
     "@t3-oss/env-core": "^0.13.11",
     "cors": "^2.8.5",
